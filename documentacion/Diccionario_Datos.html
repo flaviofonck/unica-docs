@@ -1,0 +1,6164 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>PROCESOS ÚNICA — Diccionario de Datos y Modelo Relacional - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#procesos-unica-diccionario-de-datos-y-modelo-relacional" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PROCESOS ÚNICA — Diccionario de Datos y Modelo Relacional
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-resumen-del-modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resumen del Modelo de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Resumen del Modelo de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-inventario-de-tablas-por-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Inventario de tablas por módulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-tabla-central-dim_configuracion_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Tabla central — DIM_CONFIGURACION_SERVICIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definicion-de-campos-por-tabla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Definición de Campos por Tabla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Definición de Campos por Tabla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-0-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU 0 - Acceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-15-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU 1/5 - Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-5-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU 5 - Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-6-novedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU 6 - Novedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-7-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU 7 - Indisponibilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-8-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU 8 - Prefacturación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-pendientes-de-definicion-de-campos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablas pendientes de definición de campos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-modelo-de-relaciones-fk-y-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Modelo de Relaciones (FK y Joins)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Modelo de Relaciones (FK y Joins)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-relaciones-por-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Relaciones por tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-relaciones-entrantes-a-dim_configuracion_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Relaciones entrantes a DIM_CONFIGURACION_SERVICIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-migraciones-flyway-sql-corregido-con-campos-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Migraciones Flyway — SQL corregido con campos reales
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="procesos-unica-diccionario-de-datos-y-modelo-relacional">PROCESOS ÚNICA — Diccionario de Datos y Modelo Relacional<a class="headerlink" href="#procesos-unica-diccionario-de-datos-y-modelo-relacional" title="Permanent link">&para;</a></h1>
+<p><strong>Proyecto:</strong> Sistema de Automatización Operativa — PROCESOS ÚNICA<br />
+<strong>Base de datos:</strong> MySQL 8+ · <strong>ORM:</strong> Spring Boot JPA / Hibernate<br />
+<strong>Versión:</strong> 1.0 · Marzo 2026  </p>
+<hr />
+<h2 id="1-resumen-del-modelo-de-datos">1. Resumen del Modelo de Datos<a class="headerlink" href="#1-resumen-del-modelo-de-datos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total de tablas</td>
+<td>35</td>
+</tr>
+<tr>
+<td>Total de campos definidos</td>
+<td>281</td>
+</tr>
+<tr>
+<td>Total de relaciones</td>
+<td>35</td>
+</tr>
+<tr>
+<td>Tablas DIM (maestros)</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Tablas FACT (transaccionales)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Tablas de auditoría</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Tablas de relación N:M</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-inventario-de-tablas-por-modulo">1.1 Inventario de tablas por módulo<a class="headerlink" href="#11-inventario-de-tablas-por-modulo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Tipo</th>
+<th>Módulo / HU</th>
+<th>Fase</th>
+<th>Descripción</th>
+<th># Campos</th>
+<th>Volumen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuarios</code></td>
+<td>ENTIDAD</td>
+<td>HU 0 - Acceso</td>
+<td>MVP F1</td>
+<td>Usuarios del sistema con rol y estado</td>
+<td>6</td>
+<td>Cientos</td>
+</tr>
+<tr>
+<td><code>perfiles</code></td>
+<td>ENTIDAD</td>
+<td>HU 0 - Acceso</td>
+<td>MVP F1</td>
+<td>Perfiles de acceso configurables</td>
+<td>5</td>
+<td>Docenas</td>
+</tr>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td>RELACIÓN</td>
+<td>HU 0 - Acceso</td>
+<td>MVP F1</td>
+<td>Asignación N:M usuario ↔ perfil</td>
+<td>4</td>
+<td>Cientos</td>
+</tr>
+<tr>
+<td><code>permisos</code></td>
+<td>ENTIDAD</td>
+<td>HU 0 - Acceso</td>
+<td>MVP F1</td>
+<td>Permisos por perfil: ver/ejecutar/admin por módulo</td>
+<td>7</td>
+<td>Cientos</td>
+</tr>
+<tr>
+<td><code>log_acceso</code></td>
+<td>AUDIT</td>
+<td>HU 0 - Acceso</td>
+<td>MVP F1</td>
+<td>Log de ingresos y acciones por usuario</td>
+<td>6</td>
+<td>Miles/mes</td>
+</tr>
+<tr>
+<td><code>fact_viabilidad_cotizacion</code></td>
+<td>TRANSAC</td>
+<td>HU 1 - Cotización</td>
+<td>Fase 2</td>
+<td>Solicitudes de viabilidad recibidas</td>
+<td>19</td>
+<td>Cientos/año</td>
+</tr>
+<tr>
+<td><code>fact_cotizacion_proveedor</code></td>
+<td>TRANSAC</td>
+<td>HU 1 - Cotización</td>
+<td>Fase 2</td>
+<td>Respuestas de cotización de proveedores</td>
+<td>15</td>
+<td>Cientos/año</td>
+</tr>
+<tr>
+<td><code>dim_proveedores</code></td>
+<td>DIM</td>
+<td>HU 1/5 - Inventario</td>
+<td>MVP F1</td>
+<td>Proveedores de servicios terceros</td>
+<td>8</td>
+<td>Decenas</td>
+</tr>
+<tr>
+<td><code>fact_tarifa_promedio</code></td>
+<td>DIM</td>
+<td>HU 1/5 - Inventario</td>
+<td>MVP F1</td>
+<td>Tarifas promedio por proveedor/BW/región</td>
+<td>6</td>
+<td>Cientos</td>
+</tr>
+<tr>
+<td><code>fact_instalaciones</code></td>
+<td>TRANSAC</td>
+<td>HU 2 - Instalaciones</td>
+<td>Fase 2</td>
+<td>Servicios instalados con terceros</td>
+<td>25</td>
+<td>Miles</td>
+</tr>
+<tr>
+<td><code>fact_migraciones</code></td>
+<td>TRANSAC</td>
+<td>HU 3 - Migraciones</td>
+<td>Fase 2</td>
+<td>Procesos de migración entre proveedores</td>
+<td>45</td>
+<td>Cientos/año</td>
+</tr>
+<tr>
+<td><code>fact_ampliaciones</code></td>
+<td>TRANSAC</td>
+<td>HU 3 - Migraciones</td>
+<td>Fase 2</td>
+<td>Ampliaciones de BW contratadas</td>
+<td>30</td>
+<td>Cientos/año</td>
+</tr>
+<tr>
+<td><code>fact_bajas_migracion</code></td>
+<td>TRANSAC</td>
+<td>HU 4 - Bajas</td>
+<td>Fase 2</td>
+<td>Bajas originadas por migración</td>
+<td>12</td>
+<td>Cientos/año</td>
+</tr>
+<tr>
+<td><code>fact_bajas_cliente</code></td>
+<td>TRANSAC</td>
+<td>HU 4 - Bajas</td>
+<td>Fase 2</td>
+<td>Bajas solicitadas por el cliente</td>
+<td>12</td>
+<td>Cientos/año</td>
+</tr>
+<tr>
+<td><code>fact_suspension_cartera</code></td>
+<td>TRANSAC</td>
+<td>HU 4 - Bajas</td>
+<td>Fase 2</td>
+<td>Suspensiones por deuda/cartera</td>
+<td>12</td>
+<td>Cientos/año</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td>MAESTRO</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Inventario maestro de servicios activos</td>
+<td>47</td>
+<td>Miles</td>
+</tr>
+<tr>
+<td><code>dim_tipo_servicio</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Catálogo: Fijo / Móvil</td>
+<td>3</td>
+<td>2 registros</td>
+</tr>
+<tr>
+<td><code>dim_clasificacion</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Catálogo de clasificaciones de servicio</td>
+<td>3</td>
+<td>6 registros</td>
+</tr>
+<tr>
+<td><code>dim_trm</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Tasa de cambio USD→COP mensual</td>
+<td>5</td>
+<td>1/mes</td>
+</tr>
+<tr>
+<td><code>dim_contratos</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Contratos con condiciones de pago/facturación</td>
+<td>6</td>
+<td>Decenas</td>
+</tr>
+<tr>
+<td><code>dim_clientes</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Clientes finales por NIT</td>
+<td>5</td>
+<td>Cientos</td>
+</tr>
+<tr>
+<td><code>dim_ciudades</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Ciudades con código DANE</td>
+<td>5</td>
+<td>~1100</td>
+</tr>
+<tr>
+<td><code>dim_medios</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Medios de conectividad</td>
+<td>3</td>
+<td>Decenas</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Cobertura por proveedor/ciudad/medio</td>
+<td>5</td>
+<td>Miles</td>
+</tr>
+<tr>
+<td><code>dim_servicios</code></td>
+<td>DIM</td>
+<td>HU 5 - Inventario</td>
+<td>MVP F1</td>
+<td>Códigos únicos de servicio</td>
+<td>3</td>
+<td>Miles</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td>TRANSAC</td>
+<td>HU 6 - Novedades</td>
+<td>Fase 2</td>
+<td>Prorrateo mensual de novedades de servicios</td>
+<td>14</td>
+<td>Miles/mes</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td>TRANSAC</td>
+<td>HU 6 - Novedades</td>
+<td>Fase 2</td>
+<td>Mantenimientos realizados por proveedores</td>
+<td>8</td>
+<td>Cientos/mes</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td>TRANSAC</td>
+<td>HU 7 - Indisponibilidades</td>
+<td>MVP F1</td>
+<td>Tickets de incidencias Remedy</td>
+<td>19</td>
+<td>20k-30k/mes</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td>TRANSAC</td>
+<td>HU 7 - Indisponibilidades</td>
+<td>MVP F1</td>
+<td>Conciliación mensual con proveedores</td>
+<td>20</td>
+<td>Miles/mes</td>
+</tr>
+<tr>
+<td><code>dim_exclusiones_remedy</code></td>
+<td>DIM</td>
+<td>HU 7 - Indisponibilidades</td>
+<td>MVP F1</td>
+<td>Causas excluidas del cálculo ANS</td>
+<td>5</td>
+<td>Decenas</td>
+</tr>
+<tr>
+<td><code>dim_ans_proveedores</code></td>
+<td>DIM</td>
+<td>HU 7 - Indisponibilidades</td>
+<td>MVP F1</td>
+<td>Tabla de ANS por proveedor y rangos de descuento</td>
+<td>7</td>
+<td>Decenas</td>
+</tr>
+<tr>
+<td><code>dim_motivos_fallas</code></td>
+<td>DIM</td>
+<td>HU 7 - Indisponibilidades</td>
+<td>MVP F1</td>
+<td>Motivos de falla que exoneran al proveedor</td>
+<td>4</td>
+<td>Decenas</td>
+</tr>
+<tr>
+<td><code>fact_ingresos_davox</code></td>
+<td>TRANSAC</td>
+<td>HU 8 - Prefacturación</td>
+<td>MVP F1</td>
+<td>Ingresos del archivo FISC de Davox</td>
+<td>23</td>
+<td>Miles/mes</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td>TRANSAC</td>
+<td>HU 8 - Prefacturación</td>
+<td>MVP F1</td>
+<td>Prefacturas generadas por servicio/mes</td>
+<td>37</td>
+<td>Miles/mes</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td>TRANSAC</td>
+<td>HU 8 - Prefacturación</td>
+<td>MVP F1</td>
+<td>Reconciliación pagos vs ingresos</td>
+<td>15</td>
+<td>Miles/mes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-tabla-central-dim_configuracion_servicios">1.2 Tabla central — DIM_CONFIGURACION_SERVICIOS<a class="headerlink" href="#12-tabla-central-dim_configuracion_servicios" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Esta tabla es la <strong>fuente de verdad del sistema</strong>. Es referenciada por todos los módulos transaccionales.
+Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta estados de baja y cálculos de terminación anticipada.</p>
+</blockquote>
+<p><strong>Módulos que la leen o actualizan:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Operación</th>
+<th>Campo(s) afectados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-03 Migraciones</td>
+<td>UPDATE</td>
+<td><code>proveedor</code>, <code>mrc</code>, <code>medio</code>, <code>bw</code> al registrar <code>fecha_migracion_realizada</code></td>
+</tr>
+<tr>
+<td>HU-04 Bajas</td>
+<td>UPDATE</td>
+<td><code>estado_baja</code>, <code>fecha_baja</code>, <code>fecha_tope_pago_baja</code>, <code>pago_proyectado_preaviso</code></td>
+</tr>
+<tr>
+<td>HU-04 Reconexión</td>
+<td>UPDATE</td>
+<td><code>estado_configuracion</code> → ACTIVO, <code>fecha_alta</code></td>
+</tr>
+<tr>
+<td>HU-05 Contratos</td>
+<td>UPDATE</td>
+<td><code>condicion_pago</code>, <code>condicion_facturacion</code> (trigger desde <code>dim_contratos</code>)</td>
+</tr>
+<tr>
+<td>HU-06 Prorrateo</td>
+<td>READ</td>
+<td><code>condicion_facturacion</code>, <code>mrc</code>, <code>moneda_mrc</code>, <code>novedad</code>, <code>fecha_novedad</code></td>
+</tr>
+<tr>
+<td>HU-07 Indisponibilidades</td>
+<td>READ</td>
+<td><code>ds</code>, <code>id_servicio</code>, <code>fecha_baja</code>, <code>proveedor</code></td>
+</tr>
+<tr>
+<td>HU-08 Prefacturación</td>
+<td>READ</td>
+<td><code>id_servicio</code>, <code>id_configuracion_servicio</code> (vía CUS = DS)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-definicion-de-campos-por-tabla">2. Definición de Campos por Tabla<a class="headerlink" href="#2-definicion-de-campos-por-tabla" title="Permanent link">&para;</a></h2>
+<h3 id="hu-0-acceso">HU 0 - Acceso<a class="headerlink" href="#hu-0-acceso" title="Permanent link">&para;</a></h3>
+<h4 id="usuarios"><code>usuarios</code><a class="headerlink" href="#usuarios" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> ENTIDAD · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Cientos<br />
+<strong>Descripción:</strong> Usuarios del sistema con rol y estado<br />
+<strong>Observaciones:</strong> Gestión por Gerente/Líder  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Identificador auto-incremental</td>
+</tr>
+<tr>
+<td><code>nombre_completo</code></td>
+<td>VARCHAR</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Nombre completo del usuario</td>
+</tr>
+<tr>
+<td><code>correo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Correo corporativo — usado para login</td>
+</tr>
+<tr>
+<td><code>rol</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Gerente / Líder Profesional / Ejecutor</td>
+</tr>
+<tr>
+<td><code>cargo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Cargo organizacional</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td>ACTIVO</td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td>Auditoría de creación</td>
+</tr>
+<tr>
+<td><code>fecha_modificacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Auditoría última modificación</td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Usuario sesión que creó el registro</td>
+</tr>
+</tbody>
+</table>
+<h4 id="perfiles"><code>perfiles</code><a class="headerlink" href="#perfiles" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> ENTIDAD · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Docenas<br />
+<strong>Descripción:</strong> Perfiles de acceso configurables  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre_perfil</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Nombre del perfil</td>
+</tr>
+<tr>
+<td><code>descripcion</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Descripción del perfil</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usuario_perfil"><code>usuario_perfil</code><a class="headerlink" href="#usuario_perfil" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> RELACIÓN · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Cientos<br />
+<strong>Descripción:</strong> Asignación N:M usuario ↔ perfil  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_usuario</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>usuarios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>FK a tabla usuarios</td>
+</tr>
+<tr>
+<td><code>id_perfil</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>perfiles</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>FK a tabla perfiles</td>
+</tr>
+<tr>
+<td><code>fecha_asignacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="permisos"><code>permisos</code><a class="headerlink" href="#permisos" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> ENTIDAD · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Cientos<br />
+<strong>Descripción:</strong> Permisos por perfil: ver/ejecutar/admin por módulo<br />
+<strong>Observaciones:</strong> Check-box por sección  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_perfil</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>perfiles</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modulo</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Nombre del módulo</td>
+</tr>
+<tr>
+<td><code>seccion</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Sub-sección</td>
+</tr>
+<tr>
+<td><code>puede_ver</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>puede_ejecutar</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>puede_administrar</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="log_acceso"><code>log_acceso</code><a class="headerlink" href="#log_acceso" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> AUDIT · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles/mes<br />
+<strong>Descripción:</strong> Log de ingresos y acciones por usuario<br />
+<strong>Observaciones:</strong> Append-only  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Append-only</td>
+</tr>
+<tr>
+<td><code>id_usuario</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>usuarios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modulo</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Módulo al que ingresó</td>
+</tr>
+<tr>
+<td><code>accion</code></td>
+<td>VARCHAR</td>
+<td>120</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Acción ejecutada</td>
+</tr>
+<tr>
+<td><code>fecha_hora</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td>VARCHAR</td>
+<td>45</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>IP del cliente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hu-15-inventario">HU 1/5 - Inventario<a class="headerlink" href="#hu-15-inventario" title="Permanent link">&para;</a></h3>
+<h4 id="dim_proveedores"><code>dim_proveedores</code><a class="headerlink" href="#dim_proveedores" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Decenas<br />
+<strong>Descripción:</strong> Proveedores de servicios terceros<br />
+<strong>Observaciones:</strong> Editable con aprobación  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>NIT sin dígito verificación</td>
+</tr>
+<tr>
+<td><code>razon_social</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>contacto_nombre</code></td>
+<td>VARCHAR</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Contacto para conciliaciones</td>
+</tr>
+<tr>
+<td><code>correo_conciliaciones</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fact_tarifa_promedio"><code>fact_tarifa_promedio</code><a class="headerlink" href="#fact_tarifa_promedio" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Cientos<br />
+<strong>Descripción:</strong> Tarifas promedio por proveedor/BW/región<br />
+<strong>Observaciones:</strong> Insumo para viabilidad  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td>dim_proveedores</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Ej: 10M, 100M, 1G</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tarifa_promedio</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>En COP</td>
+</tr>
+<tr>
+<td><code>fecha</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Mes de vigencia</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hu-5-inventario">HU 5 - Inventario<a class="headerlink" href="#hu-5-inventario" title="Permanent link">&para;</a></h3>
+<h4 id="dim_configuracion_servicios"><code>dim_configuracion_servicios</code><a class="headerlink" href="#dim_configuracion_servicios" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> MAESTRO · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles<br />
+<strong>Descripción:</strong> Inventario maestro de servicios activos<br />
+<strong>Observaciones:</strong> Tabla central del sistema  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Clave interna</td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>PK de negocio — del reporte instalaciones</td>
+</tr>
+<tr>
+<td><code>ds</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>DS único — no puede tener otra config activa</td>
+</tr>
+<tr>
+<td><code>id_oportunidad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>De Cronos Feasibility</td>
+</tr>
+<tr>
+<td><code>estado_configuracion</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td>ACTIVO</td>
+</tr>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td>dim_proveedores</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>10 dígitos</td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit_cliente</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td>dim_clientes</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>10 dígitos, no inicia en 0</td>
+</tr>
+<tr>
+<td><code>razon_social_cliente</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_dane_ciudad</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td>dim_ciudades</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>medio</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td>dim_medios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>clasificacion</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td>dim_clasificacion</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Aeropuerto/Datacenter/Satelital/Starlink/Tradicional/Otros</td>
+</tr>
+<tr>
+<td><code>tipo_servicio</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td>dim_tipo_servicio</td>
+<td>✓</td>
+<td></td>
+<td>FIJO</td>
+<td>Fijo</td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>direccion</code></td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>coordenada_x</code></td>
+<td>DECIMAL</td>
+<td>(10,6)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Latitud</td>
+</tr>
+<tr>
+<td><code>coordenada_y</code></td>
+<td>DECIMAL</td>
+<td>(10,6)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Longitud</td>
+</tr>
+<tr>
+<td><code>cuenta_ingresos</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_ingreso_mensual</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Debe ser &gt; 0</td>
+</tr>
+<tr>
+<td><code>responsabilidad_unica</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_clausula_uk</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>VENCIDA</td>
+</tr>
+<tr>
+<td><code>fecha_fin_clausula</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>duracion_contrato_meses</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_alta</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Del reporte instalaciones</td>
+</tr>
+<tr>
+<td><code>fecha_baja</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Se llena al dar de baja</td>
+</tr>
+<tr>
+<td><code>moneda_mrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>COP</td>
+</tr>
+<tr>
+<td><code>mrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Debe ser &gt; 0</td>
+</tr>
+<tr>
+<td><code>moneda_nrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>COP</td>
+</tr>
+<tr>
+<td><code>nrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>obra_civil</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pcl</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pep</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Si inicia E-1167 → imputacion'=L</td>
+</tr>
+<tr>
+<td><code>producto</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>numero_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td>dim_contratos</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>condicion_pago</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Autocompletado desde dim_contratos</td>
+</tr>
+<tr>
+<td><code>condicion_facturacion</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Autocompletado desde dim_contratos</td>
+</tr>
+<tr>
+<td><code>imputacion</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>L si PEP inicia E-1167</td>
+</tr>
+<tr>
+<td><code>indicador_iva</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Calculado por departamento/ciudad</td>
+</tr>
+<tr>
+<td><code>id_tarea_cronos</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ot_cronos</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>novedad</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Clase requerimiento Cronos</td>
+</tr>
+<tr>
+<td><code>fecha_novedad</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_modificacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modificado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_baja</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>BAJA POR MIGRACIÓN / BAJA POR CLIENTE / BAJA POR ASEGURAMIENTO / SUSPENSIÓN POR CARTERA</td>
+</tr>
+<tr>
+<td><code>fecha_tope_pago_baja</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha notificación + 30 días (configurable)</td>
+</tr>
+<tr>
+<td><code>pago_proyectado_preaviso</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>(MRC/30) × días_preaviso</td>
+</tr>
+<tr>
+<td><code>pago_proyectado_terminacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Calculado según condiciones contrato</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_tipo_servicio"><code>dim_tipo_servicio</code><a class="headerlink" href="#dim_tipo_servicio" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> 2 registros<br />
+<strong>Descripción:</strong> Catálogo: Fijo / Móvil  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Fijo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_clasificacion"><code>dim_clasificacion</code><a class="headerlink" href="#dim_clasificacion" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> 6 registros<br />
+<strong>Descripción:</strong> Catálogo de clasificaciones de servicio<br />
+<strong>Observaciones:</strong> Aeropuerto,Datacenter,Satelital,etc.  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Aeropuerto, Datacenter, Satelital, Starlink, Tradicional, Otros</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_trm"><code>dim_trm</code><a class="headerlink" href="#dim_trm" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> 1/mes<br />
+<strong>Descripción:</strong> Tasa de cambio USD→COP mensual<br />
+<strong>Observaciones:</strong> Un registro por mes  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>anio</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Año de la TRM</td>
+</tr>
+<tr>
+<td><code>mes</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Mes 1-12</td>
+</tr>
+<tr>
+<td><code>valor_trm</code></td>
+<td>DECIMAL</td>
+<td>(12,4)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Valor COP por 1 USD</td>
+</tr>
+<tr>
+<td><code>fecha_registro</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Primer día del mes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_contratos"><code>dim_contratos</code><a class="headerlink" href="#dim_contratos" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Decenas<br />
+<strong>Descripción:</strong> Contratos con condiciones de pago/facturación  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>numero_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>condicion_pago</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Trigger: actualiza dim_configuracion_servicios</td>
+</tr>
+<tr>
+<td><code>condicion_facturacion</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_clientes"><code>dim_clientes</code><a class="headerlink" href="#dim_clientes" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Cientos<br />
+<strong>Descripción:</strong> Clientes finales por NIT  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>10 dígitos, no inicia en 0</td>
+</tr>
+<tr>
+<td><code>razon_social</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>contacto</code></td>
+<td>VARCHAR</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_ciudades"><code>dim_ciudades</code><a class="headerlink" href="#dim_ciudades" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> ~1100<br />
+<strong>Descripción:</strong> Ciudades con código DANE  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_dane</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Código DANE oficial</td>
+</tr>
+<tr>
+<td><code>nombre_ciudad</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>departamento</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_medios"><code>dim_medios</code><a class="headerlink" href="#dim_medios" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Decenas<br />
+<strong>Descripción:</strong> Medios de conectividad  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre_medio</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_cobertura"><code>dim_cobertura</code><a class="headerlink" href="#dim_cobertura" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles<br />
+<strong>Descripción:</strong> Cobertura por proveedor/ciudad/medio  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_proveedor</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_proveedores</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_ciudad</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_ciudades</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_medio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_medios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>activo</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_servicios"><code>dim_servicios</code><a class="headerlink" href="#dim_servicios" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles<br />
+<strong>Descripción:</strong> Códigos únicos de servicio<br />
+<strong>Observaciones:</strong> PK: id_servicio  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>PK de negocio</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hu-6-novedades">HU 6 - Novedades<a class="headerlink" href="#hu-6-novedades" title="Permanent link">&para;</a></h3>
+<h4 id="fact_prorrateo_novedades"><code>fact_prorrateo_novedades</code><a class="headerlink" href="#fact_prorrateo_novedades" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> TRANSAC · <strong>Fase:</strong> Fase 2 · <strong>Volumen:</strong> Miles/mes<br />
+<strong>Descripción:</strong> Prorrateo mensual de novedades de servicios<br />
+<strong>Observaciones:</strong> 1 ejecución/mes  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>inicio_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fin_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dias_a_facturar</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_instalacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>obra_civil</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>moneda_mrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>valor_tasa_cambio</code></td>
+<td>DECIMAL</td>
+<td>(12,4)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>TRM del mes</td>
+</tr>
+<tr>
+<td><code>mrc_cop</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MRC convertido a COP</td>
+</tr>
+<tr>
+<td><code>total_cop</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Total prorrateos</td>
+</tr>
+<tr>
+<td><code>novedad</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Clase requerimiento</td>
+</tr>
+<tr>
+<td><code>mes_novedad</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_servicio</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fijo</td>
+</tr>
+<tr>
+<td><code>fecha_proceso</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fact_mantenimientos"><code>fact_mantenimientos</code><a class="headerlink" href="#fact_mantenimientos" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> TRANSAC · <strong>Fase:</strong> Fase 2 · <strong>Volumen:</strong> Cientos/mes<br />
+<strong>Descripción:</strong> Mantenimientos realizados por proveedores  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_mantenimiento</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>monto</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>En COP</td>
+</tr>
+<tr>
+<td><code>descripcion</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hu-7-indisponibilidades">HU 7 - Indisponibilidades<a class="headerlink" href="#hu-7-indisponibilidades" title="Permanent link">&para;</a></h3>
+<h4 id="fact_tickets_indisponibilidad"><code>fact_tickets_indisponibilidad</code><a class="headerlink" href="#fact_tickets_indisponibilidad" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> TRANSAC · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> 20k-30k/mes<br />
+<strong>Descripción:</strong> Tickets de incidencias Remedy<br />
+<strong>Observaciones:</strong> Carga masiva desde archivo  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>incident_id</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Número completo Remedy</td>
+</tr>
+<tr>
+<td><code>vendor_ticket_number</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Últimos 7 dígitos</td>
+</tr>
+<tr>
+<td><code>numero_ds</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Llave de cruce</td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Resuelto desde DS</td>
+</tr>
+<tr>
+<td><code>incident_reported_datetime</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Fecha apertura incidente</td>
+</tr>
+<tr>
+<td><code>incident_closed_datetime</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha cierre original Remedy</td>
+</tr>
+<tr>
+<td><code>customer_company</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>customer_city</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>customer_site</code></td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Dirección</td>
+</tr>
+<tr>
+<td><code>classification_service_ci</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_enlace</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>resolution_category_tier1</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>resolution_category_tier2</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Causa/Reparación</td>
+</tr>
+<tr>
+<td><code>resolution_category_tier3</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Motivo fallo</td>
+</tr>
+<tr>
+<td><code>assignee_assigned_group</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Grupo asignado</td>
+</tr>
+<tr>
+<td><code>fecha_solucion_incidencia</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ingresado por usuario</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Sin dato</td>
+<td>Validado / Sin dato / Excluido</td>
+</tr>
+<tr>
+<td><code>observaciones</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Editable</td>
+</tr>
+<tr>
+<td><code>mes_reporte</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM — solo 1 carga/mes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fact_indisponibilidad_mensual_conciliada"><code>fact_indisponibilidad_mensual_conciliada</code><a class="headerlink" href="#fact_indisponibilidad_mensual_conciliada" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> TRANSAC · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles/mes<br />
+<strong>Descripción:</strong> Conciliación mensual con proveedores<br />
+<strong>Observaciones:</strong> Incluye %descuento calculado  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_ticket</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>fact_tickets_indisponibilidad</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_apertura</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_cierre</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cliente</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde dim_configuracion_servicios</td>
+</tr>
+<tr>
+<td><code>ciudad</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>causa_reparacion</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>motivo_fallo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>indisp_minutos</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Fecha cierre - fecha apertura</td>
+</tr>
+<tr>
+<td><code>pct_disponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(7,4)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Calculado</td>
+</tr>
+<tr>
+<td><code>pct_descuento_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde dim_ans_proveedores</td>
+</tr>
+<tr>
+<td><code>pct_disponibilidad_pactada</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fallo_responsabilidad_diferente</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>Si motivo está en dim_motivos_fallas</td>
+</tr>
+<tr>
+<td><code>pct_descuento_final</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0 si fallo_resp_dif'=true</td>
+</tr>
+<tr>
+<td><code>descuentos_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Valor COP a descontar</td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_reporte</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>observaciones</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_exclusiones_remedy"><code>dim_exclusiones_remedy</code><a class="headerlink" href="#dim_exclusiones_remedy" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Decenas<br />
+<strong>Descripción:</strong> Causas excluidas del cálculo ANS  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_exclusion</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>descripcion</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo</code></td>
+<td>VARCHAR</td>
+<td>40</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>activo</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_ans_proveedores"><code>dim_ans_proveedores</code><a class="headerlink" href="#dim_ans_proveedores" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Decenas<br />
+<strong>Descripción:</strong> Tabla de ANS por proveedor y rangos de descuento  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td>dim_proveedores</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>disponibilidad_pactada_pct</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>% SLA pactado</td>
+</tr>
+<tr>
+<td><code>rango_min_pct</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>rango_max_pct</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pct_descuento</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Descuento a aplicar</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dim_motivos_fallas"><code>dim_motivos_fallas</code><a class="headerlink" href="#dim_motivos_fallas" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> DIM · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Decenas<br />
+<strong>Descripción:</strong> Motivos de falla que exoneran al proveedor  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>motivo</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Motivo que exonera al proveedor</td>
+</tr>
+<tr>
+<td><code>activo</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hu-8-prefacturacion">HU 8 - Prefacturación<a class="headerlink" href="#hu-8-prefacturacion" title="Permanent link">&para;</a></h3>
+<h4 id="fact_ingresos_davox"><code>fact_ingresos_davox</code><a class="headerlink" href="#fact_ingresos_davox" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> TRANSAC · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles/mes<br />
+<strong>Descripción:</strong> Ingresos del archivo FISC de Davox<br />
+<strong>Observaciones:</strong> ZIP 30MB / 700MB descomprimido  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ciclo</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Del archivo FISC</td>
+</tr>
+<tr>
+<td><code>nombre_ciclo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>negocio</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_cus</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_cuenta</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_identificacion</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>identificacion</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>razon_social</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_facturacion</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>porcentaje_iva</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_instalacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_unico_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>CUS '= DS de cruce</td>
+</tr>
+<tr>
+<td><code>tipo_moneda</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+</tr>
+<tr>
+<td><code>cargo_instalacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_fijo_mes</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ingreso mensual</td>
+</tr>
+<tr>
+<td><code>fecha_suspension</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_reconexion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_novedad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_inicio_contrato</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_fin_contrato</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>numero_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_informe_fisc</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Extraído del nombre del archivo ZIP</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fact_prefactura"><code>fact_prefactura</code><a class="headerlink" href="#fact_prefactura" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> TRANSAC · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles/mes<br />
+<strong>Descripción:</strong> Prefacturas generadas por servicio/mes<br />
+<strong>Observaciones:</strong> 37 campos calculados  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_oportunidad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>producto</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>direccion_instalacion</code></td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>departamento</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>municipio</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>permanencia</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha fin clausula</td>
+</tr>
+<tr>
+<td><code>fecha_inicio</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha Alta</td>
+</tr>
+<tr>
+<td><code>fecha_cierre</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Último día del mes facturado</td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>inicio_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fin_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dias_a_facturar</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_instalacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>obra_civil</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mantenimientos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde fact_mantenimientos</td>
+</tr>
+<tr>
+<td><code>moneda</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>trm</code></td>
+<td>DECIMAL</td>
+<td>(12,4)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde dim_trm</td>
+</tr>
+<tr>
+<td><code>mrc_cop</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pct_descuento_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>valor_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde conciliación</td>
+</tr>
+<tr>
+<td><code>total_prorrateos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>total_menos_descuento_indisp</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>=@Prorrateo+@Mantenimientos-@Indisp</td>
+</tr>
+<tr>
+<td><code>iva</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Calculado por indicador_iva</td>
+</tr>
+<tr>
+<td><code>mrc_cop_total</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>=@IVA+@Total-@Descuento</td>
+</tr>
+<tr>
+<td><code>novedad_cronos</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>novedad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Alta/Cancelación/Mantenimiento/Traslado</td>
+</tr>
+<tr>
+<td><code>observacion</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde conciliación</td>
+</tr>
+<tr>
+<td><code>estado_registro</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>Por validar</td>
+<td>Valido/Por validar/No Valido</td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_modificacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modificado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fact_validacion_pagos_ingresos"><code>fact_validacion_pagos_ingresos</code><a class="headerlink" href="#fact_validacion_pagos_ingresos" title="Permanent link">&para;</a></h4>
+<p><strong>Tipo:</strong> TRANSAC · <strong>Fase:</strong> MVP F1 · <strong>Volumen:</strong> Miles/mes<br />
+<strong>Descripción:</strong> Reconciliación pagos vs ingresos<br />
+<strong>Observaciones:</strong> Salida para SAP  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td>dim_configuracion_servicios</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_oportunidad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>departamento</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>municipio</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>pagos_proveedores</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Suma de fact_prefactura</td>
+</tr>
+<tr>
+<td><code>ingresos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde fact_ingresos_davox.cargo_fijo_mes</td>
+</tr>
+<tr>
+<td><code>pagos_menos_ingresos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>=@pagos-@ingresos</td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tablas-pendientes-de-definicion-de-campos">Tablas pendientes de definición de campos<a class="headerlink" href="#tablas-pendientes-de-definicion-de-campos" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Los campos de las siguientes tablas no están definidos en el CSV entregado. Deben confirmarse con QCS antes de implementar.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Tipo</th>
+<th>Módulo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_viabilidad_cotizacion</code></td>
+<td>TRANSAC</td>
+<td>HU 1 - Cotización</td>
+<td>Solicitudes de viabilidad recibidas</td>
+</tr>
+<tr>
+<td><code>fact_cotizacion_proveedor</code></td>
+<td>TRANSAC</td>
+<td>HU 1 - Cotización</td>
+<td>Respuestas de cotización de proveedores</td>
+</tr>
+<tr>
+<td><code>fact_instalaciones</code></td>
+<td>TRANSAC</td>
+<td>HU 2 - Instalaciones</td>
+<td>Servicios instalados con terceros</td>
+</tr>
+<tr>
+<td><code>fact_migraciones</code></td>
+<td>TRANSAC</td>
+<td>HU 3 - Migraciones</td>
+<td>Procesos de migración entre proveedores</td>
+</tr>
+<tr>
+<td><code>fact_ampliaciones</code></td>
+<td>TRANSAC</td>
+<td>HU 3 - Migraciones</td>
+<td>Ampliaciones de BW contratadas</td>
+</tr>
+<tr>
+<td><code>fact_bajas_migracion</code></td>
+<td>TRANSAC</td>
+<td>HU 4 - Bajas</td>
+<td>Bajas originadas por migración</td>
+</tr>
+<tr>
+<td><code>fact_bajas_cliente</code></td>
+<td>TRANSAC</td>
+<td>HU 4 - Bajas</td>
+<td>Bajas solicitadas por el cliente</td>
+</tr>
+<tr>
+<td><code>fact_suspension_cartera</code></td>
+<td>TRANSAC</td>
+<td>HU 4 - Bajas</td>
+<td>Suspensiones por deuda/cartera</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-modelo-de-relaciones-fk-y-joins">3. Modelo de Relaciones (FK y Joins)<a class="headerlink" href="#3-modelo-de-relaciones-fk-y-joins" title="Permanent link">&para;</a></h2>
+<h3 id="31-relaciones-por-tipo">3.1 Relaciones por tipo<a class="headerlink" href="#31-relaciones-por-tipo" title="Permanent link">&para;</a></h3>
+<h4 id="fk-calculada-1-relaciones">FK calculada (1 relaciones)<a class="headerlink" href="#fk-calculada-1-relaciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Resuelto automáticamente desde DS</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fk-cruce-negocio-1-relaciones">FK cruce negocio (1 relaciones)<a class="headerlink" href="#fk-cruce-negocio-1-relaciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>CUS de Davox = DS de inventario</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fk-obligatoria-13-relaciones">FK obligatoria (13 relaciones)<a class="headerlink" href="#fk-obligatoria-13-relaciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Un usuario puede tener múltiples perfiles</td>
+</tr>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Un perfil asignado a múltiples usuarios</td>
+</tr>
+<tr>
+<td><code>permisos</code></td>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Permisos definidos por perfil</td>
+</tr>
+<tr>
+<td><code>log_acceso</code></td>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Auditoría de accesos por usuario</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Proveedor con cobertura</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Ciudad con cobertura</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>Medio con cobertura</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_ticket</code></td>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id</code></td>
+<td>1:1</td>
+<td>Cada ticket genera 1 registro conciliado</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fk-obligatoria-trigger-1-relaciones">FK obligatoria + TRIGGER (1 relaciones)<a class="headerlink" href="#fk-obligatoria-trigger-1-relaciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>numero_contrato</code></td>
+<td><code>dim_contratos</code></td>
+<td><code>numero_contrato</code></td>
+<td>N:1</td>
+<td>Trigger: autocompleta condicion_pago y condicion_facturacion</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fk-referencial-12-relaciones">FK referencial (12 relaciones)<a class="headerlink" href="#fk-referencial-12-relaciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>Proveedor del servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_cliente</code></td>
+<td><code>dim_clientes</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>Cliente final asociado al servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>codigo_dane_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>codigo_dane</code></td>
+<td>N:1</td>
+<td>Ciudad del servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>nombre_medio</code></td>
+<td>N:1</td>
+<td>Medio de conectividad</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>clasificacion</code></td>
+<td><code>dim_clasificacion</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>Clasificación del servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>tipo_servicio</code></td>
+<td><code>dim_tipo_servicio</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>Fijo o Móvil</td>
+</tr>
+<tr>
+<td><code>fact_tarifa_promedio</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>Tarifas por proveedor</td>
+</tr>
+<tr>
+<td><code>dim_ans_proveedores</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>ANS definido por proveedor</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fk-validacion-1-relaciones">FK validación (1 relaciones)<a class="headerlink" href="#fk-validacion-1-relaciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>numero_ds</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>Filtra solo DS activos en rango de fechas</td>
+</tr>
+</tbody>
+</table>
+<h4 id="join-calculo-6-relaciones">JOIN cálculo (6 relaciones)<a class="headerlink" href="#join-calculo-6-relaciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>Consume prorrateos del mes</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>Suma mantenimientos del mes</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>Aplica descuentos de indisponibilidad</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>dim_trm</code></td>
+<td><code>(anio+mes)</code></td>
+<td>N:1</td>
+<td>Conversión USD→COP</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>—</code></td>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:N</td>
+<td>Suma pagos a proveedores por servicio</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>—</code></td>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td>N:1</td>
+<td>Compara cargo_fijo_mes vs pagos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-relaciones-entrantes-a-dim_configuracion_servicios">3.2 Relaciones entrantes a DIM_CONFIGURACION_SERVICIOS<a class="headerlink" href="#32-relaciones-entrantes-a-dim_configuracion_servicios" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Esta tabla recibe referencias de <strong>todas las tablas FACT</strong> del sistema. Es el nodo central del modelo relacional.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Tabla que referencia</th>
+<th>Campo FK</th>
+<th>Campo destino</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>numero_ds</code></td>
+<td><code>ds</code></td>
+<td>FK validación</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>id</code></td>
+<td>FK calculada</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>id</code></td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_servicio</code></td>
+<td><code>id_servicio</code></td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>id</code></td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>id_servicio</code></td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>id</code></td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td><code>ds</code></td>
+<td>FK cruce negocio</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_servicio</code></td>
+<td><code>id_servicio</code></td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>id</code></td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>id_servicio</code></td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>id</code></td>
+<td>FK obligatoria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-migraciones-flyway-sql-corregido-con-campos-reales">4. Migraciones Flyway — SQL corregido con campos reales<a class="headerlink" href="#4-migraciones-flyway-sql-corregido-con-campos-reales" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Los scripts a continuación usan los campos y tipos <strong>exactos</strong> del CSV entregado por QCS, adaptados a MySQL 8.</p>
+<p><code>BIGSERIAL</code> se reemplaza por <code>BIGINT AUTO_INCREMENT</code>. <code>BOOLEAN</code> por <code>TINYINT(1)</code>.</p>
+</blockquote>
+<h4 id="v9-hu-0304-proyecto_migraciones-fact_bajas_migracion-fact_bajas_cliente-fact_suspension_cartera">V9 — HU-03/04: proyecto_migraciones, fact_bajas_migracion, fact_bajas_cliente, fact_suspension_cartera<a class="headerlink" href="#v9-hu-0304-proyecto_migraciones-fact_bajas_migracion-fact_bajas_cliente-fact_suspension_cartera" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">-- TODO: campos de fact_bajas_migracion pendientes de definición</span>
+<span class="c1">-- TODO: campos de fact_bajas_cliente pendientes de definición</span>
+<span class="c1">-- TODO: campos de fact_suspension_cartera pendientes de definición</span>
+<span class="k">sql</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_tipo_servicio</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_clasificacion</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="n">VARCHAR60</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_trm</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">anio</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">valor_trm</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_registro</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_contratos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">numero_contrato</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">condicion_pago</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">condicion_facturacion</span><span class="w"> </span><span class="n">VARCHAR100</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_clientes</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nit</span><span class="w"> </span><span class="n">VARCHAR10</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">razon_social</span><span class="w"> </span><span class="n">VARCHAR250</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">contacto</span><span class="w"> </span><span class="n">VARCHAR150</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_ciudades</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">codigo_dane</span><span class="w"> </span><span class="n">VARCHAR10</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre_ciudad</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_medios</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre_medio</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_cobertura</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_proveedor</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_ciudad</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_medio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">activo</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_dim_cobertur_id_proveedor</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_proveedor</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_proveedores</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_dim_cobertur_id_ciudad</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_ciudad</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_ciudades</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_dim_cobertur_id_medio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_medio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_medios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_servicios</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;ACTIVO&#39;</span>
+<span class="p">);</span>
+
+<span class="k">sql</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_prorrateo_novedades</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">inicio_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fin_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">dias_a_facturar</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cargo_instalacion</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">obra_civil</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">moneda_mrc</span><span class="w"> </span><span class="n">VARCHAR3</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COP&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mrc</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">valor_tasa_cambio</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mrc_cop</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">total_cop</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">novedad</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_novedad</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_servicio</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_proceso</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prorrat_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prorrat_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_mantenimientos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_mantenimiento</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">monto</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">descripcion</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_manteni_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_manteni_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">sql</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_tickets_indisponibilidad</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">incident_id</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">vendor_ticket_number</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">numero_ds</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">incident_reported_datetime</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">incident_closed_datetime</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_company</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_city</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_site</span><span class="w"> </span><span class="n">VARCHAR255</span><span class="p">,</span>
+<span class="w">  </span><span class="n">classification_service_ci</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_enlace</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">resolution_category_tier1</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">resolution_category_tier2</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">resolution_category_tier3</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">assignee_assigned_group</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_solucion_incidencia</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;Sin dato&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">observaciones</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_reporte</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_tickets_numero_ds</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">numero_ds</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_tickets_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_indisponibilidad_mensual_conciliada</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_ticket</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_apertura</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_cierre</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cliente</span><span class="w"> </span><span class="n">VARCHAR250</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ciudad</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">causa_reparacion</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">motivo_fallo</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">indisp_minutos</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">pct_disponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">pct_descuento_indisponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">pct_disponibilidad_pactada</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">fallo_responsabilidad_diferente</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="n">pct_descuento_final</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">descuentos_indisponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_reporte</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">observaciones</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_indispo_id_ticket</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_ticket</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">fact_tickets_indisponibilidad</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_indispo_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_exclusiones_remedy</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">codigo_exclusion</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">descripcion</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo</span><span class="w"> </span><span class="n">VARCHAR40</span><span class="p">,</span>
+<span class="w">  </span><span class="n">activo</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_ans_proveedores</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nit_proveedor</span><span class="w"> </span><span class="n">VARCHAR15</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">disponibilidad_pactada_pct</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">rango_min_pct</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">rango_max_pct</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">pct_descuento</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_dim_ans_prov_nit_proveedor</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">nit_proveedor</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_proveedores</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_motivos_fallas</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">motivo</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">activo</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">);</span>
+
+<span class="k">sql</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_ingresos_davox</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ciclo</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre_ciclo</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">negocio</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado_cus</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado_cuenta</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_identificacion</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="p">,</span>
+<span class="w">  </span><span class="n">identificacion</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="p">,</span>
+<span class="w">  </span><span class="n">razon_social</span><span class="w"> </span><span class="n">VARCHAR250</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_facturacion</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">porcentaje_iva</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">fecha_instalacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">codigo_unico_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_moneda</span><span class="w"> </span><span class="n">VARCHAR3</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cargo_instalacion</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">cargo_fijo_mes</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">fecha_suspension</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_reconexion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_novedad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_inicio_contrato</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_fin_contrato</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">numero_contrato</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado_contrato</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_informe_fisc</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_prefactura</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_oportunidad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">producto</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">direccion_instalacion</span><span class="w"> </span><span class="n">VARCHAR255</span><span class="p">,</span>
+<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
+<span class="w">  </span><span class="n">municipio</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">permanencia</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_inicio</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_cierre</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">bw</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">inicio_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fin_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">dias_a_facturar</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cargo_instalacion</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">obra_civil</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mantenimientos</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">moneda</span><span class="w"> </span><span class="n">VARCHAR3</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COP&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mrc</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">trm</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mrc_cop</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">pct_descuento_indisponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">valor_indisponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">total_prorrateos</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">total_menos_descuento_indisp</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">iva</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mrc_cop_total</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">novedad_cronos</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
+<span class="w">  </span><span class="n">novedad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">observacion</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado_registro</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;Por validar&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_creacion</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fecha_modificacion</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">modificado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prefact_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prefact_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_validacion_pagos_ingresos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_oportunidad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
+<span class="w">  </span><span class="n">municipio</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">bw</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">pagos_proveedores</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">ingresos</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">pagos_menos_ingresos</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">fecha_creacion</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_validac_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_validac_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">java</span>
+<span class="o">@</span><span class="k">Column</span><span class="p">(</span><span class="n">columnDefinition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;TINYINT(1)&quot;</span><span class="p">)</span>
+<span class="n">private</span><span class="w"> </span><span class="nb">Boolean</span><span class="w"> </span><span class="n">activo</span><span class="p">;</span>
+<span class="n">java</span>
+<span class="o">@</span><span class="n">Id</span>
+<span class="o">@</span><span class="n">GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="k">IDENTITY</span><span class="p">)</span>
+<span class="n">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="k">sql</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">unica_db</span>
+<span class="w">  </span><span class="nb">CHARACTER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">utf8mb4</span>
+<span class="w">  </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8mb4_unicode_ci</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><em>Diccionario de Datos — PROCESOS ÚNICA v1.0 · Generado desde modelos QCS · Marzo 2026</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

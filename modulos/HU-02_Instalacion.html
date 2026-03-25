@@ -1,0 +1,1870 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="HU-01_Cotizacion.html">
+      
+      
+        <link rel="next" href="HU-03_Migraciones.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>HU-02 — Instalación Terceros - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hu-02-instalaciones-con-terceros" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HU-02 — Instalación Terceros
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HU-02_Instalacion.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de Versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-validar-vigencia-de-oferta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Validar Vigencia de Oferta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-oferta-esta-vigente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Oferta está VIGENTE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-oferta-esta-vencida-o-por-vencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Oferta está VENCIDA o POR VENCER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-seguimiento-de-instalaciones-de-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Seguimiento de Instalaciones de Terceros
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de Decisión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de Versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-validar-vigencia-de-oferta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Validar Vigencia de Oferta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-oferta-esta-vigente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Oferta está VIGENTE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-oferta-esta-vencida-o-por-vencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Oferta está VENCIDA o POR VENCER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-seguimiento-de-instalaciones-de-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Seguimiento de Instalaciones de Terceros
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de Decisión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="hu-02-instalaciones-con-terceros">HU-02: Instalaciones con Terceros<a class="headerlink" href="#hu-02-instalaciones-con-terceros" title="Permanent link">&para;</a></h1>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Épica</td>
+<td>PROCESOS ÚNICA</td>
+</tr>
+<tr>
+<td>Historia de Usuario</td>
+<td>2. Instalaciones con terceros</td>
+</tr>
+<tr>
+<td>Fecha de elaboración</td>
+<td>04/12/2025</td>
+</tr>
+<tr>
+<td>Versión</td>
+<td>3.0 (04/03/2026)</td>
+</tr>
+<tr>
+<td>Elaborado por</td>
+<td>Quality Customer Service (QCS)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="control-de-versiones">Control de Versiones<a class="headerlink" href="#control-de-versiones" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Autor</th>
+<th>Cambios realizados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>04/12/2025</td>
+<td>QCS</td>
+<td>Versión inicial</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>19/02/2026</td>
+<td>QCS</td>
+<td>Ajustes enfocados a validar automáticamente la vigencia de la oferta</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>04/03/2026</td>
+<td>QCS</td>
+<td>Eliminar integraciones con sistemas de Movistar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contexto-de-negocio">Contexto de Negocio<a class="headerlink" href="#contexto-de-negocio" title="Permanent link">&para;</a></h2>
+<p><strong>Persona:</strong> Área operativa UNICA</p>
+<p><strong>Impacto en negocio:</strong> Disminuir la manualidad en la gestión de las solicitudes de instalación de terceros.</p>
+<p><strong>Captura de valor:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Unidad de Medida</th>
+<th>Línea Base (Tiempo de procesamiento manual al año)</th>
+<th>Meta (Tiempo a Reducir)</th>
+<th>Tiempo de proceso final estimado (anual en días hábiles del equipo total)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Días</td>
+<td>451 días</td>
+<td>360 días (80%)</td>
+<td>90 días</td>
+</tr>
+</tbody>
+</table>
+<p>Se realizó una estimación de tiempos sobre la situación actual del proceso en los puntos críticos relacionados con la validación y comparación manual de archivos, y la gestión manual de acciones, obteniéndose los siguientes datos:</p>
+<ol>
+<li><strong>Validación y comparación manual:</strong> 6.491 actividades/año (validar indisponibilidades, coberturas, mantenimientos, prefacturas) → total de <strong>406 días hábiles</strong> de gestión del equipo, equivalente al <strong>48%</strong> de la capacidad total.</li>
+<li><strong>Gestión manual:</strong> 3.751 actividades (consolidar archivos de gestión proyectos, instalaciones de terceros, indisponibilidades, entre otros) → total de <strong>78 días hábiles</strong> de gestión del equipo, equivalente al <strong>32%</strong> de la capacidad total.</li>
+<li><strong>Falta de estandarización:</strong> 792 actividades (formatos de prefacturas, entre otros) → total de <strong>25 días hábiles</strong> de gestión del equipo, equivalente al <strong>10%</strong> de la capacidad total.</li>
+</ol>
+<h2 id="historia-de-usuario">Historia de Usuario<a class="headerlink" href="#historia-de-usuario" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Como</strong> Área operativa UNICA,
+<strong>Quiero</strong> que el sistema valide automáticamente la vigencia de la oferta, y una vez validada, cree automáticamente la Tarea de Instalación o la Tarea de Recotización según corresponda,
+<strong>Para</strong> gestionar de forma eficiente las solicitudes de instalación con terceros.</p>
+</blockquote>
+<hr />
+<h2 id="criterios-de-aceptacion">Criterios de Aceptación<a class="headerlink" href="#criterios-de-aceptacion" title="Permanent link">&para;</a></h2>
+<h3 id="1-validar-vigencia-de-oferta">1. Validar Vigencia de Oferta<a class="headerlink" href="#1-validar-vigencia-de-oferta" title="Permanent link">&para;</a></h3>
+<h4 id="11-disparador-y-pestana-de-consulta">1.1 Disparador y pestaña de consulta<a class="headerlink" href="#11-disparador-y-pestana-de-consulta" title="Permanent link">&para;</a></h4>
+<p>Se debe crear una pestaña denominada <strong>"Validar Vigencia de Oferta"</strong>. Cuando el usuario de UNICA ingrese los campos de consulta, el sistema debe validar automáticamente la vigencia de la oferta para la instalación del tercero.</p>
+<h4 id="12-campos-de-consulta-y-salida">1.2 Campos de consulta y salida<a class="headerlink" href="#12-campos-de-consulta-y-salida" title="Permanent link">&para;</a></h4>
+<p><strong>Campos de entrada (consulta):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Número de oportunidad</td>
+<td>Identificador de la oportunidad</td>
+</tr>
+<tr>
+<td>DS</td>
+<td>Identificador del servicio</td>
+</tr>
+<tr>
+<td>Fecha de validación</td>
+<td>Fecha en que se realiza la consulta</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Campos de salida:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fecha Vencimiento de Oferta</td>
+<td>Fecha hasta la cual es válida la oferta</td>
+</tr>
+<tr>
+<td>Resultado de la validación</td>
+<td>Estado resultante (ver tabla de estados)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="13-estados-de-vigencia">1.3 Estados de vigencia<a class="headerlink" href="#13-estados-de-vigencia" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Condición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VIGENTE</strong></td>
+<td>Fecha de vigencia es superior a 7 días calendario desde la fecha de consulta</td>
+</tr>
+<tr>
+<td><strong>VENCIDA</strong></td>
+<td>Fecha de vigencia es inferior a la fecha de consulta</td>
+</tr>
+<tr>
+<td><strong>POR VENCER</strong></td>
+<td>Fecha de vigencia está entre 1 y 7 días calendario desde la fecha de consulta</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2-oferta-esta-vigente">2. Oferta está VIGENTE<a class="headerlink" href="#2-oferta-esta-vigente" title="Permanent link">&para;</a></h3>
+<h4 id="21-creacion-automatica-de-la-informacion-para-la-instalacion-con-el-tercero">2.1 Creación automática de la Información para la Instalación con el Tercero<a class="headerlink" href="#21-creacion-automatica-de-la-informacion-para-la-instalacion-con-el-tercero" title="Permanent link">&para;</a></h4>
+<p>Cuando la oferta esté <strong>VIGENTE</strong>, la herramienta debe crear automáticamente la <strong>Información para la Instalación con el Tercero</strong>.</p>
+<p>El usuario de UNICA debe tener opción de cargar en el front de la herramienta el <strong>reporte de la Tarea Solicitud UNICA</strong> para completar los campos de la tabla.</p>
+<blockquote>
+<p><strong>Referencia visual:</strong> pantallas de Tarea Solicitud UNICA incluidas en el documento original (image1, image2).</p>
+</blockquote>
+<h4 id="22-campos-de-la-tabla-informacion-para-la-instalacion-con-el-tercero">2.2 Campos de la tabla "Información para la Instalación con el Tercero"<a class="headerlink" href="#22-campos-de-la-tabla-informacion-para-la-instalacion-con-el-tercero" title="Permanent link">&para;</a></h4>
+<p>La información se presenta en una tabla cuyos campos se completan con la información de la OT a UNICA de acuerdo con lo siguiente:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Fuente para completar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TAREA UNICA</strong></td>
+<td>Tarea Solicitud UNICA, campo Id Tarea</td>
+</tr>
+<tr>
+<td><strong>SOLICITUD OT</strong></td>
+<td>Tarea Solicitud UNICA, campo Orden de Trabajo #</td>
+</tr>
+<tr>
+<td><strong>FECHA ENVÍO AL TERCERO</strong></td>
+<td>Diligenciamiento manual con fecha de envío al proveedor</td>
+</tr>
+<tr>
+<td><strong>MEDIO</strong></td>
+<td>Tarea Solicitud UNICA, campo Medio</td>
+</tr>
+<tr>
+<td><strong>PERMANENCIA</strong></td>
+<td>Tarea Solicitud UNICA, campo Duración Contrato (meses)</td>
+</tr>
+<tr>
+<td><strong>COSTO INSTALACIÓN NRC</strong></td>
+<td>Viabilidad, campo Costo Instalación (NRC)</td>
+</tr>
+<tr>
+<td><strong>COSTO MENSUAL MRC</strong></td>
+<td>Viabilidad, campo Costo Mensual (MRC)</td>
+</tr>
+<tr>
+<td><strong>FECHA ESTIMADA DE ENTREGA DEL SERVICIO</strong></td>
+<td>Viabilidad, campo Fecha estimada entrega de servicio</td>
+</tr>
+<tr>
+<td><strong>ID ACTUAL</strong></td>
+<td>Tarea Solicitud UNICA, campo ID Canal Existente</td>
+</tr>
+<tr>
+<td><strong>DS</strong></td>
+<td>Tarea Solicitud UNICA, campo DS</td>
+</tr>
+<tr>
+<td><strong>BW ACTUAL</strong></td>
+<td>Tarea Solicitud UNICA, campo BW actual</td>
+</tr>
+<tr>
+<td><strong>BW NUEVO</strong></td>
+<td>Tarea Solicitud UNICA, campo BW actual</td>
+</tr>
+<tr>
+<td><strong>TIPO MODIFICACIÓN</strong></td>
+<td>Tarea Solicitud UNICA, campo Clase Requerimiento</td>
+</tr>
+<tr>
+<td><strong>CLIENTE</strong></td>
+<td>Tarea Solicitud UNICA, campo Cliente</td>
+</tr>
+<tr>
+<td><strong>DIRECCIÓN INSTALACIÓN ANTIGUA</strong></td>
+<td>Tarea Solicitud UNICA, campo Dirección Antigua</td>
+</tr>
+<tr>
+<td><strong>DIRECCIÓN INSTALACIÓN NUEVA</strong></td>
+<td>Tarea Solicitud UNICA, campo Dirección Nueva</td>
+</tr>
+<tr>
+<td><strong>MUNICIPIO</strong></td>
+<td>Tarea Solicitud UNICA, campo Municipio</td>
+</tr>
+<tr>
+<td><strong>DEPARTAMENTO</strong></td>
+<td>Tarea Solicitud UNICA, campo Departamento</td>
+</tr>
+<tr>
+<td><strong>CONTACTO IMPLANTADOR</strong></td>
+<td>Tabla paramétrica DIM_PROVEEDORES, campo Contacto Implantador</td>
+</tr>
+<tr>
+<td><strong>CEL IMPLANTADOR</strong></td>
+<td>Tabla paramétrica DIM_PROVEEDORES, campo Celular Implantador</td>
+</tr>
+<tr>
+<td><strong>CORREO IMPLANTADOR</strong></td>
+<td>Tarea Solicitud UNICA, campos Correo Implantador 1, 2, 3 y 4</td>
+</tr>
+<tr>
+<td><strong>PROVEEDOR</strong></td>
+<td>Tarea Solicitud UNICA, campo Proveedor</td>
+</tr>
+<tr>
+<td><strong>OT PROVEEDOR</strong></td>
+<td>Campo vacío — para diligenciar por el Proveedor</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Si no viene información o el campo está vacío, todos los campos anteriores deben poder diligenciarse <strong>manualmente</strong>.</p>
+<p>Se debe crear <strong>una tabla por cada Punto/servicio</strong>.</p>
+<p>Se debe poder <strong>copiar la tabla</strong> para que los usuarios de UNICA puedan pegarla en correos enviados al proveedor.</p>
+<p><strong>Referencia visual:</strong> imagen de tabla actual en documento original (image3).</p>
+</blockquote>
+<hr />
+<h3 id="3-oferta-esta-vencida-o-por-vencer">3. Oferta está VENCIDA o POR VENCER<a class="headerlink" href="#3-oferta-esta-vencida-o-por-vencer" title="Permanent link">&para;</a></h3>
+<h4 id="31-envio-de-solicitud-de-viabilidad">3.1 Envío de solicitud de viabilidad<a class="headerlink" href="#31-envio-de-solicitud-de-viabilidad" title="Permanent link">&para;</a></h4>
+<p>Cuando la vigencia de la oferta esté <strong>VENCIDA</strong> o <strong>POR VENCER</strong>, el usuario de UNICA enviará solicitud de viabilidad según lo descrito en la <strong>HU-01 Cotización</strong>.</p>
+<hr />
+<h3 id="4-seguimiento-de-instalaciones-de-terceros">4. Seguimiento de Instalaciones de Terceros<a class="headerlink" href="#4-seguimiento-de-instalaciones-de-terceros" title="Permanent link">&para;</a></h3>
+<h4 id="41-carga-de-reporte-de-fechas">4.1 Carga de reporte de fechas<a class="headerlink" href="#41-carga-de-reporte-de-fechas" title="Permanent link">&para;</a></h4>
+<p>La herramienta debe tener la opción de <strong>Seguimiento Instalaciones Terceros</strong>, de manera que cuando el usuario de UNICA seleccione esta opción pueda cargar en el front el <strong>reporte de fechas de la Tarea Solicitud UNICA</strong>, para actualizar los siguientes campos:</p>
+<ol>
+<li>Fecha de envío al Tercero</li>
+<li>Fecha de respuesta del Tercero</li>
+<li>Fecha de autorización al Tercero</li>
+<li>Fecha devolución OT del Tercero</li>
+</ol>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de pantalla de carga de fechas incluida en el documento original (image4).</p>
+</blockquote>
+<h4 id="42-generacion-de-pantalla-de-seguimiento">4.2 Generación de pantalla de seguimiento<a class="headerlink" href="#42-generacion-de-pantalla-de-seguimiento" title="Permanent link">&para;</a></h4>
+<p>La herramienta debe tener la opción de <strong>Generar Seguimiento Instalaciones Terceros</strong>. Al seleccionar esta opción, la herramienta genera una pantalla con los siguientes campos:</p>
+<table>
+<thead>
+<tr>
+<th>N°</th>
+<th>Campo</th>
+<th>Fuente para Completar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>DS</td>
+<td>Tabla Información para la Instalación con el Tercero, campo DS</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NUMERO TAREA</td>
+<td>Tabla Información para la Instalación con el Tercero, campo TAREA UNICA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SOLICITUD OT</td>
+<td>Tabla Información para la Instalación con el Tercero, campo SOLICITUD OT</td>
+</tr>
+<tr>
+<td>4</td>
+<td>TIPO MODIFICACIÓN</td>
+<td>Tabla Información para la Instalación con el Tercero, campo TIPO MODIFICACIÓN</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ID ACTUAL</td>
+<td>Tabla Información para la Instalación con el Tercero, campo ID ACTUAL</td>
+</tr>
+<tr>
+<td>6</td>
+<td>PROVEEDOR</td>
+<td>Tabla Información para la Instalación con el Tercero, campo PROVEEDOR</td>
+</tr>
+<tr>
+<td>7</td>
+<td>BW ACTUAL</td>
+<td>Tabla Información para la Instalación con el Tercero, campo BW ACTUAL</td>
+</tr>
+<tr>
+<td>8</td>
+<td>MRC ACTUAL</td>
+<td>Tabla Información para la Instalación con el Tercero, campo COSTO MENSUAL MRC</td>
+</tr>
+<tr>
+<td>9</td>
+<td>FECHA FIN CLÁUSULA PROVEEDOR</td>
+<td>Tabla DIM_CONFIGURACIÓN SERVICIOS, campo FECHA DE FIN DE CLÁUSULA</td>
+</tr>
+<tr>
+<td>10</td>
+<td>ESTADO DEL INVENTARIO</td>
+<td>Diligenciamiento manual</td>
+</tr>
+<tr>
+<td>11</td>
+<td>DIRECCIÓN</td>
+<td>Tabla Información para la Instalación con el Tercero, campo DIRECCIÓN INSTALACIÓN NUEVA</td>
+</tr>
+<tr>
+<td>12</td>
+<td>DEPARTAMENTO</td>
+<td>Tabla Información para la Instalación con el Tercero, campo DEPARTAMENTO</td>
+</tr>
+<tr>
+<td>13</td>
+<td>MUNICIPIO</td>
+<td>Tabla Información para la Instalación con el Tercero, campo MUNICIPIO</td>
+</tr>
+<tr>
+<td>14</td>
+<td>CLIENTE</td>
+<td>Tabla Información para la Instalación con el Tercero, campo CLIENTE</td>
+</tr>
+<tr>
+<td>15</td>
+<td>MEDIO</td>
+<td>Tabla Información para la Instalación con el Tercero, campo MEDIO</td>
+</tr>
+<tr>
+<td>16</td>
+<td>BW SOLICITADO</td>
+<td>Tabla Información para la Instalación con el Tercero, campo BW NUEVO</td>
+</tr>
+<tr>
+<td>17</td>
+<td>DURACIÓN CONTRATO (MESES)</td>
+<td>Tabla Información para la Instalación con el Tercero, campo PERMANENCIA</td>
+</tr>
+<tr>
+<td>18</td>
+<td>FECHA CREACIÓN TAREA ÚNICA</td>
+<td>Reporte de la Tarea Solicitud UNICA, campo FECHA CREACIÓN TAREA ÚNICA</td>
+</tr>
+<tr>
+<td>19</td>
+<td>FECHA DE ENVÍO AL TERCERO A COTIZAR</td>
+<td>Tabla Información para la Instalación con el Tercero, campo FECHA ENVÍO AL TERCERO</td>
+</tr>
+<tr>
+<td>20</td>
+<td>FECHA RESPUESTA DEL TERCERO</td>
+<td>Reporte fechas de la Tarea Solicitud UNICA, campo FECHA RESPUESTA DEL TERCERO</td>
+</tr>
+<tr>
+<td>21</td>
+<td>FECHA DE IMPLEMENTACIÓN AL TERCERO</td>
+<td>Reporte fechas de la Tarea Solicitud UNICA, campo FECHA DE AUTORIZACIÓN AL TERCERO</td>
+</tr>
+<tr>
+<td>22</td>
+<td>FECHA DEVOLUCIÓN OT PROVEEDOR DE IMPLEMENTACIÓN</td>
+<td>Reporte fechas de la Tarea Solicitud UNICA, campo FECHA DEVOLUCIÓN OT DEL TERCERO</td>
+</tr>
+<tr>
+<td>23</td>
+<td>FECHA CREACIÓN TAREA IMPLANTACIÓN</td>
+<td>Diligenciamiento manual, campo de calendario</td>
+</tr>
+<tr>
+<td>24</td>
+<td>ESTADO UNICA</td>
+<td>Diligenciamiento manual (opciones desplegables — ver imagen referencia image5)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>NRC DEFINITIVO ALTA</td>
+<td>Tabla Información para la Instalación con el Tercero, campo COSTO INSTALACIÓN NRC</td>
+</tr>
+<tr>
+<td>26</td>
+<td>MRC DEFINITIVO ALTA</td>
+<td>Tabla Información para la Instalación con el Tercero, campo COSTO MENSUAL MRC</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Fecha de Entrega</td>
+<td>Diligenciamiento manual, campo de calendario</td>
+</tr>
+</tbody>
+</table>
+<h4 id="43-reglas-de-descarga-y-actualizacion-de-inventario">4.3 Reglas de descarga y actualización de inventario<a class="headerlink" href="#43-reglas-de-descarga-y-actualizacion-de-inventario" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Si no viene información o el campo está vacío, todos los campos anteriores deben poder diligenciarse <strong>manualmente</strong>.</p>
+</li>
+<li>
+<p>Este seguimiento debe tener la opción de <strong>descargar el reporte en CSV / Excel</strong> para alimentar el tablero de Power BI del área de UNICA.</p>
+</li>
+<li>
+<p>El reporte se debe llamar: <strong><code>Base Seguimiento Instalaciones Terceros Proveedores UK</code></strong>.</p>
+</li>
+<li>
+<p>Para actualizar el inventario, el usuario de UNICA debe generar un reporte de las <strong>Tareas de Instalación</strong> en estado cerradas, según lo dispuesto en la <strong>HU-06 Novedades</strong>.</p>
+</li>
+</ul>
+<hr />
+<h2 id="flujo-de-decision">Flujo de Decisión<a class="headerlink" href="#flujo-de-decision" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="notas-tecnicas">Notas Técnicas<a class="headerlink" href="#notas-tecnicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>La versión 3.0 elimina las integraciones con sistemas externos de Movistar presentes en versiones anteriores.</p>
+</li>
+<li>
+<p>La validación de vigencia se dispara al momento en que el usuario de UNICA ingresa los campos de consulta manualmente desde la pestaña <strong>"Validar Vigencia de Oferta"</strong> (ya no es automática al crear OT en Cronos Connection como en v2.0).</p>
+</li>
+<li>
+<p>La tabla <strong>DIM_PROVEEDORES</strong> es la fuente de datos para los campos de Contacto Implantador y Celular Implantador.</p>
+</li>
+<li>
+<p>La tabla <strong>DIM_CONFIGURACIÓN SERVICIOS</strong> es fuente para el campo FECHA FIN CLÁUSULA PROVEEDOR en el seguimiento.</p>
+</li>
+<li>
+<p>El umbral de vigencia es de <strong>7 días calendario</strong> para diferenciar VIGENTE de POR VENCER.</p>
+</li>
+<li>
+<p>El nombre del reporte de descarga es fijo: <strong><code>Base Seguimiento Instalaciones Terceros Proveedores UK</code></strong>.</p>
+</li>
+<li>
+<p>La actualización de inventario se gestiona desde <strong>HU-06 Novedades</strong>, no desde esta HU.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

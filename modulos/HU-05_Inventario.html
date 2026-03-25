@@ -1,0 +1,1957 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="HU-04_Bajas.html">
+      
+      
+        <link rel="next" href="HU-06_Novedades.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>HU-05 — Inventario - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hu-05-inventario-de-servicios-terceros" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HU-05 — Inventario
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HU-05_Inventario.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pestana-de-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pestaña de Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tabla-dim_proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tabla DIM_PROVEEDORES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tabla-dim_tipo_servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Tabla DIM_TIPO_SERVICIO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tabla-dim_clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla DIM_CLASIFICACION
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tabla-dim_trm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tabla DIM_TRM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-tabla-dim_contratos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tabla DIM_CONTRATOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-tabla-dim_clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tabla DIM_CLIENTES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-tabla-dim_ciudades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Tabla DIM_CIUDADES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-tabla-dim_medios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Tabla DIM_MEDIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-tabla-dim_cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Tabla DIM_COBERTURA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-tabla-fact_tarifa_promedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Tabla FACT_TARIFA_PROMEDIO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-tabla-dim_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Tabla DIM_SERVICIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-tabla-dim_configuracion_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Tabla DIM_CONFIGURACION_SERVICIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-de-implementacion-2026-03-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado de Implementación (2026-03-19)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estado de Implementación (2026-03-19)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pestana-de-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pestaña de Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tabla-dim_proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tabla DIM_PROVEEDORES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tabla-dim_tipo_servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Tabla DIM_TIPO_SERVICIO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tabla-dim_clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla DIM_CLASIFICACION
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tabla-dim_trm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tabla DIM_TRM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-tabla-dim_contratos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tabla DIM_CONTRATOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-tabla-dim_clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tabla DIM_CLIENTES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-tabla-dim_ciudades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Tabla DIM_CIUDADES
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-tabla-dim_medios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Tabla DIM_MEDIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-tabla-dim_cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Tabla DIM_COBERTURA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-tabla-fact_tarifa_promedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Tabla FACT_TARIFA_PROMEDIO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-tabla-dim_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Tabla DIM_SERVICIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-tabla-dim_configuracion_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Tabla DIM_CONFIGURACION_SERVICIOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-de-implementacion-2026-03-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado de Implementación (2026-03-19)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estado de Implementación (2026-03-19)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="hu-05-inventario-de-servicios-terceros">HU-05: Inventario de Servicios Terceros<a class="headerlink" href="#hu-05-inventario-de-servicios-terceros" title="Permanent link">&para;</a></h1>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Épica</td>
+<td>PROCESOS ÚNICA</td>
+</tr>
+<tr>
+<td>Historia de Usuario</td>
+<td>5. Inventario</td>
+</tr>
+<tr>
+<td>Fecha de elaboración</td>
+<td>26/02/2026</td>
+</tr>
+<tr>
+<td>Versión</td>
+<td>2.0 (04/03/2026)</td>
+</tr>
+<tr>
+<td>Elaborado por</td>
+<td>Quality Customer Service (QCS)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contexto-de-negocio">Contexto de Negocio<a class="headerlink" href="#contexto-de-negocio" title="Permanent link">&para;</a></h2>
+<p><strong>Persona:</strong> Área operativa UNICA</p>
+<p><strong>Impacto en negocio:</strong> Disminuir la manualidad en la gestión del inventario.</p>
+<p><strong>Captura de valor:</strong></p>
+<ul>
+<li>
+<p>Línea base: 451 días de procesamiento manual al año</p>
+</li>
+<li>
+<p>Meta: reducir 360 días (80%)</p>
+</li>
+<li>
+<p>Tiempo estimado final: 90 días hábiles al año</p>
+</li>
+</ul>
+<h2 id="historia-de-usuario">Historia de Usuario<a class="headerlink" href="#historia-de-usuario" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Como</strong> Área operativa UNICA,
+<strong>Quiero</strong> contar con un repositorio centralizado que consolide la información de los servicios prestados por terceros, incluyendo su configuración y modificaciones,
+<strong>Para</strong> garantizar la trazabilidad de la información, reducir tiempos operativos, eliminar duplicidades, asegurar la consistencia de los datos y disponer de información clave en tiempo real para la toma de decisiones estratégicas.</p>
+</blockquote>
+<hr />
+<h2 id="criterios-de-aceptacion">Criterios de Aceptación<a class="headerlink" href="#criterios-de-aceptacion" title="Permanent link">&para;</a></h2>
+<h3 id="1-pestana-de-inventario">1. Pestaña de Inventario<a class="headerlink" href="#1-pestana-de-inventario" title="Permanent link">&para;</a></h3>
+<p>Se crea la pestaña <strong>INVENTARIO</strong> en la navegación principal de la solución para usuarios UNICA.</p>
+<p>El usuario ve un menú lateral con todas las tablas disponibles:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tabla</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>DIM_PROVEEDORES</td>
+<td>Datos de proveedores de UK</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DIM_TIPO_SERVICIO</td>
+<td>Indica si es fijo o móvil</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DIM_CLASIFICACION</td>
+<td>Aeropuerto, datacenter, satelital, starlink, tradicional, otros</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DIM_TRM</td>
+<td>Valores de TRM para conversión a COP</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DIM_CONTRATOS</td>
+<td>Contratos por proveedor, condición de pago y facturación</td>
+</tr>
+<tr>
+<td>6</td>
+<td>DIM_CLIENTES</td>
+<td>Datos de clientes finales</td>
+</tr>
+<tr>
+<td>7</td>
+<td>DIM_CIUDADES</td>
+<td>Lista de ciudades con servicios de terceros</td>
+</tr>
+<tr>
+<td>8</td>
+<td>DIM_MEDIOS</td>
+<td>Catálogo de medios de conectividad</td>
+</tr>
+<tr>
+<td>9</td>
+<td>DIM_COBERTURA</td>
+<td>Cobertura por proveedor, ciudad y medio</td>
+</tr>
+<tr>
+<td>10</td>
+<td>FACT_TARIFA_PROMEDIO</td>
+<td>Tarifas promedio por proveedor, BW y región</td>
+</tr>
+<tr>
+<td>11</td>
+<td>DIM_SERVICIOS</td>
+<td>Códigos únicos de servicios por proveedor</td>
+</tr>
+<tr>
+<td>12</td>
+<td>DIM_CONFIGURACION_SERVICIOS</td>
+<td>Datos de configuraciones (Ciudad, BW, Medio, Proveedor, etc.)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="comportamiento-de-la-visualizacion">Comportamiento de la visualización:<a class="headerlink" href="#comportamiento-de-la-visualizacion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Al seleccionar cada tabla, se muestra su contenido en <strong>formato tabular</strong>.</p>
+</li>
+<li>
+<p>Debe haber scroll horizontal si hay muchas columnas.</p>
+</li>
+<li>
+<p>Indicador visual de carga mientras se traen los datos.</p>
+</li>
+</ul>
+<h4 id="edicion-de-tablas-parametricas">Edición de tablas paramétricas:<a class="headerlink" href="#edicion-de-tablas-parametricas" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Los usuarios pueden editar las tablas.</p>
+</li>
+<li>
+<p>Cada cambio <strong>requiere aprobación del líder de área</strong>.</p>
+</li>
+<li>
+<p>Validación de tipos de dato por campo.</p>
+</li>
+<li>
+<p>Mensaje de confirmación antes de guardar cambios críticos.</p>
+</li>
+</ul>
+<hr />
+<h3 id="2-tabla-dim_proveedores">2. Tabla DIM_PROVEEDORES<a class="headerlink" href="#2-tabla-dim_proveedores" title="Permanent link">&para;</a></h3>
+<p>Propósito: consolidar los datos de los proveedores de UK.
+Estructura: ver imagen en docx original. Los usuarios UNICA pueden modificar los datos.</p>
+<hr />
+<h3 id="3-tabla-dim_tipo_servicio">3. Tabla DIM_TIPO_SERVICIO<a class="headerlink" href="#3-tabla-dim_tipo_servicio" title="Permanent link">&para;</a></h3>
+<p>Propósito: consolidar los tipos de servicios (fijo / móvil).
+Los usuarios UNICA pueden modificar los datos.</p>
+<hr />
+<h3 id="4-tabla-dim_clasificacion">4. Tabla DIM_CLASIFICACION<a class="headerlink" href="#4-tabla-dim_clasificacion" title="Permanent link">&para;</a></h3>
+<p>Propósito: consolidar la clasificación de servicios.
+Valores: aeropuerto, datacenter, satelital, starlink, tradicional, otros.</p>
+<hr />
+<h3 id="5-tabla-dim_trm">5. Tabla DIM_TRM<a class="headerlink" href="#5-tabla-dim_trm" title="Permanent link">&para;</a></h3>
+<p>Propósito: consolidar los valores de TRM usados para conversión a COP.</p>
+<h4 id="reglas">Reglas:<a class="headerlink" href="#reglas" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Botón para registrar nuevos valores de TRM correspondientes al <strong>primer día de cada mes</strong>.</p>
+</li>
+<li>
+<p>Validación: solo un valor de TRM por mes.</p>
+</li>
+</ul>
+<hr />
+<h3 id="6-tabla-dim_contratos">6. Tabla DIM_CONTRATOS<a class="headerlink" href="#6-tabla-dim_contratos" title="Permanent link">&para;</a></h3>
+<p>Propósito: consolidar condiciones de pago y facturación por contrato.</p>
+<h4 id="regla-adicional">Regla adicional:<a class="headerlink" href="#regla-adicional" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cuando se modifiquen condiciones de pago o facturación, el sistema actualiza automáticamente <code>DIM_CONFIGURACION_SERVICIOS</code>.</li>
+</ul>
+<hr />
+<h3 id="7-tabla-dim_clientes">7. Tabla DIM_CLIENTES<a class="headerlink" href="#7-tabla-dim_clientes" title="Permanent link">&para;</a></h3>
+<p>Propósito: consolidar datos de clientes finales. Editable por usuarios UNICA.</p>
+<hr />
+<h3 id="8-tabla-dim_ciudades">8. Tabla DIM_CIUDADES<a class="headerlink" href="#8-tabla-dim_ciudades" title="Permanent link">&para;</a></h3>
+<p>Propósito: consolidar la lista de ciudades con servicios de terceros.</p>
+<h4 id="reglas-de-asignacion-del-campo-codigo-dane-ciudad">Reglas de asignación del campo <code>Código DANE Ciudad</code>:<a class="headerlink" href="#reglas-de-asignacion-del-campo-codigo-dane-ciudad" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Ciudades/municipios en Colombia:</strong> código oficial DANE correspondiente.</p>
+</li>
+<li>
+<p><strong>Ciudades fuera de Colombia:</strong> código del país (ISO o equivalente, según definición de cliente).</p>
+</li>
+</ul>
+<hr />
+<h3 id="9-tabla-dim_medios">9. Tabla DIM_MEDIOS<a class="headerlink" href="#9-tabla-dim_medios" title="Permanent link">&para;</a></h3>
+<p>Propósito: catálogo de medios de conectividad disponibles. Editable por usuarios UNICA.</p>
+<hr />
+<h3 id="10-tabla-dim_cobertura">10. Tabla DIM_COBERTURA<a class="headerlink" href="#10-tabla-dim_cobertura" title="Permanent link">&para;</a></h3>
+<p>Propósito: cobertura por proveedor, ciudad y medio.
+Usada por el módulo de Cotización para validar viabilidad geográfica.</p>
+<hr />
+<h3 id="11-tabla-fact_tarifa_promedio">11. Tabla FACT_TARIFA_PROMEDIO<a class="headerlink" href="#11-tabla-fact_tarifa_promedio" title="Permanent link">&para;</a></h3>
+<p>Propósito: tarifas promedio por proveedor, BW y región.
+Usada por el módulo de Cotización para orientar la recomendación económica.</p>
+<hr />
+<h3 id="12-tabla-dim_servicios">12. Tabla DIM_SERVICIOS<a class="headerlink" href="#12-tabla-dim_servicios" title="Permanent link">&para;</a></h3>
+<p>Propósito: códigos únicos de servicios de los proveedores, independiente de su configuración.</p>
+<hr />
+<h3 id="13-tabla-dim_configuracion_servicios">13. Tabla DIM_CONFIGURACION_SERVICIOS<a class="headerlink" href="#13-tabla-dim_configuracion_servicios" title="Permanent link">&para;</a></h3>
+<p>Propósito: datos de configuración de los servicios activos (Ciudad, BW, Medio, Proveedor, Estado, etc.).</p>
+<p>Esta tabla es el <strong>inventario central</strong> del sistema. Es actualizada automáticamente por los procesos de:</p>
+<ul>
+<li>
+<p>Migraciones y Ampliaciones (HU-03)</p>
+</li>
+<li>
+<p>Bajas y Cartera (HU-04)</p>
+</li>
+<li>
+<p>Indisponibilidades (HU-07)</p>
+</li>
+<li>
+<p>Prefacturación (HU-08)</p>
+</li>
+</ul>
+<hr />
+<h2 id="notas-tecnicas">Notas Técnicas<a class="headerlink" href="#notas-tecnicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>La tabla <code>DIM_CONFIGURACION_SERVICIOS</code> es la fuente de verdad para todos los módulos transversales.</p>
+</li>
+<li>
+<p>Los cambios en tablas paramétricas requieren <strong>flujo de aprobación</strong> del líder de área.</p>
+</li>
+<li>
+<p>El campo <code>Código DANE Ciudad</code> se usa como llave de cruce en los procesos de cobertura y cotización.</p>
+</li>
+<li>
+<p>Las estructuras detalladas de cada tabla (columnas, tipos) están en las imágenes del documento original — se deben confirmar con el cliente antes de implementar.</p>
+</li>
+<li>
+<p>Un único valor de TRM por mes es una restricción de integridad de datos.</p>
+</li>
+</ul>
+<hr />
+<h2 id="estado-de-implementacion-2026-03-19">Estado de Implementación (2026-03-19)<a class="headerlink" href="#estado-de-implementacion-2026-03-19" title="Permanent link">&para;</a></h2>
+<h3 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Se implementó CRUD para las tablas HU-05 faltantes:</p>
+<ul>
+<li><code>DIM_TIPO_SERVICIO</code></li>
+<li><code>DIM_CLASIFICACION</code></li>
+<li><code>DIM_CLIENTES</code></li>
+<li><code>DIM_CONTRATOS</code></li>
+<li><code>DIM_SERVICIOS</code></li>
+</ul>
+</li>
+<li>
+<p>Se aplicó control de seguridad por rol (<code>Gerente</code> o <code>Líder Profesional Unidad de Carriers</code>) para operaciones de escritura en tablas paramétricas y de inventario HU-05.</p>
+</li>
+<li>
+<p>Se agregó auditoría de acciones CRUD en inventario usando <code>LogAccesoService</code> (acciones de creación, actualización y eliminación).</p>
+</li>
+<li>
+<p>Se implementó propagación automática de cambios de condiciones de contrato a <code>DIM_CONFIGURACION_SERVICIOS</code>.</p>
+</li>
+<li>
+<p>Se agregaron validaciones de negocio adicionales:</p>
+<ul>
+<li>Cliente: NIT de 10 dígitos, no inicia en 0, nombre obligatorio.</li>
+<li>Contrato: número/condiciones obligatorias y validación de rango de fechas.</li>
+<li>Servicio: código y NIT obligatorios, validación de referencias.</li>
+<li>Normalización de datos (trim/mayúsculas) en campos de código y nombres clave.</li>
+</ul>
+</li>
+</ul>
+<h3 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Se integró CRUD visual en la pantalla de Configuración para las 5 tablas nuevas de HU-05.</p>
+</li>
+<li>
+<p>Se alinearon endpoints frontend/backend para configuración de servicios.</p>
+</li>
+<li>
+<p>Se implementaron filtros avanzados por pestaña (texto + estado) para operación diaria:</p>
+<ul>
+<li>búsqueda por NIT/código/nombre según la tabla</li>
+<li>filtro por estado (<code>TODOS</code>, <code>ACTIVO</code>, <code>INACTIVO</code>)</li>
+<li>contador de resultados filtrados</li>
+<li>acción de limpiar filtros</li>
+</ul>
+</li>
+<li>
+<p>Se agregó feedback visual de éxito/error para operaciones CRUD en pestañas HU-05.</p>
+</li>
+</ul>
+<h3 id="pruebas">Pruebas<a class="headerlink" href="#pruebas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Se agregaron pruebas de seguridad para controladores HU-05:</p>
+<ul>
+<li><code>DimClienteControllerSecurityTest</code></li>
+<li><code>DimContratoControllerSecurityTest</code></li>
+<li><code>DimServicioControllerSecurityTest</code></li>
+</ul>
+</li>
+<li>
+<p>Cobertura principal validada:</p>
+<ul>
+<li>sin autenticación =&gt; <code>401</code></li>
+<li>con rol no autorizado =&gt; <code>403</code></li>
+<li>con rol autorizado =&gt; <code>201</code> en creación</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

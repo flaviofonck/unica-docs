@@ -1,0 +1,2423 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="Plan_Scrum.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Auditoría de Implementación - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#procesos-unica-auditoria-de-implementacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Auditoría de Implementación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Auditoria.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-00-acceso-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-00 — Acceso y Seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-00 — Acceso y Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-00" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-00
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificaciones-a-hacer-en-el-codigo-ahora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificaciones a hacer en el código ahora
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-01-cotizacion-a-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-01 — Cotización a Proveedores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-01 — Cotización a Proveedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-01
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-02-instalaciones-con-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-02 — Instalaciones con Terceros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-02 — Instalaciones con Terceros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-05-inventario-de-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-05 — Inventario de Servicios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-05 — Inventario de Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-05
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-de-accion-que-hacer-antes-de-empezar-hu-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan de Acción — Qué hacer antes de empezar HU-03
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de Acción — Qué hacer antes de empezar HU-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-1-confirmar-con-qcs-no-es-codigo-es-informacion-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad 1 — Confirmar con QCS (no es código, es información faltante)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-2-verificaciones-en-el-codigo-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad 2 — Verificaciones en el código existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-3-completar-antes-de-hu-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad 3 — Completar antes de HU-03
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-visual-del-estado-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Visual del Estado Real
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-00-acceso-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-00 — Acceso y Seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-00 — Acceso y Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-00" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-00
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificaciones-a-hacer-en-el-codigo-ahora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificaciones a hacer en el código ahora
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-01-cotizacion-a-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-01 — Cotización a Proveedores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-01 — Cotización a Proveedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-01
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-02-instalaciones-con-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-02 — Instalaciones con Terceros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-02 — Instalaciones con Terceros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-05-inventario-de-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-05 — Inventario de Servicios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-05 — Inventario de Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lo-que-el-codigo-scan-reporta-como-implementado_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el código scan reporta como implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditoria-criterio-por-criterio_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auditoría criterio por criterio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brechas-criticas-hu-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brechas críticas HU-05
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-de-accion-que-hacer-antes-de-empezar-hu-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan de Acción — Qué hacer antes de empezar HU-03
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de Acción — Qué hacer antes de empezar HU-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-1-confirmar-con-qcs-no-es-codigo-es-informacion-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad 1 — Confirmar con QCS (no es código, es información faltante)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-2-verificaciones-en-el-codigo-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad 2 — Verificaciones en el código existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridad-3-completar-antes-de-hu-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad 3 — Completar antes de HU-03
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-visual-del-estado-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Visual del Estado Real
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="procesos-unica-auditoria-de-implementacion">PROCESOS ÚNICA — Auditoría de Implementación<a class="headerlink" href="#procesos-unica-auditoria-de-implementacion" title="Permanent link">&para;</a></h1>
+<p><strong>Fecha:</strong> Marzo 2026 · <strong>Estado del proyecto:</strong> 4 de 9 HUs implementadas<br />
+<strong>Propósito:</strong> Verificar que lo implementado cumple 100% los criterios de aceptación de cada HU</p>
+<hr />
+<h2 id="resumen-ejecutivo">Resumen Ejecutivo<a class="headerlink" href="#resumen-ejecutivo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>HU</th>
+<th>Módulo</th>
+<th>Implementado (code scan)</th>
+<th>Cumplimiento estimado</th>
+<th>Brechas críticas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-00</td>
+<td>Acceso / Seguridad</td>
+<td>Auth JWT, CRUD usuarios/perfiles, log acceso, V6</td>
+<td>~70%</td>
+<td>Permisos por pestaña, restricción Gerente/Líder, log por módulo</td>
+</tr>
+<tr>
+<td>HU-01</td>
+<td>Cotización</td>
+<td>Entidades, servicio, controlador, V7, componente</td>
+<td>~40%</td>
+<td>Sección 5 incompleta, integración Cronos, campo XXXX, selección óptima</td>
+</tr>
+<tr>
+<td>HU-02</td>
+<td>Instalaciones Terceros</td>
+<td>Entidades, controlador, V8, componente</td>
+<td>~35%</td>
+<td>Integración Cronos Connection/Feasibility, correo proveedor, cierre OT</td>
+</tr>
+<tr>
+<td>HU-05</td>
+<td>Inventario de Servicios</td>
+<td>6 entidades DIM, controladores, V2/V5, lista</td>
+<td>~50%</td>
+<td>6 tablas DIM faltantes, flujo aprobación líder, DIM_TRM restricción</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Ninguna HU está al 100%.</strong> Antes de avanzar a HU-03 se deben cerrar las brechas críticas de HU-00 y HU-05 porque todas las HUs siguientes dependen de ellas.</p>
+</blockquote>
+<hr />
+<h2 id="hu-00-acceso-y-seguridad">HU-00 — Acceso y Seguridad<a class="headerlink" href="#hu-00-acceso-y-seguridad" title="Permanent link">&para;</a></h2>
+<h3 id="lo-que-el-codigo-scan-reporta-como-implementado">Lo que el código scan reporta como implementado<a class="headerlink" href="#lo-que-el-codigo-scan-reporta-como-implementado" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Auth JWT (login, presumably refresh/logout)</p>
+</li>
+<li>
+<p>CRUD de usuarios y perfiles</p>
+</li>
+<li>
+<p>Log de acceso</p>
+</li>
+<li>
+<p>Migración V6</p>
+</li>
+</ul>
+<h3 id="auditoria-criterio-por-criterio">Auditoría criterio por criterio<a class="headerlink" href="#auditoria-criterio-por-criterio" title="Permanent link">&para;</a></h3>
+<h4 id="criterio-1-gestion-de-usuarios">Criterio 1 — Gestión de Usuarios<a class="headerlink" href="#criterio-1-gestion-de-usuarios" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento HU-00</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1a. Crear usuario</td>
+<td>Nombre, correo, rol, cargo, estado + <strong>log con fecha/hora</strong></td>
+<td>⚠️ Parcial</td>
+<td>CRUD existe pero ¿el log registra creación específicamente?</td>
+</tr>
+<tr>
+<td>1b. Modificar usuario</td>
+<td>Correo, rol, cargo, estado editables + <strong>log con fecha/hora</strong></td>
+<td>⚠️ Parcial</td>
+<td>Verificar que la modificación también genera log</td>
+</tr>
+<tr>
+<td>1c. Inactivar/Eliminar</td>
+<td>Inactivación + eliminación + <strong>log con fecha/hora</strong></td>
+<td>⚠️ Parcial</td>
+<td>Verificar diferencia entre inactivar vs eliminar</td>
+</tr>
+<tr>
+<td>Restricción de quién administra</td>
+<td>Solo <strong>Gerente / Líder Profesional</strong> puede crear/modificar/eliminar usuarios</td>
+<td>❌ Sin confirmar</td>
+<td>¿Hay validación del perfil del usuario que ejecuta la acción?</td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-2-acceso-a-secciones">Criterio 2 — Acceso a Secciones<a class="headerlink" href="#criterio-2-acceso-a-secciones" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento HU-00</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2a. 3 secciones definidas</td>
+<td>Gestión de Servicios · Inventario de Servicios · Novedades y Prefactura</td>
+<td>❌ Sin confirmar</td>
+<td>¿Las rutas Angular están agrupadas en estas 3 secciones?</td>
+</tr>
+<tr>
+<td>2b. Usuario ve solo pestañas de su perfil</td>
+<td>Control de visibilidad por perfil en el frontend</td>
+<td>❌ Sin confirmar</td>
+<td>¿El menú se filtra según el perfil del usuario logueado?</td>
+</tr>
+<tr>
+<td>2b. Log de ingreso al módulo</td>
+<td>Registrar usuario + fecha + hora al acceder a cada sección</td>
+<td>❌ Sin confirmar</td>
+<td>El log_acceso existe pero ¿se escribe al navegar por módulos?</td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-3-perfiles-y-permisos">Criterio 3 — Perfiles y Permisos<a class="headerlink" href="#criterio-3-perfiles-y-permisos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento HU-00</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3a. 6 perfiles exactos</td>
+<td>Líder Profesional, Analista Conciliación, Analista Carriers, Ingeniero Especialista, Practicante, Gerente</td>
+<td>❌ Sin confirmar</td>
+<td>¿Están estos 6 perfiles sembrados/hardcoded en BD?</td>
+</tr>
+<tr>
+<td>3b. 8 pestañas mapeadas</td>
+<td>Las 8 pestañas de las 3 secciones deben estar definidas en el modelo de permisos</td>
+<td>❌ Sin confirmar</td>
+<td>¿La tabla <code>permisos</code> tiene registros para cada pestaña?</td>
+</tr>
+<tr>
+<td>3c. 3 niveles de permiso</td>
+<td><strong>Visualización / Ejecución / Administración</strong> por sección/pestaña</td>
+<td>❌ Sin confirmar</td>
+<td>¿La tabla permisos tiene los 3 campos puede_ver, puede_ejecutar, puede_administrar?</td>
+</tr>
+<tr>
+<td>3c. Solo Gerente/Líder asigna perfiles</td>
+<td>Restricción de rol para operación de asignación</td>
+<td>❌ Sin confirmar</td>
+<td>Diferente a la restricción de usuarios — aplica a la operación de <code>usuario_perfil</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="brechas-criticas-hu-00">Brechas críticas HU-00<a class="headerlink" href="#brechas-criticas-hu-00" title="Permanent link">&para;</a></h3>
+<h3 id="verificaciones-a-hacer-en-el-codigo-ahora">Verificaciones a hacer en el código ahora<a class="headerlink" href="#verificaciones-a-hacer-en-el-codigo-ahora" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="hu-01-cotizacion-a-proveedores">HU-01 — Cotización a Proveedores<a class="headerlink" href="#hu-01-cotizacion-a-proveedores" title="Permanent link">&para;</a></h2>
+<h3 id="lo-que-el-codigo-scan-reporta-como-implementado_1">Lo que el código scan reporta como implementado<a class="headerlink" href="#lo-que-el-codigo-scan-reporta-como-implementado_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Entidades</p>
+</li>
+<li>
+<p>Servicio</p>
+</li>
+<li>
+<p>Controlador</p>
+</li>
+<li>
+<p>Migración V7</p>
+</li>
+<li>
+<p>Componente Angular <code>cotizacion/</code></p>
+</li>
+</ul>
+<h3 id="auditoria-criterio-por-criterio_1">Auditoría criterio por criterio<a class="headerlink" href="#auditoria-criterio-por-criterio_1" title="Permanent link">&para;</a></h3>
+<h4 id="criterio-1-recepcion-de-proyecto">Criterio 1 — Recepción de Proyecto<a class="headerlink" href="#criterio-1-recepcion-de-proyecto" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1 Bandeja Cronos Feasibility</td>
+<td>Integración con sistema externo Cronos</td>
+<td>❌ Sin confirmar</td>
+<td>¿Hay cliente HTTP hacia Cronos Feasibility? Esta es una integración real con sistema externo</td>
+</tr>
+<tr>
+<td>1.2 Nuevo perfil en Cronos</td>
+<td>Crear perfil en sistema externo</td>
+<td>❌ Fuera del alcance de código</td>
+<td>Depende de QCS / Cronos — no es código del sistema</td>
+</tr>
+<tr>
+<td>1.3 Punto Sencillo vs Proyecto</td>
+<td>Validación automática con campo XXXX</td>
+<td>❌ Campo sin definir</td>
+<td>QCS no ha confirmado cuál es el campo. <strong>Pendiente con QCS</strong></td>
+</tr>
+<tr>
+<td>1.4 19 campos obligatorios</td>
+<td>Validación de cada campo según regla</td>
+<td>⚠️ Parcial</td>
+<td>¿Están los 19 campos con sus validaciones específicas? (ej: campo 4: fecha ≥ 30 días; campo 16: lógica de autocompletar duración)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-2-tablas-parametricas">Criterio 2 — Tablas Paramétricas<a class="headerlink" href="#criterio-2-tablas-parametricas" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DIM_PROVEEDORES</td>
+<td>Editable con nombre_corto, correo para envío</td>
+<td>⚠️ Parcial</td>
+<td>Existe pero ¿tiene el campo nombre_corto para nombre del archivo Excel?</td>
+</tr>
+<tr>
+<td>DIM_COBERTURA</td>
+<td>Por proveedor + ciudad + medio</td>
+<td>⚠️ Parcial</td>
+<td>Existe pero ¿tiene los 3 niveles de cruce?</td>
+</tr>
+<tr>
+<td>FACT_TARIFA_PROMEDIO</td>
+<td>Por proveedor, BW y región</td>
+<td>⚠️ Parcial</td>
+<td>Existe — verificar campos</td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-3-viabilidad-y-cobertura">Criterio 3 — Viabilidad y Cobertura<a class="headerlink" href="#criterio-3-viabilidad-y-cobertura" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validación automática al recibir solicitud</td>
+<td>Sin intervención manual</td>
+<td>❌ Sin confirmar</td>
+<td>¿Se ejecuta automáticamente o requiere acción del usuario?</td>
+</tr>
+<tr>
+<td>Cruce por Código DANE + Ciudad + Medio + BW</td>
+<td>Lógica de los 2 criterios de cobertura</td>
+<td>❌ Sin confirmar</td>
+<td>Es la lógica central de HU-01</td>
+</tr>
+<tr>
+<td>Generación Excel por proveedor</td>
+<td>17 campos, nombre <code>NOMBRE_CORTO_PROVEEDOR_OPORTUNIDAD</code></td>
+<td>❌ Sin confirmar</td>
+<td>¿Apache POI integrado? ¿Nombre del archivo correcto?</td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-4-envio-de-correo">Criterio 4 — Envío de Correo<a class="headerlink" href="#criterio-4-envio-de-correo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Envío de correo con adjunto Excel</td>
+<td>JavaMail o similar configurado</td>
+<td>❌ Sin confirmar</td>
+<td>¿Hay configuración SMTP en application.properties?</td>
+</tr>
+<tr>
+<td>Plantilla de correo exacta</td>
+<td>Asunto + cuerpo definidos en HU-01 sección 4.2</td>
+<td>❌ Sin confirmar</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-5-carga-de-respuestas">Criterio 5 — Carga de Respuestas<a class="headerlink" href="#criterio-5-carga-de-respuestas" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sección 5 completa</td>
+<td>El documento HU-01 dice "pendiente de extracción"</td>
+<td>❌ <strong>DATO FALTANTE</strong></td>
+<td>Necesitas pedir a QCS la sección 5 completa del docx original</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brechas-criticas-hu-01">Brechas críticas HU-01<a class="headerlink" href="#brechas-criticas-hu-01" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="hu-02-instalaciones-con-terceros">HU-02 — Instalaciones con Terceros<a class="headerlink" href="#hu-02-instalaciones-con-terceros" title="Permanent link">&para;</a></h2>
+<h3 id="lo-que-el-codigo-scan-reporta-como-implementado_2">Lo que el código scan reporta como implementado<a class="headerlink" href="#lo-que-el-codigo-scan-reporta-como-implementado_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Entidades</p>
+</li>
+<li>
+<p>Controlador</p>
+</li>
+<li>
+<p>Migración V8</p>
+</li>
+<li>
+<p>Componente Angular <code>instalacion/</code></p>
+</li>
+</ul>
+<h3 id="auditoria-criterio-por-criterio_2">Auditoría criterio por criterio<a class="headerlink" href="#auditoria-criterio-por-criterio_2" title="Permanent link">&para;</a></h3>
+<h4 id="criterio-1-validacion-de-vigencia">Criterio 1 — Validación de Vigencia<a class="headerlink" href="#criterio-1-validacion-de-vigencia" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disparador automático al crear OT</td>
+<td>Sin intervención manual</td>
+<td>❌ Sin confirmar</td>
+<td>¿Hay webhook o integración que escuche la creación de OT en Cronos Connection?</td>
+</tr>
+<tr>
+<td>Servicio Cronos Connection → Cronos Feasibility</td>
+<td>Llamada a sistema externo</td>
+<td>❌ Sin confirmar</td>
+<td>Misma pregunta que HU-01: ¿hay cliente HTTP hacia Cronos?</td>
+</tr>
+<tr>
+<td>3 estados de vigencia</td>
+<td>VIGENTE (&gt;7d) / POR VENCER (1-7d) / VENCIDA</td>
+<td>⚠️ Parcial</td>
+<td>¿La lógica de los umbrales está implementada?</td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-2-oferta-vigente">Criterio 2 — Oferta VIGENTE<a class="headerlink" href="#criterio-2-oferta-vigente" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creación automática tabla instalación</td>
+<td>Una tabla por servicio (Feasibility → Connection)</td>
+<td>❌ Sin confirmar</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Envío correo al proveedor</td>
+<td>Con tabla adjunta + plantilla exacta de HU-02 sección 2.2</td>
+<td>❌ Sin confirmar</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Creación automática Tarea de Instalación</td>
+<td>Campos autodiligenciados (imagen docx)</td>
+<td>❌ Sin confirmar</td>
+<td>Los campos exactos están en imagen — <strong>pedir a QCS</strong></td>
+</tr>
+<tr>
+<td>Cierre OT al cerrar Tarea</td>
+<td>+ registrar Fecha de implementación</td>
+<td>❌ Sin confirmar</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Actualización campos OT vía servicio</td>
+<td>Campos en docx original</td>
+<td>❌ Sin confirmar</td>
+<td><strong>Pedir a QCS</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="criterio-3-oferta-vencida-por-vencer">Criterio 3 — Oferta VENCIDA / POR VENCER<a class="headerlink" href="#criterio-3-oferta-vencida-por-vencer" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Habilitar Recotización</td>
+<td>Flujo completo según HU-01 sección "Gestión de Recotización"</td>
+<td>❌ Sin confirmar</td>
+<td>HU-01 sección 5 tampoco está completa — doble dependencia</td>
+</tr>
+<tr>
+<td>Tarea de Recotización automática</td>
+<td>Al detectar VENCIDA/POR VENCER</td>
+<td>❌ Sin confirmar</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brechas-criticas-hu-02">Brechas críticas HU-02<a class="headerlink" href="#brechas-criticas-hu-02" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="hu-05-inventario-de-servicios">HU-05 — Inventario de Servicios<a class="headerlink" href="#hu-05-inventario-de-servicios" title="Permanent link">&para;</a></h2>
+<h3 id="lo-que-el-codigo-scan-reporta-como-implementado_3">Lo que el código scan reporta como implementado<a class="headerlink" href="#lo-que-el-codigo-scan-reporta-como-implementado_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>6 entidades DIM (de 12 requeridas)</p>
+</li>
+<li>
+<p>Controladores</p>
+</li>
+<li>
+<p>Migraciones V2/V5</p>
+</li>
+<li>
+<p>Lista Angular</p>
+</li>
+</ul>
+<h3 id="auditoria-criterio-por-criterio_3">Auditoría criterio por criterio<a class="headerlink" href="#auditoria-criterio-por-criterio_3" title="Permanent link">&para;</a></h3>
+<h4 id="criterio-1-pestana-inventario-y-comportamiento-general">Criterio 1 — Pestaña Inventario y Comportamiento General<a class="headerlink" href="#criterio-1-pestana-inventario-y-comportamiento-general" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sub-criterio</th>
+<th>Requerimiento</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Menú lateral con 12 tablas</td>
+<td>Todas las tablas visibles y seleccionables</td>
+<td>❌ Solo 6</td>
+<td>6 tablas DIM faltan — ver tabla abajo</td>
+</tr>
+<tr>
+<td>Vista tabular con scroll horizontal</td>
+<td>Al seleccionar cada tabla</td>
+<td>⚠️ Parcial</td>
+<td>Lista Angular existe — ¿tiene scroll horizontal para DIM_CONFIGURACION (50 campos)?</td>
+</tr>
+<tr>
+<td>Indicador visual de carga</td>
+<td>Spinner mientras cargan datos</td>
+<td>⚠️ Sin confirmar</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Flujo de aprobación del líder</td>
+<td>Cada edición requiere aprobación antes de guardar</td>
+<td>❌ Sin confirmar</td>
+<td>¿Hay un estado "pendiente aprobación" en las ediciones? ¿Quién aprueba y cómo?</td>
+</tr>
+<tr>
+<td>Validación de tipos de dato por campo</td>
+<td>Frontend valida antes de enviar</td>
+<td>⚠️ Sin confirmar</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mensaje de confirmación en cambios críticos</td>
+<td>Modal de confirmación</td>
+<td>⚠️ Sin confirmar</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="las-12-tablas-dim-estado-por-tabla">Las 12 tablas DIM — estado por tabla<a class="headerlink" href="#las-12-tablas-dim-estado-por-tabla" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tabla</th>
+<th>Requerida</th>
+<th>Estado</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>dim_proveedores</code></td>
+<td>✓</td>
+<td>✅ Existe (V2/V5)</td>
+<td>Verificar campo <code>nombre_corto</code> (lo necesita HU-01)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>dim_tipo_servicio</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td>Solo 2 registros: Fijo / Móvil</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>dim_clasificacion</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td>6 valores: Aeropuerto/Datacenter/Satelital/Starlink/Tradicional/Otros</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>dim_trm</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td><strong>Regla crítica: 1 valor por mes</strong> — ¿está la restricción UNIQUE(anio, mes)?</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>dim_contratos</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td><strong>Trigger:</strong> al cambiar condicion_pago/facturacion → propagar a DIM_CONFIGURACION_SERVICIOS</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>dim_clientes</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>dim_ciudades</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td><strong>Campo crítico:</strong> <code>codigo_dane</code> — llave de cruce para HU-01 y HU-07</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>dim_medios</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>dim_cobertura</code></td>
+<td>✓</td>
+<td>⚠️ Existe en HU-01</td>
+<td>Verificar si está en scope de HU-05 también</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>fact_tarifa_promedio</code></td>
+<td>✓</td>
+<td>⚠️ Existe en HU-01</td>
+<td>Ídem</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>dim_servicios</code></td>
+<td>✓</td>
+<td>❓ Sin confirmar</td>
+<td>PK de negocio: <code>id_servicio</code> VARCHAR(50)</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td>⚠️ Parcial</td>
+<td><strong>50 campos requeridos</strong> — verificar cobertura completa</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tabla-dim_configuracion_servicios-campos-criticos-a-verificar">Tabla DIM_CONFIGURACION_SERVICIOS — campos críticos a verificar<a class="headerlink" href="#tabla-dim_configuracion_servicios-campos-criticos-a-verificar" title="Permanent link">&para;</a></h4>
+<p>Esta tabla tiene 50 campos. Los más críticos para las HUs siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Requerido por</th>
+<th>¿Existe?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ds</code> (VARCHAR 50, UNIQUE)</td>
+<td>HU-07, HU-08 cruce con Remedy/Davox</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>condicion_facturacion</code></td>
+<td>HU-06 motor de prorrateo</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>fecha_baja</code></td>
+<td>HU-07 filtro de incidencias</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>estado_baja</code></td>
+<td>HU-04 tipos de baja</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>mrc</code> + <code>moneda_mrc</code></td>
+<td>HU-04 cálculos, HU-06 prorrateo</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>fecha_fin_clausula</code></td>
+<td>HU-04 terminación anticipada</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>fecha_tope_pago_baja</code></td>
+<td>HU-04 cálculo de preaviso</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>codigo_dane_ciudad</code></td>
+<td>HU-01 validación cobertura</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>numero_contrato</code> (FK dim_contratos)</td>
+<td>HU-05 trigger propagación</td>
+<td>Verificar</td>
+</tr>
+<tr>
+<td><code>indicador_iva</code></td>
+<td>HU-08 cálculo prefactura</td>
+<td>Verificar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="brechas-criticas-hu-05">Brechas críticas HU-05<a class="headerlink" href="#brechas-criticas-hu-05" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="plan-de-accion-que-hacer-antes-de-empezar-hu-03">Plan de Acción — Qué hacer antes de empezar HU-03<a class="headerlink" href="#plan-de-accion-que-hacer-antes-de-empezar-hu-03" title="Permanent link">&para;</a></h2>
+<h3 id="prioridad-1-confirmar-con-qcs-no-es-codigo-es-informacion-faltante">Prioridad 1 — Confirmar con QCS (no es código, es información faltante)<a class="headerlink" href="#prioridad-1-confirmar-con-qcs-no-es-codigo-es-informacion-faltante" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pendiente</th>
+<th>HU afectada</th>
+<th>Urgencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sección 5 de HU-01 (Carga de Respuestas de Proveedores)</td>
+<td>HU-01, HU-02</td>
+<td>🔴 Alta</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Campo XXXX para validación Punto Sencillo vs Proyecto</td>
+<td>HU-01</td>
+<td>🔴 Alta</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Campos de Tarea de Instalación (imagen docx HU-02 sección 2.3)</td>
+<td>HU-02</td>
+<td>🔴 Alta</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Campos de actualización OT (imagen docx HU-02 sección 2.5)</td>
+<td>HU-02</td>
+<td>🟡 Media</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Confirmar arquitectura Cronos: ¿el sistema llama a Cronos o Cronos llama al sistema?</td>
+<td>HU-01, HU-02</td>
+<td>🔴 Alta</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prioridad-2-verificaciones-en-el-codigo-existente">Prioridad 2 — Verificaciones en el código existente<a class="headerlink" href="#prioridad-2-verificaciones-en-el-codigo-existente" title="Permanent link">&para;</a></h3>
+<h3 id="prioridad-3-completar-antes-de-hu-03">Prioridad 3 — Completar antes de HU-03<a class="headerlink" href="#prioridad-3-completar-antes-de-hu-03" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="resumen-visual-del-estado-real">Resumen Visual del Estado Real<a class="headerlink" href="#resumen-visual-del-estado-real" title="Permanent link">&para;</a></h2>
+<hr />
+<p><em>Auditoría generada contra criterios de aceptación de HU-00, HU-01, HU-02, HU-05 · Marzo 2026</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

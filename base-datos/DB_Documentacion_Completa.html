@@ -1,0 +1,8284 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="../modulos/HU-08_Prefacturacion.html">
+      
+      
+        <link rel="next" href="DB_Diccionario_Datos.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Documentación Completa BD - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#procesos-unica-documentacion-completa-de-base-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentación Completa BD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="DB_Documentacion_Completa.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones-de-uso-para-claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instrucciones de uso para Claude
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen del modelo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-0-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 0 - Acceso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 0 - Acceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        perfiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuario_perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        usuario_perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        permisos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        log_acceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-1-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 1 - Cotización
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 1 - Cotización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_viabilidad_cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_viabilidad_cotizacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_cotizacion_proveedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_cotizacion_proveedor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-15-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 1/5 - Inventario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 1/5 - Inventario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dim_proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_tarifa_promedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_tarifa_promedio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-2-instalaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 2 - Instalaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 2 - Instalaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_instalaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_instalaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_seguimiento_instalaciones_terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_seguimiento_instalaciones_terceros
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-3-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 3 - Migraciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 3 - Migraciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_migraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_ampliaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_ampliaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-4-bajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 4 - Bajas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 4 - Bajas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_bajas_migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_bajas_migracion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_bajas_cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_bajas_cliente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_suspension_cartera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_suspension_cartera
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-5-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 5 - Inventario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 5 - Inventario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dim_configuracion_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_configuracion_servicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_tipo_servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_tipo_servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_clasificacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_trm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_trm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_contratos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_contratos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_ciudades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_ciudades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_medios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_medios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_servicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-6-novedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 6 - Novedades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 6 - Novedades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_prorrateo_novedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_prorrateo_novedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_mantenimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_mantenimientos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-7-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 7 - Indisponibilidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 7 - Indisponibilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_tickets_indisponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_tickets_indisponibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_indisponibilidad_mensual_conciliada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_indisponibilidad_mensual_conciliada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_exclusiones_remedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_exclusiones_remedy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_ans_proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_ans_proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_motivos_fallas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_motivos_fallas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-8-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 8 - Prefacturación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 8 - Prefacturación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_ingresos_davox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_ingresos_davox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_prefactura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_prefactura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_validacion_pagos_ingresos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_validacion_pagos_ingresos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apendice-indice-completo-de-relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apéndice — Índice completo de relaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apendice-pendientes-de-confirmar-con-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apéndice — Pendientes de confirmar con QCS
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones-de-uso-para-claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instrucciones de uso para Claude
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen del modelo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-0-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 0 - Acceso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 0 - Acceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        perfiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuario_perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        usuario_perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        permisos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        log_acceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-1-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 1 - Cotización
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 1 - Cotización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_viabilidad_cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_viabilidad_cotizacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_cotizacion_proveedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_cotizacion_proveedor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-15-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 1/5 - Inventario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 1/5 - Inventario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dim_proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_tarifa_promedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_tarifa_promedio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-2-instalaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 2 - Instalaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 2 - Instalaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_instalaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_instalaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_seguimiento_instalaciones_terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_seguimiento_instalaciones_terceros
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-3-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 3 - Migraciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 3 - Migraciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_migraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_ampliaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_ampliaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-4-bajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 4 - Bajas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 4 - Bajas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_bajas_migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_bajas_migracion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_bajas_cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_bajas_cliente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_suspension_cartera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_suspension_cartera
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-5-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 5 - Inventario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 5 - Inventario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dim_configuracion_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_configuracion_servicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_tipo_servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_tipo_servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_clasificacion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_trm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_trm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_contratos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_contratos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_clientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_clientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_ciudades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_ciudades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_medios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_medios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_servicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-6-novedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 6 - Novedades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 6 - Novedades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_prorrateo_novedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_prorrateo_novedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_mantenimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_mantenimientos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-7-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 7 - Indisponibilidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 7 - Indisponibilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_tickets_indisponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_tickets_indisponibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_indisponibilidad_mensual_conciliada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_indisponibilidad_mensual_conciliada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_exclusiones_remedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_exclusiones_remedy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_ans_proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_ans_proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dim_motivos_fallas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dim_motivos_fallas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-hu-8-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo: HU 8 - Prefacturación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo: HU 8 - Prefacturación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_ingresos_davox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_ingresos_davox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_prefactura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_prefactura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_validacion_pagos_ingresos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_validacion_pagos_ingresos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apendice-indice-completo-de-relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apéndice — Índice completo de relaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apendice-pendientes-de-confirmar-con-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apéndice — Pendientes de confirmar con QCS
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="procesos-unica-documentacion-completa-de-base-de-datos">PROCESOS ÚNICA — Documentación Completa de Base de Datos<a class="headerlink" href="#procesos-unica-documentacion-completa-de-base-de-datos" title="Permanent link">&para;</a></h1>
+<h2 id="instrucciones-de-uso-para-claude">Instrucciones de uso para Claude<a class="headerlink" href="#instrucciones-de-uso-para-claude" title="Permanent link">&para;</a></h2>
+<p>Este documento es la referencia autoritativa del modelo de datos del sistema PROCESOS ÚNICA (QCS/Telefónica). Úsalo para:</p>
+<ul>
+<li>
+<p>Responder preguntas sobre estructura de tablas, campos y relaciones.</p>
+</li>
+<li>
+<p>Validar FKs y cardinalidades antes de escribir consultas SQL o código.</p>
+</li>
+<li>
+<p>Generar migraciones, scripts DDL o documentación técnica adicional.</p>
+</li>
+<li>
+<p>Detectar inconsistencias entre HUs y el modelo de datos.</p>
+</li>
+</ul>
+<p><strong>Versión:</strong> Actualizada a HU-01 v3.0 (27/02/2026) y HU-02 v3.0 (04/03/2026).<br />
+<strong>Separador CSV:</strong> punto y coma (<code>;</code>).<br />
+<strong>Motor de base de datos objetivo:</strong> PostgreSQL.<br />
+<strong>Convenciones:</strong> snake_case para todos los identificadores. PKs siempre <code>BIGSERIAL</code> o <code>VARCHAR</code> según se indica. FKs referenciales pueden ser NULL salvo indicación NN.</p>
+<hr />
+<h2 id="resumen-del-modelo">Resumen del modelo<a class="headerlink" href="#resumen-del-modelo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tablas ENTIDAD</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Tablas RELACIÓN</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Tablas DIM (dimensionales)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Tablas MAESTRO</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Tablas TRANSAC (transaccionales)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Tablas AUDIT</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Total tablas</strong></td>
+<td><strong>35</strong></td>
+</tr>
+<tr>
+<td><strong>Total campos definidos</strong></td>
+<td><strong>~324</strong></td>
+</tr>
+<tr>
+<td><strong>Total relaciones</strong></td>
+<td><strong>39</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-0-acceso">Módulo: HU 0 - Acceso<a class="headerlink" href="#modulo-hu-0-acceso" title="Permanent link">&para;</a></h2>
+<h3 id="usuarios"><code>usuarios</code><a class="headerlink" href="#usuarios" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> ENTIDAD<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Cientos<br />
+<strong>Campos estimados:</strong> 6  </p>
+<p><strong>Descripción:</strong> Usuarios del sistema con rol y estado</p>
+<blockquote>
+<p>Gestión por Gerente/Líder</p>
+</blockquote>
+<h4 id="campos">Campos<a class="headerlink" href="#campos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Identificador auto-incremental</td>
+</tr>
+<tr>
+<td><code>nombre_completo</code></td>
+<td>VARCHAR</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Nombre completo del usuario</td>
+</tr>
+<tr>
+<td><code>correo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Correo corporativo — usado para login</td>
+</tr>
+<tr>
+<td><code>rol</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Gerente / Líder Profesional / Ejecutor</td>
+</tr>
+<tr>
+<td><code>cargo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Cargo organizacional</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td>ACTIVO</td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td>Auditoría de creación</td>
+</tr>
+<tr>
+<td><code>fecha_modificacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Auditoría última modificación</td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Usuario sesión que creó el registro</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_usuario</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>log_acceso</code></td>
+<td><code>id_usuario</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="perfiles"><code>perfiles</code><a class="headerlink" href="#perfiles" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> ENTIDAD<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Docenas<br />
+<strong>Campos estimados:</strong> 5  </p>
+<p><strong>Descripción:</strong> Perfiles de acceso configurables</p>
+<h4 id="campos_1">Campos<a class="headerlink" href="#campos_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre_perfil</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Nombre del perfil</td>
+</tr>
+<tr>
+<td><code>descripcion</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Descripción del perfil</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_1">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_perfil</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>permisos</code></td>
+<td><code>id_perfil</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="usuario_perfil"><code>usuario_perfil</code><a class="headerlink" href="#usuario_perfil" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> RELACIÓN<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Cientos<br />
+<strong>Campos estimados:</strong> 4  </p>
+<p><strong>Descripción:</strong> Asignación N:M usuario ↔ perfil</p>
+<h4 id="campos_2">Campos<a class="headerlink" href="#campos_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_usuario</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>usuarios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>FK a tabla usuarios</td>
+</tr>
+<tr>
+<td><code>id_perfil</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>perfiles</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>FK a tabla perfiles</td>
+</tr>
+<tr>
+<td><code>fecha_asignacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen">Relaciones (origen)<a class="headerlink" href="#relaciones-origen" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Un usuario puede tener múltiples perfiles</td>
+</tr>
+<tr>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Un perfil asignado a múltiples usuarios</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="permisos"><code>permisos</code><a class="headerlink" href="#permisos" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> ENTIDAD<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Cientos<br />
+<strong>Campos estimados:</strong> 7  </p>
+<p><strong>Descripción:</strong> Permisos por perfil: ver/ejecutar/admin por módulo</p>
+<blockquote>
+<p>Check-box por sección</p>
+</blockquote>
+<h4 id="campos_3">Campos<a class="headerlink" href="#campos_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_perfil</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>perfiles</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modulo</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Nombre del módulo</td>
+</tr>
+<tr>
+<td><code>seccion</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Sub-sección</td>
+</tr>
+<tr>
+<td><code>puede_ver</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>puede_ejecutar</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>puede_administrar</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_1">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Permisos definidos por perfil</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="log_acceso"><code>log_acceso</code><a class="headerlink" href="#log_acceso" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> AUDIT<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles/mes<br />
+<strong>Campos estimados:</strong> 6  </p>
+<p><strong>Descripción:</strong> Log de ingresos y acciones por usuario</p>
+<blockquote>
+<p>Append-only</p>
+</blockquote>
+<h4 id="campos_4">Campos<a class="headerlink" href="#campos_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Append-only</td>
+</tr>
+<tr>
+<td><code>id_usuario</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>usuarios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modulo</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Módulo al que ingresó</td>
+</tr>
+<tr>
+<td><code>accion</code></td>
+<td>VARCHAR</td>
+<td>120</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Acción ejecutada</td>
+</tr>
+<tr>
+<td><code>fecha_hora</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td>VARCHAR</td>
+<td>45</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>IP del cliente</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_2">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Auditoría de accesos por usuario</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-1-cotizacion">Módulo: HU 1 - Cotización<a class="headerlink" href="#modulo-hu-1-cotizacion" title="Permanent link">&para;</a></h2>
+<h3 id="fact_viabilidad_cotizacion"><code>fact_viabilidad_cotizacion</code><a class="headerlink" href="#fact_viabilidad_cotizacion" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 25  </p>
+<p><strong>Descripción:</strong> Solicitudes de viabilidad recibidas</p>
+<blockquote>
+<p>3 canales de entrada</p>
+</blockquote>
+<h4 id="campos_5">Campos<a class="headerlink" href="#campos_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>moneda_mrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>Moneda del costo mensual MRC. COP</td>
+</tr>
+<tr>
+<td><code>moneda_nrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>Moneda del costo de instalación NRC. COP</td>
+</tr>
+<tr>
+<td><code>ranking_proveedor</code></td>
+<td>SMALLINT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Resultado de "Ordenar Viabilidad": 1=mejor propuesta, 2=segunda, 3=tercera. NULL si no ordenado.</td>
+</tr>
+<tr>
+<td><code>estado_flujo</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CARGADO</td>
+<td>Ciclo de vida: CARGADO</td>
+</tr>
+<tr>
+<td><code>proveedor_seleccionado</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td><code>dim_proveedores</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td>NIT del proveedor elegido al ejecutar Cerrar Viabilidad. NULL hasta cierre. Obligatorio para cerrar.</td>
+</tr>
+<tr>
+<td><code>fecha_cierre</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha en que el usuario UNICA ejecuta Cerrar Viabilidad. NULL hasta cierre.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_3">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proveedor_seleccionado</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Proveedor elegido al ejecutar Cerrar Viabilidad (HU-01). NULL hasta cierre. Obligatorio para poder cerrar.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fact_cotizacion_proveedor"><code>fact_cotizacion_proveedor</code><a class="headerlink" href="#fact_cotizacion_proveedor" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 17  </p>
+<p><strong>Descripción:</strong> Respuestas de cotización de proveedores</p>
+<h4 id="campos_6">Campos<a class="headerlink" href="#campos_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>moneda_mrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>Moneda del MRC respondida por el proveedor. COP</td>
+</tr>
+<tr>
+<td><code>moneda_nrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>Moneda del NRC respondida por el proveedor. COP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-15-inventario">Módulo: HU 1/5 - Inventario<a class="headerlink" href="#modulo-hu-15-inventario" title="Permanent link">&para;</a></h2>
+<h3 id="dim_proveedores"><code>dim_proveedores</code><a class="headerlink" href="#dim_proveedores" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Decenas<br />
+<strong>Campos estimados:</strong> 8  </p>
+<p><strong>Descripción:</strong> Proveedores de servicios terceros</p>
+<blockquote>
+<p>Editable con aprobación</p>
+</blockquote>
+<h4 id="campos_7">Campos<a class="headerlink" href="#campos_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>NIT sin dígito verificación</td>
+</tr>
+<tr>
+<td><code>razon_social</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>contacto_nombre</code></td>
+<td>VARCHAR</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Contacto para conciliaciones</td>
+</tr>
+<tr>
+<td><code>correo_conciliaciones</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td></td>
+</tr>
+<tr>
+<td><code>contacto_implantador</code></td>
+<td>VARCHAR</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Nombre del contacto implantador del proveedor. Fuente para tabla Instalación con el Tercero (HU-02).</td>
+</tr>
+<tr>
+<td><code>celular_implantador</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Celular del implantador para coordinación en campo (HU-02).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_2">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_proveedor</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_proveedor</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_tarifa_promedio</code></td>
+<td><code>nit_proveedor</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_ans_proveedores</code></td>
+<td><code>nit_proveedor</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_viabilidad_cotizacion</code></td>
+<td><code>proveedor_seleccionado</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fact_tarifa_promedio"><code>fact_tarifa_promedio</code><a class="headerlink" href="#fact_tarifa_promedio" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Cientos<br />
+<strong>Campos estimados:</strong> 6  </p>
+<p><strong>Descripción:</strong> Tarifas promedio por proveedor/BW/región</p>
+<blockquote>
+<p>Insumo para viabilidad</p>
+</blockquote>
+<h4 id="campos_8">Campos<a class="headerlink" href="#campos_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td><code>dim_proveedores</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Ej: 10M, 100M, 1G</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tarifa_promedio</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>En COP</td>
+</tr>
+<tr>
+<td><code>fecha</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Mes de vigencia</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_4">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Tarifas por proveedor</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-2-instalaciones">Módulo: HU 2 - Instalaciones<a class="headerlink" href="#modulo-hu-2-instalaciones" title="Permanent link">&para;</a></h2>
+<h3 id="fact_instalaciones"><code>fact_instalaciones</code><a class="headerlink" href="#fact_instalaciones" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Miles<br />
+<strong>Campos estimados:</strong> 25  </p>
+<p><strong>Descripción:</strong> Servicios instalados con terceros</p>
+<blockquote>
+<p>Vigencia: VIGENTE/VENCIDA/POR VENCER</p>
+</blockquote>
+<h4 id="campos_9">Campos<a class="headerlink" href="#campos_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tabla_instalacion_copiada</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>FALSE</td>
+<td>Flag: el usuario UNICA ya copió la tabla para enviar al proveedor (HU-02 criterio 2.2).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_3">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>id_instalacion</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fact_seguimiento_instalaciones_terceros"><code>fact_seguimiento_instalaciones_terceros</code><a class="headerlink" href="#fact_seguimiento_instalaciones_terceros" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 32  </p>
+<p><strong>Descripción:</strong> Seguimiento de instalaciones con terceros por proveedor para exportación a Power BI</p>
+<blockquote>
+<p>Exportable en CSV/Excel. Nombre fijo: Base Seguimiento Instalaciones Terceros Proveedores UK</p>
+</blockquote>
+<h4 id="campos_10">Campos<a class="headerlink" href="#campos_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Clave interna auto-incremental</td>
+</tr>
+<tr>
+<td><code>id_instalacion</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>fact_instalaciones</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>FK a tabla de instalación origen</td>
+</tr>
+<tr>
+<td><code>ds</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>DS del servicio. Fuente: Tabla Instalación con el Tercero, campo DS</td>
+</tr>
+<tr>
+<td><code>numero_tarea</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo TAREA UNICA</td>
+</tr>
+<tr>
+<td><code>solicitud_ot</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo SOLICITUD OT</td>
+</tr>
+<tr>
+<td><code>tipo_modificacion</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo TIPO MODIFICACIÓN</td>
+</tr>
+<tr>
+<td><code>id_actual</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo ID ACTUAL</td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo PROVEEDOR</td>
+</tr>
+<tr>
+<td><code>bw_actual</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo BW ACTUAL</td>
+</tr>
+<tr>
+<td><code>mrc_actual</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo COSTO MENSUAL MRC</td>
+</tr>
+<tr>
+<td><code>fecha_fin_clausula_proveedor</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: DIM_CONFIGURACIÓN SERVICIOS, campo fecha_fin_clausula</td>
+</tr>
+<tr>
+<td><code>estado_inventario</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Diligenciamiento manual por usuario UNICA</td>
+</tr>
+<tr>
+<td><code>direccion</code></td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo DIRECCIÓN INSTALACIÓN NUEVA</td>
+</tr>
+<tr>
+<td><code>departamento</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo DEPARTAMENTO</td>
+</tr>
+<tr>
+<td><code>municipio</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo MUNICIPIO</td>
+</tr>
+<tr>
+<td><code>cliente</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo CLIENTE</td>
+</tr>
+<tr>
+<td><code>medio</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo MEDIO</td>
+</tr>
+<tr>
+<td><code>bw_solicitado</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo BW NUEVO</td>
+</tr>
+<tr>
+<td><code>duracion_contrato_meses</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo PERMANENCIA</td>
+</tr>
+<tr>
+<td><code>fecha_creacion_tarea_unica</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Reporte Tarea Solicitud UNICA, campo FECHA CREACIÓN TAREA ÚNICA</td>
+</tr>
+<tr>
+<td><code>fecha_envio_tercero</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo FECHA ENVÍO AL TERCERO</td>
+</tr>
+<tr>
+<td><code>fecha_respuesta_tercero</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Reporte fechas Tarea Solicitud UNICA</td>
+</tr>
+<tr>
+<td><code>fecha_implementacion_tercero</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Reporte fechas Tarea Solicitud UNICA (= FECHA AUTORIZACIÓN AL TERCERO)</td>
+</tr>
+<tr>
+<td><code>fecha_devolucion_ot_proveedor</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Reporte fechas Tarea Solicitud UNICA</td>
+</tr>
+<tr>
+<td><code>fecha_creacion_tarea_implantacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Diligenciamiento manual, campo de calendario</td>
+</tr>
+<tr>
+<td><code>estado_unica</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Diligenciamiento manual con opciones desplegables. Catálogo pendiente de confirmar con QCS.</td>
+</tr>
+<tr>
+<td><code>nrc_definitivo_alta</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo COSTO INSTALACIÓN NRC</td>
+</tr>
+<tr>
+<td><code>mrc_definitivo_alta</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fuente: Tabla Instalación, campo COSTO MENSUAL MRC</td>
+</tr>
+<tr>
+<td><code>fecha_entrega</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Diligenciamiento manual, campo de calendario</td>
+</tr>
+<tr>
+<td><code>mes_reporte</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM — para descarga CSV/Excel a Power BI. Nombre fijo del reporte: Base Seguimiento Instalaciones Terceros Proveedores UK</td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td>Auditoría de creación</td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Usuario sesión UNICA que generó el seguimiento</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_5">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_instalacion</code></td>
+<td><code>fact_instalaciones</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Cada registro de seguimiento pertenece a una instalación con tercero (HU-02)</td>
+</tr>
+<tr>
+<td><code>ds</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>DS del servicio en seguimiento. Llave de cruce con inventario maestro.</td>
+</tr>
+<tr>
+<td><code>fecha_fin_clausula_proveedor</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>fecha_fin_clausula</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Se lee desde dim_configuracion_servicios en tiempo de consulta; no se duplica en la tabla.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-3-migraciones">Módulo: HU 3 - Migraciones<a class="headerlink" href="#modulo-hu-3-migraciones" title="Permanent link">&para;</a></h2>
+<h3 id="fact_migraciones"><code>fact_migraciones</code><a class="headerlink" href="#fact_migraciones" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 45  </p>
+<p><strong>Descripción:</strong> Procesos de migración entre proveedores</p>
+<blockquote>
+<p>Tabla cargada desde archivo Cronos</p>
+</blockquote>
+<p><em>Campos pendientes de definición individual (ver estimado en metadata).</em></p>
+<hr />
+<h3 id="fact_ampliaciones"><code>fact_ampliaciones</code><a class="headerlink" href="#fact_ampliaciones" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 30  </p>
+<p><strong>Descripción:</strong> Ampliaciones de BW contratadas</p>
+<p><em>Campos pendientes de definición individual (ver estimado en metadata).</em></p>
+<hr />
+<h2 id="modulo-hu-4-bajas">Módulo: HU 4 - Bajas<a class="headerlink" href="#modulo-hu-4-bajas" title="Permanent link">&para;</a></h2>
+<h3 id="fact_bajas_migracion"><code>fact_bajas_migracion</code><a class="headerlink" href="#fact_bajas_migracion" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 12  </p>
+<p><strong>Descripción:</strong> Bajas originadas por migración</p>
+<blockquote>
+<p>Cruza con inventario por DS+ID</p>
+</blockquote>
+<p><em>Campos pendientes de definición individual (ver estimado en metadata).</em></p>
+<hr />
+<h3 id="fact_bajas_cliente"><code>fact_bajas_cliente</code><a class="headerlink" href="#fact_bajas_cliente" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 12  </p>
+<p><strong>Descripción:</strong> Bajas solicitadas por el cliente</p>
+<p><em>Campos pendientes de definición individual (ver estimado en metadata).</em></p>
+<hr />
+<h3 id="fact_suspension_cartera"><code>fact_suspension_cartera</code><a class="headerlink" href="#fact_suspension_cartera" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/año<br />
+<strong>Campos estimados:</strong> 12  </p>
+<p><strong>Descripción:</strong> Suspensiones por deuda/cartera</p>
+<blockquote>
+<p>Fecha Tope = Notif + 30 días</p>
+</blockquote>
+<p><em>Campos pendientes de definición individual (ver estimado en metadata).</em></p>
+<hr />
+<h2 id="modulo-hu-5-inventario">Módulo: HU 5 - Inventario<a class="headerlink" href="#modulo-hu-5-inventario" title="Permanent link">&para;</a></h2>
+<h3 id="dim_configuracion_servicios"><code>dim_configuracion_servicios</code><a class="headerlink" href="#dim_configuracion_servicios" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> MAESTRO<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles<br />
+<strong>Campos estimados:</strong> 47  </p>
+<p><strong>Descripción:</strong> Inventario maestro de servicios activos</p>
+<blockquote>
+<p>Tabla central del sistema</p>
+</blockquote>
+<h4 id="campos_11">Campos<a class="headerlink" href="#campos_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Clave interna</td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>PK de negocio — del reporte instalaciones</td>
+</tr>
+<tr>
+<td><code>ds</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>DS único — no puede tener otra config activa</td>
+</tr>
+<tr>
+<td><code>id_oportunidad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>De Cronos Feasibility</td>
+</tr>
+<tr>
+<td><code>estado_configuracion</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td>ACTIVO</td>
+</tr>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td><code>dim_proveedores</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>10 dígitos</td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit_cliente</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td><code>dim_clientes</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>10 dígitos, no inicia en 0</td>
+</tr>
+<tr>
+<td><code>razon_social_cliente</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_dane_ciudad</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td><code>dim_ciudades</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>medio</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td><code>dim_medios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>clasificacion</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td><code>dim_clasificacion</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Aeropuerto/Datacenter/Satelital/Starlink/Tradicional/Otros</td>
+</tr>
+<tr>
+<td><code>tipo_servicio</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td><code>dim_tipo_servicio</code></td>
+<td>✓</td>
+<td></td>
+<td>FIJO</td>
+<td>Fijo</td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>direccion</code></td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>coordenada_x</code></td>
+<td>DECIMAL</td>
+<td>(10,6)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Latitud</td>
+</tr>
+<tr>
+<td><code>coordenada_y</code></td>
+<td>DECIMAL</td>
+<td>(10,6)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Longitud</td>
+</tr>
+<tr>
+<td><code>cuenta_ingresos</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_ingreso_mensual</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Debe ser &gt; 0</td>
+</tr>
+<tr>
+<td><code>responsabilidad_unica</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_clausula_uk</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>VENCIDA</td>
+</tr>
+<tr>
+<td><code>fecha_fin_clausula</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>duracion_contrato_meses</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_alta</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Del reporte instalaciones</td>
+</tr>
+<tr>
+<td><code>fecha_baja</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Se llena al dar de baja</td>
+</tr>
+<tr>
+<td><code>moneda_mrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>COP</td>
+</tr>
+<tr>
+<td><code>mrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Debe ser &gt; 0</td>
+</tr>
+<tr>
+<td><code>moneda_nrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td>COP</td>
+</tr>
+<tr>
+<td><code>nrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>obra_civil</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pcl</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pep</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Si inicia E-1167 → imputacion'=L</td>
+</tr>
+<tr>
+<td><code>producto</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>numero_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td><code>dim_contratos</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>condicion_pago</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Autocompletado desde dim_contratos</td>
+</tr>
+<tr>
+<td><code>condicion_facturacion</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Autocompletado desde dim_contratos</td>
+</tr>
+<tr>
+<td><code>imputacion</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>L si PEP inicia E-1167</td>
+</tr>
+<tr>
+<td><code>indicador_iva</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Calculado por departamento/ciudad</td>
+</tr>
+<tr>
+<td><code>id_tarea_cronos</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ot_cronos</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>novedad</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Clase requerimiento Cronos</td>
+</tr>
+<tr>
+<td><code>fecha_novedad</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_modificacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modificado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_baja</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>BAJA POR MIGRACIÓN / BAJA POR CLIENTE / BAJA POR ASEGURAMIENTO / SUSPENSIÓN POR CARTERA</td>
+</tr>
+<tr>
+<td><code>fecha_tope_pago_baja</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha notificación + 30 días (configurable)</td>
+</tr>
+<tr>
+<td><code>pago_proyectado_preaviso</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>(MRC/30) × días_preaviso</td>
+</tr>
+<tr>
+<td><code>pago_proyectado_terminacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Calculado según condiciones contrato</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_6">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Proveedor del servicio</td>
+</tr>
+<tr>
+<td><code>nit_cliente</code></td>
+<td><code>dim_clientes</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Cliente final asociado al servicio</td>
+</tr>
+<tr>
+<td><code>codigo_dane_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>codigo_dane</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Ciudad del servicio</td>
+</tr>
+<tr>
+<td><code>medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>nombre_medio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Medio de conectividad</td>
+</tr>
+<tr>
+<td><code>clasificacion</code></td>
+<td><code>dim_clasificacion</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Clasificación del servicio</td>
+</tr>
+<tr>
+<td><code>tipo_servicio</code></td>
+<td><code>dim_tipo_servicio</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Fijo o Móvil</td>
+</tr>
+<tr>
+<td><code>numero_contrato</code></td>
+<td><code>dim_contratos</code></td>
+<td><code>numero_contrato</code></td>
+<td>N:1</td>
+<td>FK obligatoria + TRIGGER</td>
+<td>Trigger: autocompleta condicion_pago y condicion_facturacion</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_4">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>numero_ds</code></td>
+<td>N:1</td>
+<td>FK validación</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>FK calculada</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td>N:1</td>
+<td>FK cruce negocio</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>fecha_fin_clausula_proveedor</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_tipo_servicio"><code>dim_tipo_servicio</code><a class="headerlink" href="#dim_tipo_servicio" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> 2 registros<br />
+<strong>Campos estimados:</strong> 3  </p>
+<p><strong>Descripción:</strong> Catálogo: Fijo / Móvil</p>
+<h4 id="campos_12">Campos<a class="headerlink" href="#campos_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Fijo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_5">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>tipo_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_clasificacion"><code>dim_clasificacion</code><a class="headerlink" href="#dim_clasificacion" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> 6 registros<br />
+<strong>Campos estimados:</strong> 3  </p>
+<p><strong>Descripción:</strong> Catálogo de clasificaciones de servicio</p>
+<blockquote>
+<p>Aeropuerto,Datacenter,Satelital,etc.</p>
+</blockquote>
+<h4 id="campos_13">Campos<a class="headerlink" href="#campos_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre</code></td>
+<td>VARCHAR</td>
+<td>60</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Aeropuerto, Datacenter, Satelital, Starlink, Tradicional, Otros</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_6">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>clasificacion</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_trm"><code>dim_trm</code><a class="headerlink" href="#dim_trm" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> 1/mes<br />
+<strong>Campos estimados:</strong> 5  </p>
+<p><strong>Descripción:</strong> Tasa de cambio USD→COP mensual</p>
+<blockquote>
+<p>Un registro por mes</p>
+</blockquote>
+<h4 id="campos_14">Campos<a class="headerlink" href="#campos_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>anio</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Año de la TRM</td>
+</tr>
+<tr>
+<td><code>mes</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Mes 1-12</td>
+</tr>
+<tr>
+<td><code>valor_trm</code></td>
+<td>DECIMAL</td>
+<td>(12,4)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Valor COP por 1 USD</td>
+</tr>
+<tr>
+<td><code>fecha_registro</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Primer día del mes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_7">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_contratos"><code>dim_contratos</code><a class="headerlink" href="#dim_contratos" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Decenas<br />
+<strong>Campos estimados:</strong> 6  </p>
+<p><strong>Descripción:</strong> Contratos con condiciones de pago/facturación</p>
+<h4 id="campos_15">Campos<a class="headerlink" href="#campos_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>numero_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>condicion_pago</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Trigger: actualiza dim_configuracion_servicios</td>
+</tr>
+<tr>
+<td><code>condicion_facturacion</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_8">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>numero_contrato</code></td>
+<td>N:1</td>
+<td>FK obligatoria + TRIGGER</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_clientes"><code>dim_clientes</code><a class="headerlink" href="#dim_clientes" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Cientos<br />
+<strong>Campos estimados:</strong> 5  </p>
+<p><strong>Descripción:</strong> Clientes finales por NIT</p>
+<h4 id="campos_16">Campos<a class="headerlink" href="#campos_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>10 dígitos, no inicia en 0</td>
+</tr>
+<tr>
+<td><code>razon_social</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>contacto</code></td>
+<td>VARCHAR</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_9">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_cliente</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_ciudades"><code>dim_ciudades</code><a class="headerlink" href="#dim_ciudades" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> ~1100<br />
+<strong>Campos estimados:</strong> 5  </p>
+<p><strong>Descripción:</strong> Ciudades con código DANE</p>
+<h4 id="campos_17">Campos<a class="headerlink" href="#campos_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_dane</code></td>
+<td>VARCHAR</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Código DANE oficial</td>
+</tr>
+<tr>
+<td><code>nombre_ciudad</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>departamento</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_10">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>codigo_dane_ciudad</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_ciudad</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_medios"><code>dim_medios</code><a class="headerlink" href="#dim_medios" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Decenas<br />
+<strong>Campos estimados:</strong> 3  </p>
+<p><strong>Descripción:</strong> Medios de conectividad</p>
+<h4 id="campos_18">Campos<a class="headerlink" href="#campos_18" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nombre_medio</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_11">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>medio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_medio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_cobertura"><code>dim_cobertura</code><a class="headerlink" href="#dim_cobertura" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles<br />
+<strong>Campos estimados:</strong> 5  </p>
+<p><strong>Descripción:</strong> Cobertura por proveedor/ciudad/medio</p>
+<h4 id="campos_19">Campos<a class="headerlink" href="#campos_19" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_proveedor</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_proveedores</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_ciudad</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_ciudades</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_medio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_medios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>activo</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_7">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Proveedor con cobertura</td>
+</tr>
+<tr>
+<td><code>id_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Ciudad con cobertura</td>
+</tr>
+<tr>
+<td><code>id_medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Medio con cobertura</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_servicios"><code>dim_servicios</code><a class="headerlink" href="#dim_servicios" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles<br />
+<strong>Campos estimados:</strong> 3  </p>
+<p><strong>Descripción:</strong> Códigos únicos de servicio</p>
+<blockquote>
+<p>PK: id_servicio</p>
+</blockquote>
+<h4 id="campos_20">Campos<a class="headerlink" href="#campos_20" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>PK de negocio</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>ACTIVO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-6-novedades">Módulo: HU 6 - Novedades<a class="headerlink" href="#modulo-hu-6-novedades" title="Permanent link">&para;</a></h2>
+<h3 id="fact_prorrateo_novedades"><code>fact_prorrateo_novedades</code><a class="headerlink" href="#fact_prorrateo_novedades" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Miles/mes<br />
+<strong>Campos estimados:</strong> 14  </p>
+<p><strong>Descripción:</strong> Prorrateo mensual de novedades de servicios</p>
+<blockquote>
+<p>1 ejecución/mes</p>
+</blockquote>
+<h4 id="campos_21">Campos<a class="headerlink" href="#campos_21" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>inicio_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fin_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dias_a_facturar</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_instalacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>obra_civil</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>moneda_mrc</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>valor_tasa_cambio</code></td>
+<td>DECIMAL</td>
+<td>(12,4)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>TRM del mes</td>
+</tr>
+<tr>
+<td><code>mrc_cop</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>MRC convertido a COP</td>
+</tr>
+<tr>
+<td><code>total_cop</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Total prorrateos</td>
+</tr>
+<tr>
+<td><code>novedad</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Clase requerimiento</td>
+</tr>
+<tr>
+<td><code>mes_novedad</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_servicio</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fijo</td>
+</tr>
+<tr>
+<td><code>fecha_proceso</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_8">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_12">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fact_mantenimientos"><code>fact_mantenimientos</code><a class="headerlink" href="#fact_mantenimientos" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Volumen/Frecuencia:</strong> Cientos/mes<br />
+<strong>Campos estimados:</strong> 8  </p>
+<p><strong>Descripción:</strong> Mantenimientos realizados por proveedores</p>
+<h4 id="campos_22">Campos<a class="headerlink" href="#campos_22" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_mantenimiento</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>monto</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>En COP</td>
+</tr>
+<tr>
+<td><code>descripcion</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_9">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_13">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-7-indisponibilidades">Módulo: HU 7 - Indisponibilidades<a class="headerlink" href="#modulo-hu-7-indisponibilidades" title="Permanent link">&para;</a></h2>
+<h3 id="fact_tickets_indisponibilidad"><code>fact_tickets_indisponibilidad</code><a class="headerlink" href="#fact_tickets_indisponibilidad" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> 20k-30k/mes<br />
+<strong>Campos estimados:</strong> 19  </p>
+<p><strong>Descripción:</strong> Tickets de incidencias Remedy</p>
+<blockquote>
+<p>Carga masiva desde archivo</p>
+</blockquote>
+<h4 id="campos_23">Campos<a class="headerlink" href="#campos_23" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>incident_id</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Número completo Remedy</td>
+</tr>
+<tr>
+<td><code>vendor_ticket_number</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Últimos 7 dígitos</td>
+</tr>
+<tr>
+<td><code>numero_ds</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Llave de cruce</td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Resuelto desde DS</td>
+</tr>
+<tr>
+<td><code>incident_reported_datetime</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Fecha apertura incidente</td>
+</tr>
+<tr>
+<td><code>incident_closed_datetime</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha cierre original Remedy</td>
+</tr>
+<tr>
+<td><code>customer_company</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>customer_city</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>customer_site</code></td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Dirección</td>
+</tr>
+<tr>
+<td><code>classification_service_ci</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_enlace</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>resolution_category_tier1</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>resolution_category_tier2</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Causa/Reparación</td>
+</tr>
+<tr>
+<td><code>resolution_category_tier3</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Motivo fallo</td>
+</tr>
+<tr>
+<td><code>assignee_assigned_group</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Grupo asignado</td>
+</tr>
+<tr>
+<td><code>fecha_solucion_incidencia</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ingresado por usuario</td>
+</tr>
+<tr>
+<td><code>estado</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Sin dato</td>
+<td>Validado / Sin dato / Excluido</td>
+</tr>
+<tr>
+<td><code>observaciones</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Editable</td>
+</tr>
+<tr>
+<td><code>mes_reporte</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM — solo 1 carga/mes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_10">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>numero_ds</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK validación</td>
+<td>Filtra solo DS activos en rango de fechas</td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK calculada</td>
+<td>Resuelto automáticamente desde DS</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_14">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_ticket</code></td>
+<td>1:1</td>
+<td>FK obligatoria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fact_indisponibilidad_mensual_conciliada"><code>fact_indisponibilidad_mensual_conciliada</code><a class="headerlink" href="#fact_indisponibilidad_mensual_conciliada" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles/mes<br />
+<strong>Campos estimados:</strong> 20  </p>
+<p><strong>Descripción:</strong> Conciliación mensual con proveedores</p>
+<blockquote>
+<p>Incluye %descuento calculado</p>
+</blockquote>
+<h4 id="campos_24">Campos<a class="headerlink" href="#campos_24" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_ticket</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_apertura</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_cierre</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cliente</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde dim_configuracion_servicios</td>
+</tr>
+<tr>
+<td><code>ciudad</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>causa_reparacion</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>motivo_fallo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>indisp_minutos</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Fecha cierre - fecha apertura</td>
+</tr>
+<tr>
+<td><code>pct_disponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(7,4)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Calculado</td>
+</tr>
+<tr>
+<td><code>pct_descuento_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde dim_ans_proveedores</td>
+</tr>
+<tr>
+<td><code>pct_disponibilidad_pactada</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fallo_responsabilidad_diferente</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>FALSE</td>
+<td>Si motivo está en dim_motivos_fallas</td>
+</tr>
+<tr>
+<td><code>pct_descuento_final</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0 si fallo_resp_dif'=true</td>
+</tr>
+<tr>
+<td><code>descuentos_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Valor COP a descontar</td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_reporte</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>observaciones</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_11">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_ticket</code></td>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id</code></td>
+<td>1:1</td>
+<td>FK obligatoria</td>
+<td>Cada ticket genera 1 registro conciliado</td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_15">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_exclusiones_remedy"><code>dim_exclusiones_remedy</code><a class="headerlink" href="#dim_exclusiones_remedy" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Decenas<br />
+<strong>Campos estimados:</strong> 5  </p>
+<p><strong>Descripción:</strong> Causas excluidas del cálculo ANS</p>
+<h4 id="campos_25">Campos<a class="headerlink" href="#campos_25" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_exclusion</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>descripcion</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo</code></td>
+<td>VARCHAR</td>
+<td>40</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>activo</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_ans_proveedores"><code>dim_ans_proveedores</code><a class="headerlink" href="#dim_ans_proveedores" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Decenas<br />
+<strong>Campos estimados:</strong> 7  </p>
+<p><strong>Descripción:</strong> Tabla de ANS por proveedor y rangos de descuento</p>
+<h4 id="campos_26">Campos<a class="headerlink" href="#campos_26" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td>VARCHAR</td>
+<td>15</td>
+<td></td>
+<td><code>dim_proveedores</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>disponibilidad_pactada_pct</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>% SLA pactado</td>
+</tr>
+<tr>
+<td><code>rango_min_pct</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>rango_max_pct</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pct_descuento</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Descuento a aplicar</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_12">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>ANS definido por proveedor</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dim_motivos_fallas"><code>dim_motivos_fallas</code><a class="headerlink" href="#dim_motivos_fallas" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> DIM<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Decenas<br />
+<strong>Campos estimados:</strong> 4  </p>
+<p><strong>Descripción:</strong> Motivos de falla que exoneran al proveedor</p>
+<h4 id="campos_27">Campos<a class="headerlink" href="#campos_27" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>motivo</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td>Motivo que exonera al proveedor</td>
+</tr>
+<tr>
+<td><code>activo</code></td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-hu-8-prefacturacion">Módulo: HU 8 - Prefacturación<a class="headerlink" href="#modulo-hu-8-prefacturacion" title="Permanent link">&para;</a></h2>
+<h3 id="fact_ingresos_davox"><code>fact_ingresos_davox</code><a class="headerlink" href="#fact_ingresos_davox" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles/mes<br />
+<strong>Campos estimados:</strong> 23  </p>
+<p><strong>Descripción:</strong> Ingresos del archivo FISC de Davox</p>
+<blockquote>
+<p>ZIP 30MB / 700MB descomprimido</p>
+</blockquote>
+<h4 id="campos_28">Campos<a class="headerlink" href="#campos_28" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ciclo</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Del archivo FISC</td>
+</tr>
+<tr>
+<td><code>nombre_ciclo</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>negocio</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_cus</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_cuenta</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_identificacion</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>identificacion</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>razon_social</code></td>
+<td>VARCHAR</td>
+<td>250</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_facturacion</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>porcentaje_iva</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_instalacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>codigo_unico_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>CUS '= DS de cruce</td>
+</tr>
+<tr>
+<td><code>tipo_moneda</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+</tr>
+<tr>
+<td><code>cargo_instalacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_fijo_mes</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Ingreso mensual</td>
+</tr>
+<tr>
+<td><code>fecha_suspension</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_reconexion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tipo_novedad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_inicio_contrato</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_fin_contrato</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>numero_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>estado_contrato</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_informe_fisc</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>Extraído del nombre del archivo ZIP</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_13">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>codigo_unico_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK cruce negocio</td>
+<td>CUS de Davox = DS de inventario</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_16">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>—</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fact_prefactura"><code>fact_prefactura</code><a class="headerlink" href="#fact_prefactura" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles/mes<br />
+<strong>Campos estimados:</strong> 37  </p>
+<p><strong>Descripción:</strong> Prefacturas generadas por servicio/mes</p>
+<blockquote>
+<p>37 campos calculados</p>
+</blockquote>
+<h4 id="campos_29">Campos<a class="headerlink" href="#campos_29" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_oportunidad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>producto</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>direccion_instalacion</code></td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>departamento</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>municipio</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>permanencia</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha fin clausula</td>
+</tr>
+<tr>
+<td><code>fecha_inicio</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Fecha Alta</td>
+</tr>
+<tr>
+<td><code>fecha_cierre</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Último día del mes facturado</td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>inicio_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fin_facturacion</code></td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>dias_a_facturar</code></td>
+<td>INTEGER</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cargo_instalacion</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>obra_civil</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mantenimientos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde fact_mantenimientos</td>
+</tr>
+<tr>
+<td><code>moneda</code></td>
+<td>VARCHAR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>COP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mrc</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>trm</code></td>
+<td>DECIMAL</td>
+<td>(12,4)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde dim_trm</td>
+</tr>
+<tr>
+<td><code>mrc_cop</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pct_descuento_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(5,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>valor_indisponibilidad</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde conciliación</td>
+</tr>
+<tr>
+<td><code>total_prorrateos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>total_menos_descuento_indisp</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>=@Prorrateo+@Mantenimientos-@Indisp</td>
+</tr>
+<tr>
+<td><code>iva</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Calculado por indicador_iva</td>
+</tr>
+<tr>
+<td><code>mrc_cop_total</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>=@IVA+@Total-@Descuento</td>
+</tr>
+<tr>
+<td><code>novedad_cronos</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>novedad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Alta/Cancelación/Mantenimiento/Traslado</td>
+</tr>
+<tr>
+<td><code>observacion</code></td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde conciliación</td>
+</tr>
+<tr>
+<td><code>estado_registro</code></td>
+<td>VARCHAR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>Por validar</td>
+<td>Valido/Por validar/No Valido</td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fecha_modificacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>modificado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_14">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>—</code></td>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Consume prorrateos del mes</td>
+</tr>
+<tr>
+<td><code>—</code></td>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Suma mantenimientos del mes</td>
+</tr>
+<tr>
+<td><code>—</code></td>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Aplica descuentos de indisponibilidad</td>
+</tr>
+<tr>
+<td><code>—</code></td>
+<td><code>dim_trm</code></td>
+<td><code>(anio+mes)</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Conversión USD→COP</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-destino-otras-tablas-apuntan-aqui_17">Relaciones (destino — otras tablas apuntan aquí)<a class="headerlink" href="#relaciones-destino-otras-tablas-apuntan-aqui_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>—</code></td>
+<td>N:N</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fact_validacion_pagos_ingresos"><code>fact_validacion_pagos_ingresos</code><a class="headerlink" href="#fact_validacion_pagos_ingresos" title="Permanent link">&para;</a></h3>
+<p><strong>Tipo:</strong> TRANSAC<br />
+<strong>Fase:</strong> MVP F1<br />
+<strong>Volumen/Frecuencia:</strong> Miles/mes<br />
+<strong>Campos estimados:</strong> 15  </p>
+<p><strong>Descripción:</strong> Reconciliación pagos vs ingresos</p>
+<blockquote>
+<p>Salida para SAP</p>
+</blockquote>
+<h4 id="campos_30">Campos<a class="headerlink" href="#campos_30" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo DB</th>
+<th>Tipo</th>
+<th>Long/Prec</th>
+<th>PK</th>
+<th>FK → Tabla</th>
+<th>NN</th>
+<th>UQ</th>
+<th>Default</th>
+<th>Descripción / Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_servicio</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td>BIGINT</td>
+<td></td>
+<td></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>proveedor</code></td>
+<td>VARCHAR</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_oportunidad</code></td>
+<td>VARCHAR</td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>departamento</code></td>
+<td>VARCHAR</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>municipio</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>bw</code></td>
+<td>VARCHAR</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mes_facturado</code></td>
+<td>VARCHAR</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td>YYYY-MM</td>
+</tr>
+<tr>
+<td><code>pagos_proveedores</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Suma de fact_prefactura</td>
+</tr>
+<tr>
+<td><code>ingresos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Desde fact_ingresos_davox.cargo_fijo_mes</td>
+</tr>
+<tr>
+<td><code>pagos_menos_ingresos</code></td>
+<td>DECIMAL</td>
+<td>(15,2)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>=@pagos-@ingresos</td>
+</tr>
+<tr>
+<td><code>fecha_creacion</code></td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creado_por</code></td>
+<td>VARCHAR</td>
+<td>100</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relaciones-origen_15">Relaciones (origen)<a class="headerlink" href="#relaciones-origen_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Campo FK</th>
+<th>→ Tabla</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>—</code></td>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:N</td>
+<td>JOIN cálculo</td>
+<td>Suma pagos a proveedores por servicio</td>
+</tr>
+<tr>
+<td><code>—</code></td>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Compara cargo_fijo_mes vs pagos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apendice-indice-completo-de-relaciones">Apéndice — Índice completo de relaciones<a class="headerlink" href="#apendice-indice-completo-de-relaciones" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Un usuario puede tener múltiples perfiles</td>
+</tr>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Un perfil asignado a múltiples usuarios</td>
+</tr>
+<tr>
+<td><code>permisos</code></td>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Permisos definidos por perfil</td>
+</tr>
+<tr>
+<td><code>log_acceso</code></td>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Auditoría de accesos por usuario</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Proveedor del servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_cliente</code></td>
+<td><code>dim_clientes</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Cliente final asociado al servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>codigo_dane_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>codigo_dane</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Ciudad del servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>nombre_medio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Medio de conectividad</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>clasificacion</code></td>
+<td><code>dim_clasificacion</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Clasificación del servicio</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>tipo_servicio</code></td>
+<td><code>dim_tipo_servicio</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Fijo o Móvil</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>numero_contrato</code></td>
+<td><code>dim_contratos</code></td>
+<td><code>numero_contrato</code></td>
+<td>N:1</td>
+<td>FK obligatoria + TRIGGER</td>
+<td>Trigger: autocompleta condicion_pago y condicion_facturacion</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Proveedor con cobertura</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Ciudad con cobertura</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Medio con cobertura</td>
+</tr>
+<tr>
+<td><code>fact_tarifa_promedio</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Tarifas por proveedor</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>numero_ds</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK validación</td>
+<td>Filtra solo DS activos en rango de fechas</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK calculada</td>
+<td>Resuelto automáticamente desde DS</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_ticket</code></td>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id</code></td>
+<td>1:1</td>
+<td>FK obligatoria</td>
+<td>Cada ticket genera 1 registro conciliado</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dim_ans_proveedores</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>ANS definido por proveedor</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK cruce negocio</td>
+<td>CUS de Davox = DS de inventario</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Consume prorrateos del mes</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Suma mantenimientos del mes</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Aplica descuentos de indisponibilidad</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>—</code></td>
+<td><code>dim_trm</code></td>
+<td><code>(anio+mes)</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Conversión USD→COP</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>—</code></td>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td>N:N</td>
+<td>JOIN cálculo</td>
+<td>Suma pagos a proveedores por servicio</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>—</code></td>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Compara cargo_fijo_mes vs pagos</td>
+</tr>
+<tr>
+<td><code>fact_viabilidad_cotizacion</code></td>
+<td><code>proveedor_seleccionado</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>Proveedor elegido al ejecutar Cerrar Viabilidad (HU-01). NULL hasta cierre. Obligatorio para poder cerrar.</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>id_instalacion</code></td>
+<td><code>fact_instalaciones</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+<td>Cada registro de seguimiento pertenece a una instalación con tercero (HU-02)</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>ds</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+<td>DS del servicio en seguimiento. Llave de cruce con inventario maestro.</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>fecha_fin_clausula_proveedor</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>fecha_fin_clausula</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+<td>Se lee desde dim_configuracion_servicios en tiempo de consulta; no se duplica en la tabla.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apendice-pendientes-de-confirmar-con-qcs">Apéndice — Pendientes de confirmar con QCS<a class="headerlink" href="#apendice-pendientes-de-confirmar-con-qcs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tabla</th>
+<th>Campo</th>
+<th>Pendiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>fact_instalaciones</code></td>
+<td><code>estado_unica</code> (en seguimiento)</td>
+<td>Definir catálogo de valores del desplegable (HU-02 sección 4.2 campo #24)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>fact_viabilidad_cotizacion</code></td>
+<td>Campo de envío de correo</td>
+<td>Confirmar si se elimina completamente o queda como descarga manual (v3 eliminó integración Movistar)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>fact_instalaciones</code></td>
+<td>Campos de referencia Cronos Connection</td>
+<td>Confirmar si existen campos de OT automática en la implementación actual para marcarlos como deprecated</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

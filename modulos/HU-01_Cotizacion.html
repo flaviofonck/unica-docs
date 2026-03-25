@@ -1,0 +1,1931 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="HU-00_Acceso.html">
+      
+      
+        <link rel="next" href="HU-02_Instalacion.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>HU-01 — Cotización - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hu-01-solicitud-de-cotizacion-al-proveedor" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HU-01 — Cotización
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HU-01_Cotizacion.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de Versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-recepcion-de-proyecto-para-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Recepción de Proyecto para Cotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-validar-viabilidad-y-cobertura-de-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Validar Viabilidad y Cobertura de Servicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-descargar-archivo-de-viabilidad-para-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Descargar Archivo de Viabilidad para Proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-consolidacion-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Consolidación de Respuestas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ordenar-la-viabilidad-por-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ordenar la Viabilidad por Valor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-cierre-de-solicitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cierre de Solicitudes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de Versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-recepcion-de-proyecto-para-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Recepción de Proyecto para Cotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-validar-viabilidad-y-cobertura-de-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Validar Viabilidad y Cobertura de Servicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-descargar-archivo-de-viabilidad-para-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Descargar Archivo de Viabilidad para Proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-consolidacion-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Consolidación de Respuestas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ordenar-la-viabilidad-por-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ordenar la Viabilidad por Valor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-cierre-de-solicitudes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cierre de Solicitudes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="hu-01-solicitud-de-cotizacion-al-proveedor">HU-01: Solicitud de Cotización al Proveedor<a class="headerlink" href="#hu-01-solicitud-de-cotizacion-al-proveedor" title="Permanent link">&para;</a></h1>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Épica</td>
+<td>PROCESOS ÚNICA</td>
+</tr>
+<tr>
+<td>Historia de Usuario</td>
+<td>1. Solicitud de cotización al Proveedor</td>
+</tr>
+<tr>
+<td>Fecha de elaboración</td>
+<td>05/12/2025</td>
+</tr>
+<tr>
+<td>Versión</td>
+<td>3.0 (27/02/2026)</td>
+</tr>
+<tr>
+<td>Elaborado por</td>
+<td>Quality Customer Service (QCS)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="control-de-versiones">Control de Versiones<a class="headerlink" href="#control-de-versiones" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Autor</th>
+<th>Cambios realizados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>05/12/2025</td>
+<td>QCS</td>
+<td>Versión inicial</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>23/02/2026</td>
+<td>QCS</td>
+<td>Definición de escenarios de recepción de solicitudes. Creación de paramétricas de viabilidad</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>27/02/2026</td>
+<td>QCS</td>
+<td>Eliminar integraciones con sistemas de Movistar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contexto-de-negocio">Contexto de Negocio<a class="headerlink" href="#contexto-de-negocio" title="Permanent link">&para;</a></h2>
+<p><strong>Persona:</strong> Practicante UNICA</p>
+<p><strong>Impacto en negocio:</strong> Automatizar el proceso de cotización con proveedores UNICA, con el fin de mejorar los tiempos de obtención de cotizaciones, disminuir la carga operativa de los usuarios ejecutores y orientar sobre la oferta económica más viable según varios criterios.</p>
+<p><strong>Captura de valor:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Unidad de Medida</th>
+<th>Línea Base (Tiempo de procesamiento manual al año)</th>
+<th>Meta (Tiempo a Reducir)</th>
+<th>Tiempo de proceso final estimado (anual en días hábiles del equipo total)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Días</td>
+<td>484 días</td>
+<td>338 días (70%)</td>
+<td>145 días</td>
+</tr>
+</tbody>
+</table>
+<p>Se realizó una estimación de tiempos sobre la situación actual del proceso en los puntos críticos relacionados con la validación y comparación manual de archivos, y la gestión manual de acciones, obteniéndose los siguientes datos:</p>
+<ol>
+<li><strong>Validación y comparación manual:</strong> 6.491 actividades con un promedio de 30 minutos por cada validación → total de <strong>406 días hábiles</strong> de gestión del equipo, equivalente al <strong>48%</strong> de la capacidad total.</li>
+<li><strong>Gestión manual:</strong> 3.751 actividades con un promedio de 10 minutos por cada actividad → total de <strong>78 días hábiles</strong> de gestión del equipo, equivalente al <strong>8%</strong> de la capacidad total.</li>
+</ol>
+<h2 id="historia-de-usuario">Historia de Usuario<a class="headerlink" href="#historia-de-usuario" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Como</strong> equipo de UNICA,
+<strong>Quiero</strong> una bandeja para recibir las tareas de recepción de solicitud de cotización, que haya una opción para validar automáticamente la viabilidad de la solicitud, se genere archivo para enviar a proveedores y cargar las respuestas de proveedores,
+<strong>Para</strong> gestionar de forma segura y eficiente el proceso de cotizaciones a los proveedores, mayores a 5 servicios, de acuerdo con las solicitudes generadas por el área de Preventa y PM, y poder identificar la recomendación del proveedor más adecuado para el proyecto.</p>
+</blockquote>
+<hr />
+<h2 id="criterios-de-aceptacion">Criterios de Aceptación<a class="headerlink" href="#criterios-de-aceptacion" title="Permanent link">&para;</a></h2>
+<h3 id="1-recepcion-de-proyecto-para-cotizacion">1. Recepción de Proyecto para Cotización<a class="headerlink" href="#1-recepcion-de-proyecto-para-cotizacion" title="Permanent link">&para;</a></h3>
+<h4 id="11-pestana-de-gestion-de-cotizaciones">1.1 Pestaña de gestión de cotizaciones<a class="headerlink" href="#11-pestana-de-gestion-de-cotizaciones" title="Permanent link">&para;</a></h4>
+<p>Se debe crear una pestaña para manejar las cotizaciones de viabilidad denominada <strong>"Viabilidad"</strong>.</p>
+<h4 id="12-carga-de-archivo-de-proyectos-para-cotizacion">1.2 Carga de archivo de Proyectos para Cotización<a class="headerlink" href="#12-carga-de-archivo-de-proyectos-para-cotizacion" title="Permanent link">&para;</a></h4>
+<p>Se debe crear una opción de cargar un archivo de <strong>PROYECTOS PARA COTIZACIÓN</strong>. El archivo debe contener y servir para todas las solicitudes de cotización, las cuales pueden llegar por <strong>3 escenarios</strong>:</p>
+<ol>
+<li>Solicitud de viabilidad por <strong>Salesforce</strong>, para tercero.</li>
+<li><strong>Asignación manual por DRH</strong>, cuando la marcan como tercero.</li>
+<li><strong>Creación de Viabilidad manual</strong> tercero.</li>
+</ol>
+<h4 id="13-campos-obligatorios-en-el-archivo-todos-los-escenarios">1.3 Campos obligatorios en el archivo (todos los escenarios)<a class="headerlink" href="#13-campos-obligatorios-en-el-archivo-todos-los-escenarios" title="Permanent link">&para;</a></h4>
+<p>Las solicitudes, independiente del escenario, deben traer la siguiente información diligenciada:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Campo</th>
+<th>Observaciones / Regla de negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>DS</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Medio</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Medio Proveedor</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fecha de solicitud a UNICA</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Fecha envío a proveedor</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Fecha recepción cotización</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>7</td>
+<td>ID Oportunidad</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Razón Social del Proyecto o cliente final</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Departamento</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Ciudad</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Dirección</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Coordenadas X</td>
+<td>Sin validación obligatoria</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Coordenadas Y</td>
+<td>Sin validación obligatoria</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Clasificación del Servicio Salesforce</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Duración de Proyecto de Salesforce (meses)</td>
+<td>Numérico</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Duración de contrato con Proveedor (meses)</td>
+<td>Si &lt; 12 → autocompletar con "Duración de Proyecto de Salesforce". Si ≥ 12 → autocompletar con 12 meses</td>
+</tr>
+<tr>
+<td>17</td>
+<td>BW requerido (Mbps)</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>18</td>
+<td>ID del servicio Proveedor</td>
+<td>Diligenciado</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Observación adicional</td>
+<td>Opcional</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota:</strong> La estructura de los datos del archivo de entrada se define en el <strong>Anexo 1 HU Cotización</strong> (imagen referencia en documento original).</p>
+</blockquote>
+<hr />
+<h3 id="2-validar-viabilidad-y-cobertura-de-servicios">2. Validar Viabilidad y Cobertura de Servicios<a class="headerlink" href="#2-validar-viabilidad-y-cobertura-de-servicios" title="Permanent link">&para;</a></h3>
+<h4 id="21-pestana-de-validacion-de-viabilidad">2.1 Pestaña de validación de viabilidad<a class="headerlink" href="#21-pestana-de-validacion-de-viabilidad" title="Permanent link">&para;</a></h4>
+<p>Se debe crear una pestaña que permita validar la viabilidad y la cobertura de servicios.</p>
+<h4 id="22-validacion-automatica-al-cargar-el-archivo">2.2 Validación automática al cargar el archivo<a class="headerlink" href="#22-validacion-automatica-al-cargar-el-archivo" title="Permanent link">&para;</a></h4>
+<p>Se debe validar automáticamente la viabilidad de la solicitud cuando se cargue el archivo de <strong>PROYECTOS PARA COTIZACIÓN</strong>.</p>
+<h4 id="23-logica-de-validacion-de-cobertura">2.3 Lógica de validación de cobertura<a class="headerlink" href="#23-logica-de-validacion-de-cobertura" title="Permanent link">&para;</a></h4>
+<p>La validación de viabilidad debe comparar cada una de las DS enviadas vs. la tabla <strong>DIM_COBERTURA</strong>, con los siguientes criterios:</p>
+<ol>
+<li><strong>Medio del Proveedor:</strong> identificar si los proveedores prestan el servicio en el ancho de banda solicitado.</li>
+<li><strong>Ubicación del servicio:</strong> cruzar por los campos <strong>Código DANE Ciudad</strong> y <strong>Ciudad</strong> para verificar coincidencia geográfica con la ciudad de la solicitud.</li>
+</ol>
+<h4 id="24-visual-viabilidad-proveedor">2.4 Visual "Viabilidad Proveedor"<a class="headerlink" href="#24-visual-viabilidad-proveedor" title="Permanent link">&para;</a></h4>
+<p>Se debe crear una pestaña desde la herramienta denominada <strong>"Viabilidad Proveedor"</strong> para visualizar el resultado de las validaciones de viabilidad.</p>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de pantalla incluida en el documento original (image2).</p>
+</blockquote>
+<h4 id="25-generacion-de-archivo-excel-por-proveedor">2.5 Generación de archivo Excel por proveedor<a class="headerlink" href="#25-generacion-de-archivo-excel-por-proveedor" title="Permanent link">&para;</a></h4>
+<p>Si hay cobertura, se deben listar los proveedores con coincidencia y construir un archivo Excel por proveedor identificado con el nombre:
+<code>NOMBRE_CORTO_PROVEEDOR_OPORTUNIDAD_COTIZACIONES_DS</code></p>
+<p><strong>Campos del archivo Excel:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Campo</th>
+<th>Valor / Instrucción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>DS</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ID del servicio Proveedor</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Razón Social del Proyecto o cliente final</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Departamento</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ciudad</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Dirección</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Coordenadas X</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Coordenadas Y</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Clasificación del Servicio Salesforce</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>10</td>
+<td>BW requerido (MB)</td>
+<td>Del sistema</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Duración de contrato con Proveedor (meses)</td>
+<td>Del sistema (editable antes del envío)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Medio Proveedor</td>
+<td><strong>Vacío</strong> — para diligenciar por proveedor</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Costo Mensual (MRC)</td>
+<td><strong>Vacío</strong> — para diligenciar por proveedor</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Moneda (MRC)</td>
+<td><strong>Vacío</strong> — para diligenciar por proveedor</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Costo Instalación (NRC)</td>
+<td><strong>Vacío</strong> — para diligenciar por proveedor</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Moneda (NRC)</td>
+<td><strong>Vacío</strong> — para diligenciar por proveedor</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Fecha estimada entrega de servicio</td>
+<td><strong>Vacío</strong> — para diligenciar por proveedor</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Fecha vencimiento oferta</td>
+<td><strong>Vacío</strong> — para diligenciar por proveedor</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Observación</td>
+<td><strong>Vacío</strong> — para diligenciar por UNICA</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>El campo <strong>"Duración de contrato con Proveedor"</strong> debe ser editable antes de enviar la solicitud.
+La estructura del Excel se define en el <strong>Anexo 1 HU Cotización</strong> (imagen referencia en documento original, image3).</p>
+</blockquote>
+<hr />
+<h3 id="3-descargar-archivo-de-viabilidad-para-proveedores">3. Descargar Archivo de Viabilidad para Proveedores<a class="headerlink" href="#3-descargar-archivo-de-viabilidad-para-proveedores" title="Permanent link">&para;</a></h3>
+<h4 id="31-opcion-de-descarga-por-proveedor">3.1 Opción de descarga por proveedor<a class="headerlink" href="#31-opcion-de-descarga-por-proveedor" title="Permanent link">&para;</a></h4>
+<p>Desde la pestaña <strong>"Viabilidad Proveedor"</strong>, se debe desarrollar una opción para <strong>descargar el archivo</strong> Excel respectivo a cada proveedor identificado.</p>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de botón de descarga incluida en el documento original (image4).</p>
+</blockquote>
+<hr />
+<h3 id="4-consolidacion-de-respuestas">4. Consolidación de Respuestas<a class="headerlink" href="#4-consolidacion-de-respuestas" title="Permanent link">&para;</a></h3>
+<h4 id="41-registro-manual-de-respuestas-de-proveedores">4.1 Registro manual de respuestas de proveedores<a class="headerlink" href="#41-registro-manual-de-respuestas-de-proveedores" title="Permanent link">&para;</a></h4>
+<p>En la pestaña <strong>"Viabilidad Proveedor"</strong>, se debe poder registrar manualmente por parte del usuario de UNICA las respuestas del (los) proveedor(es) en los campos respectivos, con opción de copiar y pegar.</p>
+<h4 id="42-ingreso-de-informacion-por-campo">4.2 Ingreso de información por campo<a class="headerlink" href="#42-ingreso-de-informacion-por-campo" title="Permanent link">&para;</a></h4>
+<p>El sistema debe permitir agregar manualmente la información de la respuesta en cada campo que corresponde al proveedor.</p>
+<h4 id="43-validacion-de-precio-techo">4.3 Validación de precio techo<a class="headerlink" href="#43-validacion-de-precio-techo" title="Permanent link">&para;</a></h4>
+<p>Se debe validar la tabla <strong>FACT_TARIFA_PROMEDIO</strong> para conocer el precio techo y agregarlo a las respuestas consolidadas.</p>
+<hr />
+<h3 id="5-ordenar-la-viabilidad-por-valor">5. Ordenar la Viabilidad por Valor<a class="headerlink" href="#5-ordenar-la-viabilidad-por-valor" title="Permanent link">&para;</a></h3>
+<h4 id="51-pestana-ordenar-viabilidad">5.1 Pestaña "Ordenar Viabilidad"<a class="headerlink" href="#51-pestana-ordenar-viabilidad" title="Permanent link">&para;</a></h4>
+<p>Se debe crear una pestaña denominada <strong>"Ordenar Viabilidad"</strong> para consolidar las evaluaciones, con un botón para <strong>Ordenar Viabilidad</strong>.</p>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de botón en documento original (image5).</p>
+</blockquote>
+<h4 id="52-tabla-consolidada-de-respuestas-de-proveedores">5.2 Tabla consolidada de respuestas de proveedores<a class="headerlink" href="#52-tabla-consolidada-de-respuestas-de-proveedores" title="Permanent link">&para;</a></h4>
+<p>Al seleccionar el botón <strong>Ordenar Viabilidad</strong>, se debe consolidar una tabla con las respuestas enviadas por los proveedores con los siguientes campos:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Campo</th>
+<th>Aplica a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ID viabilidad</td>
+<td>General</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Razón Social del Proyecto o cliente final</td>
+<td>General</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Departamento</td>
+<td>General</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ciudad</td>
+<td>General</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dirección</td>
+<td>General</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Coordenadas</td>
+<td>General</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Clasificación del Servicio Salesforce</td>
+<td>General</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Duración de contrato con Proveedor (meses)</td>
+<td>General</td>
+</tr>
+<tr>
+<td>9</td>
+<td>BW requerido</td>
+<td>General</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Nombre Proveedor Corto</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Costo Mensual MRC</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Moneda MRC</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Costo Instalación NRC</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Moneda NRC</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Medio Proveedor</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Oferta Preciario</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Respuesta viabilidad</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Observación</td>
+<td>Para cada uno de los 3 proveedores</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de tabla en documento original (image6).</p>
+</blockquote>
+<h4 id="53-logica-de-ordenamiento-de-proveedores">5.3 Lógica de ordenamiento de proveedores<a class="headerlink" href="#53-logica-de-ordenamiento-de-proveedores" title="Permanent link">&para;</a></h4>
+<p>El sistema debe ordenar 3 proveedores de acuerdo con los siguientes criterios:</p>
+<ol>
+<li>Que la <strong>viabilidad sea positiva</strong>.</li>
+<li>Ordenar por <strong>menor costo total</strong> (calculado como: <code>Costo Mensual × Duración de contrato con Proveedor (meses)</code> + <code>Costo Instalación</code>; si la duración es mayor a 12 meses, se usa 12 para el cálculo).</li>
+<li><strong>Ranking:</strong> Proveedor 1 = mejor propuesta, Proveedor 2 = segunda mejor, Proveedor 3 = tercera mejor propuesta económica.</li>
+</ol>
+<blockquote>
+<p><strong>Nota de proceso:</strong> En el Kick-off con Preventa, el área de Preventa debe indicar los proveedores, medio y tiempo con que se debe cotizar.</p>
+</blockquote>
+<hr />
+<h3 id="6-cierre-de-solicitudes">6. Cierre de Solicitudes<a class="headerlink" href="#6-cierre-de-solicitudes" title="Permanent link">&para;</a></h3>
+<h4 id="61-cierre-manual-desde-ordenar-viabilidad">6.1 Cierre manual desde "Ordenar Viabilidad"<a class="headerlink" href="#61-cierre-manual-desde-ordenar-viabilidad" title="Permanent link">&para;</a></h4>
+<p>La solicitud se cierra manualmente por el usuario de UNICA desde la visual denominada <strong>"Ordenar Viabilidad"</strong>, mediante un botón de <strong>Cerrar Viabilidad</strong>.</p>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de pantalla en documento original (image7).</p>
+</blockquote>
+<h4 id="62-reglas-de-cierre">6.2 Reglas de cierre<a class="headerlink" href="#62-reglas-de-cierre" title="Permanent link">&para;</a></h4>
+<ol>
+<li>El usuario de UNICA debe <strong>seleccionar un proveedor</strong> antes de cerrar.</li>
+<li>El sistema debe <strong>restringir</strong> el cierre de viabilidad a menos que se haya seleccionado un proveedor.</li>
+<li>Debe existir una opción para <strong>seleccionar el mismo proveedor para todas las viabilidades</strong> del lote.</li>
+</ol>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de opción masiva en documento original (image8).</p>
+</blockquote>
+<ol>
+<li>Debe existir una opción para <strong>seleccionar un proveedor por viabilidad individual</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Referencia visual:</strong> imagen de selección individual en documento original (image9).</p>
+</blockquote>
+<hr />
+<h2 id="notas-tecnicas">Notas Técnicas<a class="headerlink" href="#notas-tecnicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>La versión 3.0 elimina las integraciones con sistemas externos de Movistar presentes en versiones anteriores.</p>
+</li>
+<li>
+<p>La validación de viabilidad se dispara automáticamente al cargar el archivo de <strong>PROYECTOS PARA COTIZACIÓN</strong> (sin intervención manual).</p>
+</li>
+<li>
+<p>Las tablas paramétricas (<code>DIM_COBERTURA</code>, <code>FACT_TARIFA_PROMEDIO</code>) deben ser referenciadas internamente por el sistema para validaciones automáticas.</p>
+</li>
+<li>
+<p>Los archivos Excel generados siguen la convención de nombre: <code>NOMBRE_CORTO_PROVEEDOR_OPORTUNIDAD_COTIZACIONES_DS</code>.</p>
+</li>
+<li>
+<p>La estructura exacta de las pantallas y los archivos Excel de referencia se encuentra en el <strong>Anexo 1 HU Cotización</strong>.</p>
+</li>
+<li>
+<p>A nivel de proceso, en el Kick-off con Preventa, el área de Preventa debe indicar los proveedores, medio y tiempo de cotización requerido.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

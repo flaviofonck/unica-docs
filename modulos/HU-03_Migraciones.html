@@ -1,0 +1,1963 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="HU-02_Instalacion.html">
+      
+      
+        <link rel="next" href="HU-04_Bajas.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>HU-03 — Migraciones y Ampliaciones - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hu-03-gestion-de-migraciones-y-ampliaciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HU-03 — Migraciones y Ampliaciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HU-03_Migraciones.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargue-de-archivo-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cargue de Archivo de Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-consolidar-informacion-datos-comerciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Consolidar Información (Datos Comerciales)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-consolidacion-de-informacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Consolidación de Información Técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-completitud-de-informacion-y-generacion-de-inconsistencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Completitud de Información y Generación de Inconsistencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consolidacion-informacion-vlan-e-interconexion-casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Consolidación Información VLAN e Interconexión (Casos Especiales)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-seguimiento-de-migraciones-bajas-y-ampliaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Seguimiento de Migraciones, Bajas y Ampliaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-actualizacion-automatica-del-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Actualización Automática del Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-reporte-final-de-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reporte Final de Migraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historia de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de Aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargue-de-archivo-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cargue de Archivo de Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-consolidar-informacion-datos-comerciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Consolidar Información (Datos Comerciales)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-consolidacion-de-informacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Consolidación de Información Técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-completitud-de-informacion-y-generacion-de-inconsistencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Completitud de Información y Generación de Inconsistencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-consolidacion-informacion-vlan-e-interconexion-casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Consolidación Información VLAN e Interconexión (Casos Especiales)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-seguimiento-de-migraciones-bajas-y-ampliaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Seguimiento de Migraciones, Bajas y Ampliaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-actualizacion-automatica-del-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Actualización Automática del Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-reporte-final-de-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reporte Final de Migraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="hu-03-gestion-de-migraciones-y-ampliaciones">HU-03: Gestión de Migraciones y Ampliaciones<a class="headerlink" href="#hu-03-gestion-de-migraciones-y-ampliaciones" title="Permanent link">&para;</a></h1>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Épica</td>
+<td>MÓDULO DE PROCESAMIENTO ÚNICA (2)</td>
+</tr>
+<tr>
+<td>Historia de Usuario</td>
+<td>3. Gestión de Migraciones y ampliaciones</td>
+</tr>
+<tr>
+<td>Fecha de elaboración</td>
+<td>05/12/2025</td>
+</tr>
+<tr>
+<td>Versión</td>
+<td>2.0 (06/03/2026)</td>
+</tr>
+<tr>
+<td>Elaborado por</td>
+<td>Quality Customer Service (QCS)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contexto-de-negocio">Contexto de Negocio<a class="headerlink" href="#contexto-de-negocio" title="Permanent link">&para;</a></h2>
+<p><strong>Persona:</strong> Ingeniero Especialista UNICA</p>
+<p><strong>Impacto en negocio:</strong> Consolidar y asegurar la calidad y completitud de la información de manera transversal para los procesos de Migración, Ampliación y Bajas.</p>
+<p><strong>Captura de valor:</strong></p>
+<ul>
+<li>
+<p>Línea base: 484 días de procesamiento manual al año</p>
+</li>
+<li>
+<p>Meta: reducir 338 días (70%)</p>
+</li>
+<li>
+<p>Tiempo estimado final: 145 días hábiles al año</p>
+</li>
+</ul>
+<h2 id="historia-de-usuario">Historia de Usuario<a class="headerlink" href="#historia-de-usuario" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Como</strong> Ingeniero Especialista UNICA,
+<strong>Quiero</strong> disponer de un módulo que permita cargar de manera segura la gestión de consolidación de información y seguimientos de los archivos de Migración, Ampliación y Bajas,
+<strong>Para</strong> que el inventario se actualice de manera automática una vez finalizados los procesos.</p>
+</blockquote>
+<hr />
+<h2 id="criterios-de-aceptacion">Criterios de Aceptación<a class="headerlink" href="#criterios-de-aceptacion" title="Permanent link">&para;</a></h2>
+<h3 id="1-cargue-de-archivo-de-migracion">1. Cargue de Archivo de Migración<a class="headerlink" href="#1-cargue-de-archivo-de-migracion" title="Permanent link">&para;</a></h3>
+<h4 id="11-pestana">1.1 Pestaña<a class="headerlink" href="#11-pestana" title="Permanent link">&para;</a></h4>
+<p>Se crea la pestaña <strong>"Migraciones y Ampliaciones"</strong> en la herramienta.</p>
+<h4 id="12-opcion-cargar-archivos-de-migracion">1.2 Opción: "Cargar archivos de Migración"<a class="headerlink" href="#12-opcion-cargar-archivos-de-migracion" title="Permanent link">&para;</a></h4>
+<p>El usuario carga el archivo de Migraciones y Ampliaciones desde el front. El sistema crea una tabla con nombre:</p>
+<ul>
+<li>
+<p><strong>Nombre del proyecto:</strong> asignado por el usuario ejecutor.</p>
+</li>
+<li>
+<p><strong>Fecha:</strong> fecha del cargue del archivo (formato DD-MM-AAAA).</p>
+</li>
+</ul>
+<h4 id="13-formulario-digital-editable">1.3 Formulario digital editable<a class="headerlink" href="#13-formulario-digital-editable" title="Permanent link">&para;</a></h4>
+<p>Campos habilitados para ajustes manuales por el usuario UNICA:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CUS</td>
+</tr>
+<tr>
+<td>CLIENTE</td>
+</tr>
+<tr>
+<td>DIRECCIÓN</td>
+</tr>
+<tr>
+<td>Ciudad</td>
+</tr>
+<tr>
+<td>ID</td>
+</tr>
+<tr>
+<td>ÁREA RESPALDO</td>
+</tr>
+<tr>
+<td>CONTACTO CGP/ASEGURAMIENTO</td>
+</tr>
+<tr>
+<td>PROVEEDOR ACTUAL</td>
+</tr>
+<tr>
+<td>ID ACTUAL</td>
+</tr>
+<tr>
+<td>Contacto en Sitio</td>
+</tr>
+<tr>
+<td>Correo Contacto en Sitio</td>
+</tr>
+<tr>
+<td>Celular Contacto en Sitio</td>
+</tr>
+<tr>
+<td>Coordenadas</td>
+</tr>
+<tr>
+<td>PE ACTUAL</td>
+</tr>
+<tr>
+<td>IP PE ACTUAL</td>
+</tr>
+<tr>
+<td>INTERFACE ACTUAL</td>
+</tr>
+<tr>
+<td>VPRN</td>
+</tr>
+<tr>
+<td>SAP ACTUAL</td>
+</tr>
+<tr>
+<td>WAN EN PE</td>
+</tr>
+<tr>
+<td>Loopback</td>
+</tr>
+<tr>
+<td>VLAN ACTUAL</td>
+</tr>
+<tr>
+<td>ENRUTAMIENTO</td>
+</tr>
+<tr>
+<td>RUTA</td>
+</tr>
+<tr>
+<td>BW ACTUAL</td>
+</tr>
+<tr>
+<td>Voz</td>
+</tr>
+<tr>
+<td>Video</td>
+</tr>
+<tr>
+<td>PLATINO / ORO / PLATA / BRONCE</td>
+</tr>
+<tr>
+<td>OBSERVACIÓN DATOS SEDE / TIPS</td>
+</tr>
+<tr>
+<td>OBSERVACIONES REVISIÓN ÁREA RESPALDO</td>
+</tr>
+</tbody>
+</table>
+<h4 id="14-exportar-formulario">1.4 Exportar formulario<a class="headerlink" href="#14-exportar-formulario" title="Permanent link">&para;</a></h4>
+<p>Opción para exportar a <strong>Excel o CSV</strong> para entrega al CGP o líder del proyecto.</p>
+<hr />
+<h3 id="2-consolidar-informacion-datos-comerciales">2. Consolidar Información (Datos Comerciales)<a class="headerlink" href="#2-consolidar-informacion-datos-comerciales" title="Permanent link">&para;</a></h3>
+<h4 id="21-opcion-consolidar-informacion-de-migracion">2.1 Opción: "Consolidar información de Migración"<a class="headerlink" href="#21-opcion-consolidar-informacion-de-migracion" title="Permanent link">&para;</a></h4>
+<p>Al seleccionar esta opción, el sistema valida contra el <strong>inventario actual de servicios</strong> de UNICA y trae al formulario (usando <strong>CUS/DS</strong> como llave) los siguientes campos:</p>
+<table>
+<thead>
+<tr>
+<th>Campo comercial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESTADO CLÁUSULA UK</td>
+</tr>
+<tr>
+<td>Duración contratada (meses)</td>
+</tr>
+<tr>
+<td>Fecha fin cláusula proveedor</td>
+</tr>
+<tr>
+<td>MRCACTUALFACTURACION</td>
+</tr>
+<tr>
+<td>BW FACTURACIÓN</td>
+</tr>
+</tbody>
+</table>
+<h4 id="22-datos-de-cotizacion">2.2 Datos de cotización<a class="headerlink" href="#22-datos-de-cotizacion" title="Permanent link">&para;</a></h4>
+<p>También se trae del módulo de cotización (llave: CUS/DS) los siguientes campos:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MRC PRECIOS</td>
+<td>Cotización → Costo Mensual MRC</td>
+</tr>
+<tr>
+<td>NRC PRECIOS</td>
+<td>Cotización → Costo Instalación NRC</td>
+</tr>
+<tr>
+<td>MEDIO</td>
+<td>Cotización → Medio Proveedor</td>
+</tr>
+<tr>
+<td>TIEMPO DE ENTREGA</td>
+<td>Cotización → Fecha estimada entrega de servicio</td>
+</tr>
+<tr>
+<td>TIPO_DE_RED</td>
+<td>Vacío — diligenciar por usuario</td>
+</tr>
+<tr>
+<td>COMENTARIO</td>
+<td>Cotización → Observación</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Si no existe información, se permite diligenciar los campos manualmente.</p>
+</blockquote>
+<hr />
+<h3 id="3-consolidacion-de-informacion-tecnica">3. Consolidación de Información Técnica<a class="headerlink" href="#3-consolidacion-de-informacion-tecnica" title="Permanent link">&para;</a></h3>
+<h4 id="31-opcion-consolidar-informacion-tecnica">3.1 Opción: "Consolidar información Técnica"<a class="headerlink" href="#31-opcion-consolidar-informacion-tecnica" title="Permanent link">&para;</a></h4>
+<p>El usuario carga la tabla <code>PROYECTO_FECHA_MIGRACIONES</code> y el sistema actualiza el formulario (puntos 1 y 2) cruzando por <strong>CUS (DS)</strong> los siguientes campos técnicos:</p>
+<table>
+<thead>
+<tr>
+<th>Campo técnico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ÁREA RESPALDO</td>
+</tr>
+<tr>
+<td>CONTACTO CGP/ASEGURAMIENTO</td>
+</tr>
+<tr>
+<td>PROVEEDOR ACTUAL</td>
+</tr>
+<tr>
+<td>ID ACTUAL</td>
+</tr>
+<tr>
+<td>Contacto en Sitio / Correo / Celular</td>
+</tr>
+<tr>
+<td>Coordenadas</td>
+</tr>
+<tr>
+<td>PE ACTUAL / IP PE ACTUAL / INTERFACE ACTUAL</td>
+</tr>
+<tr>
+<td>VPRN / SAP ACTUAL / WAN EN PE / Loopback</td>
+</tr>
+<tr>
+<td>VLAN ACTUAL / ENRUTAMIENTO / RUTA</td>
+</tr>
+<tr>
+<td>BW ACTUAL</td>
+</tr>
+<tr>
+<td>Voz / Video</td>
+</tr>
+<tr>
+<td>PLATINO / ORO / PLATA / BRONCE</td>
+</tr>
+<tr>
+<td>OBSERVACIÓN DATOS SEDE</td>
+</tr>
+<tr>
+<td>OBSERVACIONES REVISIÓN ÁREA RESPALDO</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Si no existe información o cambió la estructura, se permite diligenciar manualmente.</p>
+</blockquote>
+<hr />
+<h3 id="4-completitud-de-informacion-y-generacion-de-inconsistencias">4. Completitud de Información y Generación de Inconsistencias<a class="headerlink" href="#4-completitud-de-informacion-y-generacion-de-inconsistencias" title="Permanent link">&para;</a></h3>
+<h4 id="41-validacion-bw">4.1 Validación BW<a class="headerlink" href="#41-validacion-bw" title="Permanent link">&para;</a></h4>
+<p>Al consolidar información técnica, el sistema compara:</p>
+<ul>
+<li><strong>BW ACTUAL</strong> (técnico, punto 3) vs. <strong>BW FACTURACIÓN</strong> (inventario, punto 2).</li>
+</ul>
+<h4 id="42-si-hay-diferencias">4.2 Si hay diferencias:<a class="headerlink" href="#42-si-hay-diferencias" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Se genera una <strong>alerta</strong> visual.</p>
+</li>
+<li>
+<p>Se genera un archivo de inconsistencias con nombre: <code>Inconsistencias_facturación_PROYECTO_FECHA_MIGRACIONES</code>.</p>
+</li>
+<li>
+<p>El usuario puede corregir la información desde el formulario digital (puntos 1 y 2).</p>
+</li>
+</ul>
+<h4 id="43-boton-cerrar-migracion">4.3 Botón "Cerrar Migración"<a class="headerlink" href="#43-boton-cerrar-migracion" title="Permanent link">&para;</a></h4>
+<p>Permite al usuario ejecutor cerrar la data del proyecto una vez ajustada.</p>
+<hr />
+<h3 id="5-consolidacion-informacion-vlan-e-interconexion-casos-especiales">5. Consolidación Información VLAN e Interconexión (Casos Especiales)<a class="headerlink" href="#5-consolidacion-informacion-vlan-e-interconexion-casos-especiales" title="Permanent link">&para;</a></h3>
+<h4 id="51-opcion-descargar-informacion-para-implantacion">5.1 Opción: "Descargar información para Implantación"<a class="headerlink" href="#51-opcion-descargar-informacion-para-implantacion" title="Permanent link">&para;</a></h4>
+<p>Genera un archivo para solicitar información de VLAN e interconexión al área de implantación.</p>
+<p><strong>Nombre del archivo:</strong> <code>Implantación_PROYECTO_FECHA_MIGRACIONES</code></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DS, OT TT, BW, CLIENTE FINAL, DIRECCIÓN, MUNICIPIO, Departamento, Proveedor, VLAN Actual</td>
+<td>Archivo <code>PROYECTO_FECHA_MIGRACIONES</code></td>
+</tr>
+<tr>
+<td>ITX PE NEW</td>
+<td>Campo nuevo — diligenciar</td>
+</tr>
+<tr>
+<td>IP ITX PE NEW</td>
+<td>Campo nuevo — diligenciar</td>
+</tr>
+<tr>
+<td>PTO ITX NEW</td>
+<td>Campo nuevo — diligenciar</td>
+</tr>
+<tr>
+<td>VLAN ASIGNADA IMPLANTACIÓN</td>
+<td>Campo nuevo — diligenciar</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="6-seguimiento-de-migraciones-bajas-y-ampliaciones">6. Seguimiento de Migraciones, Bajas y Ampliaciones<a class="headerlink" href="#6-seguimiento-de-migraciones-bajas-y-ampliaciones" title="Permanent link">&para;</a></h3>
+<p>Estructura del archivo de <strong>Migración</strong> (campos de seguimiento):</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CUS (DS), CLIENTE, DIRECCIÓN, Ciudad, ID</td>
+</tr>
+<tr>
+<td>Proveedor más barato, OT MIGRACIÓN</td>
+</tr>
+<tr>
+<td>ESTADO ACTUAL, AVANCE</td>
+</tr>
+<tr>
+<td>NUEVO ID NUEVO PROVEEDOR</td>
+</tr>
+<tr>
+<td>CLÁUSULA DE PERMANENCIA</td>
+</tr>
+<tr>
+<td>FECHA MIGRACIÓN REALIZADA</td>
+</tr>
+<tr>
+<td>TAREA EN BAJA EN ETB, FECHA ENVÍO BAJA DE PARTE DE UNICA</td>
+</tr>
+<tr>
+<td>ÁREA RESPALDO, CONTACTO CGP/ASEGURAMIENTO</td>
+</tr>
+<tr>
+<td>PROVEEDOR ACTUAL, ID ACTUAL</td>
+</tr>
+<tr>
+<td>Contacto en Sitio / Correo / Celular</td>
+</tr>
+<tr>
+<td>Coordenadas, PE ACTUAL, IP PE ACTUAL</td>
+</tr>
+<tr>
+<td>INTERFACE ACTUAL, VPRN, SAP ACTUAL</td>
+</tr>
+<tr>
+<td>WAN EN PE, Loopback, VLAN ACTUAL</td>
+</tr>
+<tr>
+<td>ENRUTAMIENTO, RUTA, BW ACTUAL</td>
+</tr>
+<tr>
+<td>Voz, Video, PLATINO/ORO/PLATA/BRONCE</td>
+</tr>
+<tr>
+<td>OBSERVACIÓN DATOS SEDE</td>
+</tr>
+</tbody>
+</table>
+<p>Estructura del archivo de <strong>Bajas</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DS, Ciudad, Departamento, Cliente, Dirección</td>
+</tr>
+<tr>
+<td>Proveedor Actual, ID ACTUAL, BW Kbps</td>
+</tr>
+<tr>
+<td>DURACIÓN CONTRATO</td>
+</tr>
+<tr>
+<td>CONTACTO BAJA NOMBRE / CORREO / CELULAR</td>
+</tr>
+<tr>
+<td>FECHA ENVÍO BAJA DE PARTE DE UNICA</td>
+</tr>
+</tbody>
+</table>
+<p>Estructura del archivo de <strong>Ampliaciones</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COMERCIAL, A Kbps, DS, CLIENTE, SEDE</td>
+</tr>
+<tr>
+<td>FECHA AMPLIACIÓN, OT, TAREA, Observación</td>
+</tr>
+<tr>
+<td>LEGALIZADO, OT LEGALIZACIÓN</td>
+</tr>
+<tr>
+<td>TAREA LEGALIZACIÓN, FECHA LEGALIZACIÓN</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Los archivos se pueden cargar múltiples veces hasta cerrar el proyecto.</p>
+</blockquote>
+<hr />
+<h3 id="7-actualizacion-automatica-del-inventario">7. Actualización Automática del Inventario<a class="headerlink" href="#7-actualizacion-automatica-del-inventario" title="Permanent link">&para;</a></h3>
+<p>Cuando se registre una fecha válida en los campos clave, el inventario se actualiza automáticamente:</p>
+<table>
+<thead>
+<tr>
+<th>Proceso</th>
+<th>Campo disparador</th>
+<th>Actualización en inventario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Migración</td>
+<td>FECHA MIGRACIÓN REALIZADA</td>
+<td>Proveedor, MRC, Medio, BW Actual</td>
+</tr>
+<tr>
+<td>Bajas</td>
+<td>FECHA ENVÍO BAJA DE PARTE DE UNICA</td>
+<td>Estado de la DS</td>
+</tr>
+<tr>
+<td>Ampliación</td>
+<td>FECHA AMPLIACIÓN</td>
+<td>BW ACTUAL, MRC</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="8-reporte-final-de-migraciones">8. Reporte Final de Migraciones<a class="headerlink" href="#8-reporte-final-de-migraciones" title="Permanent link">&para;</a></h3>
+<h4 id="81-opcion-reporte-final-migraciones">8.1 Opción: "Reporte Final Migraciones"<a class="headerlink" href="#81-opcion-reporte-final-migraciones" title="Permanent link">&para;</a></h4>
+<p>Genera un archivo final con nombre: <code>DOCUMENTACIÓN_FINAL_PROYECTO</code></p>
+<p><strong>Campos del reporte:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAREA UNICA, Solicitud OT, FECHA DE ENVÍO TERCERO</td>
+</tr>
+<tr>
+<td>MEDIO, PERMANENCIA, NRC, MRC</td>
+</tr>
+<tr>
+<td>FECHA ESTIMADA DE ENTREGA DEL SERVICIO</td>
+</tr>
+<tr>
+<td>ID ACTUAL, DS, BW ACTUAL (Kbps), BW NUEVO (Kbps)</td>
+</tr>
+<tr>
+<td>TIPO DE MODIFICACIÓN, CLIENTE</td>
+</tr>
+<tr>
+<td>DIRECCIÓN INSTALACIÓN ANTIGUA / NUEVA</td>
+</tr>
+<tr>
+<td>MUNICIPIO, DEPARTAMENTO, PROVEEDOR</td>
+</tr>
+<tr>
+<td>OT PROVEEDOR, PEP, Fecha migración</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="notas-tecnicas">Notas Técnicas<a class="headerlink" href="#notas-tecnicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>La llave de cruce en todos los procesos es <strong>CUS (DS)</strong>.</p>
+</li>
+<li>
+<p>El inventario se actualiza <strong>automáticamente</strong> al registrar fechas válidas.</p>
+</li>
+<li>
+<p>Los archivos de cargue siguen la convención: <code>PROYECTO_FECHA_MIGRACIONES</code>.</p>
+</li>
+<li>
+<p>Todos los campos no encontrados permiten <strong>diligenciamiento manual</strong> por el usuario UNICA.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

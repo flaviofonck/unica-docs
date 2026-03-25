@@ -1,0 +1,2751 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="Plan_Ejecutivo.html">
+      
+      
+        <link rel="next" href="Auditoria.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Plan Scrum / Sprints - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#procesos-unica-plan-de-trabajo-scrum" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plan Scrum / Sprints
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Guia_Tecnica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía Técnica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Plan_Ejecutivo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Plan_Scrum.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roles-scrum-en-este-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles Scrum en este Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-done-dod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition of Done (DoD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-del-producto-product-backlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backlog del Producto (Product Backlog)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backlog del Producto (Product Backlog)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#epica-1-gobierno-de-acceso-y-datos-maestros-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica 1 — Gobierno de Acceso y Datos Maestros (Fase 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epica-2-gestion-del-ciclo-de-vida-de-proveedores-fase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica 2 — Gestión del Ciclo de Vida de Proveedores (Fase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epica-3-control-operativo-y-ciclo-de-vida-de-servicios-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica 3 — Control Operativo y Ciclo de Vida de Servicios (Fase 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sprint-1-semana-1-2328-mar-setup-y-modelo-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 1 — Semana 1 (23–28 mar) · Setup y Modelo Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-2-semana-2-30-mar4-abr-consolidar-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 2 — Semana 2 (30 mar–4 abr) · Consolidar Fase 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-3-semana-3-611-abr-inicio-fase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 3 — Semana 3 (6–11 abr) · Inicio Fase 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-4-semana-4-1318-abr-completar-hu-03-hu-04-y-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 4 — Semana 4 (13–18 abr) · Completar HU-03, HU-04 y HU-06
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-5-semana-5-2025-abr-hu-07-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 5 — Semana 5 (20–25 abr) · HU-07 Indisponibilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-6-semana-6-27-abr2-may-hu-08-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 6 — Semana 6 (27 abr–2 may) · HU-08 Prefacturación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-7-semana-7-48-may-qa-final-uat-y-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 7 — Semana 7 (4–8 may) · QA Final, UAT y Despliegue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ceremonias-semanales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ceremonias Semanales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ceremonias Semanales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agenda-tipo-de-la-sesion-semanal-30-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agenda tipo de la sesión semanal (30 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablero-kanban-del-sprint-activo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablero Kanban del Sprint Activo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tablero Kanban del Sprint Activo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estados-del-tablero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estados del tablero
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-impedimentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de Impedimentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion-por-sprint-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación por Sprint (Resumen)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocidad-estimada-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocidad Estimada del Equipo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roles-scrum-en-este-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles Scrum en este Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-done-dod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition of Done (DoD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-del-producto-product-backlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backlog del Producto (Product Backlog)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backlog del Producto (Product Backlog)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#epica-1-gobierno-de-acceso-y-datos-maestros-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica 1 — Gobierno de Acceso y Datos Maestros (Fase 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epica-2-gestion-del-ciclo-de-vida-de-proveedores-fase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica 2 — Gestión del Ciclo de Vida de Proveedores (Fase 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epica-3-control-operativo-y-ciclo-de-vida-de-servicios-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épica 3 — Control Operativo y Ciclo de Vida de Servicios (Fase 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sprint-1-semana-1-2328-mar-setup-y-modelo-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 1 — Semana 1 (23–28 mar) · Setup y Modelo Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-2-semana-2-30-mar4-abr-consolidar-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 2 — Semana 2 (30 mar–4 abr) · Consolidar Fase 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-3-semana-3-611-abr-inicio-fase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 3 — Semana 3 (6–11 abr) · Inicio Fase 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-4-semana-4-1318-abr-completar-hu-03-hu-04-y-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 4 — Semana 4 (13–18 abr) · Completar HU-03, HU-04 y HU-06
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-5-semana-5-2025-abr-hu-07-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 5 — Semana 5 (20–25 abr) · HU-07 Indisponibilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-6-semana-6-27-abr2-may-hu-08-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 6 — Semana 6 (27 abr–2 may) · HU-08 Prefacturación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-7-semana-7-48-may-qa-final-uat-y-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 7 — Semana 7 (4–8 may) · QA Final, UAT y Despliegue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ceremonias-semanales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ceremonias Semanales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ceremonias Semanales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agenda-tipo-de-la-sesion-semanal-30-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agenda tipo de la sesión semanal (30 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tablero-kanban-del-sprint-activo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablero Kanban del Sprint Activo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tablero Kanban del Sprint Activo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estados-del-tablero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estados del tablero
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-impedimentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de Impedimentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion-por-sprint-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aceptación por Sprint (Resumen)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocidad-estimada-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocidad Estimada del Equipo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="procesos-unica-plan-de-trabajo-scrum">PROCESOS ÚNICA — Plan de Trabajo Scrum<a class="headerlink" href="#procesos-unica-plan-de-trabajo-scrum" title="Permanent link">&para;</a></h1>
+<p><strong>Proyecto:</strong> Sistema de Automatización Operativa<br />
+<strong>Cliente:</strong> QCS / Telefónica UNICA · <strong>Desarrollador:</strong> Flavio Fonseca Tovar<br />
+<strong>Marco:</strong> Scrum adaptado (1 desarrollador + QCS como Product Owner)<br />
+<strong>Sprint:</strong> 1 semana · Duración total: 7 sprints (6.5 semanas efectivas)</p>
+<hr />
+<h2 id="roles-scrum-en-este-proyecto">Roles Scrum en este Proyecto<a class="headerlink" href="#roles-scrum-en-este-proyecto" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rol Scrum</th>
+<th>Responsable</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Product Owner (PO)</strong></td>
+<td>QCS</td>
+<td>Define y prioriza el backlog. Aprueba entregables. Representa al cliente final (Telefónica UNICA)</td>
+</tr>
+<tr>
+<td><strong>Scrum Master / Dev</strong></td>
+<td>Flavio Fonseca Tovar</td>
+<td>Desarrollador único. Gestiona impedimentos técnicos. Facilita la ceremonia semanal</td>
+</tr>
+<tr>
+<td><strong>Stakeholder</strong></td>
+<td>Telefónica UNICA</td>
+<td>Destinatario final. Participa en UAT. Sin contacto directo salvo dudas técnicas puntuales a demanda de QCS</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="definition-of-done-dod">Definition of Done (DoD)<a class="headerlink" href="#definition-of-done-dod" title="Permanent link">&para;</a></h2>
+<p>Un ítem del backlog se considera <strong>DONE</strong> cuando cumple todos estos criterios:</p>
+<ul>
+<li>
+<p>[ ] Código commiteado en rama <code>feature/HU-XX</code> con mensajes descriptivos</p>
+</li>
+<li>
+<p>[ ] Pruebas unitarias escritas y pasando (cobertura mínima del módulo)</p>
+</li>
+<li>
+<p>[ ] Migración Flyway ejecutada sin errores en el ambiente de pruebas</p>
+</li>
+<li>
+<p>[ ] Componente Angular integrado y accesible desde <code>app.routes.ts</code> (sin <code>en-construccion</code>)</p>
+</li>
+<li>
+<p>[ ] Endpoint REST documentado (mínimo: ruta, método, parámetros, respuesta)</p>
+</li>
+<li>
+<p>[ ] Enlace de ambiente de pruebas disponible para QCS el viernes 7:00 a.m.</p>
+</li>
+<li>
+<p>[ ] QCS valida y aprueba el ítem (o aprobación tácita tras 5 días hábiles)</p>
+</li>
+<li>
+<p>[ ] Merge a <code>develop</code> realizado</p>
+</li>
+</ul>
+<hr />
+<h2 id="backlog-del-producto-product-backlog">Backlog del Producto (Product Backlog)<a class="headerlink" href="#backlog-del-producto-product-backlog" title="Permanent link">&para;</a></h2>
+<h3 id="epica-1-gobierno-de-acceso-y-datos-maestros-fase-1">Épica 1 — Gobierno de Acceso y Datos Maestros (Fase 1)<a class="headerlink" href="#epica-1-gobierno-de-acceso-y-datos-maestros-fase-1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Historia</th>
+<th>Prioridad</th>
+<th>Estimación</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-00-01</td>
+<td>Auth JWT funcional (login, refresh, logout)</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-00-02</td>
+<td>CRUD usuarios con log de auditoría</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-00-03</td>
+<td>Gestión de 6 perfiles con permisos por sección/pestaña</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-00-04</td>
+<td>Control de acceso: Gerente/Líder como únicos asignadores de perfiles</td>
+<td>Must</td>
+<td>1 pt</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-00-05</td>
+<td>Log de ingreso a módulos (usuario + fecha + hora)</td>
+<td>Must</td>
+<td>1 pt</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-05-01</td>
+<td>12 tablas DIM en BD con CRUD y versionamiento</td>
+<td>Must</td>
+<td>5 pts</td>
+<td>⚠️ Verificar (solo 6 de 12)</td>
+</tr>
+<tr>
+<td>HU-05-02</td>
+<td>Flujo de aprobación del líder para edición de tablas paramétricas</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-05-03</td>
+<td>DIM_TRM: restricción 1 valor por mes</td>
+<td>Must</td>
+<td>1 pt</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-05-04</td>
+<td>DIM_CONTRATOS: propagar cambios a DIM_CONFIGURACION_SERVICIOS</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>⚠️ Verificar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="epica-2-gestion-del-ciclo-de-vida-de-proveedores-fase-2">Épica 2 — Gestión del Ciclo de Vida de Proveedores (Fase 2)<a class="headerlink" href="#epica-2-gestion-del-ciclo-de-vida-de-proveedores-fase-2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Historia</th>
+<th>Prioridad</th>
+<th>Estimación</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-01-01</td>
+<td>Bandeja Cronos Feasibility + perfil UNICA</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-01-02</td>
+<td>Validación Punto Sencillo vs Proyecto + 19 campos obligatorios</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-01-03</td>
+<td>Validación cobertura contra DIM_COBERTURA por DANE+Ciudad+Medio</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-01-04</td>
+<td>Generación Excel por proveedor <code>NOMBRE_CORTO_PROVEEDOR_OPORTUNIDAD</code></td>
+<td>Must</td>
+<td>2 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-01-05</td>
+<td>Envío de correo con plantilla + adjunto Excel</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-01-06</td>
+<td>Selección automática proveedor óptimo por menor costo total</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-02-01</td>
+<td>Validación automática vigencia al crear OT (3 estados)</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-02-02</td>
+<td>Creación automática tabla instalación + Tarea (flujo VIGENTE)</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>✅ Done</td>
+</tr>
+<tr>
+<td>HU-02-03</td>
+<td>Envío correo proveedor con tabla de instalación</td>
+<td>Must</td>
+<td>1 pt</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-02-04</td>
+<td>Cierre OT al cerrar Tarea de Instalación</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>⚠️ Verificar</td>
+</tr>
+<tr>
+<td>HU-02-05</td>
+<td>Flujo POR VENCER / VENCIDA → habilitar Recotización</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>✅ Done</td>
+</tr>
+</tbody>
+</table>
+<h3 id="epica-3-control-operativo-y-ciclo-de-vida-de-servicios-fase-3">Épica 3 — Control Operativo y Ciclo de Vida de Servicios (Fase 3)<a class="headerlink" href="#epica-3-control-operativo-y-ciclo-de-vida-de-servicios-fase-3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Historia</th>
+<th>Prioridad</th>
+<th>Estimación</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-03-01</td>
+<td>Carga de archivo migración → tabla <code>PROYECTO_FECHA_MIGRACIONES</code></td>
+<td>Must</td>
+<td>3 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-03-02</td>
+<td>Formulario digital editable (30 campos HU-03 sección 1.3)</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-03-03</td>
+<td>Consolidar datos comerciales desde inventario + cotización</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-03-04</td>
+<td>Consolidar datos técnicos desde archivo</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-03-05</td>
+<td>Detección automática inconsistencias BW</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-03-06</td>
+<td>Descarga archivo inconsistencias Excel</td>
+<td>Must</td>
+<td>1 pt</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-03-07</td>
+<td>Botón "Cerrar Migración" + actualización automática inventario</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-03-08</td>
+<td>Descarga info implantación + reporte final</td>
+<td>Should</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-04-01</td>
+<td>Carga y procesamiento bajas por migración (cruce DS+ID → BAJA_POR_MIGRACIÓN)</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-04-02</td>
+<td>Cálculo <code>fecha_tope_pagar</code> (param 30 días) + <code>pago_proyectado_preaviso</code></td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-04-03</td>
+<td>Carga y procesamiento bajas por cliente (Salesforce)</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-04-04</td>
+<td>Carga y procesamiento suspensiones por cartera (5 estados)</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-04-05</td>
+<td>Validación terminación anticipada + cálculo pago proyectado</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-04-06</td>
+<td>Vista servicios en baja + flujo de reconexión con doble confirmación</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-06-01</td>
+<td>Motor de prorrateo mensual (3 modalidades: vencido / anticipado / trimestral)</td>
+<td>Must</td>
+<td>5 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-06-02</td>
+<td>Control idempotencia: 1 ejecución por mes (bloqueo automático)</td>
+<td>Must</td>
+<td>1 pt</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-06-03</td>
+<td>Tipos de novedad: Alta, Baja, Cambio BW, Suspensión, Reconexión, Migración, Recurrente</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-06-04</td>
+<td>CRUD FACT_MANTENIMIENTOS con flujo de aprobación</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-06-05</td>
+<td>Filtros por Mes Facturado / Mes Novedad / Tipo Servicio</td>
+<td>Should</td>
+<td>1 pt</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-01</td>
+<td>Carga asíncrona archivo incidencias (20k-30k registros) + barra de progreso</td>
+<td>Must</td>
+<td>5 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-02</td>
+<td>Filtro 1: cruce DS con DIM_CONFIGURACION_SERVICIOS + validación Fecha Baja</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-03</td>
+<td>Filtro 2: exclusiones Remedy con lógica de sobrescritura (5 patrones)</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-04</td>
+<td>Cálculo <code>indisp_mins</code>, <code>pct_disponibilidad</code>, <code>pct_descuento</code> (DIM_ANS), <code>pct_final</code></td>
+<td>Must</td>
+<td>4 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-05</td>
+<td>CRUD tablas paramétricas: DIM_ANS, DIM_EXCLUSIONES, DIM_MOTIVOS_FALLAS</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-06</td>
+<td>Generación archivo conciliación por proveedor (Excel/CSV)</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-07</td>
+<td>Carga respuestas de proveedores → FACT_INDISPONIBILIDAD_MENSUAL_CONCILIADA</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-08</td>
+<td>Cálculo <code>mes_facturacion</code> según condición facturación (3 esquemas)</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-07-09</td>
+<td>Generación consolidado mensual → archivo final que alimenta HU-08</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-01</td>
+<td>Carga asíncrona ZIP/TXT Davox FISC (~700MB) + filtro ESTADO_CUS=ACTIVO</td>
+<td>Must</td>
+<td>5 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-02</td>
+<td>Matriz de verificación previa (Novedades + Mantenimientos + Indisponibilidades)</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-03</td>
+<td>Generación FACT_PREFACTURA con cruces HU-06 + HU-07</td>
+<td>Must</td>
+<td>5 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-04</td>
+<td>Vista Hoja Prefactura: validación ítem a ítem (Válido/No Válido/Por Validar)</td>
+<td>Must</td>
+<td>3 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-05</td>
+<td>Vista Hoja Resumen: cálculo IVA y totales sobre registros Válidos</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-06</td>
+<td>Navegación entre proveedores con auto-guardado</td>
+<td>Must</td>
+<td>1 pt</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-07</td>
+<td>Consolidado final de mes + descarga Excel</td>
+<td>Must</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>HU-08-08</td>
+<td>Módulo Validación Pagos vs Ingresos + descarga Excel</td>
+<td>Should</td>
+<td>2 pts</td>
+<td>❌ Pendiente</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sprints">Sprints<a class="headerlink" href="#sprints" title="Permanent link">&para;</a></h2>
+<h3 id="sprint-1-semana-1-2328-mar-setup-y-modelo-base">Sprint 1 — Semana 1 (23–28 mar) · Setup y Modelo Base<a class="headerlink" href="#sprint-1-semana-1-2328-mar-setup-y-modelo-base" title="Permanent link">&para;</a></h3>
+<p><strong>Meta del Sprint:</strong> Repositorio configurado, BD inicializada, Auth funcional.</p>
+<p><strong>Sprint Backlog:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entendimiento y refinación de HUs con QCS</td>
+<td>Setup</td>
+<td>Dudas resueltas, alcance confirmado</td>
+</tr>
+<tr>
+<td>Configuración base: repositorio Git, estructura Spring Boot + Angular</td>
+<td>Setup</td>
+<td>Proyecto arrancando en local del desarrollador</td>
+</tr>
+<tr>
+<td>Modelo de datos inicial: tablas base V1-V5 aplicadas</td>
+<td>Dev</td>
+<td>Flyway ejecuta sin errores</td>
+</tr>
+<tr>
+<td>HU-00 verificación completa: 6 perfiles + permisos + logs</td>
+<td>QA</td>
+<td>Todos los criterios DoD marcados</td>
+</tr>
+<tr>
+<td>HU-05: verificar tablas DIM faltantes (confirmar 6 vs 12 requeridas)</td>
+<td>QA/Dev</td>
+<td>12 tablas DIM disponibles en BD</td>
+</tr>
+<tr>
+<td>HU-05: flujo aprobación líder + TRM 1/mes + propagación contratos</td>
+<td>Dev</td>
+<td>Criterios de negocio verificados con QCS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ceremonia de cierre (viernes 28 mar 4:30pm):</strong></p>
+<ul>
+<li>
+<p>Enlace disponible desde las 7:00 a.m.: Login + gestión usuarios + inventario</p>
+</li>
+<li>
+<p>QCS valida y registra observaciones antes de la sesión</p>
+</li>
+<li>
+<p>Resultado esperado: aprobación Fase 1 o lista de ajustes</p>
+</li>
+</ul>
+<hr />
+<h3 id="sprint-2-semana-2-30-mar4-abr-consolidar-fase-1">Sprint 2 — Semana 2 (30 mar–4 abr) · Consolidar Fase 1<a class="headerlink" href="#sprint-2-semana-2-30-mar4-abr-consolidar-fase-1" title="Permanent link">&para;</a></h3>
+<p><strong>Meta del Sprint:</strong> Fase 1 aprobada por QCS. Todas las verificaciones de HU-00 y HU-05 cerradas.</p>
+<p><strong>Sprint Backlog:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ajustes HU-00 según observaciones S1</td>
+<td>Dev</td>
+<td>Criterios HU-00 100% cubiertos</td>
+</tr>
+<tr>
+<td>Ajustes HU-05 según observaciones S1</td>
+<td>Dev</td>
+<td>12 tablas DIM, versionamiento, aprobaciones activas</td>
+</tr>
+<tr>
+<td>Pruebas unitarias: módulo acceso + inventario</td>
+<td>QA</td>
+<td>Suite de tests pasando</td>
+</tr>
+<tr>
+<td>Pruebas de integración Fase 1 con datos de QCS</td>
+<td>QA</td>
+<td>Datos reales de QCS procesados sin errores</td>
+</tr>
+<tr>
+<td>Verificación HU-01: campo XXXX Punto Sencillo + selección óptima proveedor</td>
+<td>QA/Dev</td>
+<td>Confirmar con QCS y cerrar</td>
+</tr>
+<tr>
+<td>Verificación HU-02: cierre OT + correo proveedor</td>
+<td>QA</td>
+<td>Flujos completos verificados</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ceremonia de cierre (viernes 4 abr 4:30pm):</strong></p>
+<ul>
+<li>
+<p>Enlace: sistema Fase 1 completo + HU-01 y HU-02 verificadas</p>
+</li>
+<li>
+<p><strong>Hito: Aprobación formal Fase 1 por QCS → gatilla pago 20% ($9.840.000 COP)</strong></p>
+</li>
+</ul>
+<hr />
+<h3 id="sprint-3-semana-3-611-abr-inicio-fase-2">Sprint 3 — Semana 3 (6–11 abr) · Inicio Fase 2<a class="headerlink" href="#sprint-3-semana-3-611-abr-inicio-fase-2" title="Permanent link">&para;</a></h3>
+<p><strong>Meta del Sprint:</strong> HU-01 y HU-02 verificadas. Inicio HU-03 y HU-04.</p>
+<p><strong>Sprint Backlog:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Migración V9: tablas <code>proyecto_migraciones</code>, <code>detalle_migracion</code>, <code>inconsistencias_migracion</code></td>
+<td>Dev</td>
+<td>Flyway ejecuta sin errores</td>
+</tr>
+<tr>
+<td>HU-03: backend carga archivo + creación tabla dinámica</td>
+<td>Dev</td>
+<td><code>POST /api/migraciones/cargar</code> funcional</td>
+</tr>
+<tr>
+<td>HU-03: consolidación datos comerciales + técnicos</td>
+<td>Dev</td>
+<td>Cruce por CUS/DS contra inventario funcional</td>
+</tr>
+<tr>
+<td>HU-03: detección inconsistencias BW automática</td>
+<td>Dev</td>
+<td>Registros en <code>inconsistencias_migracion</code> generados</td>
+</tr>
+<tr>
+<td>Migración V10: tablas <code>fact_bajas_cartera</code>, <code>param_dias_preaviso</code></td>
+<td>Dev</td>
+<td>Flyway ejecuta sin errores</td>
+</tr>
+<tr>
+<td>HU-04: backend bajas por migración (cruce + cálculos)</td>
+<td>Dev</td>
+<td><code>POST /api/bajas/migracion/cargar</code> funcional</td>
+</tr>
+<tr>
+<td>HU-04: bajas por cliente (Salesforce)</td>
+<td>Dev</td>
+<td><code>POST /api/bajas/cliente/cargar</code> funcional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ceremonia de cierre (viernes 11 abr 4:30pm):</strong></p>
+<ul>
+<li>Enlace: HU-03 y HU-04 backend funcional</li>
+</ul>
+<hr />
+<h3 id="sprint-4-semana-4-1318-abr-completar-hu-03-hu-04-y-hu-06">Sprint 4 — Semana 4 (13–18 abr) · Completar HU-03, HU-04 y HU-06<a class="headerlink" href="#sprint-4-semana-4-1318-abr-completar-hu-03-hu-04-y-hu-06" title="Permanent link">&para;</a></h3>
+<p><strong>Meta del Sprint:</strong> Migraciones, bajas y prorrateo de novedades completos y verificados.</p>
+<p><strong>Sprint Backlog:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-03: frontend completo (formulario editable + inconsistencias + exportaciones)</td>
+<td>Dev</td>
+<td>Componente <code>migraciones/</code> reemplaza <code>en-construccion</code></td>
+</tr>
+<tr>
+<td>HU-03: actualización automática inventario al registrar fechas clave</td>
+<td>Dev</td>
+<td>DIM_CONFIGURACION_SERVICIOS se actualiza automáticamente</td>
+</tr>
+<tr>
+<td>HU-04: suspensiones cartera + terminación anticipada</td>
+<td>Dev</td>
+<td>5 estados correctamente asignados + cálculos verificados</td>
+</tr>
+<tr>
+<td>HU-04: frontend completo (4 pestañas + reconexión con doble confirmación)</td>
+<td>Dev</td>
+<td>Componente <code>bajas/</code> reemplaza <code>en-construccion</code></td>
+</tr>
+<tr>
+<td>Migración V11: tablas <code>fact_prorrateo_novedades_servicios</code>, <code>fact_mantenimientos</code></td>
+<td>Dev</td>
+<td>Flyway ejecuta sin errores</td>
+</tr>
+<tr>
+<td>HU-06: motor de prorrateo (3 modalidades + 7 tipos de novedad)</td>
+<td>Dev</td>
+<td>Cálculos verificados con datos QCS</td>
+</tr>
+<tr>
+<td>HU-06: control idempotencia + CRUD mantenimientos</td>
+<td>Dev</td>
+<td>Bloqueo de segunda ejecución mensual activo</td>
+</tr>
+<tr>
+<td>HU-06: frontend (tablas, botón prorrateo, filtros)</td>
+<td>Dev</td>
+<td>Componente <code>novedades/</code> reemplaza <code>en-construccion</code></td>
+</tr>
+<tr>
+<td>Pruebas integración HU-03 + HU-04 + HU-06 con datos QCS</td>
+<td>QA</td>
+<td>Datos reales procesados correctamente</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ceremonia de cierre (viernes 18 abr 4:30pm):</strong></p>
+<ul>
+<li>
+<p>Enlace: HU-03, HU-04, HU-06 funcionales</p>
+</li>
+<li>
+<p><strong>Hito: Aprobación formal Fase 2 → gatilla pago 20% ($9.840.000 COP)</strong></p>
+</li>
+</ul>
+<hr />
+<h3 id="sprint-5-semana-5-2025-abr-hu-07-indisponibilidades">Sprint 5 — Semana 5 (20–25 abr) · HU-07 Indisponibilidades<a class="headerlink" href="#sprint-5-semana-5-2025-abr-hu-07-indisponibilidades" title="Permanent link">&para;</a></h3>
+<p><strong>Meta del Sprint:</strong> Módulo de indisponibilidades completo. Consolidado mensual disponible para alimentar HU-08.</p>
+<blockquote>
+<p>⚠️ Este sprint es crítico. HU-07 es prerequisito bloqueante de HU-08.</p>
+</blockquote>
+<p><strong>Sprint Backlog:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Migración V12: tablas indisponibilidades (6 tablas)</td>
+<td>Dev</td>
+<td>Flyway ejecuta sin errores</td>
+</tr>
+<tr>
+<td>HU-07: carga asíncrona archivo incidencias (30k registros) con barra de progreso</td>
+<td>Dev</td>
+<td>Carga de 30.000 registros sin timeout. Polling funcional</td>
+</tr>
+<tr>
+<td>HU-07: Filtro 1 — cruce DS con DIM_CONFIGURACION_SERVICIOS + validación Fecha Baja</td>
+<td>Dev</td>
+<td>Lógica de estados aplicada correctamente</td>
+</tr>
+<tr>
+<td>HU-07: Filtro 2 — exclusiones Remedy con lógica de sobrescritura (5 patrones)</td>
+<td>Dev</td>
+<td>Reglas de sobrescritura (4 casos) aplicadas correctamente</td>
+</tr>
+<tr>
+<td>HU-07: cálculo indisp_mins + pct_disponibilidad + pct_descuento + pct_final</td>
+<td>Dev</td>
+<td>Fórmulas verificadas con datos históricos de QCS</td>
+</tr>
+<tr>
+<td>HU-07: CRUD tablas paramétricas (DIM_ANS, DIM_EXCLUSIONES, DIM_MOTIVOS)</td>
+<td>Dev</td>
+<td>Editables desde el frontend</td>
+</tr>
+<tr>
+<td>HU-07: generación archivos conciliación por proveedor (Excel)</td>
+<td>Dev</td>
+<td>Nombre de archivo correcto: <code>Informe_..._NombreProveedor_MM_AAAA</code></td>
+</tr>
+<tr>
+<td>HU-07: carga respuestas proveedores + cálculo mes_facturacion (3 esquemas)</td>
+<td>Dev</td>
+<td>Los 3 esquemas de facturación calculan correctamente</td>
+</tr>
+<tr>
+<td>HU-07: consolidado mensual final → alimenta FACT_INDISPONIBILIDAD_MENSUAL_CONCILIADA</td>
+<td>Dev</td>
+<td>Archivo final generado y disponible para HU-08</td>
+</tr>
+<tr>
+<td>HU-07: frontend completo (5 opciones de menú lateral)</td>
+<td>Dev</td>
+<td>Componente <code>indisponibilidades/</code> reemplaza <code>en-construccion</code></td>
+</tr>
+<tr>
+<td>Pruebas integración HU-07 con datos reales QCS (datos de prueba entregados por QCS)</td>
+<td>QA</td>
+<td>30k registros reales procesados sin errores</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ceremonia de cierre (viernes 25 abr 4:30pm):</strong></p>
+<ul>
+<li>Enlace: HU-07 completo con datos reales de QCS</li>
+</ul>
+<hr />
+<h3 id="sprint-6-semana-6-27-abr2-may-hu-08-prefacturacion">Sprint 6 — Semana 6 (27 abr–2 may) · HU-08 Prefacturación<a class="headerlink" href="#sprint-6-semana-6-27-abr2-may-hu-08-prefacturacion" title="Permanent link">&para;</a></h3>
+<p><strong>Meta del Sprint:</strong> Módulo de prefacturación completo. Cierre financiero mensual automatizado.</p>
+<blockquote>
+<p>⚠️ HU-06 y HU-07 deben estar aprobadas por QCS antes de iniciar este sprint.</p>
+</blockquote>
+<p><strong>Sprint Backlog:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Migración V13: tablas prefacturación</td>
+<td>Dev</td>
+<td>Flyway ejecuta sin errores</td>
+</tr>
+<tr>
+<td>HU-08: carga asíncrona ZIP/TXT Davox FISC (~700MB) + filtro ACTIVO</td>
+<td>Dev</td>
+<td>Archivo de 700MB procesado. Solo registros ACTIVO en BD</td>
+</tr>
+<tr>
+<td>HU-08: extracción <code>mes_informe_fisc</code> desde nombre del archivo</td>
+<td>Dev</td>
+<td>Regex extrae mes correctamente del patrón <code>FISC_HIST_SC_30_01_SEP_24_060921</code></td>
+</tr>
+<tr>
+<td>HU-08: matriz de verificación previa con alerta + doble confirmación</td>
+<td>Dev</td>
+<td>Las 3 fechas se comparan y la alerta se dispara correctamente</td>
+</tr>
+<tr>
+<td>HU-08: generación FACT_PREFACTURA con cruces HU-06 + HU-07</td>
+<td>Dev</td>
+<td>Cruces verificados con datos de prueba. Descuentos aplicados solo a <code>Recurrente</code></td>
+</tr>
+<tr>
+<td>HU-08: vista Hoja Prefactura (validación ítem a ítem)</td>
+<td>Dev</td>
+<td>Estados Válido/No Válido/Por Validar funcionales</td>
+</tr>
+<tr>
+<td>HU-08: vista Hoja Resumen (cálculo IVA y totales)</td>
+<td>Dev</td>
+<td>Fórmulas de resumen verificadas contra cálculo manual</td>
+</tr>
+<tr>
+<td>HU-08: consolidado final + descarga Excel</td>
+<td>Dev</td>
+<td>Excel descargable con todos los ítems Válidos del mes</td>
+</tr>
+<tr>
+<td>HU-08: Validación Pagos vs Ingresos</td>
+<td>Dev</td>
+<td>Tabla comparativa funcional + exportación Excel</td>
+</tr>
+<tr>
+<td>HU-08: frontend completo (3 opciones de menú lateral)</td>
+<td>Dev</td>
+<td>Componente <code>prefacturacion/</code> reemplaza <code>en-construccion</code></td>
+</tr>
+<tr>
+<td>Pruebas E2E completas — flujo completo del sistema integrado</td>
+<td>QA</td>
+<td>Flujo end-to-end HU-00 → HU-05 → HU-06 → HU-07 → HU-08 sin errores</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ceremonia de cierre (viernes 2 may 4:30pm):</strong></p>
+<ul>
+<li>Enlace: sistema completo con HU-08 funcional</li>
+</ul>
+<hr />
+<h3 id="sprint-7-semana-7-48-may-qa-final-uat-y-despliegue">Sprint 7 — Semana 7 (4–8 may) · QA Final, UAT y Despliegue<a class="headerlink" href="#sprint-7-semana-7-48-may-qa-final-uat-y-despliegue" title="Permanent link">&para;</a></h3>
+<p><strong>Meta del Sprint:</strong> Sistema aprobado por QCS, desplegado en servidores productivos y con soporte de arranque iniciado.</p>
+<p><strong>Sprint Backlog:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>DoD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Corrección de bugs detectados en Sprint 6</td>
+<td>Dev</td>
+<td>Cero bugs abiertos de prioridad alta</td>
+</tr>
+<tr>
+<td>Pruebas E2E completas sistema integrado (ambiente QCS)</td>
+<td>QA</td>
+<td>Flujo completo de los 9 módulos sin errores</td>
+</tr>
+<tr>
+<td>UAT con equipo QCS — sesión de aceptación formal</td>
+<td>QA</td>
+<td>QCS firma acta de aceptación final</td>
+</tr>
+<tr>
+<td>Corrección de bugs UAT + estabilización</td>
+<td>Dev</td>
+<td>Todos los bugs UAT resueltos</td>
+</tr>
+<tr>
+<td>Despliegue productivo en servidores QCS</td>
+<td>Deploy</td>
+<td>Sistema accesible en producción para Telefónica UNICA</td>
+</tr>
+<tr>
+<td>Smoke test post-despliegue</td>
+<td>QA</td>
+<td>Funciones críticas verificadas en producción</td>
+</tr>
+<tr>
+<td>Entrega de documentación técnica</td>
+<td>Doc</td>
+<td>Documento entregado a QCS</td>
+</tr>
+<tr>
+<td>Inicio soporte de arranque (30 días calendario)</td>
+<td>Soporte</td>
+<td>Canal de soporte activo</td>
+</tr>
+<tr>
+<td><strong>Aprobación formal de Fase 3</strong></td>
+<td>QCS</td>
+<td><strong>Gatilla pago 10% ($4.920.000 COP)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flujo completo E2E a validar en UAT:</strong></p>
+<hr />
+<h2 id="ceremonias-semanales">Ceremonias Semanales<a class="headerlink" href="#ceremonias-semanales" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ceremonia</th>
+<th>Día</th>
+<th>Hora</th>
+<th>Duración</th>
+<th>Participantes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Demo / Review semanal</strong></td>
+<td>Viernes</td>
+<td>4:30–5:00 pm</td>
+<td>30 min</td>
+<td>QCS + Desarrollador</td>
+</tr>
+<tr>
+<td><strong>Ambiente de pruebas disponible</strong></td>
+<td>Viernes</td>
+<td>Desde 7:00 am</td>
+<td>—</td>
+<td>QCS (auto-validación previa a la sesión)</td>
+</tr>
+<tr>
+<td><strong>Retrospectiva interna</strong></td>
+<td>Viernes</td>
+<td>Post-sesión</td>
+<td>10 min</td>
+<td>Desarrollador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="agenda-tipo-de-la-sesion-semanal-30-min">Agenda tipo de la sesión semanal (30 min)<a class="headerlink" href="#agenda-tipo-de-la-sesion-semanal-30-min" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Demo del incremento</strong> (15 min) — el desarrollador muestra las funcionalidades nuevas en el ambiente de pruebas</li>
+<li><strong>Revisión de observaciones</strong> (10 min) — QCS comparte observaciones registradas desde el viernes anterior</li>
+<li><strong>Aprobación formal o lista de ajustes</strong> (5 min) — QCS aprueba el entregable o documenta los cambios requeridos</li>
+</ol>
+<hr />
+<h2 id="tablero-kanban-del-sprint-activo">Tablero Kanban del Sprint Activo<a class="headerlink" href="#tablero-kanban-del-sprint-activo" title="Permanent link">&para;</a></h2>
+<h3 id="estados-del-tablero">Estados del tablero<a class="headerlink" href="#estados-del-tablero" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="gestion-de-impedimentos">Gestión de Impedimentos<a class="headerlink" href="#gestion-de-impedimentos" title="Permanent link">&para;</a></h2>
+<p>Los impedimentos se clasifican y escalan según su tipo:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de impedimento</th>
+<th>Responsable de desbloquear</th>
+<th>Plazo máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HUs o documentación faltante</td>
+<td>QCS</td>
+<td>3 días hábiles</td>
+</tr>
+<tr>
+<td>Datos de prueba no entregados</td>
+<td>QCS</td>
+<td>5 días hábiles desde inicio de fase</td>
+</tr>
+<tr>
+<td>Aprobación de entregable pendiente</td>
+<td>QCS</td>
+<td>5 días hábiles (luego → aprobación tácita)</td>
+</tr>
+<tr>
+<td>Bug técnico bloqueante</td>
+<td>Desarrollador</td>
+<td>1 día hábil</td>
+</tr>
+<tr>
+<td>Cambio de alcance solicitado</td>
+<td>QCS (Change Request)</td>
+<td>Antes de ejecutar</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="criterios-de-aceptacion-por-sprint-resumen">Criterios de Aceptación por Sprint (Resumen)<a class="headerlink" href="#criterios-de-aceptacion-por-sprint-resumen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>Criterio de éxito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>Login funcional + 12 tablas DIM en BD + flujo de aprobación activo</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Fase 1 aprobada por QCS. HU-01 campo XXXX confirmado. HU-02 flujos verificados</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>HU-03 backend funcional. HU-04 backend funcional (3 tipos de baja)</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>HU-03, HU-04, HU-06 completas y verificadas con datos reales QCS. Fase 2 aprobada</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>HU-07 completa: 30k registros procesados, consolidado mensual generado, datos reales QCS</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>HU-08 completa: prefacturas generadas con cruces correctos, validación ítems, consolidado</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>UAT aprobado por QCS. Despliegue productivo exitoso. Fase 3 aprobada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="velocidad-estimada-del-equipo">Velocidad Estimada del Equipo<a class="headerlink" href="#velocidad-estimada-del-equipo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>Puntos planificados</th>
+<th>Puntos completados</th>
+<th>Velocidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1–S4 (completados)</td>
+<td>~50 pts</td>
+<td>~30 pts (HUs base)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>~25 pts</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>~20 pts</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>~10 pts (QA/Deploy)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Total proyecto</strong></td>
+<td><strong>~105 pts</strong></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Plan de Trabajo Scrum — PROCESOS ÚNICA v1.0 · Marzo 2026</em><br />
+<em>Marco adaptado a equipo de 1 desarrollador + QCS como Product Owner</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
