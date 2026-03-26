@@ -1071,7 +1071,7 @@
 <strong>Fecha cierre estimada</strong>: semana del 08/05/2026<br />
 <strong>Target QCS</strong>: Aprobación formal de Fase 1 → inicio inmediato de Fase 2<br />
 <strong>Desarrollador</strong>: Flavio Fonseca Tovar<br />
-<strong>Prerequisito</strong>: Fase 1 aprobada por QCS (HU-00 + HU-05 ✅)</p>
+<strong>Prerequisito</strong>: Fase 1 aprobada por QCS (<a href="../modulos/HU-00_Acceso.html">HU-00</a> + <a href="../modulos/HU-05_Inventario.html">HU-05</a> ✅)</p>
 <hr />
 <h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
 <table>
@@ -1086,38 +1086,38 @@
 </thead>
 <tbody>
 <tr>
-<td>HU-03</td>
+<td><a href="../modulos/HU-03_Migraciones.html">HU-03</a></td>
 <td>Migraciones y Ampliaciones</td>
 <td>❌ Pendiente</td>
 <td>🟡 Alta</td>
 <td>S5</td>
 </tr>
 <tr>
-<td>HU-04</td>
+<td><a href="../modulos/HU-04_Bajas.html">HU-04</a></td>
 <td>Bajas y Cartera</td>
 <td>❌ Pendiente</td>
 <td>🟡 Alta</td>
 <td>S5</td>
 </tr>
 <tr>
-<td>HU-06</td>
+<td><a href="../modulos/HU-06_Novedades.html">HU-06</a></td>
 <td>Novedades y Prorrateo</td>
 <td>❌ Pendiente</td>
-<td>🔴 Crítica — bloquea HU-08</td>
+<td>🔴 Crítica — bloquea <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></td>
 <td>S5–S6</td>
 </tr>
 <tr>
-<td>HU-07</td>
+<td><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
 <td>Indisponibilidades</td>
 <td>❌ Pendiente</td>
-<td>🔴 Crítica — bloquea HU-08</td>
+<td>🔴 Crítica — bloquea <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></td>
 <td>S5–S6</td>
 </tr>
 <tr>
-<td>HU-08</td>
+<td><a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></td>
 <td>Prefacturación</td>
 <td>❌ Pendiente</td>
-<td>🔴 Crítica — depende de HU-06 + HU-07</td>
+<td>🔴 Crítica — depende de <a href="../modulos/HU-06_Novedades.html">HU-06</a> + <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
 <td>S6–S6.5</td>
 </tr>
 <tr>
@@ -1148,32 +1148,32 @@
 <tbody>
 <tr>
 <td>V26</td>
-<td>HU-04</td>
+<td><a href="../modulos/HU-04_Bajas.html">HU-04</a></td>
 <td><code>fact_bajas</code>, <code>fact_suspensiones</code>, <code>fact_reconexiones</code></td>
 <td></td>
 </tr>
 <tr>
 <td>V27</td>
-<td>HU-06</td>
+<td><a href="../modulos/HU-06_Novedades.html">HU-06</a></td>
 <td><code>fact_prorrateo_novedades_servicios</code>, <code>fact_mantenimientos</code></td>
 <td></td>
 </tr>
 <tr>
 <td>V28</td>
-<td>HU-07</td>
+<td><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
 <td><code>fact_tickets_indisponibilidad</code>, <code>fact_indisponibilidad_mensual</code>, <code>fact_indisponibilidad_mensual_conciliada</code>, <code>dim_ans_proveedores</code>, <code>dim_motivos_fallas</code>, <code>dim_exclusiones_remedy</code></td>
 <td>Verificar si V15 ya creó alguna de estas</td>
 </tr>
 <tr>
 <td>V29</td>
-<td>HU-08</td>
+<td><a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></td>
 <td><code>fact_prefactura</code>, <code>fact_prefactura_item</code>, <code>fact_ingresos_davox</code>, <code>fact_validacion_pagos_ingresos</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>⚠️ <strong>Nota:</strong> La migración V15 (<code>hu03 migraciones ampliaciones</code>) ya existe en el historial Flyway. Las tablas <code>hu03_*</code> probablemente ya están creadas — verificar antes de generar V26+ para HU-03.</p>
+<p>⚠️ <strong>Nota:</strong> La migración V15 (<code>hu03 migraciones ampliaciones</code>) ya existe en el historial Flyway. Las tablas <code>hu03_*</code> probablemente ya están creadas — verificar antes de generar V26+ para <a href="../modulos/HU-03_Migraciones.html">HU-03</a>.</p>
 </blockquote>
 <p><strong>Acción previa requerida:</strong>
 <div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s2">&quot;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&quot;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-padmin</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;</span>
@@ -1224,7 +1224,7 @@
 <tr>
 <td>Carga de 30.000 registros de Remedy genera timeout</td>
 <td>Alta</td>
-<td>🔴 Bloquea HU-07</td>
+<td>🔴 Bloquea <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
 <td>Procesamiento asíncrono con <code>@Async</code> + status polling desde frontend</td>
 </tr>
 <tr>
@@ -1234,13 +1234,13 @@
 <td>Generar dataset sintético para pruebas con estructura real</td>
 </tr>
 <tr>
-<td>Formato del archivo FISC/Davox (HU-08) no documentado</td>
+<td>Formato del archivo FISC/Davox (<a href="../modulos/HU-08_Prefacturacion.html">HU-08</a>) no documentado</td>
 <td>Media</td>
-<td>🔴 Bloquea HU-08</td>
+<td>🔴 Bloquea <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></td>
 <td>Solicitar a QCS en la sesión del viernes la estructura exacta del archivo</td>
 </tr>
 <tr>
-<td>HU-06 o HU-07 tienen cambios de alcance de QCS</td>
+<td><a href="../modulos/HU-06_Novedades.html">HU-06</a> o <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a> tienen cambios de alcance de QCS</td>
 <td>Baja</td>
 <td>🟡 Retraso 1–2 días</td>
 <td>Control de cambios formal — cualquier cambio post-aprobación requiere firma</td>
@@ -1273,19 +1273,19 @@
 <h2 id="referencia">Referencia<a class="headerlink" href="#referencia" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>HU-03: <code>docs/files/HU-03_Migraciones_y_Ampliaciones.md</code></p>
+<p><a href="../modulos/HU-03_Migraciones.html">HU-03</a>: <code>docs/files/HU-03_Migraciones_y_Ampliaciones.md</code></p>
 </li>
 <li>
-<p>HU-04: <code>docs/files/HU-04_Bajas_y_Cartera.md</code></p>
+<p><a href="../modulos/HU-04_Bajas.html">HU-04</a>: <code>docs/files/HU-04_Bajas_y_Cartera.md</code></p>
 </li>
 <li>
-<p>HU-06: <code>docs/files/HU-06_Novedades.md</code></p>
+<p><a href="../modulos/HU-06_Novedades.html">HU-06</a>: <code>docs/files/HU-06_Novedades.md</code></p>
 </li>
 <li>
-<p>HU-07: <code>docs/files/HU-07_Indisponibilidades.md</code></p>
+<p><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a>: <code>docs/files/HU-07_Indisponibilidades.md</code></p>
 </li>
 <li>
-<p>HU-08: <code>docs/files/HU-08_Prefacturacion.md</code></p>
+<p><a href="../modulos/HU-08_Prefacturacion.html">HU-08</a>: <code>docs/files/HU-08_Prefacturacion.md</code></p>
 </li>
 <li>
 <p>Reglas de negocio: RN-22, RN-24, RN-25, RN-28, RN-29, RN-30</p>

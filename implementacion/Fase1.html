@@ -1035,7 +1035,7 @@
 <strong>Fecha cierre</strong>: 26/03/2026<br />
 <strong>Target QCS</strong>: Viernes 27/03/2026 — 7:00 a.m.<br />
 <strong>Desarrollador</strong>: Flavio Fonseca Tovar<br />
-<strong>Origen</strong>: Auditoría interna 24/03/2026 — HU-00 + HU-05</p>
+<strong>Origen</strong>: Auditoría interna 24/03/2026 — <a href="../modulos/HU-00_Acceso.html">HU-00</a> + <a href="../modulos/HU-05_Inventario.html">HU-05</a></p>
 <hr />
 <h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
 <table>
@@ -1103,7 +1103,7 @@
 <h3 id="task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas">TASK-001: Migración V22 — seed permisos iniciales (6 perfiles × 8 pestañas)<a class="headerlink" href="#task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas" title="Permanent link">&para;</a></h3>
 <p><strong>Estado</strong>: ✅ Completada — 24/03/2026<br />
 <strong>Estimado</strong>: 1.5h | <strong>Prioridad</strong>: 🟡 IMPORTANTE<br />
-<strong>Contexto</strong>: HU-00 §3b/§3c | Brecha: sin seed → usuario nuevo queda sin acceso  </p>
+<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §3b/§3c | Brecha: sin seed → usuario nuevo queda sin acceso  </p>
 <p><strong>Problema actual:</strong><br />
 <code>AuthController.obtenerModulosVisibles()</code> filtra permisos donde <code>puede_ver=true</code>. Si no existen registros en <code>permisos</code> para un perfil, el JWT no incluye ningún módulo → el usuario no ve ninguna sección en el menú lateral.</p>
 <p><strong>Solución:</strong><br />
@@ -1193,7 +1193,7 @@ Crear <code>V22__seed_permisos_perfiles.sql</code> que inserte la matriz complet
 </tbody>
 </table>
 <blockquote>
-<p>⚠️ <strong>Nota:</strong> Esta matriz es una propuesta técnica basada en roles de negocio de HU-00 §3a.<br />
+<p>⚠️ <strong>Nota:</strong> Esta matriz es una propuesta técnica basada en roles de negocio de <a href="../modulos/HU-00_Acceso.html">HU-00</a> §3a.<br />
 <strong>Confirmar con QCS</strong> si la distribución exacta de <code>puedeEjecutar</code> y <code>puedeAdministrar</code> por perfil es correcta antes de aplicar en producción.</p>
 </blockquote>
 <p><strong>Nomenclatura en BD:</strong></p>
@@ -1232,7 +1232,7 @@ Crear <code>V22__seed_permisos_perfiles.sql</code> que inserte la matriz complet
 <h3 id="task-002-migracion-v23-agregar-campo-pais-y-estado-a-dim_ciudades">TASK-002: Migración V23 — agregar campo <code>pais</code> y <code>estado</code> a <code>dim_ciudades</code><a class="headerlink" href="#task-002-migracion-v23-agregar-campo-pais-y-estado-a-dim_ciudades" title="Permanent link">&para;</a></h3>
 <p><strong>Estado</strong>: ✅ Completada — 24/03/2026<br />
 <strong>Estimado</strong>: 0.5h | <strong>Prioridad</strong>: 🟡 IMPORTANTE<br />
-<strong>Contexto</strong>: HU-05 §8 | Brecha: no hay distinción entre código DANE colombiano y código ISO de países extranjeros</p>
+<strong>Contexto</strong>: <a href="../modulos/HU-05_Inventario.html">HU-05</a> §8 | Brecha: no hay distinción entre código DANE colombiano y código ISO de países extranjeros</p>
 <p><strong>Problema actual:</strong><br />
 <code>dim_ciudades</code> tiene: <code>id, codigo_dane, nombre_ciudad, departamento</code>. Si se registra una ciudad fuera de Colombia, el campo <code>codigo_dane</code> contiene un código ISO/país, pero no hay forma de distinguirlo ni de excluirlo del cálculo de IVA (RN-10).</p>
 <p><strong>Solución:</strong><br />
