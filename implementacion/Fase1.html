@@ -1103,12 +1103,10 @@
 <h3 id="task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas">TASK-001: Migración V22 — seed permisos iniciales (6 perfiles × 8 pestañas)<a class="headerlink" href="#task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas" title="Permanent link">&para;</a></h3>
 <p><strong>Estado</strong>: ✅ Completada — 24/03/2026<br />
 <strong>Estimado</strong>: 1.5h | <strong>Prioridad</strong>: 🟡 IMPORTANTE<br />
-<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §3b/§3c | Brecha: sin seed → usuario nuevo queda sin acceso  </p>
-<p><strong>Problema actual:</strong><br />
-<code>AuthController.obtenerModulosVisibles()</code> filtra permisos donde <code>puede_ver=true</code>. Si no existen registros en <code>permisos</code> para un perfil, el JWT no incluye ningún módulo → el usuario no ve ninguna sección en el menú lateral.</p>
-<p><strong>Solución:</strong><br />
-Crear <code>V22__seed_permisos_perfiles.sql</code> que inserte la matriz completa de permisos por perfil.</p>
-<p><strong>Matriz de permisos a implementar:</strong></p>
+<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §3b/§3c</p>
+<p><strong>Implementación:</strong><br />
+<code>V22__seed_permisos_perfiles.sql</code> inserta la matriz completa de permisos por perfil, garantizando que <code>AuthController.obtenerModulosVisibles()</code> retorne los módulos correctos en el JWT desde el primer login.</p>
+<p><strong>Matriz de permisos implementada:</strong></p>
 <table>
 <thead>
 <tr>
@@ -1232,10 +1230,9 @@ Crear <code>V22__seed_permisos_perfiles.sql</code> que inserte la matriz complet
 <h3 id="task-002-migracion-v23-agregar-campo-pais-y-estado-a-dim_ciudades">TASK-002: Migración V23 — agregar campo <code>pais</code> y <code>estado</code> a <code>dim_ciudades</code><a class="headerlink" href="#task-002-migracion-v23-agregar-campo-pais-y-estado-a-dim_ciudades" title="Permanent link">&para;</a></h3>
 <p><strong>Estado</strong>: ✅ Completada — 24/03/2026<br />
 <strong>Estimado</strong>: 0.5h | <strong>Prioridad</strong>: 🟡 IMPORTANTE<br />
-<strong>Contexto</strong>: <a href="../modulos/HU-05_Inventario.html">HU-05</a> §8 | Brecha: no hay distinción entre código DANE colombiano y código ISO de países extranjeros</p>
-<p><strong>Problema actual:</strong><br />
-<code>dim_ciudades</code> tiene: <code>id, codigo_dane, nombre_ciudad, departamento</code>. Si se registra una ciudad fuera de Colombia, el campo <code>codigo_dane</code> contiene un código ISO/país, pero no hay forma de distinguirlo ni de excluirlo del cálculo de IVA (RN-10).</p>
-<p><strong>Solución:</strong><br />
+<strong>Contexto</strong>: <a href="../modulos/HU-05_Inventario.html">HU-05</a> §8</p>
+<p><strong>Implementación:</strong><br />
+<code>V23__dim_ciudades_pais_estado.sql</code> agrega los campos <code>pais</code> y <code>estado</code> a <code>dim_ciudades</code> para distinguir servicios nacionales de internacionales (requerido por RN-10):</p>
 <div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_ciudades</span>
 <span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COL&#39;</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="n">departamento</span><span class="p">,</span>
 <span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">estado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;ACTIVO&#39;</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="n">pais</span><span class="p">;</span>
@@ -1247,9 +1244,6 @@ Crear <code>V22__seed_permisos_perfiles.sql</code> que inserte la matriz complet
 <span class="w">  </span><span class="p">(</span><span class="s1">&#39;Starlink&#39;</span><span class="p">,</span><span class="w">     </span><span class="s1">&#39;Servicios Starlink (baja órbita)&#39;</span><span class="p">,</span><span class="w">               </span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">),</span>
 <span class="w">  </span><span class="p">(</span><span class="s1">&#39;Tradicional&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Servicios de conectividad tradicional terrestre&#39;</span><span class="p">,</span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">),</span>
 <span class="w">  </span><span class="p">(</span><span class="s1">&#39;Otros&#39;</span><span class="p">,</span><span class="w">        </span><span class="s1">&#39;Otros tipos de clasificación&#39;</span><span class="p">,</span><span class="w">                   </span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">);</span>
-<span class="n">typescript</span>
-<span class="o">//</span><span class="w"> </span><span class="n">module</span><span class="p">.</span><span class="n">guard</span><span class="p">.</span><span class="n">ts</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="n">línea</span><span class="w"> </span><span class="mi">12</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">modulo</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">authService</span><span class="p">.</span><span class="n">puedeVerModulo</span><span class="p">(</span><span class="n">modulo</span><span class="p">))</span><span class="w"> </span><span class="err">{</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">solo</span><span class="w"> </span><span class="n">verifica</span><span class="w"> </span><span class="n">módulo</span>
 <span class="n">java</span>
 <span class="w">   </span><span class="n">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obtenerSeccionesVisibles</span><span class="p">(</span><span class="n">Usuario</span><span class="w"> </span><span class="n">usuario</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
 <span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">usuarioPerfilRepository</span><span class="p">.</span><span class="n">findByUsuario</span><span class="p">(</span><span class="n">usuario</span><span class="p">).</span><span class="n">stream</span><span class="p">()</span>
@@ -1541,7 +1535,7 @@ Crear <code>V22__seed_permisos_perfiles.sql</code> que inserte la matriz complet
 <span class="o">|</span><span class="w"> </span><span class="n">Líder</span><span class="w"> </span><span class="n">Profesional</span><span class="w"> </span><span class="n">Unidad</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">Carriers</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">8</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="n">Practicante</span><span class="w">                          </span><span class="o">|</span><span class="w">   </span><span class="mi">2</span><span class="w"> </span><span class="o">|</span>
 <span class="o">+</span><span class="c1">--------------------------------------+-----+</span>
-</code></pre></div></p>
+</code></pre></div>
 <blockquote>
 <p>✅ BD en estado correcto — 37 permisos limpios, nombres de perfiles con encoding utf8mb4 correcto.</p>
 </blockquote>
