@@ -756,6 +756,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#indice-de-todas-las-relaciones-fk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Índice de todas las relaciones FK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-de-implementacion-en-bd-26032026" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado de implementación en BD (26/03/2026)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -956,6 +974,24 @@
   <a href="#task-002-migracion-v23-agregar-campo-pais-y-estado-a-dim_ciudades" class="md-nav__link">
     <span class="md-ellipsis">
       TASK-002: Migración V23 — agregar campo pais y estado a dim_ciudades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indice-de-todas-las-relaciones-fk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Índice de todas las relaciones FK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-de-implementacion-en-bd-26032026" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado de implementación en BD (26/03/2026)
     </span>
   </a>
   
@@ -1489,10 +1525,606 @@
 <span class="o">|</span><span class="w"> </span><span class="n">Líder</span><span class="w"> </span><span class="n">Profesional</span><span class="w"> </span><span class="n">Unidad</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">Carriers</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">8</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="n">Practicante</span><span class="w">                          </span><span class="o">|</span><span class="w">   </span><span class="mi">2</span><span class="w"> </span><span class="o">|</span>
 <span class="o">+</span><span class="c1">--------------------------------------+-----+</span>
+<span class="n">mermaid</span>
+<span class="n">erDiagram</span>
+<span class="w">    </span><span class="n">usuarios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ usuario_perfil : &quot;tiene&quot;</span>
+<span class="w">    </span><span class="n">perfiles</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ usuario_perfil : &quot;asignado_a&quot;</span>
+<span class="w">    </span><span class="n">perfiles</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ permisos : &quot;define&quot;</span>
+<span class="w">    </span><span class="n">usuarios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ log_acceso : &quot;genera&quot;</span>
+
+<span class="w">    </span><span class="n">dim_proveedores</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_configuracion_servicios : &quot;proveedor_de&quot;</span>
+<span class="w">    </span><span class="n">dim_clientes</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_configuracion_servicios : &quot;cliente_de&quot;</span>
+<span class="w">    </span><span class="n">dim_ciudades</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_configuracion_servicios : &quot;ubicada_en&quot;</span>
+<span class="w">    </span><span class="n">dim_medios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_configuracion_servicios : &quot;medio_de&quot;</span>
+<span class="w">    </span><span class="n">dim_clasificacion</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_configuracion_servicios : &quot;clasifica&quot;</span>
+<span class="w">    </span><span class="n">dim_tipo_servicio</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_configuracion_servicios : &quot;tipo_de&quot;</span>
+<span class="w">    </span><span class="n">dim_contratos</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_configuracion_servicios : &quot;contrato_de&quot;</span>
+
+<span class="w">    </span><span class="n">dim_proveedores</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_cobertura : &quot;cubre&quot;</span>
+<span class="w">    </span><span class="n">dim_ciudades</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_cobertura : &quot;en&quot;</span>
+<span class="w">    </span><span class="n">dim_medios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_cobertura : &quot;con&quot;</span>
+
+<span class="w">    </span><span class="n">dim_proveedores</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_tarifa_promedio : &quot;tarifa_de&quot;</span>
+<span class="w">    </span><span class="n">dim_proveedores</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ dim_ans_proveedores : &quot;ans_de&quot;</span>
+
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_tickets_indisponibilidad : &quot;incidencias_de&quot;</span>
+<span class="w">    </span><span class="n">fact_tickets_indisponibilidad</span><span class="w"> </span><span class="o">||</span><span class="c1">--|| fact_indisponibilidad_mensual_conciliada : &quot;conciliado_en&quot;</span>
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_indisponibilidad_mensual_conciliada : &quot;conciliacion_de&quot;</span>
+
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_prorrateo_novedades : &quot;prorrateo_de&quot;</span>
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_mantenimientos : &quot;mantenimiento_de&quot;</span>
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_ingresos_davox : &quot;ingreso_de&quot;</span>
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_prefactura : &quot;prefactura_de&quot;</span>
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_validacion_pagos_ingresos : &quot;validacion_de&quot;</span>
+
+<span class="w">    </span><span class="n">dim_proveedores</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_viabilidad_cotizacion : &quot;seleccionado_en&quot;</span>
+<span class="w">    </span><span class="n">fact_instalaciones</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_seguimiento_instalaciones_terceros : &quot;seguimiento_de&quot;</span>
+<span class="w">    </span><span class="n">dim_configuracion_servicios</span><span class="w"> </span><span class="o">||</span><span class="c1">--o{ fact_seguimiento_instalaciones_terceros : &quot;ds_en&quot;</span>
 </code></pre></div>
-<blockquote>
-<p>✅ BD en estado correcto — 37 permisos limpios, nombres de perfiles con encoding utf8mb4 correcto.</p>
-</blockquote>
+<hr />
+<h3 id="indice-de-todas-las-relaciones-fk">Índice de todas las relaciones FK<a class="headerlink" href="#indice-de-todas-las-relaciones-fk" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tabla Origen</th>
+<th>Campo FK</th>
+<th>→ Tabla Destino</th>
+<th>Campo Ref.</th>
+<th>Cardinalidad</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>permisos</code></td>
+<td><code>id_perfil</code></td>
+<td><code>perfiles</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>log_acceso</code></td>
+<td><code>id_usuario</code></td>
+<td><code>usuarios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>nit_cliente</code></td>
+<td><code>dim_clientes</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>codigo_dane_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>codigo_dane</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>nombre_medio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>clasificacion</code></td>
+<td><code>dim_clasificacion</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>tipo_servicio</code></td>
+<td><code>dim_tipo_servicio</code></td>
+<td><code>nombre</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>numero_contrato</code></td>
+<td><code>dim_contratos</code></td>
+<td><code>numero_contrato</code></td>
+<td>N:1</td>
+<td>FK obligatoria + TRIGGER</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_ciudad</code></td>
+<td><code>dim_ciudades</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td><code>id_medio</code></td>
+<td><code>dim_medios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_tarifa_promedio</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>numero_ds</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK validación</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK calculada</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_ticket</code></td>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td><code>id</code></td>
+<td>1:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>dim_ans_proveedores</code></td>
+<td><code>nit_proveedor</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_ingresos_davox</code></td>
+<td><code>codigo_unico_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK cruce negocio</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td>—</td>
+<td><code>fact_prorrateo_novedades</code></td>
+<td>—</td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td>—</td>
+<td><code>fact_mantenimientos</code></td>
+<td>—</td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td>—</td>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td>—</td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td>—</td>
+<td><code>dim_trm</code></td>
+<td><code>(anio+mes)</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id_servicio</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td><code>id_configuracion_servicio</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td>—</td>
+<td><code>fact_prefactura</code></td>
+<td>—</td>
+<td>N:N</td>
+<td>JOIN cálculo</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td>—</td>
+<td><code>fact_ingresos_davox</code></td>
+<td>—</td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+<tr>
+<td><code>fact_viabilidad_cotizacion</code></td>
+<td><code>proveedor_seleccionado</code></td>
+<td><code>dim_proveedores</code></td>
+<td><code>nit</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>id_instalacion</code></td>
+<td><code>fact_instalaciones</code></td>
+<td><code>id</code></td>
+<td>N:1</td>
+<td>FK obligatoria</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>ds</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>ds</code></td>
+<td>N:1</td>
+<td>FK referencial</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td><code>fecha_fin_clausula_proveedor</code></td>
+<td><code>dim_configuracion_servicios</code></td>
+<td><code>fecha_fin_clausula</code></td>
+<td>N:1</td>
+<td>JOIN cálculo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="estado-de-implementacion-en-bd-26032026">Estado de implementación en BD (26/03/2026)<a class="headerlink" href="#estado-de-implementacion-en-bd-26032026" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Estado en BD</th>
+<th>Flyway</th>
+<th>Filas demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuarios</code></td>
+<td>✅ Implementada</td>
+<td>V6</td>
+<td>3 activos</td>
+</tr>
+<tr>
+<td><code>perfiles</code></td>
+<td>✅ Implementada</td>
+<td>V6</td>
+<td>6 perfiles</td>
+</tr>
+<tr>
+<td><code>usuario_perfil</code></td>
+<td>✅ Implementada</td>
+<td>V6</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>permisos</code></td>
+<td>✅ Implementada</td>
+<td>V24+V25</td>
+<td><strong>37</strong> ✅</td>
+</tr>
+<tr>
+<td><code>log_acceso</code></td>
+<td>✅ Implementada</td>
+<td>V6</td>
+<td>98 registros</td>
+</tr>
+<tr>
+<td><code>dim_proveedores</code></td>
+<td>✅ Implementada</td>
+<td>V2</td>
+<td>7</td>
+</tr>
+<tr>
+<td><code>dim_clientes</code></td>
+<td>✅ Implementada</td>
+<td>V2</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>dim_contratos</code></td>
+<td>✅ Implementada</td>
+<td>V2</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>dim_ciudades</code></td>
+<td>✅ Implementada + pais/estado</td>
+<td>V2+V23</td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>dim_medios</code></td>
+<td>✅ Implementada</td>
+<td>V2</td>
+<td>11</td>
+</tr>
+<tr>
+<td><code>dim_tipo_servicio</code></td>
+<td>✅ Implementada</td>
+<td>V2</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>dim_clasificacion</code></td>
+<td>✅ Implementada</td>
+<td>V2+V22</td>
+<td>11 (5 demo + 6 canónicos)</td>
+</tr>
+<tr>
+<td><code>dim_trm</code></td>
+<td>✅ Implementada</td>
+<td>V5</td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>dim_cobertura</code></td>
+<td>✅ Implementada</td>
+<td>V10</td>
+<td>15</td>
+</tr>
+<tr>
+<td><code>dim_contratos</code></td>
+<td>✅ Implementada</td>
+<td>V10</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>dim_servicios</code></td>
+<td>✅ Implementada</td>
+<td>V10</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>dim_configuracion_servicios</code></td>
+<td>✅ Implementada (47 campos)</td>
+<td>V19</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>fact_tarifa_promedio</code></td>
+<td>✅ Implementada</td>
+<td>V10</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>fact_tickets_indisponibilidad</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_indisponibilidad_mensual_conciliada</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>dim_exclusiones_remedy</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>dim_ans_proveedores</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>dim_motivos_fallas</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_ingresos_davox</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_prefactura</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_validacion_pagos_ingresos</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_prorrateo_novedades</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_mantenimientos</code></td>
+<td>⏳ Pendiente</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_viabilidad_cotizacion</code></td>
+<td>⏳ Pendiente (Fase 2)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_cotizacion_proveedor</code></td>
+<td>⏳ Pendiente (Fase 2)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_instalaciones</code></td>
+<td>✅ Implementada (parcial)</td>
+<td>V8</td>
+<td>7</td>
+</tr>
+<tr>
+<td><code>fact_seguimiento_instalaciones_terceros</code></td>
+<td>⏳ Pendiente (Fase 2)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_migraciones</code></td>
+<td>✅ Implementada (parcial)</td>
+<td>V15</td>
+<td>13 registros</td>
+</tr>
+<tr>
+<td><code>fact_ampliaciones</code></td>
+<td>✅ Implementada (parcial)</td>
+<td>V15</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_bajas_migracion</code></td>
+<td>⏳ Pendiente (Fase 2)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_bajas_cliente</code></td>
+<td>⏳ Pendiente (Fase 2)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>fact_suspension_cartera</code></td>
+<td>⏳ Pendiente (Fase 2)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
 
 
 
