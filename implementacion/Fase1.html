@@ -867,6 +867,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fase-6-usuarios-de-demo-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fase 6: Usuarios de Demo por Perfil
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 6: Usuarios de Demo por Perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciales-de-acceso-usuarios-demo-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciales de acceso — Usuarios demo Fase 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#orden-de-ejecucion-recomendado" class="md-nav__link">
     <span class="md-ellipsis">
       Orden de ejecución recomendado
@@ -1333,6 +1366,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fase-6-usuarios-de-demo-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fase 6: Usuarios de Demo por Perfil
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 6: Usuarios de Demo por Perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciales-de-acceso-usuarios-demo-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciales de acceso — Usuarios demo Fase 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#orden-de-ejecucion-recomendado" class="md-nav__link">
     <span class="md-ellipsis">
       Orden de ejecución recomendado
@@ -1567,8 +1633,14 @@
 <td>fix nombres perfiles + 14 permisos 25/03/2026</td>
 </tr>
 <tr>
+<td>BD — Seed usuarios por perfil (V27)</td>
+<td>1 tarea</td>
+<td>✅ Completado</td>
+<td>6 usuarios demo (1 por perfil) 27/03/2026</td>
+</tr>
+<tr>
 <td><strong>Total</strong></td>
-<td><strong>9 tareas</strong></td>
+<td><strong>10 tareas</strong></td>
 <td><strong>100% completo</strong></td>
 <td></td>
 </tr>
@@ -1832,6 +1904,174 @@ Seed incluido en <code>V22__seed_permisos_perfiles.sql</code> con los 6 valores 
 - [x] Guard redirige correctamente cuando la sección no está en los permisos
 - [x] UI de perfiles muestra 8 filas por perfil
 - [x] Los 6 valores de dim_clasificacion están presentes</p>
+<hr />
+<h2 id="fase-6-usuarios-de-demo-por-perfil">Fase 6: Usuarios de Demo por Perfil<a class="headerlink" href="#fase-6-usuarios-de-demo-por-perfil" title="Permanent link">&para;</a></h2>
+<h3 id="task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios">TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios)<a class="headerlink" href="#task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios" title="Permanent link">&para;</a></h3>
+<p><strong>Estado</strong>: ✅ Completada — 27/03/2026<br />
+<strong>Estimado</strong>: 0.5h | <strong>Prioridad</strong>: 🔴 CRÍTICO — requerido para demo QCS<br />
+<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §1a — Gestión de Usuarios / §3a — Perfiles contemplados</p>
+<p><strong>Implementación:</strong><br />
+<code>V27__seed_usuarios_por_perfil.sql</code> inserta un usuario de acceso por cada uno de los 6 perfiles predefinidos del sistema, permitiendo a QCS verificar el comportamiento de menú, guards y permisos con credenciales reales de cada rol.</p>
+<hr />
+<h3 id="credenciales-de-acceso-usuarios-demo-fase-1">Credenciales de acceso — Usuarios demo Fase 1<a class="headerlink" href="#credenciales-de-acceso-usuarios-demo-fase-1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>URL:</strong> http://localhost:4200<br />
+<strong>Contraseña:</strong> <code>Unica2026#</code> (igual para todos los usuarios)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Perfil</th>
+<th>Usuario (correo)</th>
+<th>Contraseña</th>
+<th>Módulos accesibles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Gerente</strong></td>
+<td><code>admin@unica.co</code></td>
+<td><code>Unica2026#</code></td>
+<td>Gestión de Servicios · Inventario · Novedades y Prefactura</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Líder Profesional Unidad de Carriers</strong></td>
+<td><code>lider@unica.co</code></td>
+<td><code>Unica2026#</code></td>
+<td>Gestión de Servicios · Inventario · Novedades y Prefactura</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Analista Conciliación Terceros</strong></td>
+<td><code>analista.concil@unica.co</code></td>
+<td><code>Unica2026#</code></td>
+<td>Gestión de Servicios (solo consulta) · Inventario · Novedades y Prefactura</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Analista Unidad de Carriers</strong></td>
+<td><code>analista.carr@unica.co</code></td>
+<td><code>Unica2026#</code></td>
+<td>Gestión de Servicios · Inventario · Novedades y Prefactura</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Ingeniero Especialista</strong></td>
+<td><code>ingeniero@unica.co</code></td>
+<td><code>Unica2026#</code></td>
+<td>Gestión de Servicios (parcial) · Inventario</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Practicante</strong></td>
+<td><code>practicante@unica.co</code></td>
+<td><code>Unica2026#</code></td>
+<td>Gestión de Servicios (cotización) · Inventario</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Detalle de permisos por perfil (Ver / Ejecutar / Administrar):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Cotización</th>
+<th>Instalaciones</th>
+<th>Migraciones</th>
+<th>Bajas</th>
+<th>Inventario</th>
+<th>Prorrateo</th>
+<th>Indisponibilidades</th>
+<th>Prefacturación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerente</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+</tr>
+<tr>
+<td>Líder Profesional</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+</tr>
+<tr>
+<td>Analista Conciliación</td>
+<td>V</td>
+<td>V</td>
+<td>—</td>
+<td>—</td>
+<td>V</td>
+<td>V+E</td>
+<td>V+E+A</td>
+<td>V+E</td>
+</tr>
+<tr>
+<td>Analista Carriers</td>
+<td>V+E</td>
+<td>V+E</td>
+<td>V</td>
+<td>V</td>
+<td>V</td>
+<td>V+E</td>
+<td>V+E</td>
+<td>V+E+A</td>
+</tr>
+<tr>
+<td>Ingeniero Especialista</td>
+<td>—</td>
+<td>V</td>
+<td>V+E+A</td>
+<td>V</td>
+<td>V</td>
+<td>—</td>
+<td>V</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Practicante</td>
+<td>V+E</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>V</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notas de implementación:</strong>
+- Hash BCrypt strength-10 (<code>$2b$10$...</code>) — compatible con <code>BCryptPasswordEncoder</code> de Spring Security
+- El script usa <code>ON DUPLICATE KEY UPDATE correo = correo</code> → idempotente si el usuario ya existe (ej: si DataSeeder dev ya lo creó)
+- <code>INSERT IGNORE</code> en <code>usuario_perfil</code> → evita duplicar la asignación de perfil
+- Si los perfiles del DataSeeder (<code>admin@unica.co</code>, <code>lider@unica.co</code>, <code>analista@unica.co</code>) ya existen con contraseña diferente, la contraseña original <strong>no</strong> se sobrescribe</p>
+<p><strong>Criterios de aceptación:</strong>
+- [x] V27 ejecuta sin errores Flyway
+- [x] Los 6 usuarios aparecen en la tabla <code>usuarios</code> con <code>estado = ACTIVO</code>
+- [x] Cada usuario tiene exactamente 1 perfil asignado en <code>usuario_perfil</code>
+- [x] Login con <code>admin@unica.co</code> / <code>Unica2026#</code> retorna JWT con los 3 módulos
+- [x] Login con <code>practicante@unica.co</code> / <code>Unica2026#</code> retorna JWT solo con Gestión de Servicios e Inventario
+- [x] Login con <code>ingeniero@unica.co</code> / <code>Unica2026#</code> no incluye Novedades y Prefactura
+- [x] Guard bloquea acceso a secciones no autorizadas por perfil</p>
+<p><strong>Dependencias</strong>: TASK-001 (V22 permisos) ✅, TASK-004 (guard) ✅<br />
+<strong>Archivo creado</strong>: <code>src/main/resources/db/migration/V27__seed_usuarios_por_perfil.sql</code> ✅</p>
 <hr />
 <h2 id="orden-de-ejecucion-recomendado">Orden de ejecución recomendado<a class="headerlink" href="#orden-de-ejecucion-recomendado" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>TASK-001 (V22 seed permisos)
