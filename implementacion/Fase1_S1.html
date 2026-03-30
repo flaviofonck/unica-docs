@@ -1,0 +1,2007 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="Fase1.html">
+      
+      
+        <link rel="next" href="Fase1_S2.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Fase 1_S1 - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fase-1-s1-2327-mar-2026-trabajo-completado" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fase 1_S1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía del Proyecto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Módulos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-00 — Acceso y Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-01 — Cotización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-02 — Instalación Terceros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-03 — Migraciones y Ampliaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-04 — Bajas y Cartera
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-05 — Inventario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-06 — Novedades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-07 — Indisponibilidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-08 — Prefacturación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Base de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Base de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentación Completa BD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diccionario de Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementación por Fases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Implementación por Fases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Fase1_S1.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S1
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-lo-entregado-en-s1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen de lo entregado en S1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-001: Migración V22 — seed permisos iniciales (6 perfiles × 8 pestañas)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-002-migracion-v23-agregar-campos-pais-y-estado-a-dim_ciudades" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-002: Migración V23 — agregar campos pais y estado a dim_ciudades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-003-seed-dim_clasificacion-6-valores-canonicos-hu-05-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-003: Seed dim_clasificacion — 6 valores canónicos HU-05 §4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-004-moduleguard-secciones-en-authcontroller-y-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-004: module.guard + secciones[] en AuthController y frontend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-005-verificar-ui-de-perfiles-checkboxes-por-pestana" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-005: Verificar UI de Perfiles — checkboxes por pestaña
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-006-verificar-campo-contacto-en-dimcliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-006: Verificar campo contacto en DimCliente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-007-smoke-test-pre-entrega-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-007: Smoke test pre-entrega QCS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios demo)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios demo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credenciales-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciales de acceso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correcciones-de-encoding-v24-v25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correcciones de encoding (V24 + V25)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correcciones de encoding (V24 + V25)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v24-fix-encoding-y-rebuild-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      V24 — fix encoding y rebuild permisos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v25-fix-encoding-en-perfiles-14-permisos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      V25 — fix encoding en perfiles + 14 permisos faltantes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoria-de-base-de-datos-25032026" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditoría de Base de Datos — 25/03/2026
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditoría de Base de Datos — 25/03/2026">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallazgos-y-estado-de-correccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallazgos y estado de corrección
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flyway-al-cierre-de-s1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flyway al cierre de S1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-ejecucion-aplicado-en-s1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orden de ejecución aplicado en S1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgos-s1-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos S1 (resueltos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_S2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_S3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2_S4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2_S5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentación del Proyecto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación del Proyecto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plan Scrum / Sprints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auditoría de Implementación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-lo-entregado-en-s1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen de lo entregado en S1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-001: Migración V22 — seed permisos iniciales (6 perfiles × 8 pestañas)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-002-migracion-v23-agregar-campos-pais-y-estado-a-dim_ciudades" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-002: Migración V23 — agregar campos pais y estado a dim_ciudades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-003-seed-dim_clasificacion-6-valores-canonicos-hu-05-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-003: Seed dim_clasificacion — 6 valores canónicos HU-05 §4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-004-moduleguard-secciones-en-authcontroller-y-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-004: module.guard + secciones[] en AuthController y frontend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-005-verificar-ui-de-perfiles-checkboxes-por-pestana" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-005: Verificar UI de Perfiles — checkboxes por pestaña
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-006-verificar-campo-contacto-en-dimcliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-006: Verificar campo contacto en DimCliente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-007-smoke-test-pre-entrega-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-007: Smoke test pre-entrega QCS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios demo)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios demo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credenciales-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciales de acceso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correcciones-de-encoding-v24-v25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correcciones de encoding (V24 + V25)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correcciones de encoding (V24 + V25)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v24-fix-encoding-y-rebuild-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      V24 — fix encoding y rebuild permisos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v25-fix-encoding-en-perfiles-14-permisos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      V25 — fix encoding en perfiles + 14 permisos faltantes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditoria-de-base-de-datos-25032026" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditoría de Base de Datos — 25/03/2026
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditoría de Base de Datos — 25/03/2026">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hallazgos-y-estado-de-correccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hallazgos y estado de corrección
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flyway-al-cierre-de-s1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flyway al cierre de S1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-ejecucion-aplicado-en-s1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orden de ejecución aplicado en S1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgos-s1-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos S1 (resueltos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="fase-1-s1-2327-mar-2026-trabajo-completado">Fase 1 — S1 (23–27 mar 2026): Trabajo completado<a class="headerlink" href="#fase-1-s1-2327-mar-2026-trabajo-completado" title="Permanent link">&para;</a></h1>
+<p><strong>Semana</strong>: S1 — 23 al 27 de marzo de 2026<br />
+<strong>Compromiso contractual</strong>: Inicio <a href="../modulos/HU-00_Acceso.html">HU-00</a> + <a href="../modulos/HU-05_Inventario.html">HU-05</a> — entrega de arranque<br />
+<strong>Estado S1</strong>: ✅ Completado — entregado viernes 28/03 7:00 a.m.<br />
+<strong>Desarrollador</strong>: Flavio Fonseca Tovar</p>
+<blockquote>
+<p>Ver alcance S2 → <code>Implementacion_Fase1_S2.md</code><br />
+Ver cierre S3 → <code>Implementacion_Fase1_S3.md</code></p>
+</blockquote>
+<hr />
+<h2 id="resumen-de-lo-entregado-en-s1">Resumen de lo entregado en S1<a class="headerlink" href="#resumen-de-lo-entregado-en-s1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Estado</th>
+<th>Ejecutado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V22 — seed permisos × perfiles</td>
+<td>✅ Completado</td>
+<td>24/03/2026</td>
+</tr>
+<tr>
+<td>V23 — campos pais/estado en dim_ciudades</td>
+<td>✅ Completado</td>
+<td>24/03/2026</td>
+</tr>
+<tr>
+<td>seed dim_clasificacion (6 valores canónicos)</td>
+<td>✅ Completado</td>
+<td>incluido en V22</td>
+</tr>
+<tr>
+<td>module.guard + secciones[] (AuthController + frontend)</td>
+<td>✅ Completado</td>
+<td>24/03/2026</td>
+</tr>
+<tr>
+<td>UI Perfiles — checkboxes Ver/Ejecutar/Administrar</td>
+<td>✅ Ya existía — verificado</td>
+<td>24/03/2026</td>
+</tr>
+<tr>
+<td>Campo contacto en DimCliente (V21)</td>
+<td>✅ Ya existía — verificado</td>
+<td>24/03/2026</td>
+</tr>
+<tr>
+<td>Smoke test pre-entrega</td>
+<td>✅ Completado</td>
+<td>24/03/2026</td>
+</tr>
+<tr>
+<td>V27 — seed 1 usuario por perfil (6 usuarios demo)</td>
+<td>✅ Completado</td>
+<td>27/03/2026</td>
+</tr>
+<tr>
+<td>V24 — fix encoding rebuild permisos</td>
+<td>✅ Completado</td>
+<td>25/03/2026</td>
+</tr>
+<tr>
+<td>V25 — fix encoding perfiles + 14 permisos faltantes</td>
+<td>✅ Completado</td>
+<td>25/03/2026</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100%</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas">TASK-001: Migración V22 — seed permisos iniciales (6 perfiles × 8 pestañas)<a class="headerlink" href="#task-001-migracion-v22-seed-permisos-iniciales-6-perfiles-8-pestanas" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completada — 24/03/2026<br />
+<strong>Prioridad</strong>: 🟡 IMPORTANTE<br />
+<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §3b/§3c</p>
+<p><strong>Migración:</strong> <code>V22__seed_permisos_perfiles.sql</code> — inserta la matriz completa de permisos por perfil, garantizando que <code>AuthController.obtenerModulosVisibles()</code> retorne los módulos correctos en el JWT desde el primer login.</p>
+<p><strong>Matriz de permisos (37 registros post-V24+V25):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Cotización</th>
+<th>Instalaciones</th>
+<th>Migraciones</th>
+<th>Bajas</th>
+<th>Inventario</th>
+<th>Prorrateo</th>
+<th>Indisponibilidades</th>
+<th>Prefacturación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerente</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+</tr>
+<tr>
+<td>Líder Profesional</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+<td>V+E+A</td>
+</tr>
+<tr>
+<td>Analista Conciliación</td>
+<td>V</td>
+<td>V</td>
+<td>—</td>
+<td>—</td>
+<td>V</td>
+<td>V+E</td>
+<td>V+E+A</td>
+<td>V+E</td>
+</tr>
+<tr>
+<td>Analista Carriers</td>
+<td>V+E</td>
+<td>V+E</td>
+<td>V</td>
+<td>V</td>
+<td>V</td>
+<td>V+E</td>
+<td>V+E</td>
+<td>V+E+A</td>
+</tr>
+<tr>
+<td>Ingeniero Especialista</td>
+<td>—</td>
+<td>V</td>
+<td>V+E+A</td>
+<td>V</td>
+<td>V</td>
+<td>—</td>
+<td>V</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Practicante</td>
+<td>V+E</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>V</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ Confirmar con QCS si la distribución exacta de permisos es correcta antes de producción.</p>
+</blockquote>
+<p><strong>Criterios de aceptación:</strong>
+- [x] V22 ejecuta sin errores con <code>INSERT IGNORE</code>
+- [x] JWT incluye <code>modulos[]</code> correctos por perfil
+- [x] <code>INSERT IGNORE</code> garantiza idempotencia</p>
+<p><strong>Archivo</strong>: <code>src/main/resources/db/migration/V22__seed_permisos_perfiles.sql</code> ✅</p>
+<hr />
+<h2 id="task-002-migracion-v23-agregar-campos-pais-y-estado-a-dim_ciudades">TASK-002: Migración V23 — agregar campos <code>pais</code> y <code>estado</code> a <code>dim_ciudades</code><a class="headerlink" href="#task-002-migracion-v23-agregar-campos-pais-y-estado-a-dim_ciudades" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completada — 24/03/2026<br />
+<strong>Contexto</strong>: <a href="../modulos/HU-05_Inventario.html">HU-05</a> §8</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_ciudades</span>
+<span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COL&#39;</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="n">departamento</span><span class="p">,</span>
+<span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">estado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;ACTIVO&#39;</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="n">pais</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Criterios de aceptación:</strong>
+- [x] Migración ejecuta sin errores
+- [x] Columnas <code>pais</code> y <code>estado</code> presentes
+- [x] <code>DimCiudad.java</code> refleja los nuevos campos
+- [ ] <code>ConfiguracionServicioService.aplicarReglas()</code> maneja <code>pais != 'COL'</code> → <code>indicador_iva = 0</code> <em>(pendiente — ver G2 en S3)</em></p>
+<p><strong>Archivos</strong>:
+- <code>src/main/resources/db/migration/V23__dim_ciudades_pais_estado.sql</code> ✅
+- <code>src/main/java/com/unica/app/entity/DimCiudad.java</code> ✅</p>
+<hr />
+<h2 id="task-003-seed-dim_clasificacion-6-valores-canonicos-hu-05-4">TASK-003: Seed <code>dim_clasificacion</code> — 6 valores canónicos <a href="../modulos/HU-05_Inventario.html">HU-05</a> §4<a class="headerlink" href="#task-003-seed-dim_clasificacion-6-valores-canonicos-hu-05-4" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completada — incluida en V22 — 24/03/2026</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">IGNORE</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dim_clasificacion</span><span class="w"> </span><span class="p">(</span><span class="n">nombre_clasificacion</span><span class="p">,</span><span class="w"> </span><span class="n">descripcion</span><span class="p">,</span><span class="w"> </span><span class="n">estado</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;Aeropuerto&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Servicios en zonas aeroportuarias&#39;</span><span class="p">,</span><span class="w">              </span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;Datacenter&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Servicios en centros de datos&#39;</span><span class="p">,</span><span class="w">                  </span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;Satelital&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;Servicios de conectividad satelital&#39;</span><span class="p">,</span><span class="w">            </span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;Starlink&#39;</span><span class="p">,</span><span class="w">    </span><span class="s1">&#39;Servicios Starlink (baja órbita)&#39;</span><span class="p">,</span><span class="w">               </span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;Tradicional&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Servicios de conectividad tradicional terrestre&#39;</span><span class="p">,</span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;Otros&#39;</span><span class="p">,</span><span class="w">       </span><span class="s1">&#39;Otros tipos de clasificación&#39;</span><span class="p">,</span><span class="w">                   </span><span class="s1">&#39;ACTIVO&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Criterios de aceptación:</strong>
+- [x] 6 valores canónicos presentes en <code>dim_clasificacion</code>
+- [x] Script idempotente con <code>INSERT IGNORE</code></p>
+<blockquote>
+<p>⚠️ También existen 5 valores demo (IDs 1-5 de V20) — pendiente decisión QCS (ver G3 en S2)</p>
+</blockquote>
+<hr />
+<h2 id="task-004-moduleguard-secciones-en-authcontroller-y-frontend">TASK-004: module.guard + secciones[] en AuthController y frontend<a class="headerlink" href="#task-004-moduleguard-secciones-en-authcontroller-y-frontend" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completada — 24/03/2026<br />
+<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §3c / §2b</p>
+<p><strong>Backend <code>AuthController</code></strong> — agrega <code>secciones[]</code> al <code>LoginResponse</code>:
+<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">obtenerSeccionesVisibles</span><span class="p">(</span><span class="n">Usuario</span><span class="w"> </span><span class="n">usuario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">usuarioPerfilRepository</span><span class="p">.</span><span class="na">findByUsuario</span><span class="p">(</span><span class="n">usuario</span><span class="p">).</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">up</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">permisoRepository</span><span class="p">.</span><span class="na">findByPerfil</span><span class="p">(</span><span class="n">up</span><span class="p">.</span><span class="na">getPerfil</span><span class="p">()).</span><span class="na">stream</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Boolean</span><span class="p">.</span><span class="na">TRUE</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">getPuedeVer</span><span class="p">()))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">Permiso</span><span class="p">::</span><span class="n">getSeccion</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">s</span><span class="p">.</span><span class="na">isBlank</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="na">distinct</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">toList</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Frontend:</strong>
+- <code>auth.model.ts</code>: <code>secciones: string[]</code> en <code>LoginResponse</code> y <code>SesionUsuario</code>
+- <code>AuthService</code>: método <code>puedeVerSeccion(seccion: string): boolean</code>
+- <code>module.guard.ts</code>: verifica sección cuando <code>route.data['titulo']</code> está presente</p>
+<p><strong>Criterios de aceptación:</strong>
+- [x] Practicante accede a <code>/gestion/cotizacion</code> pero NO a <code>/gestion/instalacion</code> (red. a /dashboard)
+- [x] Gerente accede a todas las rutas protegidas
+- [x] JWT incluye <code>secciones[]</code>
+- [x] Guard verifica sección cuando disponible</p>
+<p><strong>Archivos</strong>:
+- <code>src/main/java/com/unica/app/controller/AuthController.java</code> ✅
+- <code>src/main/java/com/unica/app/dto/LoginResponse.java</code> ✅
+- <code>unica-frontend/src/app/models/auth.model.ts</code> ✅
+- <code>unica-frontend/src/app/services/auth.service.ts</code> ✅
+- <code>unica-frontend/src/app/guards/module.guard.ts</code> ✅</p>
+<hr />
+<h2 id="task-005-verificar-ui-de-perfiles-checkboxes-por-pestana">TASK-005: Verificar UI de Perfiles — checkboxes por pestaña<a class="headerlink" href="#task-005-verificar-ui-de-perfiles-checkboxes-por-pestana" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completada (verificada en auditoría)<br />
+<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §3c</p>
+<p><code>perfiles.component.ts</code> ya implementa la tabla de checkboxes por sección/pestaña con columnas Ver, Ejecutar, Administrar.</p>
+<p><strong>Criterios de aceptación:</strong>
+- [x] Tabla muestra columnas: Sección, Pestaña, Ver, Ejecutar, Administrar
+- [x] Checkboxes editables solo para Gerente/Líder (<code>esAdmin()</code>)
+- [x] Con seed V22, muestra 8 filas de permisos por perfil
+- [x] Cambio de checkbox persiste en BD</p>
+<hr />
+<h2 id="task-006-verificar-campo-contacto-en-dimcliente">TASK-006: Verificar campo <code>contacto</code> en DimCliente<a class="headerlink" href="#task-006-verificar-campo-contacto-en-dimcliente" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completada (verificada en auditoría)<br />
+<strong>Contexto</strong>: <code>V21__add_contacto_dim_clientes.sql</code></p>
+<ul>
+<li><code>DimCliente.java</code> tiene <code>@Column(nullable = true, length = 200) private String contacto;</code> ✅</li>
+<li><code>V21</code> aplica el ALTER TABLE correctamente ✅</li>
+</ul>
+<p><strong>Criterios de aceptación:</strong>
+- [x] <code>DimCliente.java</code> tiene campo <code>contacto</code>
+- [x] <code>V21</code> aplica <code>ALTER TABLE dim_clientes ADD COLUMN contacto</code>
+- [x] Formulario Angular incluye el campo contacto</p>
+<hr />
+<h2 id="task-007-smoke-test-pre-entrega-qcs">TASK-007: Smoke test pre-entrega QCS<a class="headerlink" href="#task-007-smoke-test-pre-entrega-qcs" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completado — 24/03/2026</p>
+<div class="highlight"><pre><span></span><code>1. Arrancar backend: .\mvnw.cmd spring-boot:run
+   → V22 y V23 aplicadas sin errores Flyway
+
+2. Login por perfil:
+   → Gerente: modulos = [&quot;Gestión de Servicios&quot;,&quot;Inventario de Servicios&quot;,&quot;Novedades y Prefactura&quot;]
+   → Practicante: secciones contiene &quot;1.1 Cotización a Terceros&quot; y &quot;2.1 Inventario Servicios Terceros&quot;
+
+3. Guard por sección:
+   → Practicante intenta /gestion/instalacion → redirige a /dashboard ✅
+   → Practicante intenta /gestion/cotizacion → accede ✅
+
+4. /perfiles → seleccionar &quot;Analista Conciliación Terceros&quot; → 6 filas de permisos ✅
+
+5. /servicios → DIM_CLASIFICACION: 6 valores canónicos ✅ · DIM_CIUDADES: columna pais ✅
+</code></pre></div>
+<p><strong>Criterios:</strong>
+- [x] Flyway aplica V22 y V23 sin errores — BD en v23
+- [x] Login devuelve <code>secciones[]</code>
+- [x] Guard redirige correctamente
+- [x] UI perfiles muestra 8 filas por perfil
+- [x] 6 valores dim_clasificacion presentes</p>
+<hr />
+<h2 id="task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios-demo">TASK-008: Migración V27 — seed 1 usuario por perfil (6 usuarios demo)<a class="headerlink" href="#task-008-migracion-v27-seed-1-usuario-por-perfil-6-usuarios-demo" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ✅ Completada — 27/03/2026<br />
+<strong>Contexto</strong>: <a href="../modulos/HU-00_Acceso.html">HU-00</a> §1a / §3a — requerido para demo QCS</p>
+<h3 id="credenciales-de-acceso">Credenciales de acceso<a class="headerlink" href="#credenciales-de-acceso" title="Permanent link">&para;</a></h3>
+<p><strong>URL:</strong> http://localhost:4200 · <strong>Contraseña:</strong> <code>Unica2026#</code> (todos los usuarios)</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Perfil</th>
+<th>Usuario</th>
+<th>Módulos accesibles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Gerente</strong></td>
+<td><code>admin@unica.co</code></td>
+<td>Gestión · Inventario · Novedades y Prefactura</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Líder Profesional</strong></td>
+<td><code>lider@unica.co</code></td>
+<td>Gestión · Inventario · Novedades y Prefactura</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Analista Conciliación</strong></td>
+<td><code>analista.concil@unica.co</code></td>
+<td>Gestión (consulta) · Inventario · Novedades</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Analista Carriers</strong></td>
+<td><code>analista.carr@unica.co</code></td>
+<td>Gestión · Inventario · Novedades y Prefactura</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Ingeniero Especialista</strong></td>
+<td><code>ingeniero@unica.co</code></td>
+<td>Gestión (parcial) · Inventario</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Practicante</strong></td>
+<td><code>practicante@unica.co</code></td>
+<td>Gestión (cotización) · Inventario</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notas de implementación:</strong>
+- Hash BCrypt strength-10 — compatible con <code>BCryptPasswordEncoder</code>
+- <code>ON DUPLICATE KEY UPDATE correo = correo</code> → idempotente
+- <code>INSERT IGNORE</code> en <code>usuario_perfil</code> → evita duplicados</p>
+<p><strong>Criterios:</strong>
+- [x] V27 ejecuta sin errores
+- [x] 6 usuarios con <code>estado = ACTIVO</code>
+- [x] Cada usuario tiene 1 perfil en <code>usuario_perfil</code>
+- [x] Login con <code>admin@unica.co</code> / <code>Unica2026#</code> → JWT con 3 módulos
+- [x] Login con <code>practicante@unica.co</code> → JWT sin Novedades y Prefactura
+- [x] Guard bloquea acceso a secciones no autorizadas</p>
+<p><strong>Archivo</strong>: <code>src/main/resources/db/migration/V27__seed_usuarios_por_perfil.sql</code> ✅</p>
+<hr />
+<h2 id="correcciones-de-encoding-v24-v25">Correcciones de encoding (V24 + V25)<a class="headerlink" href="#correcciones-de-encoding-v24-v25" title="Permanent link">&para;</a></h2>
+<h3 id="v24-fix-encoding-y-rebuild-permisos">V24 — fix encoding y rebuild permisos<a class="headerlink" href="#v24-fix-encoding-y-rebuild-permisos" title="Permanent link">&para;</a></h3>
+<p><strong>Estado</strong>: ✅ Aplicada — 25/03/2026<br />
+<strong>Archivo</strong>: <code>src/main/resources/db/migration/V24__fix_permisos_rebuild_encoding.sql</code></p>
+<p><strong>Causa raíz:</strong> V6 y V9 insertaron permisos sin <code>SET NAMES utf8mb4</code> → 22 variantes corruptas de <code>(modulo, seccion)</code> → 107 filas infladas.</p>
+<p><strong>Pasos:</strong>
+1. Elimina UNIQUE constraint existente (condicionalmente)
+2. <code>DELETE FROM permisos</code> — elimina todos los registros corruptos
+3. Re-inserta 37 registros canónicos con <code>SET NAMES utf8mb4</code>
+4. Restaura <code>UNIQUE (id_perfil, modulo, seccion)</code></p>
+<p><strong>Resultado real:</strong> Solo insertó 23 permisos (perfiles id=2 e id=3 tenían nombres corruptos). Corregido por V25.</p>
+<hr />
+<h3 id="v25-fix-encoding-en-perfiles-14-permisos-faltantes">V25 — fix encoding en <code>perfiles</code> + 14 permisos faltantes<a class="headerlink" href="#v25-fix-encoding-en-perfiles-14-permisos-faltantes" title="Permanent link">&para;</a></h3>
+<p><strong>Estado</strong>: ✅ Aplicada — 25/03/2026<br />
+<strong>Archivo</strong>: <code>src/main/resources/db/migration/V25__fix_perfiles_encoding_permisos_faltantes.sql</code></p>
+<p><strong>Pasos:</strong>
+1. <code>UPDATE perfiles SET nombre_perfil = 'Líder...' WHERE id = 2</code> — corrige por id
+2. <code>UPDATE perfiles SET nombre_perfil = 'Analista Conciliación Terceros' WHERE id = 3</code>
+3. Inserta 8 permisos del Líder con <code>id_perfil = 2</code>
+4. Inserta 6 permisos del Analista Conciliación con <code>id_perfil = 3</code></p>
+<p><strong>Resultado verificado:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Permisos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerente</td>
+<td>8 ✅</td>
+</tr>
+<tr>
+<td>Líder Profesional Unidad de Carriers</td>
+<td>8 ✅</td>
+</tr>
+<tr>
+<td>Analista Unidad de Carriers</td>
+<td>8 ✅</td>
+</tr>
+<tr>
+<td>Analista Conciliación Terceros</td>
+<td>6 ✅</td>
+</tr>
+<tr>
+<td>Ingeniero Especialista</td>
+<td>5 ✅</td>
+</tr>
+<tr>
+<td>Practicante</td>
+<td>2 ✅</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>37</strong> ✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="auditoria-de-base-de-datos-25032026">Auditoría de Base de Datos — 25/03/2026<a class="headerlink" href="#auditoria-de-base-de-datos-25032026" title="Permanent link">&para;</a></h2>
+<p><strong>Script:</strong> <code>scripts/auditoria_fase1.sql</code></p>
+<h3 id="hallazgos-y-estado-de-correccion">Hallazgos y estado de corrección<a class="headerlink" href="#hallazgos-y-estado-de-correccion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hallazgo</th>
+<th>Severidad</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>permisos</code> con 107 filas: 22 variantes corruptas por encoding V6/V9</td>
+<td>🔴 CRÍTICO</td>
+<td>✅ Corregido — V24 eliminó filas corruptas</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sin UNIQUE constraint en <code>(id_perfil, modulo, seccion)</code></td>
+<td>🔴 CRÍTICO</td>
+<td>✅ Corregido — V24 restaura el constraint</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>perfiles</code> id=2 y id=3 con nombres corruptos</td>
+<td>🔴 CRÍTICO</td>
+<td>✅ Corregido — V25 actualiza por id</td>
+</tr>
+<tr>
+<td>4</td>
+<td>V24 no matcheó perfiles corruptos → solo 23 permisos</td>
+<td>🔴 CRÍTICO</td>
+<td>✅ Corregido — V25 inserta por <code>id_perfil</code> directo</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>dim_clasificacion</code> tiene 5 valores demo (IDs 1-5)</td>
+<td>🟡 MENOR</td>
+<td>⏳ Pendiente confirmación QCS (ver G3 en S2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flyway-al-cierre-de-s1">Flyway al cierre de S1<a class="headerlink" href="#flyway-al-cierre-de-s1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Descripción</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V0–V21</td>
+<td>Migraciones anteriores a S1</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>V22</td>
+<td>seed permisos perfiles</td>
+<td>✅ 24/03</td>
+</tr>
+<tr>
+<td>V23</td>
+<td>dim_ciudades pais estado</td>
+<td>✅ 24/03</td>
+</tr>
+<tr>
+<td>V24</td>
+<td>fix permisos rebuild encoding</td>
+<td>✅ 25/03</td>
+</tr>
+<tr>
+<td>V25</td>
+<td>fix perfiles encoding + 14 permisos</td>
+<td>✅ 25/03</td>
+</tr>
+<tr>
+<td>V27</td>
+<td>seed usuarios por perfil</td>
+<td>✅ 27/03</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orden-de-ejecucion-aplicado-en-s1">Orden de ejecución aplicado en S1<a class="headerlink" href="#orden-de-ejecucion-aplicado-en-s1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>TASK-001 (V22 seed permisos)
+    ↓ paralelo con:
+TASK-002 + TASK-003 (V23 dim_ciudades + seed clasificacion)
+    ↓
+TASK-004 (backend AuthController + frontend guard/model)
+    ↓
+TASK-005 verificar UI perfiles
+TASK-006 verificar UI clientes
+    ↓
+TASK-007 smoke test completo
+    ↓
+TASK-008 (V27 seed usuarios demo)
+</code></pre></div>
+<hr />
+<h2 id="riesgos-s1-resueltos">Riesgos S1 (resueltos)<a class="headerlink" href="#riesgos-s1-resueltos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Riesgo</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matriz de permisos no coincide con expectativa QCS</td>
+<td>✅ <code>INSERT IGNORE</code> + nota: "Permisos configurables vía UI /perfiles"</td>
+</tr>
+<tr>
+<td><code>secciones[]</code> en JWT rompe <code>AuthInterceptor</code></td>
+<td>✅ Campo aditivo — no rompe</td>
+</tr>
+<tr>
+<td>V23 genera conflicto si <code>pais</code> ya tiene NULL</td>
+<td>✅ DEFAULT asegura 'COL' en registros existentes</td>
+</tr>
+<tr>
+<td>Encoding corrupto en perfiles/permisos</td>
+<td>✅ Resuelto con V24 + V25</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="referencia">Referencia<a class="headerlink" href="#referencia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../modulos/HU-00_Acceso.html">HU-00</a>: <code>docs/files/HU-00_Front_de_Acceso.md</code> — §2b, §3b, §3c</li>
+<li><a href="../modulos/HU-05_Inventario.html">HU-05</a>: <code>docs/files/HU-05_Inventario.md</code> — §4, §8</li>
+<li>Auditoría interna: <code>scripts/auditoria_fase1.sql</code></li>
+<li>Reglas de negocio: RN-01, RN-02, RN-04, RN-06, RN-10, RN-12</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

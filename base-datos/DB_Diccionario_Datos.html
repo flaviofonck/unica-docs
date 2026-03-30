@@ -888,12 +888,127 @@
   
   
     <li class="md-nav__item">
+      <a href="../implementacion/Fase1_S1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1_S2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1_S3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../implementacion/Fase2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase2_S4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase2_S5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S5
     
   </span>
   
@@ -1206,8 +1321,9 @@
 
 <h1 id="procesos-unica-diccionario-de-datos-y-modelo-relacional">PROCESOS ÚNICA — Diccionario de Datos y Modelo Relacional<a class="headerlink" href="#procesos-unica-diccionario-de-datos-y-modelo-relacional" title="Permanent link">&para;</a></h1>
 <p><strong>Proyecto:</strong> Sistema de Automatización Operativa — PROCESOS ÚNICA<br />
-<strong>Base de datos:</strong> MySQL 8+ · <strong>ORM:</strong> Spring Boot JPA / Hibernate<br />
-<strong>Versión:</strong> 1.0 · Marzo 2026  </p>
+<strong>Base de datos:</strong> MySQL 8 (desarrollo) · utf8mb4 · <strong>ORM:</strong> Spring Boot JPA / Hibernate<br />
+<strong>Actualizado:</strong> Marzo 2026 · Alineado con HU-v3<br />
+<strong>Versión:</strong> 1.1 · Marzo 2026  </p>
 <hr />
 <h2 id="1-resumen-del-modelo-de-datos">1. Resumen del Modelo de Datos<a class="headerlink" href="#1-resumen-del-modelo-de-datos" title="Permanent link">&para;</a></h2>
 <table>
@@ -5835,15 +5951,17 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 <div class="highlight"><pre><span></span><code><span class="c1">-- TODO: campos de fact_bajas_migracion pendientes de definición</span>
 <span class="c1">-- TODO: campos de fact_bajas_cliente pendientes de definición</span>
 <span class="c1">-- TODO: campos de fact_suspension_cartera pendientes de definición</span>
+<span class="c1">-- NOTA HU-v3: 5 estados de baja: BAJA_POR_MIGRACION / BAJA_POR_CLIENTE / </span>
+<span class="c1">--   BAJA_POR_ASEGURAMIENTO_INGRESO / SUSPENSION_POR_CARTERA / BAJA_POR_CARTERA</span>
 <span class="k">sql</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_tipo_servicio</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_clasificacion</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="n">VARCHAR60</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_trm</span><span class="w"> </span><span class="p">(</span>
@@ -5856,29 +5974,29 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_contratos</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">numero_contrato</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">condicion_pago</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">condicion_facturacion</span><span class="w"> </span><span class="n">VARCHAR100</span>
+<span class="w">  </span><span class="n">numero_contrato</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">condicion_pago</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">condicion_facturacion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_clientes</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">nit</span><span class="w"> </span><span class="n">VARCHAR10</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">razon_social</span><span class="w"> </span><span class="n">VARCHAR250</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">contacto</span><span class="w"> </span><span class="n">VARCHAR150</span>
+<span class="w">  </span><span class="n">nit</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">razon_social</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">contacto</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_ciudades</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">codigo_dane</span><span class="w"> </span><span class="n">VARCHAR10</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">nombre_ciudad</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="w">  </span><span class="n">codigo_dane</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre_ciudad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_medios</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">nombre_medio</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="w">  </span><span class="n">nombre_medio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_cobertura</span><span class="w"> </span><span class="p">(</span>
@@ -5893,44 +6011,44 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_servicios</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;ACTIVO&#39;</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;ACTIVO&#39;</span>
 <span class="p">);</span>
 
 <span class="k">sql</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_prorrateo_novedades</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">inicio_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fin_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">dias_a_facturar</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
 <span class="w">  </span><span class="n">cargo_instalacion</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">obra_civil</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
-<span class="w">  </span><span class="n">moneda_mrc</span><span class="w"> </span><span class="n">VARCHAR3</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COP&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">moneda_mrc</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COP&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="n">mrc</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">valor_tasa_cambio</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
 <span class="w">  </span><span class="n">mrc_cop</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">total_cop</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
-<span class="w">  </span><span class="n">novedad</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_novedad</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="p">,</span>
-<span class="w">  </span><span class="n">tipo_servicio</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="p">,</span>
+<span class="w">  </span><span class="n">novedad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mes_novedad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+<span class="w">  </span><span class="n">tipo_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
 <span class="w">  </span><span class="n">fecha_proceso</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
-<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prorrat_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prorrat_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_mantenimientos</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_mantenimiento</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">monto</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">descripcion</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_manteni_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_manteni_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>
@@ -5938,25 +6056,25 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 <span class="k">sql</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_tickets_indisponibilidad</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">incident_id</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">vendor_ticket_number</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">numero_ds</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">incident_id</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">vendor_ticket_number</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">numero_ds</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
 <span class="w">  </span><span class="n">incident_reported_datetime</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">incident_closed_datetime</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
-<span class="w">  </span><span class="n">customer_company</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="p">,</span>
-<span class="w">  </span><span class="n">customer_city</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">customer_site</span><span class="w"> </span><span class="n">VARCHAR255</span><span class="p">,</span>
-<span class="w">  </span><span class="n">classification_service_ci</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_enlace</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">resolution_category_tier1</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">resolution_category_tier2</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">resolution_category_tier3</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">assignee_assigned_group</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">customer_company</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+<span class="w">  </span><span class="n">customer_city</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">customer_site</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">  </span><span class="n">classification_service_ci</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">id_enlace</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">resolution_category_tier1</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">resolution_category_tier2</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">resolution_category_tier3</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">assignee_assigned_group</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
 <span class="w">  </span><span class="n">fecha_solucion_incidencia</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
-<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;Sin dato&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;Sin dato&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="n">observaciones</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_reporte</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mes_reporte</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_tickets_numero_ds</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">numero_ds</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_tickets_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>
@@ -5965,13 +6083,13 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 <span class="w">  </span><span class="n">id_ticket</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_apertura</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_cierre</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">cliente</span><span class="w"> </span><span class="n">VARCHAR250</span><span class="p">,</span>
-<span class="w">  </span><span class="n">ciudad</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">causa_reparacion</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">motivo_fallo</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cliente</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">250</span><span class="p">),</span>
+<span class="w">  </span><span class="n">ciudad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">causa_reparacion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">motivo_fallo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
 <span class="w">  </span><span class="n">indisp_minutos</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">pct_disponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">pct_descuento_indisponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
@@ -5979,8 +6097,8 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 <span class="w">  </span><span class="n">fallo_responsabilidad_diferente</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <span class="w">  </span><span class="n">pct_descuento_final</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">descuentos_indisponibilidad</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
-<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_reporte</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mes_reporte</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">observaciones</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_indispo_id_ticket</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_ticket</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">fact_tickets_indisponibilidad</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_indispo_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
@@ -5988,15 +6106,15 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_exclusiones_remedy</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">codigo_exclusion</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">descripcion</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">tipo</span><span class="w"> </span><span class="n">VARCHAR40</span><span class="p">,</span>
+<span class="w">  </span><span class="n">codigo_exclusion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">descripcion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span>
 <span class="w">  </span><span class="n">activo</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">1</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_ans_proveedores</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">nit_proveedor</span><span class="w"> </span><span class="n">VARCHAR15</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nit_proveedor</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">disponibilidad_pactada_pct</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">rango_min_pct</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">rango_max_pct</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
@@ -6006,60 +6124,60 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dim_motivos_fallas</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">motivo</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">motivo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">activo</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">1</span>
 <span class="p">);</span>
 
 <span class="k">sql</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_ingresos_davox</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">ciclo</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="p">,</span>
-<span class="w">  </span><span class="n">nombre_ciclo</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">negocio</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">estado_cus</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">estado_cuenta</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">tipo_identificacion</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="p">,</span>
-<span class="w">  </span><span class="n">identificacion</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="p">,</span>
-<span class="w">  </span><span class="n">razon_social</span><span class="w"> </span><span class="n">VARCHAR250</span><span class="p">,</span>
-<span class="w">  </span><span class="n">tipo_facturacion</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ciclo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">  </span><span class="n">nombre_ciclo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">negocio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">estado_cus</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">estado_cuenta</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">tipo_identificacion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+<span class="w">  </span><span class="n">identificacion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="w">  </span><span class="n">razon_social</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">250</span><span class="p">),</span>
+<span class="w">  </span><span class="n">tipo_facturacion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
 <span class="w">  </span><span class="n">porcentaje_iva</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">fecha_instalacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">codigo_unico_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">tipo_moneda</span><span class="w"> </span><span class="n">VARCHAR3</span><span class="p">,</span>
+<span class="w">  </span><span class="n">codigo_unico_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_moneda</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
 <span class="w">  </span><span class="n">cargo_instalacion</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">cargo_fijo_mes</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">fecha_suspension</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_reconexion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">tipo_novedad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tipo_novedad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
 <span class="w">  </span><span class="n">fecha_inicio_contrato</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_fin_contrato</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">numero_contrato</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">estado_contrato</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_informe_fisc</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="w">  </span><span class="n">numero_contrato</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">estado_contrato</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mes_informe_fisc</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_prefactura</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_oportunidad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">producto</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">direccion_instalacion</span><span class="w"> </span><span class="n">VARCHAR255</span><span class="p">,</span>
-<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
-<span class="w">  </span><span class="n">municipio</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_oportunidad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">producto</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">direccion_instalacion</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+<span class="w">  </span><span class="n">municipio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
 <span class="w">  </span><span class="n">permanencia</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_inicio</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_cierre</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">  </span><span class="n">bw</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">bw</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">inicio_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fin_facturacion</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
 <span class="w">  </span><span class="n">dias_a_facturar</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
 <span class="w">  </span><span class="n">cargo_instalacion</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">obra_civil</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">mantenimientos</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
-<span class="w">  </span><span class="n">moneda</span><span class="w"> </span><span class="n">VARCHAR3</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COP&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">moneda</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;COP&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="n">mrc</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">trm</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
 <span class="w">  </span><span class="n">mrc_cop</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
@@ -6069,33 +6187,33 @@ Contiene <strong>50 campos</strong> que cubren desde datos comerciales hasta est
 <span class="w">  </span><span class="n">total_menos_descuento_indisp</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">iva</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">mrc_cop_total</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
-<span class="w">  </span><span class="n">novedad_cronos</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
-<span class="w">  </span><span class="n">novedad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
+<span class="w">  </span><span class="n">novedad_cronos</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+<span class="w">  </span><span class="n">novedad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
 <span class="w">  </span><span class="n">observacion</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="w">  </span><span class="n">estado_registro</span><span class="w"> </span><span class="n">VARCHAR20</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;Por validar&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">estado_registro</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;Por validar&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_creacion</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
 <span class="w">  </span><span class="n">fecha_modificacion</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
-<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">modificado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
+<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">modificado_por</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prefact_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_prefact_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fact_validacion_pagos_ingresos</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_servicio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">id_configuracion_servicio</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="n">VARCHAR200</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">  </span><span class="n">id_oportunidad</span><span class="w"> </span><span class="n">VARCHAR50</span><span class="p">,</span>
-<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="n">VARCHAR80</span><span class="p">,</span>
-<span class="w">  </span><span class="n">municipio</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="p">,</span>
-<span class="w">  </span><span class="n">bw</span><span class="w"> </span><span class="n">VARCHAR30</span><span class="p">,</span>
-<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="n">VARCHAR7</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">proveedor</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">id_oportunidad</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">  </span><span class="n">departamento</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+<span class="w">  </span><span class="n">municipio</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">bw</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+<span class="w">  </span><span class="n">mes_facturado</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="n">pagos_proveedores</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">ingresos</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">pagos_menos_ingresos</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
 <span class="w">  </span><span class="n">fecha_creacion</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
-<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="n">VARCHAR100</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">creado_por</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_validac_id_servicio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
 <span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_fact_validac_id_configuracio</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_configuracion_servicio</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">dim_configuracion_servicios</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>

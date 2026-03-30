@@ -1,0 +1,1840 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="Fase1_S2.html">
+      
+      
+        <link rel="next" href="Fase2.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Fase 1_S3 - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fase-1-s3-611-abr-2026-cierre-y-aprobacion-qcs-hu-00-hu-05" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fase 1_S3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía del Proyecto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Módulos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-00 — Acceso y Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-01 — Cotización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-02 — Instalación Terceros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-03 — Migraciones y Ampliaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-04 — Bajas y Cartera
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-05 — Inventario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-06 — Novedades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-07 — Indisponibilidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-08 — Prefacturación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Base de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Base de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentación Completa BD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diccionario de Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementación por Fases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Implementación por Fases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_S1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_S2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S3
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Fase1_S3.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S3
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#matriz-semanal-s3-alineada-al-cronograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matriz semanal S3 (alineada al cronograma)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-entregar-el-viernes-1104" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qué entregar el viernes 11/04
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-00-bloque-semanal-s3-cierre-total-demo-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-00 — Bloque semanal S3 (cierre total + demo QCS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-00 — Bloque semanal S3 (cierre total + demo QCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alcance-funcional-a-demostrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alcance funcional a demostrar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-05-bloque-semanal-s3-cierre-total-demo-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-05 — Bloque semanal S3 (cierre total + demo QCS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-05 — Bloque semanal S3 (cierre total + demo QCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alcance-funcional-a-demostrar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alcance funcional a demostrar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foco-de-ajuste-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foco de ajuste S3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g2-indicador_iva-0-para-pais-col-rn-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      G2 — indicador_iva = 0 para pais != COL (RN-10)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G2 — indicador_iva = 0 para pais != COL (RN-10)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementacion-requerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación requerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-unitario-requerido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test unitario requerido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-cierre-g2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio de cierre G2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-cierre-total-fase-1-para-demo-y-acta-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist de cierre total Fase 1 (para demo y acta QCS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist de cierre total Fase 1 (para demo y acta QCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-00-acceso-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-00 — Acceso y Seguridad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-05-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-05 — Inventario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidencia-para-entrega-s3-viernes-1104" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidencia para entrega S3 (viernes 11/04)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentacion-a-qcs-viernes-1104-estructura-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentación a QCS — viernes 11/04 (estructura sugerida)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-acumulado-fase-1-al-cierre-de-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado acumulado Fase 1 al cierre de S3
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2_S4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2_S5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentación del Proyecto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación del Proyecto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plan Scrum / Sprints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auditoría de Implementación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#matriz-semanal-s3-alineada-al-cronograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matriz semanal S3 (alineada al cronograma)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-entregar-el-viernes-1104" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qué entregar el viernes 11/04
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-00-bloque-semanal-s3-cierre-total-demo-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-00 — Bloque semanal S3 (cierre total + demo QCS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-00 — Bloque semanal S3 (cierre total + demo QCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alcance-funcional-a-demostrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alcance funcional a demostrar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hu-05-bloque-semanal-s3-cierre-total-demo-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-05 — Bloque semanal S3 (cierre total + demo QCS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HU-05 — Bloque semanal S3 (cierre total + demo QCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alcance-funcional-a-demostrar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alcance funcional a demostrar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foco-de-ajuste-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foco de ajuste S3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g2-indicador_iva-0-para-pais-col-rn-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      G2 — indicador_iva = 0 para pais != COL (RN-10)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G2 — indicador_iva = 0 para pais != COL (RN-10)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementacion-requerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación requerida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-unitario-requerido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test unitario requerido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterio-de-cierre-g2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterio de cierre G2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-cierre-total-fase-1-para-demo-y-acta-qcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist de cierre total Fase 1 (para demo y acta QCS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist de cierre total Fase 1 (para demo y acta QCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-00-acceso-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-00 — Acceso y Seguridad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-05-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      HU-05 — Inventario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidencia-para-entrega-s3-viernes-1104" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidencia para entrega S3 (viernes 11/04)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentacion-a-qcs-viernes-1104-estructura-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Presentación a QCS — viernes 11/04 (estructura sugerida)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-acumulado-fase-1-al-cierre-de-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado acumulado Fase 1 al cierre de S3
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="fase-1-s3-611-abr-2026-cierre-y-aprobacion-qcs-hu-00-hu-05">Fase 1 — S3 (6–11 abr 2026): Cierre y aprobación QCS (<a href="../modulos/HU-00_Acceso.html">HU-00</a> + <a href="../modulos/HU-05_Inventario.html">HU-05</a>)<a class="headerlink" href="#fase-1-s3-611-abr-2026-cierre-y-aprobacion-qcs-hu-00-hu-05" title="Permanent link">&para;</a></h1>
+<p><strong>Semana</strong>: S3 — 6 al 11 de abril de 2026<br />
+<strong>Compromiso contractual</strong>: Cierre <a href="../modulos/HU-00_Acceso.html">HU-00</a> + <a href="../modulos/HU-05_Inventario.html">HU-05</a> al 100% — aprobación QCS<br />
+<strong>Entrega</strong>: viernes 11/04/2026 — 7:00 a.m.<br />
+<strong>Estado S3</strong>: ⬜ Pendiente</p>
+<blockquote>
+<p>S1 completado → <code>Implementacion_Fase1_S1.md</code><br />
+S2 verificaciones → <code>Implementacion_Fase1_S2.md</code></p>
+</blockquote>
+<hr />
+<h2 id="matriz-semanal-s3-alineada-al-cronograma">Matriz semanal S3 (alineada al cronograma)<a class="headerlink" href="#matriz-semanal-s3-alineada-al-cronograma" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>HU</th>
+<th>Actividad S3</th>
+<th>Amb.</th>
+<th>Estado S3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../modulos/HU-00_Acceso.html">HU-00</a></td>
+<td>Validación final: checklist completo + demo QCS</td>
+<td>Q</td>
+<td>⬜ Pendiente</td>
+</tr>
+<tr>
+<td><a href="../modulos/HU-05_Inventario.html">HU-05</a></td>
+<td>Validación final: checklist completo + demo QCS</td>
+<td>Q</td>
+<td>⬜ Pendiente</td>
+</tr>
+<tr>
+<td><a href="../modulos/HU-05_Inventario.html">HU-05</a></td>
+<td>Implementar RN-10: indicador_iva internacional</td>
+<td>D</td>
+<td>🔄 En ejecución (G2)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="que-entregar-el-viernes-1104">Qué entregar el viernes 11/04<a class="headerlink" href="#que-entregar-el-viernes-1104" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ítem</th>
+<th>HU / RN</th>
+<th>Criterio de cierre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="../modulos/HU-00_Acceso.html">HU-00</a>-Q</strong> — Validación final en ambiente QCS</td>
+<td><a href="../modulos/HU-00_Acceso.html">HU-00</a></td>
+<td>Checklist completo, demo y acta firmada</td>
+</tr>
+<tr>
+<td><strong><a href="../modulos/HU-05_Inventario.html">HU-05</a>-Q</strong> — Validación final en ambiente QCS</td>
+<td><a href="../modulos/HU-05_Inventario.html">HU-05</a></td>
+<td>Checklist completo, demo y acta firmada</td>
+</tr>
+<tr>
+<td><strong>G2</strong> — indicador_iva internacional (RN-10)</td>
+<td><a href="../modulos/HU-05_Inventario.html">HU-05</a> / RN-10</td>
+<td>Test unitario verde + lógica en <code>aplicarReglas()</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="hu-00-bloque-semanal-s3-cierre-total-demo-qcs"><a href="../modulos/HU-00_Acceso.html">HU-00</a> — Bloque semanal S3 (cierre total + demo QCS)<a class="headerlink" href="#hu-00-bloque-semanal-s3-cierre-total-demo-qcs" title="Permanent link">&para;</a></h2>
+<h3 id="alcance-funcional-a-demostrar">Alcance funcional a demostrar<a class="headerlink" href="#alcance-funcional-a-demostrar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Todos los criterios <a href="../modulos/HU-00_Acceso.html">HU-00</a> en checklist marcados ✅</li>
+<li>Demo en vivo: login, menú diferencial, CRUD usuarios, guard, logs</li>
+<li>Validación QCS: acta firmada y observaciones documentadas</li>
+</ul>
+<hr />
+<h2 id="hu-05-bloque-semanal-s3-cierre-total-demo-qcs"><a href="../modulos/HU-05_Inventario.html">HU-05</a> — Bloque semanal S3 (cierre total + demo QCS)<a class="headerlink" href="#hu-05-bloque-semanal-s3-cierre-total-demo-qcs" title="Permanent link">&para;</a></h2>
+<h3 id="alcance-funcional-a-demostrar_1">Alcance funcional a demostrar<a class="headerlink" href="#alcance-funcional-a-demostrar_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Todos los criterios <a href="../modulos/HU-05_Inventario.html">HU-05</a> en checklist marcados ✅</li>
+<li>Demo en vivo: inventario, CRUD DIM, filtros, validaciones</li>
+<li>Validación QCS: acta firmada y observaciones documentadas</li>
+</ul>
+<h3 id="foco-de-ajuste-s3">Foco de ajuste S3<a class="headerlink" href="#foco-de-ajuste-s3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>G2</strong>: RN-10 — indicador_iva internacional implementado y probado</li>
+</ul>
+<hr />
+<hr />
+<h2 id="g2-indicador_iva-0-para-pais-col-rn-10">G2 — <code>indicador_iva = 0</code> para pais != COL (RN-10)<a class="headerlink" href="#g2-indicador_iva-0-para-pais-col-rn-10" title="Permanent link">&para;</a></h2>
+<p><strong><a href="../modulos/HU-05_Inventario.html">HU-05</a> / Regla RN-10</strong>: Si la ciudad del servicio está fuera de Colombia (<code>pais != 'COL'</code>) → <code>indicador_iva = 0</code> (servicios internacionales no aplican IVA colombiano)</p>
+<h3 id="implementacion-requerida">Implementación requerida<a class="headerlink" href="#implementacion-requerida" title="Permanent link">&para;</a></h3>
+<p><strong>Servicio:</strong> <code>ConfiguracionServicioService.java</code> — método <code>aplicarReglas(ConfiguracionServicio cs)</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * RN-10: Si la ciudad del servicio está fuera de Colombia → indicador_iva = 0</span>
+<span class="cm"> */</span>
+<span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">aplicarReglaIndicadorIva</span><span class="p">(</span><span class="n">ConfiguracionServicio</span><span class="w"> </span><span class="n">cs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cs</span><span class="p">.</span><span class="na">getCodigoDaneCiudad</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DimCiudad</span><span class="w"> </span><span class="n">ciudad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dimCiudadRepository</span>
+<span class="w">            </span><span class="p">.</span><span class="na">findByCodigoDane</span><span class="p">(</span><span class="n">cs</span><span class="p">.</span><span class="na">getCodigoDaneCiudad</span><span class="p">())</span>
+<span class="w">            </span><span class="p">.</span><span class="na">orElse</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ciudad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="s">&quot;COL&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">ciudad</span><span class="p">.</span><span class="na">getPais</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">cs</span><span class="p">.</span><span class="na">setIndicadorIva</span><span class="p">(</span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">ZERO</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Cuándo se invoca:</strong> al crear o modificar un <code>dim_configuracion_servicios</code> — antes de persistir.</p>
+<h3 id="test-unitario-requerido">Test unitario requerido<a class="headerlink" href="#test-unitario-requerido" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nd">@Test</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">aplicarReglas_ciudadInternacional_debeSetearIndicadorIvaCero</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Arrange</span>
+<span class="w">    </span><span class="n">DimCiudad</span><span class="w"> </span><span class="n">ciudadUSA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DimCiudad</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ciudadUSA</span><span class="p">.</span><span class="na">setCodigoDane</span><span class="p">(</span><span class="s">&quot;US-NYC&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ciudadUSA</span><span class="p">.</span><span class="na">setPais</span><span class="p">(</span><span class="s">&quot;USA&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ConfiguracionServicio</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConfiguracionServicio</span><span class="p">();</span>
+<span class="w">    </span><span class="n">cs</span><span class="p">.</span><span class="na">setCodigoDaneCiudad</span><span class="p">(</span><span class="s">&quot;US-NYC&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cs</span><span class="p">.</span><span class="na">setIndicadorIva</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="s">&quot;0.19&quot;</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">when</span><span class="p">(</span><span class="n">dimCiudadRepository</span><span class="p">.</span><span class="na">findByCodigoDane</span><span class="p">(</span><span class="s">&quot;US-NYC&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">thenReturn</span><span class="p">(</span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">ciudadUSA</span><span class="p">));</span>
+
+<span class="w">    </span><span class="c1">// Act</span>
+<span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">aplicarReglas</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Assert</span>
+<span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">cs</span><span class="p">.</span><span class="na">getIndicadorIva</span><span class="p">()).</span><span class="na">isEqualByComparingTo</span><span class="p">(</span><span class="n">BigDecimal</span><span class="p">.</span><span class="na">ZERO</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nd">@Test</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">aplicarReglas_ciudadColombia_noModificaIndicadorIva</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">DimCiudad</span><span class="w"> </span><span class="n">ciudadCOL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DimCiudad</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ciudadCOL</span><span class="p">.</span><span class="na">setCodigoDane</span><span class="p">(</span><span class="s">&quot;11001&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ciudadCOL</span><span class="p">.</span><span class="na">setPais</span><span class="p">(</span><span class="s">&quot;COL&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ConfiguracionServicio</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConfiguracionServicio</span><span class="p">();</span>
+<span class="w">    </span><span class="n">cs</span><span class="p">.</span><span class="na">setCodigoDaneCiudad</span><span class="p">(</span><span class="s">&quot;11001&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cs</span><span class="p">.</span><span class="na">setIndicadorIva</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="s">&quot;0.19&quot;</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">when</span><span class="p">(</span><span class="n">dimCiudadRepository</span><span class="p">.</span><span class="na">findByCodigoDane</span><span class="p">(</span><span class="s">&quot;11001&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">thenReturn</span><span class="p">(</span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">ciudadCOL</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">aplicarReglas</span><span class="p">(</span><span class="n">cs</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="n">cs</span><span class="p">.</span><span class="na">getIndicadorIva</span><span class="p">()).</span><span class="na">isEqualByComparingTo</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="s">&quot;0.19&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="criterio-de-cierre-g2">Criterio de cierre G2<a class="headerlink" href="#criterio-de-cierre-g2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <code>aplicarReglas()</code> incluye la lógica <code>if (!"COL".equals(pais)) → indicadorIva = 0</code></li>
+<li>[ ] Test unitario para ciudad COL → no modifica <code>indicador_iva</code></li>
+<li>[ ] Test unitario para ciudad USA → <code>indicador_iva = 0</code></li>
+<li>[ ] Ambos tests en verde (<code>mvnw test</code>)</li>
+</ul>
+<hr />
+<hr />
+<h2 id="checklist-de-cierre-total-fase-1-para-demo-y-acta-qcs">Checklist de cierre total Fase 1 (para demo y acta QCS)<a class="headerlink" href="#checklist-de-cierre-total-fase-1-para-demo-y-acta-qcs" title="Permanent link">&para;</a></h2>
+<h3 id="hu-00-acceso-y-seguridad"><a href="../modulos/HU-00_Acceso.html">HU-00</a> — Acceso y Seguridad<a class="headerlink" href="#hu-00-acceso-y-seguridad" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6 perfiles predefinidos en BD (V22)</td>
+<td>✅ S1</td>
+</tr>
+<tr>
+<td>8 secciones/pestañas con permisos corretos</td>
+<td>✅ S1 (V24+V25 — 37 permisos)</td>
+</tr>
+<tr>
+<td>Checkboxes Ver/Ejecutar/Administrar en UI /perfiles</td>
+<td>✅ S1</td>
+</tr>
+<tr>
+<td>Guard por sección individual (secciones[] en JWT)</td>
+<td>✅ S1</td>
+</tr>
+<tr>
+<td>Login solo usuarios ACTIVO (RN-01)</td>
+<td>✅ — verificar en smoke test</td>
+</tr>
+<tr>
+<td>Menú lateral filtra por permisos.puede_ver (RN-02)</td>
+<td>✅ S1</td>
+</tr>
+<tr>
+<td>CRUD Usuarios solo Gerente/Líder (RN-04)</td>
+<td>⬜ G1 — S2</td>
+</tr>
+<tr>
+<td>Log de auditoría en log_acceso</td>
+<td>✅ — verificar con 6 usuarios demo</td>
+</tr>
+<tr>
+<td>6 usuarios demo con contraseña Unica2026#</td>
+<td>✅ S1 (V27)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hu-05-inventario"><a href="../modulos/HU-05_Inventario.html">HU-05</a> — Inventario<a class="headerlink" href="#hu-05-inventario" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pestaña INVENTARIO con menú lateral 12 tablas</td>
+<td>✅ — verificar en smoke test</td>
+</tr>
+<tr>
+<td>DIM_PROVEEDORES — CRUD funcional</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DIM_TIPO_SERVICIO — CRUD funcional</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DIM_CLASIFICACION — 6 valores canónicos</td>
+<td>✅ S1 (decisión demo: G3 — S2)</td>
+</tr>
+<tr>
+<td>DIM_TRM — registro con validación unicidad mes (RN-12)</td>
+<td>⬜ G4 — S2</td>
+</tr>
+<tr>
+<td>DIM_CONTRATOS — propaga cambios a DIM_CONFIGURACION (TRIGGER)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DIM_CLIENTES — campo contacto</td>
+<td>✅ S1 (V21)</td>
+</tr>
+<tr>
+<td>DIM_CIUDADES — campos pais/estado</td>
+<td>✅ S1 (V23)</td>
+</tr>
+<tr>
+<td>DIM_MEDIOS — CRUD funcional</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DIM_COBERTURA — CRUD funcional</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>FACT_TARIFA_PROMEDIO — CRUD funcional</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DIM_SERVICIOS — CRUD funcional</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DIM_CONFIGURACION_SERVICIOS — 47 campos, CRUD funcional</td>
+<td>✅ (V19)</td>
+</tr>
+<tr>
+<td>RN-06 — 1 config activa por DS</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>RN-07 — NIT cliente 10 dígitos, no inicia en 0</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>RN-09 — PEP inicia E-1167 → imputacion='L'</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>RN-10 — indicador_iva por ciudad/pais</td>
+<td>⬜ G2 — S3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="evidencia-para-entrega-s3-viernes-1104">Evidencia para entrega S3 (viernes 11/04)<a class="headerlink" href="#evidencia-para-entrega-s3-viernes-1104" title="Permanent link">&para;</a></h2>
+<p>Preparar capturas o notas para cada ítem:</p>
+<table>
+<thead>
+<tr>
+<th>Ítem</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../modulos/HU-00_Acceso.html">HU-00</a>-Q</td>
+<td>Acta/checklist de validación en ambiente QCS (con observaciones)</td>
+</tr>
+<tr>
+<td><a href="../modulos/HU-05_Inventario.html">HU-05</a>-Q</td>
+<td>Acta/checklist de validación en ambiente QCS (con observaciones)</td>
+</tr>
+<tr>
+<td>G2</td>
+<td>Captura de test unitario verde + fragmento de código <code>aplicarReglas()</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Ejecutar antes de la reunión del viernes 11/04:</p>
+<div class="highlight"><pre><span></span><code>1. Arrancar backend + frontend
+   .\mvnw.cmd spring-boot:run
+   cd unica-frontend; npm start
+
+2. Login con admin@unica.co / Unica2026#
+   → JWT tiene 3 módulos ✅
+   → Navegar todas las rutas — sin 404 ni placeholder ✅
+
+3. Verificar CRUD Usuarios:
+   → Crear usuario con Gerente ✅
+   → Intentar crear con Practicante → 403 ✅
+
+4. Verificar TRM unicidad:
+   → Registrar TRM mismo mes dos veces → segundo rechazado ✅
+
+5. Smoke de RN-10 (si G2 implementado):
+   → mvnw test → todos los tests en verde ✅
+
+6. Verificar DIM_CONFIGURACION_SERVICIOS:
+   → Cargar servicio con ciudad extranjera → indicador_iva = 0 ✅
+   → NIT cliente inválido → error de validación ✅
+
+7. Log de auditoría:
+   → log_acceso tiene &gt;= 1 registro por cada login anterior ✅
+</code></pre></div>
+<hr />
+<h2 id="presentacion-a-qcs-viernes-1104-estructura-sugerida">Presentación a QCS — viernes 11/04 (estructura sugerida)<a class="headerlink" href="#presentacion-a-qcs-viernes-1104-estructura-sugerida" title="Permanent link">&para;</a></h2>
+<p><strong>Estructura sugerida (máx 20 min):</strong></p>
+<ol>
+<li><strong>Demo en vivo</strong> (10 min)</li>
+<li>Login con 3 perfiles distintos → menú diferencial por perfil</li>
+<li>CRUD de una tabla paramétrica (DIM_PROVEEDORES o DIM_CLASIFICACION)</li>
+<li>
+<p>Verificación de guard: Practicante ve 403 en sección no autorizada</p>
+</li>
+<li>
+<p><strong>Estado de criterios</strong> (5 min)</p>
+</li>
+<li>Tabla <a href="../modulos/HU-00_Acceso.html">HU-00</a>: todos los checks verdes</li>
+<li>Tabla <a href="../modulos/HU-05_Inventario.html">HU-05</a>: todos los checks verdes</li>
+<li>
+<p>G2 si está listo; si no → confirmación de fecha de entrega</p>
+</li>
+<li>
+<p><strong>Próximos pasos</strong> (5 min)</p>
+</li>
+<li>S4 inicia <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> (Cotización) — inicio 13/04</li>
+<li>No se mezclan HOUs de Fase 2 con el cierre actual</li>
+</ol>
+<p><strong>Documentos a tener listos:</strong>
+- Este archivo con checklist completo
+- <code>Implementacion_Fase1_S1.md</code> — evidencia del trabajo S1
+- <code>Implementacion_Fase1_S2.md</code> — evidencia verificaciones S2</p>
+<hr />
+<h2 id="estado-acumulado-fase-1-al-cierre-de-s3">Estado acumulado Fase 1 al cierre de S3<a class="headerlink" href="#estado-acumulado-fase-1-al-cierre-de-s3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>Estado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V22–V27 migraciones</td>
+<td>✅ S1</td>
+</tr>
+<tr>
+<td>module.guard + secciones[]</td>
+<td>✅ S1</td>
+</tr>
+<tr>
+<td>CRUD Usuarios RN-04</td>
+<td>⬜ → ✅ S2</td>
+</tr>
+<tr>
+<td>dim_clasificacion decisión QCS</td>
+<td>⬜ → ✅ S2</td>
+</tr>
+<tr>
+<td>TRM unicidad RN-12</td>
+<td>⬜ → ✅ S2</td>
+</tr>
+<tr>
+<td>indicador_iva RN-10 (G2)</td>
+<td>⬜ → ✅ S3</td>
+</tr>
+<tr>
+<td><strong>Aprobación QCS Fase 1</strong></td>
+<td><strong>⬜ → ✅ S3</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

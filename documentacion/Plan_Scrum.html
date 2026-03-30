@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../implementacion/Fase2.html">
+        <link rel="prev" href="../implementacion/Fase2_S5.html">
       
       
         <link rel="next" href="Auditoria.html">
@@ -693,12 +693,127 @@
   
   
     <li class="md-nav__item">
+      <a href="../implementacion/Fase1_S1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1_S2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase1_S3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../implementacion/Fase2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase2_S4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementacion/Fase2_S5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S5
     
   </span>
   
@@ -1328,7 +1443,8 @@
 <p><strong>Proyecto:</strong> Sistema de Automatización Operativa<br />
 <strong>Cliente:</strong> QCS / Telefónica UNICA · <strong>Desarrollador:</strong> Flavio Fonseca Tovar<br />
 <strong>Marco:</strong> Scrum adaptado (1 desarrollador + QCS como Product Owner)<br />
-<strong>Sprint:</strong> 1 semana · Duración total: 7 sprints (6.5 semanas efectivas)</p>
+<strong>Sprint:</strong> 1 semana · Duración total: 7 sprints (6.5 semanas efectivas)<br />
+<strong>Actualizado:</strong> Marzo 2026 · Alineado con HU-v3</p>
 <hr />
 <h2 id="roles-scrum-en-este-proyecto">Roles Scrum en este Proyecto<a class="headerlink" href="#roles-scrum-en-este-proyecto" title="Permanent link">&para;</a></h2>
 <table>
@@ -1479,17 +1595,17 @@
 <tbody>
 <tr>
 <td>HU-01-01</td>
-<td>Bandeja Cronos Feasibility + perfil UNICA</td>
+<td>Carga de archivo Excel con proyectos de cotización (19 campos)</td>
 <td>Must</td>
 <td>3 pts</td>
 <td>✅ Done</td>
 </tr>
 <tr>
 <td>HU-01-02</td>
-<td>Validación Punto Sencillo vs Proyecto + 19 campos obligatorios</td>
+<td>Validación 19 campos obligatorios + cobertura DIM_COBERTURA</td>
 <td>Must</td>
 <td>2 pts</td>
-<td>⚠️ Verificar</td>
+<td>✅ Done</td>
 </tr>
 <tr>
 <td>HU-01-03</td>
@@ -1521,7 +1637,7 @@
 </tr>
 <tr>
 <td>HU-02-01</td>
-<td>Validación automática vigencia al crear OT (3 estados)</td>
+<td>Validación automática vigencia de oferta (3 estados)</td>
 <td>Must</td>
 <td>3 pts</td>
 <td>✅ Done</td>
@@ -1570,7 +1686,7 @@
 <tbody>
 <tr>
 <td>HU-03-01</td>
-<td>Carga de archivo migración → tabla <code>PROYECTO_FECHA_MIGRACIONES</code></td>
+<td>Carga XLSX <code>10. Archivo Migraciones y Ampliaciones.xlsx</code> (31 col, hoja <code>DATOS TECNICOS Y CONTACTOS</code>) → tabla <code>proyecto_migraciones</code> + <code>detalle_migracion</code>. Endpoint: <code>POST /api/migraciones/cargar</code></td>
 <td>Must</td>
 <td>3 pts</td>
 <td>❌ Pendiente</td>
@@ -1626,7 +1742,7 @@
 </tr>
 <tr>
 <td>HU-04-01</td>
-<td>Carga y procesamiento bajas por migración (cruce DS+ID → BAJA_POR_MIGRACIÓN)</td>
+<td>Carga archivo bajas por migración. Endpoint: <code>POST /api/bajas/migracion/cargar</code>. Cruce DS+ID → <code>BAJA_POR_MIGRACIÓN</code></td>
 <td>Must</td>
 <td>3 pts</td>
 <td>❌ Pendiente</td>
@@ -1640,14 +1756,14 @@
 </tr>
 <tr>
 <td>HU-04-03</td>
-<td>Carga y procesamiento bajas por cliente (Salesforce)</td>
+<td>Carga CSV Salesforce <code>12. Reporte de DS de Bajas de Salesforce.csv</code> — <strong>sep: <code>;</code>, encoding: <code>ISO-8859-1</code></strong>, 12 col., 54.730 registros. Endpoint: <code>POST /api/bajas/cliente/cargar</code>. Campo clave: <code>Nombre de Descripción de servicio</code> (col 4) → <code>BAJA_POR_CLIENTE</code></td>
 <td>Must</td>
 <td>2 pts</td>
 <td>❌ Pendiente</td>
 </tr>
 <tr>
 <td>HU-04-04</td>
-<td>Carga y procesamiento suspensiones por cartera (5 estados)</td>
+<td>Carga archivo suspensiones — 5 estados de baja: BAJA_POR_MIGRACIÓN / BAJA_POR_CLIENTE / BAJA_POR_ASEGURAMIENTO_INGRESO / SUSPENSIÓN_POR_CARTERA / BAJA_POR_CARTERA. Endpoint: <code>POST /api/bajas/cartera/cargar</code></td>
 <td>Must</td>
 <td>2 pts</td>
 <td>❌ Pendiente</td>
@@ -1703,7 +1819,7 @@
 </tr>
 <tr>
 <td>HU-07-01</td>
-<td>Carga asíncrona archivo incidencias (20k-30k registros) + barra de progreso</td>
+<td>Carga <code>@Async</code> XLSX Remedy <code>26. Closed TERCEROS Preview/*.xlsx</code> — hoja <code>BASE GENERAL</code>, <strong>12 col. reales</strong> (verificado), ~29.154 reg/mes. Endpoint: <code>POST /api/indisponibilidades/cargar</code> → retorna <code>jobId</code>. Polling: <code>GET /api/indisponibilidades/estado-carga/{jobId}</code> cada 2s. Llave de cruce: col <strong><code>ID ENLACE</code></strong> (col 9). Cols 10 y 11 nombre duplicado — parsear por índice</td>
 <td>Must</td>
 <td>5 pts</td>
 <td>❌ Pendiente</td>
@@ -1766,7 +1882,7 @@
 </tr>
 <tr>
 <td>HU-08-01</td>
-<td>Carga asíncrona ZIP/TXT Davox FISC (~700MB) + filtro ESTADO_CUS=ACTIVO</td>
+<td>Carga <code>@Async</code> <code>31. Archivo FISC/*.zip</code> (y 1 <code>.rar</code>) — descomprimir, TXT delimitado <strong><code>~</code></strong> (tilde), <strong>107 col.</strong>, ~1.034.341 reg/archivo, ~774 MB descomprimido. Filtrar <code>ESTADO CUS=ACTIVO</code>. Campo clave: <code>CODIGO UNICO DE SERVICIO (CUS)</code> = <strong>columna 47</strong>. Encoding <code>latin1</code>. <code>mes_informe_fisc</code> extraído del nombre del archivo con regex <code>(ENE|FEB|MAR|ABR|MAY|JUN|JUL|AGO|SEP|OCT|NOV|DIC)_(\d{2})</code>. Endpoint: <code>POST /api/prefactura/ingresos-davox/cargar</code> → <code>jobId</code>. Soportar ZIP y RAR (junrar)</td>
 <td>Must</td>
 <td>5 pts</td>
 <td>❌ Pendiente</td>
@@ -1953,9 +2069,9 @@
 <td>Flyway ejecuta sin errores</td>
 </tr>
 <tr>
-<td>HU-03: backend carga archivo + creación tabla dinámica</td>
+<td>HU-03: carga XLSX <code>10. Archivo Migraciones y Ampliaciones.xlsx</code> (hoja <code>DATOS TECNICOS Y CONTACTOS</code>, 31 col.) → <code>POST /api/migraciones/cargar</code>. Parser: <code>ExcelExportService.leerXlsx(file, "DATOS TECNICOS Y CONTACTOS", 0)</code></td>
 <td>Dev</td>
-<td><code>POST /api/migraciones/cargar</code> funcional</td>
+<td>Registros en <code>proyecto_migraciones</code> + <code>detalle_migracion</code> creados</td>
 </tr>
 <tr>
 <td>HU-03: consolidación datos comerciales + técnicos</td>
@@ -1973,14 +2089,19 @@
 <td>Flyway ejecuta sin errores</td>
 </tr>
 <tr>
-<td>HU-04: backend bajas por migración (cruce + cálculos)</td>
+<td>HU-04: carga bajas por migración (formato a confirmar con QCS — archivo Cronos). Endpoint: <code>POST /api/bajas/migracion/cargar</code></td>
 <td>Dev</td>
-<td><code>POST /api/bajas/migracion/cargar</code> funcional</td>
+<td>Endpoint declarado — implementar cuando QCS confirme formato</td>
 </tr>
 <tr>
-<td>HU-04: bajas por cliente (Salesforce)</td>
+<td>HU-04: agregar dependencia <code>commons-csv:1.10.0</code> al <code>pom.xml</code></td>
 <td>Dev</td>
-<td><code>POST /api/bajas/cliente/cargar</code> funcional</td>
+<td>Dependencia disponible para HU-04 y posteriores</td>
+</tr>
+<tr>
+<td>HU-04: carga CSV Salesforce <code>12. Reporte de DS de Bajas de Salesforce.csv</code> — <strong>sep: <code>;</code>, encoding: <code>ISO-8859-1</code></strong>, 12 col., 54.730 reg. Campo clave: <code>Nombre de Descripción de servicio</code> (col 4). <code>FUN: Nombre</code> (col 2) vacío en datos reales. Endpoint: <code>POST /api/bajas/cliente/cargar</code>. Usar <code>CSVFormat.DEFAULT.withDelimiter(';')</code> + <code>InputStreamReader(ISO_8859_1)</code></td>
+<td>Dev</td>
+<td>CSV leído sin corrupción de tildes. Registros en <code>fact_bajas_cartera</code></td>
 </tr>
 </tbody>
 </table>
@@ -2012,9 +2133,9 @@
 <td>DIM_CONFIGURACION_SERVICIOS se actualiza automáticamente</td>
 </tr>
 <tr>
-<td>HU-04: suspensiones cartera + terminación anticipada</td>
+<td>HU-04: carga archivo suspensiones + terminación anticipada</td>
 <td>Dev</td>
-<td>5 estados correctamente asignados + cálculos verificados</td>
+<td>5 estados de baja correctamente asignados + cálculos verificados</td>
 </tr>
 <tr>
 <td>HU-04: frontend completo (4 pestañas + reconexión con doble confirmación)</td>
@@ -2079,9 +2200,9 @@
 <td>Flyway ejecuta sin errores</td>
 </tr>
 <tr>
-<td>HU-07: carga asíncrona archivo incidencias (30k registros) con barra de progreso</td>
+<td>HU-07: carga <code>@Async</code> XLSX Remedy <code>26. Closed TERCEROS Preview/*.xlsx</code> — hoja <code>BASE GENERAL</code>, <strong>12 col. reales</strong> (verificado), ~29.154 reg/mes. Llave cruce: <strong><code>ID ENLACE</code></strong> (col 9). Cols 10/11 nombre duplicado — parsear por índice. Endpoints: <code>POST /api/indisponibilidades/cargar</code> → <code>jobId</code> + <code>GET estado-carga/{jobId}</code></td>
 <td>Dev</td>
-<td>Carga de 30.000 registros sin timeout. Polling funcional</td>
+<td>29k registros procesados sin timeout. <code>JobStatusService</code> funcional. Polling Angular cada 2s</td>
 </tr>
 <tr>
 <td>HU-07: Filtro 1 — cruce DS con DIM_CONFIGURACION_SERVICIOS + validación Fecha Baja</td>
@@ -2156,14 +2277,14 @@
 <td>Flyway ejecuta sin errores</td>
 </tr>
 <tr>
-<td>HU-08: carga asíncrona ZIP/TXT Davox FISC (~700MB) + filtro ACTIVO</td>
+<td>HU-08: carga <code>@Async</code> ZIP/RAR — TXT sep. <strong><code>~</code></strong>, <strong>107 col.</strong>, ~1M reg/archivo, encoding <code>latin1</code>. Filtrar <code>ESTADO CUS=ACTIVO</code>. CUS en col <strong>47</strong>. Endpoints: <code>POST /api/prefactura/ingresos-davox/cargar</code> → <code>jobId</code> + <code>GET estado/{jobId}</code></td>
 <td>Dev</td>
-<td>Archivo de 700MB procesado. Solo registros ACTIVO en BD</td>
+<td>ZIP y RAR procesados. Solo ACTIVO en <code>fact_ingresos_davox</code>. Polling funcional</td>
 </tr>
 <tr>
-<td>HU-08: extracción <code>mes_informe_fisc</code> desde nombre del archivo</td>
+<td>HU-08: regex extrae <code>mes_informe_fisc</code> del nombre del archivo. Patrones reales: <code>FISC_HIST_SC_30_01_SEP_24_060921.zip</code>, <code>FISC_HIST_31_MAR_25.zip</code>, <code>FIS_HIST_28_FEB_25.zip</code>, <code>1_FISC_TOTAL_EMP_30_JUL_25.rar</code>. Regex: <code>(ENE|FEB|MAR|ABR|MAY|JUN|JUL|AGO|SEP|OCT|NOV|DIC)_(\d{2})</code></td>
 <td>Dev</td>
-<td>Regex extrae mes correctamente del patrón <code>FISC_HIST_SC_30_01_SEP_24_060921</code></td>
+<td>Regex valida contra los 15 nombres de archivo de muestra. Resultado: formato <code>YYYY-MM</code></td>
 </tr>
 <tr>
 <td>HU-08: matriz de verificación previa con alerta + doble confirmación</td>

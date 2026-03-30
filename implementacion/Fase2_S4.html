@@ -1,0 +1,1891 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Telefónica Colombia">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="Fase2.html">
+      
+      
+        <link rel="next" href="Fase2_S5.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Fase 2_S4 - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#implementation-tasks-fase-2-s4-1317-abr-2026" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fase 2_S4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía del Proyecto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Módulos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-00 — Acceso y Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-01 — Cotización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-02 — Instalación Terceros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-03 — Migraciones y Ampliaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-04 — Bajas y Cartera
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-05 — Inventario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-06 — Novedades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-07 — Indisponibilidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-08 — Prefacturación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Base de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Base de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentación Completa BD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diccionario de Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementación por Fases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Implementación por Fases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_S1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_S2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_S3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_S3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S4
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Fase2_S4.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S4
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-semanal-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist semanal S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alineacion-con-cronograma-contractual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alineación con cronograma contractual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desviaciones-verificadas-baseline-27032026" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desviaciones verificadas (baseline 27/03/2026)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-001-bd-verificacion-y-v28-hu-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-001: BD — Verificación y V28 (HU-04)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK-001: BD — Verificación y V28 (HU-04)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estado-migraciones-al-cierre-de-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado migraciones al cierre de Fase 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-hu01-hu-01-cotizacion-al-proveedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-HU01: HU-01 — Cotización al Proveedor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK-HU01: HU-01 — Cotización al Proveedor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artefactos-a-verificar-antes-de-implementar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artefactos a verificar antes de implementar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-hu-01-segun-docsdb_docmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas HU-01 (según docs/db_doc.md)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-unitarias-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pruebas unitarias HU-01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spec-playwright-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spec Playwright HU-01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion-hu-01-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de aceptación HU-01 (S4)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenciones-para-esta-semana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convenciones para esta semana
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-de-importaciones-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapa de importaciones S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-ejecucion-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orden de ejecución S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgos-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2_S5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_S5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentación del Proyecto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación del Proyecto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plan Scrum / Sprints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auditoría de Implementación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-semanal-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist semanal S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alineacion-con-cronograma-contractual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alineación con cronograma contractual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desviaciones-verificadas-baseline-27032026" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desviaciones verificadas (baseline 27/03/2026)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-001-bd-verificacion-y-v28-hu-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-001: BD — Verificación y V28 (HU-04)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK-001: BD — Verificación y V28 (HU-04)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estado-migraciones-al-cierre-de-fase-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado migraciones al cierre de Fase 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-hu01-hu-01-cotizacion-al-proveedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      TASK-HU01: HU-01 — Cotización al Proveedor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK-HU01: HU-01 — Cotización al Proveedor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artefactos-a-verificar-antes-de-implementar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artefactos a verificar antes de implementar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-hu-01-segun-docsdb_docmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas HU-01 (según docs/db_doc.md)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-unitarias-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pruebas unitarias HU-01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spec-playwright-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spec Playwright HU-01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aceptacion-hu-01-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de aceptación HU-01 (S4)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenciones-para-esta-semana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convenciones para esta semana
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapa-de-importaciones-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapa de importaciones S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-de-ejecucion-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orden de ejecución S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riesgos-s4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos S4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="implementation-tasks-fase-2-s4-1317-abr-2026">Implementation Tasks: Fase 2 — S4 (13–17 abr 2026)<a class="headerlink" href="#implementation-tasks-fase-2-s4-1317-abr-2026" title="Permanent link">&para;</a></h1>
+<p><strong>Semana</strong>: S4 — 13 al 17 de abril de 2026<br />
+<strong>Alcance contractual</strong>: <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> Cotización (backend + frontend + pruebas)<br />
+<strong>Prerequisito</strong>: Fase 1 aprobada por QCS (<a href="../modulos/HU-00_Acceso.html">HU-00</a> + <a href="../modulos/HU-05_Inventario.html">HU-05</a> ✅)<br />
+<strong>Desarrollador</strong>: Flavio Fonseca Tovar<br />
+<strong>Estado</strong>: ⬜ Pendiente<br />
+<strong>Referencia maestra</strong>: <code>docs/files/Implementacion_Fase2.md</code></p>
+<hr />
+<h2 id="checklist-semanal-s4">Checklist semanal S4<a class="headerlink" href="#checklist-semanal-s4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tarea</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TASK-001: Verificar V28 e iniciar <a href="../modulos/HU-04_Bajas.html">HU-04</a> BD</td>
+<td>⬜</td>
+</tr>
+<tr>
+<td>TASK-HU01-A: Completar backend <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> (entidades + servicio + controlador)</td>
+<td>⬜</td>
+</tr>
+<tr>
+<td>TASK-HU01-B: Completar frontend <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> (componente + rutas)</td>
+<td>⬜</td>
+</tr>
+<tr>
+<td>TASK-HU01-C: Pruebas unitarias <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> (mínimo 3 tests)</td>
+<td>⬜</td>
+</tr>
+<tr>
+<td>TASK-HU01-D: Smoke test E2E <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> (Playwright)</td>
+<td>⬜</td>
+</tr>
+<tr>
+<td>Evidencia funcional lista para viernes S4</td>
+<td>⬜</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="alineacion-con-cronograma-contractual">Alineación con cronograma contractual<a class="headerlink" href="#alineacion-con-cronograma-contractual" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Semana</th>
+<th>Alcance comprometido</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S4 (13–17 abr)</strong></td>
+<td><strong><a href="../modulos/HU-01_Cotizacion.html">HU-01</a></strong> — Cotización</td>
+<td>⬜ Pendiente</td>
+</tr>
+<tr>
+<td><strong>S5 (20–24 abr)</strong></td>
+<td><a href="../modulos/HU-01_Cotizacion.html">HU-01</a> cierre + <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
+<td>⬜ Pendiente</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Regla operativa:</strong> El avance reportado el viernes debe centrarse en <a href="../modulos/HU-01_Cotizacion.html">HU-01</a>.
+Todo el backlog técnico (<a href="../modulos/HU-03_Migraciones.html">HU-03</a>, <a href="../modulos/HU-04_Bajas.html">HU-04</a>, <a href="../modulos/HU-06_Novedades.html">HU-06</a>, <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a>, <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a>) se gestiona en <code>Implementacion_Fase2_S5.md</code> y <strong>no debe usarse como criterio de aprobación de S4</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="desviaciones-verificadas-baseline-27032026">Desviaciones verificadas (baseline 27/03/2026)<a class="headerlink" href="#desviaciones-verificadas-baseline-27032026" title="Permanent link">&para;</a></h2>
+<p>Antes de implementar, tener en cuenta el estado real del repositorio:</p>
+<ol>
+<li><strong><a href="../modulos/HU-03_Migraciones.html">HU-03</a> no está pendiente total</strong> — ya existen migración Flyway, entidades, servicio, controlador y componente Angular. Tratar siempre como cierre de brechas.</li>
+<li><strong>Contrato HTTP de <a href="../modulos/HU-03_Migraciones.html">HU-03</a></strong>: <code>/api/migraciones-ampliaciones</code> — no introducir <code>/api/migraciones</code> sin alias explícito.</li>
+<li><strong>Siguiente Flyway libre</strong>: <code>V36</code> en adelante — las V28–V35 ya existen (V28 pendiente de ejecutar).</li>
+<li><strong>Nombres canónicos de tablas</strong> según <code>docs/db_doc.md</code>: no crear tablas con nombres alternativos.</li>
+<li><strong>Runtime real</strong>: Java 21 + Spring Boot 4.0.3 — usar como baseline desde <code>pom.xml</code>.</li>
+</ol>
+<hr />
+<h2 id="task-001-bd-verificacion-y-v28-hu-04">TASK-001: BD — Verificación y V28 (<a href="../modulos/HU-04_Bajas.html">HU-04</a>)<a class="headerlink" href="#task-001-bd-verificacion-y-v28-hu-04" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: 🔄 Parcial — V28 pendiente; V29–V35 aplicadas<br />
+<strong>Prioridad</strong>: 🔴 Verificar al inicio de S4</p>
+<h3 id="estado-migraciones-al-cierre-de-fase-1">Estado migraciones al cierre de Fase 1<a class="headerlink" href="#estado-migraciones-al-cierre-de-fase-1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>HU</th>
+<th>Tablas</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V28</td>
+<td><a href="../modulos/HU-04_Bajas.html">HU-04</a></td>
+<td><code>fact_bajas_migracion</code>, <code>fact_bajas_cliente</code>, <code>fact_suspension_cartera</code></td>
+<td>❌ Pendiente</td>
+</tr>
+<tr>
+<td>V29</td>
+<td><a href="../modulos/HU-06_Novedades.html">HU-06</a></td>
+<td><code>fact_prorrateo_novedades</code>, <code>fact_mantenimientos</code></td>
+<td>✅ Aplicada</td>
+</tr>
+<tr>
+<td>V30</td>
+<td><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
+<td><code>fact_tickets_indisponibilidad</code>, <code>fact_indisponibilidad_mensual</code>, <code>fact_indisponibilidad_mensual_conciliada</code>, <code>dim_ans_proveedores</code>, <code>dim_motivos_fallas</code>, <code>dim_exclusiones_remedy</code></td>
+<td>✅ Aplicada</td>
+</tr>
+<tr>
+<td>V31</td>
+<td><a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></td>
+<td><code>fact_ingresos_davox</code>, <code>fact_prefactura</code>, <code>fact_validacion_pagos_ingresos</code></td>
+<td>✅ Aplicada</td>
+</tr>
+<tr>
+<td>V34</td>
+<td><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
+<td>Campos conciliación: <code>viabilidad_proveedor</code>, <code>observaciones_conciliacion</code>, <code>mes_facturacion</code></td>
+<td>✅ Aplicada</td>
+</tr>
+<tr>
+<td>V35</td>
+<td><a href="../modulos/HU-02_Instalacion.html">HU-02</a></td>
+<td><code>fact_seguimiento_instalaciones_terceros</code> + índices</td>
+<td>✅ Aplicada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verificación al inicio de S4:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s2">&quot;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&quot;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-padmin</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;</span>
+<span class="s2">  SELECT version FROM flyway_schema_history ORDER BY installed_rank DESC LIMIT 1;</span>
+<span class="s2">  SHOW TABLES LIKE &#39;fact_%&#39;;</span>
+<span class="s2">  SHOW TABLES LIKE &#39;dim_ans%&#39;;</span>
+<span class="s2">&quot;</span>
+</code></pre></div></p>
+<p><strong>Criterio de salida TASK-001:</strong>
+- [ ] Última versión Flyway confirmada (debe ser V35)
+- [ ] V28 programada para ejecutar en S4 (junto con <a href="../modulos/HU-04_Bajas.html">HU-04</a> backend)</p>
+<hr />
+<h2 id="task-hu01-hu-01-cotizacion-al-proveedor">TASK-HU01: <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> — Cotización al Proveedor<a class="headerlink" href="#task-hu01-hu-01-cotizacion-al-proveedor" title="Permanent link">&para;</a></h2>
+<p><strong>Estado</strong>: ⬜ Pendiente — scaffolding V7/V12/V13 existente<br />
+<strong>Prioridad</strong>: 🔴 CRÍTICO — alcance contractual S4<br />
+<strong>Referencia HU</strong>: <code>docs/files/HU-01_Cotizacion.md</code><br />
+<strong>Semana</strong>: S4 (13–17 abr)</p>
+<h3 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h3>
+<p>Módulo para gestionar solicitudes de cotización a proveedores de telecomunicaciones.
+Permite registrar la solicitud, adjuntar especificaciones técnicas, recibir la respuesta
+del proveedor y registrar la decisión final (aprobado / rechazado / desierto).</p>
+<blockquote>
+<p>⚠️ Las migraciones V7 (<code>hu01 cotizacion</code>), V12 y V13 ya existen. Verificar entidades
+y controlador antes de implementar para no duplicar artefactos.</p>
+</blockquote>
+<h3 id="artefactos-a-verificar-antes-de-implementar">Artefactos a verificar antes de implementar<a class="headerlink" href="#artefactos-a-verificar-antes-de-implementar" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Verificar entidades JPA existentes</span>
+<span class="nb">Get-ChildItem</span> <span class="n">src</span><span class="p">/</span><span class="n">main</span><span class="p">/</span><span class="n">java</span><span class="p">/</span><span class="n">com</span><span class="p">/</span><span class="n">unica</span><span class="p">/</span><span class="n">app</span><span class="p">/</span><span class="n">entity</span><span class="p">/</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">Name</span> <span class="o">-like</span> <span class="s2">&quot;*Cotiz*&quot;</span>
+<span class="nb">Get-ChildItem</span> <span class="n">src</span><span class="p">/</span><span class="n">main</span><span class="p">/</span><span class="n">java</span><span class="p">/</span><span class="n">com</span><span class="p">/</span><span class="n">unica</span><span class="p">/</span><span class="n">app</span><span class="p">/</span><span class="n">controller</span><span class="p">/</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">Name</span> <span class="o">-like</span> <span class="s2">&quot;*Cotiz*&quot;</span>
+<span class="nb">Get-ChildItem</span> <span class="n">src</span><span class="p">/</span><span class="n">main</span><span class="p">/</span><span class="n">java</span><span class="p">/</span><span class="n">com</span><span class="p">/</span><span class="n">unica</span><span class="p">/</span><span class="n">app</span><span class="p">/</span><span class="n">service</span><span class="p">/</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">Name</span> <span class="o">-like</span> <span class="s2">&quot;*Cotiz*&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c"># Verificar tablas en BD</span>
+<span class="p">&amp;</span> <span class="s2">&quot;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&quot;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-padmin</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;</span>
+<span class="s2">  SHOW TABLES LIKE &#39;%cotizacion%&#39;;</span>
+<span class="s2">  SHOW TABLES LIKE &#39;%viabilidad%&#39;;</span>
+<span class="s2">&quot;</span>
+</code></pre></div>
+<h3 id="tablas-hu-01-segun-docsdb_docmd">Tablas <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> (según <code>docs/db_doc.md</code>)<a class="headerlink" href="#tablas-hu-01-segun-docsdb_docmd" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim_viabilidad_cotizacion</code></td>
+<td>Registro de solicitud de cotización con datos técnicos</td>
+</tr>
+<tr>
+<td><code>dim_cotizacion_proveedor</code></td>
+<td>Respuesta del proveedor a una viabilidad</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h3>
+<p><strong>Entidades JPA</strong> (verificar si ya existen en <code>com.unica.app.entity</code>):
+- <code>ViabilidadCotizacion</code> — idViabilidad, idConfiguracionServicio (FK), proveedor,
+  descripcion, bwRequerido, ciudadOrigen, ciudadDestino, fechaSolicitud, estado, responsable
+- <code>CotizacionProveedor</code> — idCotizacion, idViabilidad (FK), proveedor, precioMensual,
+  moneda, tiempoImplementacion, observaciones, fechaRespuesta, decision (APROBADA/RECHAZADA/DESIERTA)</p>
+<p><strong>Servicios</strong> (<code>CotizacionService</code>):
+- <code>crearViabilidad(dto)</code> — registra solicitud con estado <code>PENDIENTE</code>
+- <code>registrarRespuesta(idViabilidad, dto)</code> — guarda respuesta del proveedor
+- <code>aprobarCotizacion(idCotizacion)</code> — cambia estado a <code>APROBADA</code>, registra en inventario
+- <code>rechazarCotizacion(idCotizacion, motivo)</code> — cambia estado a <code>RECHAZADA</code>
+- <code>declararDesierta(idViabilidad, motivo)</code> — sin respuesta válida de proveedor
+- <code>listarViabilidades(filtros)</code> — con filtros por estado, proveedor y fecha
+- <code>exportarDetalle(idViabilidad)</code> — genera CSV con especificación y respuesta</p>
+<p><strong>Controlador REST</strong> (<code>/api/viabilidad-cotizacion</code> y <code>/api/cotizacion-proveedor</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Endpoint</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/viabilidad-cotizacion</code></td>
+<td>Crear nueva solicitud</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/viabilidad-cotizacion</code></td>
+<td>Listar con filtros (estado, proveedor, fechaDesde)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/viabilidad-cotizacion/{id}</code></td>
+<td>Detalle de solicitud</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><code>/api/viabilidad-cotizacion/{id}/estado</code></td>
+<td>Actualizar estado de la viabilidad</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/api/cotizacion-proveedor</code></td>
+<td>Registrar respuesta del proveedor</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/cotizacion-proveedor/{idViabilidad}</code></td>
+<td>Ver cotizaciones de una viabilidad</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><code>/api/cotizacion-proveedor/{id}/decision</code></td>
+<td>Aprobar / rechazar / declarar desierta</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/api/viabilidad-cotizacion/{id}/exportar</code></td>
+<td>Exportar detalle en CSV</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DTOs:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Request</span>
+<span class="kd">record</span> <span class="nc">ViabilidadCotizacionRequest</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Long</span><span class="w"> </span><span class="n">idConfiguracionServicio</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">proveedor</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">descripcion</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Double</span><span class="w"> </span><span class="n">bwRequerido</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ciudadOrigen</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ciudadDestino</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">responsable</span><span class="p">)</span>
+
+<span class="kd">record</span> <span class="nc">CotizacionProveedorRequest</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Long</span><span class="w"> </span><span class="n">idViabilidad</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">proveedor</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">precioMensual</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">moneda</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">tiempoImplementacion</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">observaciones</span><span class="p">)</span>
+
+<span class="kd">record</span> <span class="nc">DecisionCotizacionRequest</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">decision</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">motivo</span><span class="p">)</span>
+
+<span class="c1">// Response</span>
+<span class="kd">record</span> <span class="nc">ViabilidadCotizacionResponse</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">proveedor</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">estado</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">bwRequerido</span><span class="p">,</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">ciudadOrigen</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ciudadDestino</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">fechaSolicitud</span><span class="p">,</span>
+<span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">CotizacionProveedorResponse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cotizaciones</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h3>
+<p><strong>Componente</strong>: <code>unica-frontend/src/app/components/cotizacion/</code></p>
+<blockquote>
+<p>Verificar si el directorio ya existe antes de crearlo.</p>
+</blockquote>
+<p><strong>Pantallas:</strong>
+1. <strong>Lista de viabilidades</strong> — tabla con filtros de estado y proveedor; botón "Nueva viabilidad"
+2. <strong>Formulario nueva viabilidad</strong> — campos: proveedor, BW, ciudades, descripción, responsable
+3. <strong>Detalle de viabilidad</strong> — lista de cotizaciones recibidas; acciones: aprobar, rechazar, declarar desierta
+4. <strong>Formulario respuesta proveedor</strong> — precio, moneda, tiempo implementación, observaciones</p>
+<p><strong>Ruta</strong> (en <code>app.routes.ts</code>):
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;gestion/cotizacion&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">loadComponent</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;./components/cotizacion/cotizacion.component&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">CotizacionComponent</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Servicio Angular</strong> (<code>CotizacionService</code>):
+<div class="highlight"><pre><span></span><code><span class="c1">// Métodos mínimos en ApiService o servicio dedicado</span>
+<span class="nx">getViabilidades</span><span class="p">(</span><span class="nx">filtros?</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">ViabilidadCotizacion</span><span class="p">[]</span><span class="o">&gt;</span>
+<span class="nx">crearViabilidad</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">ViabilidadCotizacionRequest</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">ViabilidadCotizacion</span><span class="o">&gt;</span>
+<span class="nx">registrarRespuesta</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">CotizacionProveedorRequest</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">CotizacionProveedor</span><span class="o">&gt;</span>
+<span class="nx">actualizarDecision</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">decision</span><span class="o">:</span><span class="w"> </span><span class="kt">DecisionRequest</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">CotizacionProveedor</span><span class="o">&gt;</span>
+<span class="nx">exportarDetalle</span><span class="p">(</span><span class="nx">idViabilidad</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">Blob</span><span class="o">&gt;</span>
+</code></pre></div></p>
+<p><strong>Convención de componente:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">@Component</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-cotizacion&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">standalone</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">CommonModule</span><span class="p">,</span><span class="w"> </span><span class="nx">FormsModule</span><span class="p">,</span><span class="w"> </span><span class="nx">ReactiveFormsModule</span><span class="p">,</span><span class="w"> </span><span class="nx">CurrencyPipe</span><span class="p">,</span><span class="w"> </span><span class="nx">DatePipe</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./cotizacion.component.html&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">CotizacionComponent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">inject</span><span class="p">(</span><span class="nx">ApiService</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// usar inject() — no constructor injection</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="pruebas-unitarias-hu-01">Pruebas unitarias <a href="../modulos/HU-01_Cotizacion.html">HU-01</a><a class="headerlink" href="#pruebas-unitarias-hu-01" title="Permanent link">&para;</a></h3>
+<p>Archivo: <code>src/test/java/com/unica/app/service/CotizacionServiceTest.java</code></p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>crearViabilidad_debeCrearConEstadoPendiente()</code></td>
+<td>Estado inicial = <code>PENDIENTE</code></td>
+</tr>
+<tr>
+<td><code>registrarRespuesta_debeAsociarseAViabilidad()</code></td>
+<td>FK <code>idViabilidad</code> correcta</td>
+</tr>
+<tr>
+<td><code>aprobarCotizacion_debeCambiarEstadoYActualizarInventario()</code></td>
+<td>Estado = <code>APROBADA</code>, servicio en inventario actualizado</td>
+</tr>
+<tr>
+<td><code>rechazarCotizacion_debeGuardarMotivo()</code></td>
+<td>Estado = <code>RECHAZADA</code>, motivo persistido</td>
+</tr>
+<tr>
+<td><code>listarViabilidades_filtroPorEstado_debeFiltrarCorrectamente()</code></td>
+<td>Solo devuelve las del estado solicitado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spec-playwright-hu-01">Spec Playwright <a href="../modulos/HU-01_Cotizacion.html">HU-01</a><a class="headerlink" href="#spec-playwright-hu-01" title="Permanent link">&para;</a></h3>
+<p>Archivo: <code>unica-frontend/e2e/hu01-cotizacion-flow.spec.ts</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;HU-01: crear viabilidad y registrar cotización&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// mock POST /api/viabilidad-cotizacion</span>
+<span class="w">  </span><span class="c1">// mock GET /api/viabilidad-cotizacion</span>
+<span class="w">  </span><span class="c1">// mock POST /api/cotizacion-proveedor</span>
+<span class="w">  </span><span class="c1">// Navegar a /gestion/cotizacion</span>
+<span class="w">  </span><span class="c1">// Verificar tabla carga</span>
+<span class="w">  </span><span class="c1">// Abrir formulario nueva viabilidad</span>
+<span class="w">  </span><span class="c1">// Llenar campos y enviar</span>
+<span class="w">  </span><span class="c1">// Verificar que aparece en tabla con estado PENDIENTE</span>
+<span class="w">  </span><span class="c1">// Registrar respuesta de proveedor</span>
+<span class="w">  </span><span class="c1">// Aprobar cotización</span>
+<span class="w">  </span><span class="c1">// Verificar badge APROBADA</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="criterios-de-aceptacion-hu-01-s4">Criterios de aceptación <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> (S4)<a class="headerlink" href="#criterios-de-aceptacion-hu-01-s4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Crear una viabilidad de cotización con datos técnicos completos</li>
+<li>[ ] Registrar respuesta de proveedor con precio y tiempo de implementación</li>
+<li>[ ] Aprobar, rechazar o declarar desierta una cotización con motivo</li>
+<li>[ ] Listar viabilidades con filtros por estado y proveedor</li>
+<li>[ ] Estado de servicio en <code>dim_configuracion_servicios</code> actualizado tras aprobación</li>
+<li>[ ] Exportar detalle de cotización a CSV</li>
+<li>[ ] Ruta <code>gestion/cotizacion</code> activa (sin placeholder ni 404)</li>
+<li>[ ] Pruebas unitarias en verde (≥ 3 test métodos)</li>
+<li>[ ] Smoke test Playwright pasando</li>
+</ul>
+<hr />
+<h2 id="convenciones-para-esta-semana">Convenciones para esta semana<a class="headerlink" href="#convenciones-para-esta-semana" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Commits</strong>: <code>feat(HU-01): implementar viabilidad de cotización y flujo de aprobación</code></li>
+<li><strong>Rama</strong>: <code>feature/HU-01-cotizacion</code></li>
+<li><strong>Componentes Angular</strong>: <code>CotizacionComponent</code> en <code>components/cotizacion/</code></li>
+<li><strong>Migraciones</strong>: próxima versión libre es <code>V36</code> — <strong>nunca modificar V0–V35</strong></li>
+<li><strong>Auth</strong>: Basic Auth <code>admin:admin</code> en dev; en prod, JWT con claims <code>userId</code>, <code>roles</code>, <code>módulos</code></li>
+</ul>
+<hr />
+<h2 id="mapa-de-importaciones-s4">Mapa de importaciones S4<a class="headerlink" href="#mapa-de-importaciones-s4" title="Permanent link">&para;</a></h2>
+<p><a href="../modulos/HU-01_Cotizacion.html">HU-01</a> <strong>no tiene importación masiva de archivo</strong>. La carga de datos es:
+- Por formulario web (viabilidad nueva)
+- Por API REST (respuesta del proveedor)
+- Por acción de usuario (decisión: aprobar/rechazar/desierta)</p>
+<p>No se requieren dependencias Maven adicionales para <a href="../modulos/HU-01_Cotizacion.html">HU-01</a>.</p>
+<hr />
+<h2 id="orden-de-ejecucion-s4">Orden de ejecución S4<a class="headerlink" href="#orden-de-ejecucion-s4" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>1. Verificar Flyway (TASK-001): ¿V28 pendiente? → programar para HU-04 en S5
+2. Verificar artefactos existentes HU-01 en repositorio
+3. Completar entidades JPA (si faltan campos)
+4. Implementar servicio CotizacionService (lógica de negocio)
+5. Implementar controlador REST (/api/viabilidad-cotizacion, /api/cotizacion-proveedor)
+6. Implementar componente Angular (ListaCotizaciones + formularios)
+7. Registrar ruta en app.routes.ts
+8. Escribir pruebas unitarias (mínimo 3)
+9. Verificar smoke test Playwright
+10. Preparar evidencia funcional para viernes S4
+</code></pre></div>
+<hr />
+<h2 id="riesgos-s4">Riesgos S4<a class="headerlink" href="#riesgos-s4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Riesgo</th>
+<th>Probabilidad</th>
+<th>Impacto</th>
+<th>Mitigación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artefactos V7/V12/V13 incompletos o con errores de compilación</td>
+<td>Media</td>
+<td>🟡 Retraso</td>
+<td>Revisar al inicio de S4 antes de escribir nuevo código</td>
+</tr>
+<tr>
+<td>Esquema de BD de <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> no cubre todos los campos requeridos</td>
+<td>Baja</td>
+<td>🟡 Migración adicional</td>
+<td>Consultar <code>docs/db_doc.md</code> antes de cualquier cambio</td>
+</tr>
+<tr>
+<td>Ruta <code>gestion/cotizacion</code> apunta a <code>en-construccion</code></td>
+<td>Alta</td>
+<td>🟡 No demostrable</td>
+<td>Actualizar <code>app.routes.ts</code> desde el inicio de S4</td>
+</tr>
+<tr>
+<td>QCS solicita cambios en flujo de cotización durante S4</td>
+<td>Baja</td>
+<td>🟡 Re-trabajo</td>
+<td>Control de cambios formal; registrar en <code>docs/PENDIENTES.md</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="referencia">Referencia<a class="headerlink" href="#referencia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../modulos/HU-01_Cotizacion.html">HU-01</a> completa: <code>docs/files/HU-01_Cotizacion.md</code></li>
+<li>Reglas de negocio relevantes: <code>docs/Reglas_Negocio_UNICA.md</code> §Cotización</li>
+<li>Modelo de datos: <code>docs/db_doc.md</code> — tablas <code>dim_viabilidad_cotizacion</code>, <code>dim_cotizacion_proveedor</code></li>
+<li>Fase 2 maestra: <code>docs/files/Implementacion_Fase2.md</code></li>
+<li>Planificación S5: <code>docs/files/Implementacion_Fase2_S5.md</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
