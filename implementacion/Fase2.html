@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
     
+      <link rel="stylesheet" href="../extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1952,6 +1954,32 @@
 <strong>Preparado por:</strong> Equipo de Desarrollo QCS<br />
 <strong>Versión documento:</strong> 1.0  </p>
 <hr />
+<div class="admonition abstract">
+<p><strong>Tipo:</strong> Guía de Pruebas<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Sprint:</strong> Sprint 3, Sprint 4<br />
+<strong>Roles:</strong> QA, Cliente, PM<br />
+<strong>Estado:</strong> 🟢 Activo<br />
+<strong>HUs relacionadas:</strong> <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> · <a href="../modulos/HU-02_Instalacion.html">HU-02</a> · <a href="../modulos/HU-03_Migraciones.html">HU-03</a> · <a href="../modulos/HU-04_Bajas.html">HU-04</a> · <a href="../modulos/HU-06_Novedades.html">HU-06</a>  </p>
+</div>
+<div class="graph-obsidian-wrapper"><p class="graph-obsidian-title">🕸️ Mapa de relaciones</p><div id="graph-fase2" class="graph-obsidian"></div></div>
+<script>
+(function(){
+  var N=[{"id": 0, "label": "Guía de Pruebas\nFase 2", "group": "doc", "mass": 2, "title": "Este documento"}, {"id": 1, "label": "HU-01\nCotización", "group": "hu", "title": "Ver HU-01 — Cotización", "url": "../modulos/HU-01_Cotizacion.html"}, {"id": 2, "label": "HU-02\nInstalación", "group": "hu", "title": "Ver HU-02 — Instalación", "url": "../modulos/HU-02_Instalacion.html"}, {"id": 3, "label": "HU-03\nMigraciones", "group": "hu", "title": "Ver HU-03 — Migraciones", "url": "../modulos/HU-03_Migraciones.html"}, {"id": 4, "label": "HU-04\nBajas", "group": "hu", "title": "Ver HU-04 — Bajas", "url": "../modulos/HU-04_Bajas.html"}, {"id": 5, "label": "HU-06\nNovedades", "group": "hu", "title": "Ver HU-06 — Novedades", "url": "../modulos/HU-06_Novedades.html"}];
+  var E=[{"from": 0, "to": 1}, {"from": 0, "to": 2}, {"from": 0, "to": 3}, {"from": 0, "to": 4}, {"from": 0, "to": 5}];
+  function render(){
+    var el=document.getElementById("graph-fase2");
+    if(!el)return;
+    var net=new vis.Network(el,{nodes:new vis.DataSet(N),edges:new vis.DataSet(E)},{nodes:{shape:"dot",size:18,font:{size:12,color:"#cdd6f4",multi:true},borderWidth:2},edges:{color:"#585b70",width:2,smooth:{type:"continuous"}},groups:{doc:{color:{background:"#cba6f7",border:"#9d7cd8"},font:{color:"#1e1e2e",bold:true},size:24},hu:{color:{background:"#89b4fa",border:"#4a8fd4"},font:{color:"#1e1e2e"}}},physics:{barnesHut:{gravitationalConstant:-4000,springConstant:0.05,springLength:120},stabilization:{iterations:200}},interaction:{hover:true,dragNodes:true,zoomView:true,tooltipDelay:150}});
+    net.on("click",function(p){
+      if(p.nodes.length){var n=new vis.DataSet(N).get(p.nodes[0]);if(n&&n.url)window.location.href=n.url;}
+    });
+  }
+  if(typeof vis!=="undefined"){render();}
+  else{var s=document.createElement("script");s.src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js";s.onload=render;document.head.appendChild(s);}
+})();
+</script>
+
 <blockquote>
 <p><strong>Acceso al sistema</strong><br />
 - <strong>Frontend:</strong> http://localhost:4200<br />

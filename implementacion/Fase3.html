@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
     
+      <link rel="stylesheet" href="../extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1926,6 +1928,32 @@
 <p><strong>Sprint 5 (20–25 abr): <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></strong> · <strong>Sprint 6 (27 abr–2 may): <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></strong><br />
 <strong>Prerrequisito bloqueante:</strong> <a href="../modulos/HU-06_Novedades.html">HU-06</a> (Prorrateo Novedades) aprobada por QCS antes de Sprint 6</p>
 <hr />
+<div class="admonition abstract">
+<p><strong>Tipo:</strong> Guía de Pruebas<br />
+<strong>Fase:</strong> Fase 3<br />
+<strong>Sprint:</strong> Sprint 5, Sprint 6, Sprint 7<br />
+<strong>Roles:</strong> QA, Cliente, PM<br />
+<strong>Estado:</strong> 🟢 Activo<br />
+<strong>HUs relacionadas:</strong> <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a> · <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a>  </p>
+</div>
+<div class="graph-obsidian-wrapper"><p class="graph-obsidian-title">🕸️ Mapa de relaciones</p><div id="graph-fase3" class="graph-obsidian"></div></div>
+<script>
+(function(){
+  var N=[{"id": 0, "label": "Guía de Pruebas\nFase 3", "group": "doc", "mass": 2, "title": "Este documento"}, {"id": 1, "label": "HU-07\nIndisponibilidades", "group": "hu", "title": "Ver HU-07 — Indisponibilidades", "url": "../modulos/HU-07_Indisponibilidades.html"}, {"id": 2, "label": "HU-08\nPrefacturación", "group": "hu", "title": "Ver HU-08 — Prefacturación", "url": "../modulos/HU-08_Prefacturacion.html"}];
+  var E=[{"from": 0, "to": 1}, {"from": 0, "to": 2}];
+  function render(){
+    var el=document.getElementById("graph-fase3");
+    if(!el)return;
+    var net=new vis.Network(el,{nodes:new vis.DataSet(N),edges:new vis.DataSet(E)},{nodes:{shape:"dot",size:18,font:{size:12,color:"#cdd6f4",multi:true},borderWidth:2},edges:{color:"#585b70",width:2,smooth:{type:"continuous"}},groups:{doc:{color:{background:"#cba6f7",border:"#9d7cd8"},font:{color:"#1e1e2e",bold:true},size:24},hu:{color:{background:"#89b4fa",border:"#4a8fd4"},font:{color:"#1e1e2e"}}},physics:{barnesHut:{gravitationalConstant:-4000,springConstant:0.05,springLength:120},stabilization:{iterations:200}},interaction:{hover:true,dragNodes:true,zoomView:true,tooltipDelay:150}});
+    net.on("click",function(p){
+      if(p.nodes.length){var n=new vis.DataSet(N).get(p.nodes[0]);if(n&&n.url)window.location.href=n.url;}
+    });
+  }
+  if(typeof vis!=="undefined"){render();}
+  else{var s=document.createElement("script");s.src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js";s.onload=render;document.head.appendChild(s);}
+})();
+</script>
+
 <h2 id="indice">Índice<a class="headerlink" href="#indice" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
