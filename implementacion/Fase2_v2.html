@@ -1,0 +1,3534 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Colombia Telecomunicaciones">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="Fase1_v2.html">
+      
+      
+        <link rel="next" href="Fase3_v2.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Fase 2_v2 - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-pruebas-fase-2-v2" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fase 2_v2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../reportes-novedades/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reportes de Novedades
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reportes de Novedades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reportes-novedades/reportes_2026-04-17/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-04-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reportes-novedades/reportes_2026-04-15/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-04-15
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_v2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1_v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2_v2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Fase2_v2.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2_v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-procesos-unica-telefonica-colombia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema PROCESOS ÚNICA · Telefónica Colombia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema PROCESOS ÚNICA · Telefónica Colombia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-01-hu-02-hu-03-hu-04-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-01 · HU-02 · HU-03 · HU-04 · HU-06
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-real-por-hu-auditoria-21042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado real por HU (Auditoría 21/04/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-1-hu-01-cotizacion-a-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 1 — HU-01: Cotización a Terceros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 1 — HU-01: Cotización a Terceros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-carga-de-proyectos-para-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 — Carga de Proyectos para Cotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-validacion-automatica-de-viabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 — Validación Automática de Viabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-generacion-de-archivo-para-envio-a-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 — Generación de Archivo para Envío a Proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-carga-de-respuestas-de-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 — Carga de Respuestas de Proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-comparacion-de-ofertas-y-aprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 — Comparación de Ofertas y Aprobación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-brechas-conocidas-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 — Brechas conocidas HU-01
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-2-hu-02-instalaciones-de-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 2 — HU-02: Instalaciones de Terceros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 2 — HU-02: Instalaciones de Terceros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-validacion-de-vigencia-de-oferta-ca-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 — Validación de Vigencia de Oferta (CA-1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-oferta-vigente-crear-tarea-de-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 — Oferta VIGENTE → Crear Tarea de Instalación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-oferta-vencida-crear-tarea-de-recotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 — Oferta VENCIDA → Crear Tarea de Recotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-seguimiento-de-instalacion-ca-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 — Seguimiento de Instalación (CA-2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-envio-al-proveedor-ca-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 — Envío al Proveedor (CA-3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-recepcion-de-respuesta-del-proveedor-ca-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 — Recepción de Respuesta del Proveedor (CA-4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-devolucion-de-ot-y-cierre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 — Devolución de OT y Cierre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-brechas-conocidas-hu-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 — Brechas conocidas HU-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-3-hu-03-migraciones-y-ampliaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 3 — HU-03: Migraciones y Ampliaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 3 — HU-03: Migraciones y Ampliaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-carga-de-archivo-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 — Carga de Archivo de Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-gestion-y-seguimiento-de-registros-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 — Gestión y Seguimiento de Registros de Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-consolidacion-con-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 — Consolidación con Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-actualizacion-automatica-del-inventario-al-completar-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 — Actualización Automática del Inventario al Completar Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-exportar-formulario-para-cgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 — Exportar Formulario para CGP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-brechas-conocidas-hu-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 — Brechas conocidas HU-03
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-4-hu-04-bajas-y-cartera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 4 — HU-04: Bajas y Cartera
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 4 — HU-04: Bajas y Cartera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-carga-de-bajas-archivo-cronossalesforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 — Carga de Bajas (archivo Cronos/Salesforce)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-visualizacion-de-servicios-en-baja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 — Visualización de Servicios en Baja
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-calculo-de-pago-proyectado-de-preaviso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 — Cálculo de Pago Proyectado de Preaviso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-reconexion-de-servicios-suspendidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 — Reconexión de Servicios Suspendidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-terminacion-anticipada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 — Terminación Anticipada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-brechas-conocidas-hu-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 — Brechas conocidas HU-04
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-5-hu-06-novedades-y-prorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 5 — HU-06: Novedades y Prorrateo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 5 — HU-06: Novedades y Prorrateo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ejecucion-del-prorrateo-mensual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 — Ejecución del Prorrateo Mensual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ver-resultado-del-prorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 — Ver Resultado del Prorrateo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-gestion-de-mantenimientos-programados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 — Gestión de Mantenimientos Programados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-bloqueo-de-segunda-ejecucion-del-prorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 — Bloqueo de segunda ejecución del prorrateo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-brechas-conocidas-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 — Brechas conocidas HU-06
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-e2e-fase-2-validacion-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo E2E Fase 2 — Validación completa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-aceptacion-fase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist de Aceptación Fase 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist de Aceptación Fase 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-01-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-01 Cotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-02-instalaciones-modulo-completo-pendiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-02 Instalaciones (módulo completo pendiente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-03-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-03 Migraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-04-bajas-y-cartera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-04 Bajas y Cartera
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-06-novedadesprorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-06 Novedades/Prorrateo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase3_v2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3_v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-procesos-unica-telefonica-colombia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema PROCESOS ÚNICA · Telefónica Colombia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema PROCESOS ÚNICA · Telefónica Colombia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-01-hu-02-hu-03-hu-04-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-01 · HU-02 · HU-03 · HU-04 · HU-06
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-real-por-hu-auditoria-21042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado real por HU (Auditoría 21/04/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-1-hu-01-cotizacion-a-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 1 — HU-01: Cotización a Terceros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 1 — HU-01: Cotización a Terceros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-carga-de-proyectos-para-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 — Carga de Proyectos para Cotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-validacion-automatica-de-viabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 — Validación Automática de Viabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-generacion-de-archivo-para-envio-a-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 — Generación de Archivo para Envío a Proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-carga-de-respuestas-de-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 — Carga de Respuestas de Proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-comparacion-de-ofertas-y-aprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 — Comparación de Ofertas y Aprobación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-brechas-conocidas-hu-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 — Brechas conocidas HU-01
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-2-hu-02-instalaciones-de-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 2 — HU-02: Instalaciones de Terceros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 2 — HU-02: Instalaciones de Terceros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-validacion-de-vigencia-de-oferta-ca-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 — Validación de Vigencia de Oferta (CA-1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-oferta-vigente-crear-tarea-de-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 — Oferta VIGENTE → Crear Tarea de Instalación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-oferta-vencida-crear-tarea-de-recotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 — Oferta VENCIDA → Crear Tarea de Recotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-seguimiento-de-instalacion-ca-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 — Seguimiento de Instalación (CA-2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-envio-al-proveedor-ca-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 — Envío al Proveedor (CA-3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-recepcion-de-respuesta-del-proveedor-ca-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 — Recepción de Respuesta del Proveedor (CA-4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-devolucion-de-ot-y-cierre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 — Devolución de OT y Cierre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-brechas-conocidas-hu-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 — Brechas conocidas HU-02
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-3-hu-03-migraciones-y-ampliaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 3 — HU-03: Migraciones y Ampliaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 3 — HU-03: Migraciones y Ampliaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-carga-de-archivo-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 — Carga de Archivo de Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-gestion-y-seguimiento-de-registros-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 — Gestión y Seguimiento de Registros de Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-consolidacion-con-inventario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 — Consolidación con Inventario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-actualizacion-automatica-del-inventario-al-completar-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 — Actualización Automática del Inventario al Completar Migración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-exportar-formulario-para-cgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 — Exportar Formulario para CGP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-brechas-conocidas-hu-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 — Brechas conocidas HU-03
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-4-hu-04-bajas-y-cartera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 4 — HU-04: Bajas y Cartera
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 4 — HU-04: Bajas y Cartera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-carga-de-bajas-archivo-cronossalesforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 — Carga de Bajas (archivo Cronos/Salesforce)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-visualizacion-de-servicios-en-baja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 — Visualización de Servicios en Baja
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-calculo-de-pago-proyectado-de-preaviso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 — Cálculo de Pago Proyectado de Preaviso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-reconexion-de-servicios-suspendidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 — Reconexión de Servicios Suspendidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-terminacion-anticipada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 — Terminación Anticipada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-brechas-conocidas-hu-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 — Brechas conocidas HU-04
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-5-hu-06-novedades-y-prorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 5 — HU-06: Novedades y Prorrateo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 5 — HU-06: Novedades y Prorrateo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ejecucion-del-prorrateo-mensual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 — Ejecución del Prorrateo Mensual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ver-resultado-del-prorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 — Ver Resultado del Prorrateo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-gestion-de-mantenimientos-programados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 — Gestión de Mantenimientos Programados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-bloqueo-de-segunda-ejecucion-del-prorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 — Bloqueo de segunda ejecución del prorrateo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-brechas-conocidas-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 — Brechas conocidas HU-06
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-e2e-fase-2-validacion-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo E2E Fase 2 — Validación completa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-aceptacion-fase-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist de Aceptación Fase 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist de Aceptación Fase 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-01-cotizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-01 Cotización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-02-instalaciones-modulo-completo-pendiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-02 Instalaciones (módulo completo pendiente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-03-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-03 Migraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-04-bajas-y-cartera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-04 Bajas y Cartera
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-06-novedadesprorrateo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-06 Novedades/Prorrateo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-de-pruebas-fase-2-v2">Guía de Pruebas — Fase 2 v2<a class="headerlink" href="#guia-de-pruebas-fase-2-v2" title="Permanent link">&para;</a></h1>
+<h2 id="sistema-procesos-unica-telefonica-colombia">Sistema PROCESOS ÚNICA · Telefónica Colombia<a class="headerlink" href="#sistema-procesos-unica-telefonica-colombia" title="Permanent link">&para;</a></h2>
+<h3 id="hu-01-hu-02-hu-03-hu-04-hu-06"><a href="../modulos/HU-01_Cotizacion.html">HU-01</a> · <a href="../modulos/HU-02_Instalacion.html">HU-02</a> · <a href="../modulos/HU-03_Migraciones.html">HU-03</a> · <a href="../modulos/HU-04_Bajas.html">HU-04</a> · <a href="../modulos/HU-06_Novedades.html">HU-06</a><a class="headerlink" href="#hu-01-hu-02-hu-03-hu-04-hu-06" title="Permanent link">&para;</a></h3>
+<p><strong>Fecha:</strong> 21/04/2026<br />
+<strong>Versión:</strong> 2.0 (generada desde auditorías reales 21/04/2026)<br />
+<strong>Preparado por:</strong> Equipo de Desarrollo QCS  </p>
+<hr />
+<div class="admonition abstract">
+<p><strong>Tipo:</strong> Guía de Pruebas<br />
+<strong>Fase:</strong> Fase 2<br />
+<strong>Roles:</strong> QA, Cliente, PM<br />
+<strong>Estado:</strong> 🟢 Activo<br />
+<strong>HUs relacionadas:</strong> <a href="../modulos/HU-01_Cotizacion.html">HU-01</a> · <a href="../modulos/HU-02_Instalacion.html">HU-02</a> · <a href="../modulos/HU-03_Migraciones.html">HU-03</a> · <a href="../modulos/HU-04_Bajas.html">HU-04</a> · <a href="../modulos/HU-06_Novedades.html">HU-06</a>  </p>
+</div>
+<div class="graph-obsidian-wrapper"><p class="graph-obsidian-title">🕸️ Mapa de relaciones</p><div id="graph-fase2_v2" class="graph-obsidian"></div></div>
+<script>
+(function(){
+  var N=[{"id": 0, "label": "Guía de Pruebas\nFase 2", "group": "doc", "mass": 2, "title": "Este documento"}, {"id": 1, "label": "HU-01\nCotización", "group": "hu", "title": "Ver HU-01 — Cotización", "url": "../modulos/HU-01_Cotizacion.html"}, {"id": 2, "label": "HU-02\nInstalación", "group": "hu", "title": "Ver HU-02 — Instalación", "url": "../modulos/HU-02_Instalacion.html"}, {"id": 3, "label": "HU-03\nMigraciones", "group": "hu", "title": "Ver HU-03 — Migraciones", "url": "../modulos/HU-03_Migraciones.html"}, {"id": 4, "label": "HU-04\nBajas", "group": "hu", "title": "Ver HU-04 — Bajas", "url": "../modulos/HU-04_Bajas.html"}, {"id": 5, "label": "HU-06\nNovedades", "group": "hu", "title": "Ver HU-06 — Novedades", "url": "../modulos/HU-06_Novedades.html"}];
+  var E=[{"from": 0, "to": 1}, {"from": 0, "to": 2}, {"from": 0, "to": 3}, {"from": 0, "to": 4}, {"from": 0, "to": 5}];
+  function render(){
+    var el=document.getElementById("graph-fase2_v2");
+    if(!el)return;
+    var net=new vis.Network(el,{nodes:new vis.DataSet(N),edges:new vis.DataSet(E)},{nodes:{shape:"dot",size:18,font:{size:12,color:"#cdd6f4",multi:true},borderWidth:2},edges:{color:"#585b70",width:2,smooth:{type:"continuous"}},groups:{doc:{color:{background:"#cba6f7",border:"#9d7cd8"},font:{color:"#1e1e2e",bold:true},size:24},hu:{color:{background:"#89b4fa",border:"#4a8fd4"},font:{color:"#1e1e2e"}}},physics:{barnesHut:{gravitationalConstant:-4000,springConstant:0.05,springLength:120},stabilization:{iterations:200}},interaction:{hover:true,dragNodes:true,zoomView:true,tooltipDelay:150}});
+    net.on("click",function(p){
+      if(p.nodes.length){var n=new vis.DataSet(N).get(p.nodes[0]);if(n&&n.url)window.location.href=n.url;}
+    });
+  }
+  if(typeof vis!=="undefined"){render();}
+  else{var s=document.createElement("script");s.src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js";s.onload=render;document.head.appendChild(s);}
+})();
+</script>
+
+<blockquote>
+<p><strong>Acceso al sistema</strong><br />
+- <strong>Frontend:</strong> http://localhost:4200<br />
+- <strong>Usuario de prueba:</strong> admin / admin<br />
+- <strong>Backend API:</strong> http://localhost:8080<br />
+- <strong>Prerequisito:</strong> Fase 1 validada y aprobada por QCS. Tablas paramétricas de Inventario cargadas (Proveedores, Clientes, Contratos, Ciudades, TRM, Configuración Servicios).</p>
+</blockquote>
+<hr />
+<blockquote>
+<h3 id="estado-real-por-hu-auditoria-21042026">Estado real por HU (Auditoría 21/04/2026)<a class="headerlink" href="#estado-real-por-hu-auditoria-21042026" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>HU</th>
+<th>Estado</th>
+<th>Listo para QCS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="../modulos/HU-01_Cotizacion.html">HU-01</a></strong> Cotización</td>
+<td>🟡 CASI COMPLETO (90%)</td>
+<td>⚠️ CASI — 1 brecha crítica (vigencia de oferta bloquea <a href="../modulos/HU-02_Instalacion.html">HU-02</a>)</td>
+</tr>
+<tr>
+<td><strong><a href="../modulos/HU-02_Instalacion.html">HU-02</a></strong> Instalaciones</td>
+<td>🔴 NO IMPLEMENTADA (0%)</td>
+<td>❌ NO — Pendiente implementación completa</td>
+</tr>
+<tr>
+<td><strong><a href="../modulos/HU-03_Migraciones.html">HU-03</a></strong> Migraciones</td>
+<td>🟡 PARCIAL (60%)</td>
+<td>⚠️ PARCIAL — Core operativo, faltan consolidación y export</td>
+</tr>
+<tr>
+<td><strong><a href="../modulos/HU-04_Bajas.html">HU-04</a></strong> Bajas y Cartera</td>
+<td>🟡 CASI COMPLETO (75%)</td>
+<td>⚠️ CASI — Core operativo, falta terminación anticipada</td>
+</tr>
+<tr>
+<td><strong><a href="../modulos/HU-06_Novedades.html">HU-06</a></strong> Novedades/Prorrateo</td>
+<td>🟡 PARCIAL (70%)</td>
+<td>⚠️ PARCIAL — Servicios fijos funcionan, falta móviles y export</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> <a href="../modulos/HU-02_Instalacion.html">HU-02</a> está pendiente de implementación. Las pruebas de ese módulo son el objetivo, no el estado actual.</p>
+</blockquote>
+<hr />
+<h2 id="modulo-1-hu-01-cotizacion-a-terceros">Módulo 1 — <a href="../modulos/HU-01_Cotizacion.html">HU-01</a>: Cotización a Terceros<a class="headerlink" href="#modulo-1-hu-01-cotizacion-a-terceros" title="Permanent link">&para;</a></h2>
+<p><strong>Descripción:</strong> Gestiona el proceso de cotización con proveedores. Centraliza solicitudes (Salesforce, DRH o manual), validación de viabilidad automática, generación del archivo de cotización y registro de respuestas.</p>
+<p><strong>Estado real (auditoría):</strong> 🟡 90% implementado. <strong>Brecha crítica:</strong> validación automática de vigencia de oferta (bloquea <a href="../modulos/HU-02_Instalacion.html">HU-02</a>).</p>
+<hr />
+<h3 id="11-carga-de-proyectos-para-cotizacion">1.1 — Carga de Proyectos para Cotización<a class="headerlink" href="#11-carga-de-proyectos-para-cotizacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Gestión de Servicios → Cotización a Terceros</strong> (http://localhost:4200/gestion/cotizacion).</p>
+</li>
+<li>
+<p>Seleccionar <strong>"Cargar Proyectos para Cotización"</strong>.</p>
+</li>
+<li>
+<p>Cargar un archivo CSV o XLSX con campos: Número oportunidad, DS, Ciudad, Cliente, Producto, BW, Proveedor actual, Propietario de la solicitud.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>Procesar</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado">Resultado esperado<a class="headerlink" href="#resultado-esperado" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Los proyectos quedan registrados en la bandeja de cotizaciones.</p>
+</li>
+<li>
+<p>✅ Las solicitudes de los tres escenarios son aceptadas (Salesforce, DRH, manual).</p>
+</li>
+<li>
+<p>✅ Resumen: proyectos cargados, con errores.</p>
+</li>
+<li>
+<p>✅ Proyectos duplicados (misma oportunidad + DS) no se insertan dos veces.</p>
+</li>
+<li>
+<p>✅ La importación es asíncrona con barra de progreso.</p>
+</li>
+</ul>
+<hr />
+<h3 id="12-validacion-automatica-de-viabilidad">1.2 — Validación Automática de Viabilidad<a class="headerlink" href="#12-validacion-automatica-de-viabilidad" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Desde la bandeja de cotizaciones, seleccionar un proyecto cargado.</p>
+</li>
+<li>
+<p>Ejecutar la validación de viabilidad (botón <strong>"Validar Viabilidad"</strong>).</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_1">Resultado esperado<a class="headerlink" href="#resultado-esperado_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El sistema cruza la solicitud con <code>dim_cobertura</code>, <code>dim_proveedores</code> y <code>dim_contratos</code>.</p>
+</li>
+<li>
+<p>✅ Se muestra resultado de viabilidad por proveedor (viable / no viable).</p>
+</li>
+<li>
+<p>✅ Para proveedores viables se muestran condiciones económicas (tarifa promedio de <code>fact_tarifa_promedio</code>).</p>
+</li>
+<li>
+<p>✅ El resultado queda registrado con fecha y hora de validación.</p>
+</li>
+</ul>
+<hr />
+<h3 id="13-generacion-de-archivo-para-envio-a-proveedores">1.3 — Generación de Archivo para Envío a Proveedores<a class="headerlink" href="#13-generacion-de-archivo-para-envio-a-proveedores" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Con la viabilidad validada, seleccionar los proveedores a cotizar.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>"Generar Archivo de Cotización"</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_2">Resultado esperado<a class="headerlink" href="#resultado-esperado_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Se genera el archivo de cotización (CSV o XLSX) con datos del proyecto.</p>
+</li>
+<li>
+<p>✅ El archivo contiene: Número oportunidad, DS, Ciudad, Descripción técnica, BW requerido.</p>
+</li>
+<li>
+<p>✅ El estado de la solicitud cambia a <strong>"Enviado a Proveedor"</strong>.</p>
+</li>
+</ul>
+<hr />
+<h3 id="14-carga-de-respuestas-de-proveedores">1.4 — Carga de Respuestas de Proveedores<a class="headerlink" href="#14-carga-de-respuestas-de-proveedores" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>"Cargar Respuestas de Proveedores"</strong> (o desde el detalle de la cotización).</p>
+</li>
+<li>
+<p>Cargar el archivo de respuesta del proveedor con: valor oferta, plazo de entrega, condiciones.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_3">Resultado esperado<a class="headerlink" href="#resultado-esperado_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ La respuesta queda registrada vinculada a la cotización correspondiente.</p>
+</li>
+<li>
+<p>✅ Si hay múltiples proveedores, permite cargar respuesta de cada uno por separado.</p>
+</li>
+<li>
+<p>✅ Se muestra tabla comparativa de ofertas recibidas.</p>
+</li>
+<li>
+<p>✅ El sistema señala la oferta recomendada (menor valor, mejor plazo).</p>
+</li>
+</ul>
+<hr />
+<h3 id="15-comparacion-de-ofertas-y-aprobacion">1.5 — Comparación de Ofertas y Aprobación<a class="headerlink" href="#15-comparacion-de-ofertas-y-aprobacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Abrir una cotización con respuestas cargadas.</p>
+</li>
+<li>
+<p>Ver la tabla comparativa de ofertas.</p>
+</li>
+<li>
+<p>Seleccionar la oferta ganadora y marcarla como <strong>APROBADA</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_4">Resultado esperado<a class="headerlink" href="#resultado-esperado_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ La oferta queda marcada como aprobada en <code>fact_viabilidad_cotizacion</code>.</p>
+</li>
+<li>
+<p>✅ El estado del proyecto cambia a un estado que permita continuar a instalación.</p>
+</li>
+<li>
+<p>✅ La viabilidad aprobada queda vinculada con fecha de vencimiento de oferta.</p>
+</li>
+</ul>
+<hr />
+<h3 id="16-brechas-conocidas-hu-01">1.6 — Brechas conocidas <a href="../modulos/HU-01_Cotizacion.html">HU-01</a><a class="headerlink" href="#16-brechas-conocidas-hu-01" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Severidad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validación automática de vigencia de oferta</td>
+<td>🔴 CRÍTICA</td>
+<td><strong>BLOQUEA <a href="../modulos/HU-02_Instalacion.html">HU-02</a>.</strong> Falta endpoint <code>/api/cotizacion/validar-vigencia</code> con lógica: &gt;7d=VIGENTE, 1-7d=POR_VENCER, ≤0=VENCIDA</td>
+</tr>
+<tr>
+<td>Flujo de recotización automática</td>
+<td>🟡 Importante</td>
+<td>Si oferta VENCIDA o POR_VENCER, no se crea automáticamente nueva cotización</td>
+</tr>
+<tr>
+<td>Notificación a proveedores por email</td>
+<td>🟡 Importante</td>
+<td>Al cambiar a estado ENVIO_PROVEEDOR, no se envía email</td>
+</tr>
+<tr>
+<td>Exportar PDF de cotización</td>
+<td>🟢 Menor</td>
+<td>Sin generación de PDF para enviar a proveedores</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-2-hu-02-instalaciones-de-terceros">Módulo 2 — <a href="../modulos/HU-02_Instalacion.html">HU-02</a>: Instalaciones de Terceros<a class="headerlink" href="#modulo-2-hu-02-instalaciones-de-terceros" title="Permanent link">&para;</a></h2>
+<p><strong>Descripción:</strong> Valida vigencia de oferta del proveedor y crea automáticamente la Tarea de Instalación (oferta vigente) o Tarea de Recotización (oferta vencida). Gestiona seguimiento hasta devolución de OT.</p>
+<p><strong>Estado real (auditoría):</strong> 🔴 0% implementado. Todos los artefactos deben ser creados.</p>
+<blockquote>
+<p><strong>⚠️ ESTADO ACTUAL:</strong> Este módulo está <strong>pendiente de implementación</strong>. Los pasos de prueba descritos a continuación son los criterios de aceptación para validar la implementación una vez completada.</p>
+</blockquote>
+<hr />
+<h3 id="21-validacion-de-vigencia-de-oferta-ca-1">2.1 — Validación de Vigencia de Oferta (CA-1)<a class="headerlink" href="#21-validacion-de-vigencia-de-oferta-ca-1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Gestión de Servicios → Instalaciones de Terceros</strong> (http://localhost:4200/gestion/instalacion).</p>
+</li>
+<li>
+<p>Ingresar:</p>
+</li>
+<li>Número de oportunidad</li>
+<li>DS del servicio</li>
+<li>
+<p>Fecha de validación (fecha actual)</p>
+</li>
+<li>
+<p>Hacer clic en <strong>"Validar Vigencia"</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_5">Resultado esperado<a class="headerlink" href="#resultado-esperado_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ Sistema devuelve <strong>Fecha de Vencimiento de la Oferta</strong> y resultado:</li>
+<li><strong>VIGENTE</strong>: fecha de vigencia &gt; 7 días desde fecha de consulta</li>
+<li><strong>POR VENCER</strong>: fecha de vigencia entre 1 y 7 días</li>
+<li><strong>VENCIDA</strong>: fecha de vigencia ≤ fecha de consulta</li>
+</ul>
+<hr />
+<h3 id="22-oferta-vigente-crear-tarea-de-instalacion">2.2 — Oferta VIGENTE → Crear Tarea de Instalación<a class="headerlink" href="#22-oferta-vigente-crear-tarea-de-instalacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ejecutar validación con oferta <strong>VIGENTE</strong>.</li>
+</ol>
+<h4 id="resultado-esperado_6">Resultado esperado<a class="headerlink" href="#resultado-esperado_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El sistema crea automáticamente el registro de instalación en <code>fact_instalaciones</code>.</p>
+</li>
+<li>
+<p>✅ Los datos se pre-cargan desde <code>fact_viabilidad_cotizacion</code> (DS, cliente, proveedor, ciudad, BW).</p>
+</li>
+<li>
+<p>✅ La instalación aparece en la bandeja con estado <strong>"PENDIENTE_INSTALACION"</strong>.</p>
+</li>
+<li>
+<p>✅ El usuario puede cargar el <strong>Reporte de Tarea Solicitud UNICA</strong>.</p>
+</li>
+</ul>
+<hr />
+<h3 id="23-oferta-vencida-crear-tarea-de-recotizacion">2.3 — Oferta VENCIDA → Crear Tarea de Recotización<a class="headerlink" href="#23-oferta-vencida-crear-tarea-de-recotizacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ejecutar validación con oferta <strong>VENCIDA</strong>.</li>
+</ol>
+<h4 id="resultado-esperado_7">Resultado esperado<a class="headerlink" href="#resultado-esperado_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El sistema crea automáticamente una <strong>Tarea de Recotización</strong> vinculada a la oportunidad.</p>
+</li>
+<li>
+<p>✅ La tarea de recotización aparece en la bandeja de cotizaciones (<a href="../modulos/HU-01_Cotizacion.html">HU-01</a>).</p>
+</li>
+<li>
+<p>✅ <strong>NO</strong> se crea tarea de instalación.</p>
+</li>
+</ul>
+<hr />
+<h3 id="24-seguimiento-de-instalacion-ca-2">2.4 — Seguimiento de Instalación (CA-2)<a class="headerlink" href="#24-seguimiento-de-instalacion-ca-2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Buscar una instalación creada en la bandeja.</p>
+</li>
+<li>
+<p>Abrir el detalle de la instalación.</p>
+</li>
+<li>
+<p>Registrar campos de seguimiento:</p>
+</li>
+<li><code>tarea_unica</code></li>
+<li><code>solicitud_ot</code></li>
+<li><code>fecha_envio_tercero</code></li>
+<li><code>medio</code></li>
+<li><code>permanencia_meses</code></li>
+<li><code>costo_instalacion_nrc</code></li>
+<li><code>costo_mensual_mrc</code></li>
+<li><code>fecha_estimada_entrega</code></li>
+<li>
+<p><code>contacto_implantador</code>, <code>cel_implantador</code>, <code>correo_implantador</code></p>
+</li>
+<li>
+<p>Guardar.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_8">Resultado esperado<a class="headerlink" href="#resultado-esperado_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Todos los campos de seguimiento son editables y persistentes.</p>
+</li>
+<li>
+<p>✅ Los cambios de estado quedan con log de usuario y fecha.</p>
+</li>
+<li>
+<p>✅ El campo <code>estado</code> puede avanzar: PENDIENTE_INSTALACION → ENVIADO_PROVEEDOR → RESPUESTA_RECIBIDA → AUTORIZADO → OT_DEVUELTA → COMPLETADO.</p>
+</li>
+</ul>
+<hr />
+<h3 id="25-envio-al-proveedor-ca-3">2.5 — Envío al Proveedor (CA-3)<a class="headerlink" href="#25-envio-al-proveedor-ca-3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Con los datos de la instalación completos, hacer clic en <strong>"Enviar a Proveedor"</strong>.</li>
+</ol>
+<h4 id="resultado-esperado_9">Resultado esperado<a class="headerlink" href="#resultado-esperado_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El estado cambia a <code>ENVIADO_PROVEEDOR</code>.</p>
+</li>
+<li>
+<p>✅ Se genera tabla HTML copiable para enviar por email al proveedor con todos los datos de la instalación.</p>
+</li>
+<li>
+<p>✅ Los campos <code>fecha_envio_tercero</code> se registran automáticamente.</p>
+</li>
+</ul>
+<hr />
+<h3 id="26-recepcion-de-respuesta-del-proveedor-ca-4">2.6 — Recepción de Respuesta del Proveedor (CA-4)<a class="headerlink" href="#26-recepcion-de-respuesta-del-proveedor-ca-4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Registrar la respuesta del proveedor:</li>
+<li><code>fecha_respuesta_tercero</code></li>
+<li><code>ot_proveedor</code></li>
+<li>
+<p><code>fecha_autorizacion_tercero</code></p>
+</li>
+<li>
+<p>Cambiar estado a <code>RESPUESTA_RECIBIDA</code> o <code>AUTORIZADO</code>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_10">Resultado esperado<a class="headerlink" href="#resultado-esperado_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Los campos de respuesta se guardan correctamente.</p>
+</li>
+<li>
+<p>✅ El estado avanza según el flujo de estados válidos.</p>
+</li>
+</ul>
+<hr />
+<h3 id="27-devolucion-de-ot-y-cierre">2.7 — Devolución de OT y Cierre<a class="headerlink" href="#27-devolucion-de-ot-y-cierre" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Registrar la <code>fecha_devolucion_ot</code>.</p>
+</li>
+<li>
+<p>Cambiar estado a <code>OT_DEVUELTA</code> y luego <code>COMPLETADO</code>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_11">Resultado esperado<a class="headerlink" href="#resultado-esperado_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ La instalación queda marcada como COMPLETADA.</p>
+</li>
+<li>
+<p>✅ El sistema registra el usuario y fecha de cierre.</p>
+</li>
+</ul>
+<hr />
+<h3 id="28-brechas-conocidas-hu-02">2.8 — Brechas conocidas <a href="../modulos/HU-02_Instalacion.html">HU-02</a><a class="headerlink" href="#28-brechas-conocidas-hu-02" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Severidad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Módulo completo no implementado</td>
+<td>🔴 CRÍTICA</td>
+<td>Tabla <code>fact_instalaciones</code>, entidad, repositorio, servicio, controlador, y 4 componentes Angular deben crearse desde cero</td>
+</tr>
+<tr>
+<td>Validación de vigencia en <a href="../modulos/HU-01_Cotizacion.html">HU-01</a></td>
+<td>🔴 CRÍTICA</td>
+<td><strong>Prerequisito:</strong> <code>CotizacionService.validarVigenciaOferta()</code> y endpoint <code>/api/cotizacion/validar-vigencia</code> deben implementarse primero</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-3-hu-03-migraciones-y-ampliaciones">Módulo 3 — <a href="../modulos/HU-03_Migraciones.html">HU-03</a>: Migraciones y Ampliaciones<a class="headerlink" href="#modulo-3-hu-03-migraciones-y-ampliaciones" title="Permanent link">&para;</a></h2>
+<p><strong>Descripción:</strong> Gestiona el proceso de migraciones de servicios entre proveedores. Permite cargar el archivo de migraciones, hacer seguimiento y al finalizar actualiza el inventario.</p>
+<p><strong>Estado real (auditoría):</strong> 🟡 60% implementado. CRUD e importación operativos. Faltan consolidación automática, export y actualización de inventario.</p>
+<hr />
+<h3 id="31-carga-de-archivo-de-migracion">3.1 — Carga de Archivo de Migración<a class="headerlink" href="#31-carga-de-archivo-de-migracion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Gestión de Servicios → Migraciones y Ampliaciones</strong> (http://localhost:4200/gestion/migraciones).</p>
+</li>
+<li>
+<p>Hacer clic en <strong>"Cargar archivo de Migración"</strong>.</p>
+</li>
+<li>
+<p>Ingresar el nombre del proyecto de migración.</p>
+</li>
+<li>
+<p>Seleccionar el archivo de migraciones (CSV o XLSX) con los campos: CUS, CLIENTE, DIRECCIÓN, Ciudad, ID, ÁREA RESPALDO, CONTACTO CGP, PROVEEDOR ACTUAL, ID ACTUAL, Contacto en Sitio, Correo Contacto, Celular, Coordenadas.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>Procesar</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_12">Resultado esperado<a class="headerlink" href="#resultado-esperado_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Se crea la agrupación de proyecto con nombre dado.</p>
+</li>
+<li>
+<p>✅ Los registros quedan disponibles en el formulario digital para ajustes manuales.</p>
+</li>
+<li>
+<p>✅ Resumen con filas cargadas y con errores.</p>
+</li>
+<li>
+<p>✅ La importación es asíncrona con barra de progreso.</p>
+</li>
+<li>
+<p>✅ Modal de resultado con detalle y botón Descargar CSV.</p>
+</li>
+</ul>
+<hr />
+<h3 id="32-gestion-y-seguimiento-de-registros-de-migracion">3.2 — Gestión y Seguimiento de Registros de Migración<a class="headerlink" href="#32-gestion-y-seguimiento-de-registros-de-migracion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Abrir un proyecto de migración cargado.</p>
+</li>
+<li>
+<p>Seleccionar un registro y editarlo desde el formulario digital.</p>
+</li>
+<li>
+<p>Modificar el campo <strong>Estado</strong> del registro.</p>
+</li>
+<li>
+<p>Guardar.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_13">Resultado esperado<a class="headerlink" href="#resultado-esperado_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Los cambios se guardan y quedan auditados (usuario + fecha).</p>
+</li>
+<li>
+<p>✅ El formulario valida campos obligatorios antes de guardar.</p>
+</li>
+<li>
+<p>✅ Se puede filtrar por estado, proveedor, ciudad.</p>
+</li>
+</ul>
+<hr />
+<h3 id="33-consolidacion-con-inventario">3.3 — Consolidación con Inventario<a class="headerlink" href="#33-consolidacion-con-inventario" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>⚠️ Brecha Identificada:</strong> Esta funcionalidad está parcialmente implementada.</p>
+</blockquote>
+<ol>
+<li>
+<p>Abrir un registro de migración.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>"Consolidar con Inventario"</strong> (si está disponible).</p>
+</li>
+</ol>
+<h4 id="resultado-esperado-cuando-implementado">Resultado esperado (cuando implementado)<a class="headerlink" href="#resultado-esperado-cuando-implementado" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El sistema cruza el DS contra <code>dim_configuracion_servicios</code>.</p>
+</li>
+<li>
+<p>✅ Los datos comerciales actuales (MRC, proveedor, cliente, dirección) se auto-rellenan en el formulario de migración.</p>
+</li>
+<li>
+<p>✅ El usuario solo necesita completar los campos de destino.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Brecha actual:</strong> El usuario debe copiar manualmente los datos entre inventario y formulario migración.</p>
+</blockquote>
+<hr />
+<h3 id="34-actualizacion-automatica-del-inventario-al-completar-migracion">3.4 — Actualización Automática del Inventario al Completar Migración<a class="headerlink" href="#34-actualizacion-automatica-del-inventario-al-completar-migracion" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>⚠️ Brecha Identificada:</strong> Flujo parcialmente implementado.</p>
+</blockquote>
+<ol>
+<li>
+<p>Marcar un registro de migración como <strong>completado</strong> (estado final).</p>
+</li>
+<li>
+<p>Verificar en el inventario (http://localhost:4200/servicios) el DS migrado.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado-cuando-implementado_1">Resultado esperado (cuando implementado)<a class="headerlink" href="#resultado-esperado-cuando-implementado_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El inventario se actualiza automáticamente: el servicio migrado cambia su estado a <strong>BAJA POR MIGRACIÓN</strong>.</p>
+</li>
+<li>
+<p>✅ El nuevo servicio activo (proveedor destino) aparece en el inventario con el nuevo DS.</p>
+</li>
+<li>
+<p>✅ Si el DS no cruza contra el inventario, se genera reporte de <strong>"Error de cruce DS Migraciones"</strong>.</p>
+</li>
+</ul>
+<hr />
+<h3 id="35-exportar-formulario-para-cgp">3.5 — Exportar Formulario para CGP<a class="headerlink" href="#35-exportar-formulario-para-cgp" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>⚠️ Brecha Identificada:</strong> Pendiente de implementación.</p>
+</blockquote>
+<ol>
+<li>Desde el detalle del proyecto, hacer clic en <strong>"Exportar formulario para CGP"</strong>.</li>
+</ol>
+<h4 id="resultado-esperado-cuando-implementado_2">Resultado esperado (cuando implementado)<a class="headerlink" href="#resultado-esperado-cuando-implementado_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Se descarga archivo Excel con todos los registros del proyecto formateados para entrega a CGP o líder de proyecto.</p>
+</li>
+<li>
+<p>✅ El formato cumple con la plantilla solicitada.</p>
+</li>
+</ul>
+<hr />
+<h3 id="36-brechas-conocidas-hu-03">3.6 — Brechas conocidas <a href="../modulos/HU-03_Migraciones.html">HU-03</a><a class="headerlink" href="#36-brechas-conocidas-hu-03" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Severidad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consolidación automática con inventario</td>
+<td>🟡 Importante</td>
+<td>Falta endpoint que cruce DS y auto-rellene datos comerciales del inventario</td>
+</tr>
+<tr>
+<td>Exportar formulario Excel/CSV para CGP</td>
+<td>🟡 Importante</td>
+<td>Falta endpoint <code>/api/migraciones/{id}/export-formulario</code></td>
+</tr>
+<tr>
+<td>Actualización automática de inventario al completar</td>
+<td>🟡 Importante</td>
+<td>Cambio de estado a COMPLETADA no actualiza <code>dim_configuracion_servicios</code></td>
+</tr>
+<tr>
+<td>Validación BW_ACTUAL vs inventario</td>
+<td>🟢 Menor</td>
+<td>Al cargar DS, no se valida que BW coincida con inventario</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-4-hu-04-bajas-y-cartera">Módulo 4 — <a href="../modulos/HU-04_Bajas.html">HU-04</a>: Bajas y Cartera<a class="headerlink" href="#modulo-4-hu-04-bajas-y-cartera" title="Permanent link">&para;</a></h2>
+<p><strong>Descripción:</strong> Gestiona el proceso de bajas de servicios (por migración, cliente o suspensión) y su seguimiento hasta la reconexión o cierre definitivo.</p>
+<p><strong>Estado real (auditoría):</strong> 🟡 75% implementado. Importación, cruce de inventario y cálculo de preaviso operativos. Falta terminación anticipada y reconexión completa.</p>
+<hr />
+<h3 id="41-carga-de-bajas-archivo-cronossalesforce">4.1 — Carga de Bajas (archivo Cronos/Salesforce)<a class="headerlink" href="#41-carga-de-bajas-archivo-cronossalesforce" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Gestión de Servicios → Bajas y Cartera</strong> (http://localhost:4200/gestion/bajas).</p>
+</li>
+<li>
+<p>Hacer clic en <strong>"Cargar Bajas"</strong>.</p>
+</li>
+<li>
+<p>Seleccionar el archivo Cronos o Salesforce (CSV o XLSX).</p>
+</li>
+<li>
+<p>Hacer clic en <strong>Procesar</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_14">Resultado esperado<a class="headerlink" href="#resultado-esperado_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ La importación corre asíncronamente con barra de progreso.</p>
+</li>
+<li>
+<p>✅ Cada baja se cruza contra <code>dim_configuracion_servicios</code> por DS e id_servicio_proveedor.</p>
+</li>
+<li>
+<p>✅ Resumen: procesados, insertados, errores de cruce.</p>
+</li>
+<li>
+<p>✅ Modal de detalle con primeras 200 filas.</p>
+</li>
+<li>
+<p>✅ Botón Descargar CSV con resultado.</p>
+</li>
+</ul>
+<hr />
+<h3 id="42-visualizacion-de-servicios-en-baja">4.2 — Visualización de Servicios en Baja<a class="headerlink" href="#42-visualizacion-de-servicios-en-baja" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ir a la vista de servicios en baja.</li>
+</ol>
+<h4 id="resultado-esperado_15">Resultado esperado<a class="headerlink" href="#resultado-esperado_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Lista de servicios en proceso de baja con sus fechas y estados.</p>
+</li>
+<li>
+<p>✅ Filtros por tipo de baja (por migración, por cliente, suspensión por cartera, suspensión por aseguramiento).</p>
+</li>
+<li>
+<p>✅ Cada registro muestra: DS, cliente, proveedor, fecha notificación, fecha tope pagar, pago proyectado preaviso.</p>
+</li>
+</ul>
+<hr />
+<h3 id="43-calculo-de-pago-proyectado-de-preaviso">4.3 — Cálculo de Pago Proyectado de Preaviso<a class="headerlink" href="#43-calculo-de-pago-proyectado-de-preaviso" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Verificar los cálculos para una baja cargada.</li>
+</ol>
+<h4 id="resultado-esperado_16">Resultado esperado<a class="headerlink" href="#resultado-esperado_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ <code>pago_proyectado_preaviso = (MRC/30) × días_preaviso</code> (30 días parametrizables).</p>
+</li>
+<li>
+<p>✅ El sistema usa el MRC del servicio en <code>dim_configuracion_servicios</code>.</p>
+</li>
+<li>
+<p>✅ Si <code>moneda_mrc = 'USD'</code> → convierte a COP con TRM del mes (RN-28).</p>
+</li>
+</ul>
+<hr />
+<h3 id="44-reconexion-de-servicios-suspendidos">4.4 — Reconexión de Servicios Suspendidos<a class="headerlink" href="#44-reconexion-de-servicios-suspendidos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Desde la lista de bajas, buscar un servicio suspendido.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>"Reconectar"</strong>.</p>
+</li>
+<li>
+<p>Registrar la <code>fecha_reconexion</code> y observaciones.</p>
+</li>
+<li>
+<p>Confirmar.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_17">Resultado esperado<a class="headerlink" href="#resultado-esperado_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El registro en <code>fact_suspension_cartera</code> queda marcado como reactivado.</p>
+</li>
+<li>
+<p>✅ <code>dim_configuracion_servicios.estado</code> cambia a <strong>'ACTIVO'</strong>.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>⚠️ Brecha actual:</strong> La <code>fecha_alta</code> en <code>dim_configuracion_servicios</code> no se actualiza automáticamente al reconectar (pendiente de corrección).</p>
+</blockquote>
+<hr />
+<h3 id="45-terminacion-anticipada">4.5 — Terminación Anticipada<a class="headerlink" href="#45-terminacion-anticipada" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>⚠️ Brecha Identificada:</strong> Funcionalidad pendiente de implementación.</p>
+</blockquote>
+<ol>
+<li>Verificar que una baja donde <code>fecha_baja &lt; fecha_fin_clausula</code> muestra el cálculo de terminación anticipada.</li>
+</ol>
+<h4 id="resultado-esperado-cuando-implementado_3">Resultado esperado (cuando implementado)<a class="headerlink" href="#resultado-esperado-cuando-implementado_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Se calcula <code>pago_proyectado_terminacion_anticipada = (MRC/30) × días_entre(fecha_baja, fecha_fin_clausula)</code>.</p>
+</li>
+<li>
+<p>✅ El campo <code>terminacion_anticipada = true</code> aparece marcado.</p>
+</li>
+<li>
+<p>✅ El sistema advierte al usuario sobre el pago por terminación anticipada.</p>
+</li>
+</ul>
+<hr />
+<h3 id="46-brechas-conocidas-hu-04">4.6 — Brechas conocidas <a href="../modulos/HU-04_Bajas.html">HU-04</a><a class="headerlink" href="#46-brechas-conocidas-hu-04" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Severidad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Terminación anticipada</td>
+<td>🟡 Importante</td>
+<td>No existe campo <code>terminacion_anticipada</code> ni cálculo. Pendiente migración <code>V41__add_terminacion_anticipada_bajas.sql</code></td>
+</tr>
+<tr>
+<td>Reconexión no actualiza fecha_alta</td>
+<td>🟡 Importante</td>
+<td><code>BajasService.reconectarServicios()</code> no actualiza <code>dim_configuracion_servicios.fecha_alta</code></td>
+</tr>
+<tr>
+<td>Exportar CSV de errores de cruce</td>
+<td>🟢 Menor</td>
+<td>Al importar bajas con errores de cruce, no hay descarga de CSV con esos registros</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-5-hu-06-novedades-y-prorrateo">Módulo 5 — <a href="../modulos/HU-06_Novedades.html">HU-06</a>: Novedades y Prorrateo<a class="headerlink" href="#modulo-5-hu-06-novedades-y-prorrateo" title="Permanent link">&para;</a></h2>
+<p><strong>Descripción:</strong> Calcula el prorrateo de MRC según novedades del mes (altas, bajas, cambios) y gestiona mantenimientos programados.</p>
+<p><strong>Estado real (auditoría):</strong> 🟡 70% implementado. Prorrateo para servicios fijos operativo. Faltan prorrateo móviles, export consolidado e integración con <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a>.</p>
+<hr />
+<h3 id="51-ejecucion-del-prorrateo-mensual">5.1 — Ejecución del Prorrateo Mensual<a class="headerlink" href="#51-ejecucion-del-prorrateo-mensual" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Novedades y Prefactura → Prorrateo Novedades</strong> (http://localhost:4200/novedades/prorrateo).</p>
+</li>
+<li>
+<p>Verificar que NO se ejecutó prorrateo para el mes.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>"Ejecutar Prorrateo del mes"</strong>.</p>
+</li>
+<li>
+<p>Confirmar en el modal de validación.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_18">Resultado esperado<a class="headerlink" href="#resultado-esperado_18" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Solo se ejecuta una vez por mes (sistema bloquea si ya se ejecutó).</p>
+</li>
+<li>
+<p>✅ El sistema identifica novedades: ALTA, BAJA, CAMBIO_BW, CAMBIO_MRC, SIN_NOVEDAD.</p>
+</li>
+<li>
+<p>✅ Calcula días de servicio según fechas de alta/baja.</p>
+</li>
+<li>
+<p>✅ Calcula prorrateo por tipo de facturación: mensual vencido, anticipado, trimestral.</p>
+</li>
+<li>
+<p>✅ Convierte MRC USD→COP usando TRM del mes (RN-28).</p>
+</li>
+</ul>
+<hr />
+<h3 id="52-ver-resultado-del-prorrateo">5.2 — Ver Resultado del Prorrateo<a class="headerlink" href="#52-ver-resultado-del-prorrateo" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Una vez ejecutado, ver la tabla de prorrateo.</li>
+</ol>
+<h4 id="resultado-esperado_19">Resultado esperado<a class="headerlink" href="#resultado-esperado_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Tabla con columnas: DS, Cliente, Proveedor, Novedad, Días Servicio, MRC_COP, MRC_Prorrateo_COP.</p>
+</li>
+<li>
+<p>✅ Filtros por mes, tipo de novedad, proveedor.</p>
+</li>
+<li>
+<p>✅ Los registros sin novedad (SIN_NOVEDAD) muestran MRC completo sin prorrateo.</p>
+</li>
+</ul>
+<hr />
+<h3 id="53-gestion-de-mantenimientos-programados">5.3 — Gestión de Mantenimientos Programados<a class="headerlink" href="#53-gestion-de-mantenimientos-programados" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a la sección <strong>Mantenimientos</strong> dentro del módulo.</p>
+</li>
+<li>
+<p>Registrar un nuevo mantenimiento programado: DS, proveedor, fecha inicio, fecha fin, descripción.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_20">Resultado esperado<a class="headerlink" href="#resultado-esperado_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El mantenimiento queda registrado en <code>fact_mantenimientos</code>.</p>
+</li>
+<li>
+<p>✅ El formulario valida fechas (fin no puede ser antes que inicio).</p>
+</li>
+<li>
+<p>✅ CRUD completo de mantenimientos (crear, editar, eliminar).</p>
+</li>
+</ul>
+<hr />
+<h3 id="54-bloqueo-de-segunda-ejecucion-del-prorrateo">5.4 — Bloqueo de segunda ejecución del prorrateo<a class="headerlink" href="#54-bloqueo-de-segunda-ejecucion-del-prorrateo" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Intentar ejecutar el prorrateo para un mes que ya fue ejecutado.</li>
+</ol>
+<h4 id="resultado-esperado_21">Resultado esperado<a class="headerlink" href="#resultado-esperado_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ El sistema bloquea con mensaje: <strong>"Ya existe prorrateo ejecutado para el mes [Mes/Año]."</strong></li>
+</ul>
+<hr />
+<h3 id="55-brechas-conocidas-hu-06">5.5 — Brechas conocidas <a href="../modulos/HU-06_Novedades.html">HU-06</a><a class="headerlink" href="#55-brechas-conocidas-hu-06" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Severidad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prorrateo servicios móviles</td>
+<td>🟡 Importante</td>
+<td>Reglas de prorrateo para móviles no definidas con QCS. Pendiente definición</td>
+</tr>
+<tr>
+<td>Exportar consolidado mensual para prefacturación</td>
+<td>🟡 Importante</td>
+<td>Falta endpoint <code>/api/prorrateo/export-consolidado/{mes}</code> en Excel</td>
+</tr>
+<tr>
+<td>Validación de mantenimientos contra indisponibilidades</td>
+<td>🟡 Importante</td>
+<td>Tickets en ventana de mantenimiento no se excluyen automáticamente en <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></td>
+</tr>
+<tr>
+<td>Dashboard de novedades del mes</td>
+<td>🟢 Menor</td>
+<td>Sin contadores de altas/bajas/cambios ni MRC impactado</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="flujo-e2e-fase-2-validacion-completa">Flujo E2E Fase 2 — Validación completa<a class="headerlink" href="#flujo-e2e-fase-2-validacion-completa" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>1. Cotización (HU-01):
+   → Cargar proyectos → Validar viabilidad → Generar archivo → Cargar respuestas proveedores
+   → Aprobar oferta ganadora → Viabilidad queda aprobada con fecha vencimiento
+
+2. Instalación (HU-02) [cuando implementada]:
+   → Validar vigencia de oferta → Si VIGENTE: crear instalación
+   → Hacer seguimiento (enviar al proveedor → respuesta → autorizar → devolver OT)
+   → Al completar: el servicio queda activo y puede ingresar al inventario
+
+3. Migraciones (HU-03):
+   → Cargar archivo de migración → Consolidar con inventario
+   → Hacer seguimiento → Al completar: inventario se actualiza automáticamente
+
+4. Bajas (HU-04):
+   → Cargar bajas desde Cronos/Salesforce → Ver servicios en baja
+   → Calcular preaviso → Reconectar servicios (si aplica)
+
+5. Novedades (HU-06):
+   → Ejecutar prorrateo del mes → Verificar novedades identificadas
+   → Resultado alimenta HU-08 (prerequisito)
+</code></pre></div>
+<hr />
+<h2 id="checklist-de-aceptacion-fase-2">Checklist de Aceptación Fase 2<a class="headerlink" href="#checklist-de-aceptacion-fase-2" title="Permanent link">&para;</a></h2>
+<h3 id="hu-01-cotizacion"><a href="../modulos/HU-01_Cotizacion.html">HU-01</a> Cotización<a class="headerlink" href="#hu-01-cotizacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] Carga de proyectos asíncrona con progreso (CSV/XLSX)</p>
+</li>
+<li>
+<p>[ ] Validación de viabilidad cruza dim_cobertura + dim_proveedores</p>
+</li>
+<li>
+<p>[ ] Generación de archivo de cotización descargable</p>
+</li>
+<li>
+<p>[ ] Carga de respuestas de proveedores con progreso</p>
+</li>
+<li>
+<p>[ ] Tabla comparativa de ofertas</p>
+</li>
+<li>
+<p>[ ] Aprobación de oferta ganadora</p>
+</li>
+<li>
+<p>[ ] No se insertan proyectos duplicados (misma oportunidad + DS)</p>
+</li>
+<li>
+<p>[ ] ⚠️ Validación de vigencia de oferta: PENDIENTE IMPLEMENTAR</p>
+</li>
+</ul>
+<h3 id="hu-02-instalaciones-modulo-completo-pendiente"><a href="../modulos/HU-02_Instalacion.html">HU-02</a> Instalaciones <em>(módulo completo pendiente)</em><a class="headerlink" href="#hu-02-instalaciones-modulo-completo-pendiente" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] ❌ Tabla <code>fact_instalaciones</code> en MySQL</p>
+</li>
+<li>
+<p>[ ] ❌ Endpoint <code>POST /api/instalaciones</code> (crear desde viabilidad)</p>
+</li>
+<li>
+<p>[ ] ❌ Endpoint <code>GET /api/instalaciones</code> (listar)</p>
+</li>
+<li>
+<p>[ ] ❌ Endpoint <code>PUT /api/instalaciones/{id}/estado</code> (cambiar estado)</p>
+</li>
+<li>
+<p>[ ] ❌ Vista de validación de vigencia</p>
+</li>
+<li>
+<p>[ ] ❌ Vista de listado de instalaciones</p>
+</li>
+<li>
+<p>[ ] ❌ Vista de detalle/seguimiento</p>
+</li>
+<li>
+<p>[ ] ❌ Flujo VIGENTE → crear instalación automáticamente</p>
+</li>
+<li>
+<p>[ ] ❌ Flujo VENCIDA → crear recotización automáticamente</p>
+</li>
+</ul>
+<h3 id="hu-03-migraciones"><a href="../modulos/HU-03_Migraciones.html">HU-03</a> Migraciones<a class="headerlink" href="#hu-03-migraciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] Carga de archivo asíncrona con progreso (CSV/XLSX)</p>
+</li>
+<li>
+<p>[ ] Listado de proyectos con filtros</p>
+</li>
+<li>
+<p>[ ] Edición de registros con auditoría</p>
+</li>
+<li>
+<p>[ ] ⚠️ Consolidación automática con inventario: PENDIENTE</p>
+</li>
+<li>
+<p>[ ] ⚠️ Exportar formulario Excel para CGP: PENDIENTE</p>
+</li>
+<li>
+<p>[ ] ⚠️ Actualización automática de inventario al completar: PENDIENTE</p>
+</li>
+</ul>
+<h3 id="hu-04-bajas-y-cartera"><a href="../modulos/HU-04_Bajas.html">HU-04</a> Bajas y Cartera<a class="headerlink" href="#hu-04-bajas-y-cartera" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] Carga de bajas asíncrona (CSV/XLSX) con cruce de inventario</p>
+</li>
+<li>
+<p>[ ] Vista de servicios en baja con filtros por tipo</p>
+</li>
+<li>
+<p>[ ] Cálculo correcto de pago proyectado preaviso</p>
+</li>
+<li>
+<p>[ ] Reconexión actualiza estado en dim_configuracion_servicios</p>
+</li>
+<li>
+<p>[ ] ⚠️ Terminación anticipada: PENDIENTE</p>
+</li>
+<li>
+<p>[ ] ⚠️ Reconexión actualiza fecha_alta en inventario: PENDIENTE</p>
+</li>
+</ul>
+<h3 id="hu-06-novedadesprorrateo"><a href="../modulos/HU-06_Novedades.html">HU-06</a> Novedades/Prorrateo<a class="headerlink" href="#hu-06-novedadesprorrateo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] Ejecución de prorrateo mensual</p>
+</li>
+<li>
+<p>[ ] Bloquea segunda ejecución del mes</p>
+</li>
+<li>
+<p>[ ] Identifica novedades: ALTA, BAJA, CAMBIO_BW, CAMBIO_MRC, SIN_NOVEDAD</p>
+</li>
+<li>
+<p>[ ] Calcula prorrateo por tipo facturación (vencido, anticipado, trimestral)</p>
+</li>
+<li>
+<p>[ ] CRUD de mantenimientos programados</p>
+</li>
+<li>
+<p>[ ] ⚠️ Prorrateo servicios móviles: PENDIENTE (definición con QCS)</p>
+</li>
+<li>
+<p>[ ] ⚠️ Export consolidado para prefacturación: PENDIENTE</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

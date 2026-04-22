@@ -1,0 +1,3051 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Colombia Telecomunicaciones">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="Fase2_v2.html">
+      
+      
+        <link rel="next" href="../documentacion/Plan_Scrum.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Fase 3_v2 - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-pruebas-fase-3-v2" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fase 3_v2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Módulos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Módulos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-00 — Acceso y Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-05 — Inventario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-06 — Novedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-07 — Indisponibilidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-08 — Prefacturación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-01 — Cotización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-02 — Instalación Terceros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-03 — Migraciones y Ampliaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HU-04 — Bajas y Cartera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../reportes-novedades/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reportes de Novedades
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reportes de Novedades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reportes-novedades/reportes_2026-04-17/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-04-17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reportes-novedades/reportes_2026-04-15/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026-04-15
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación Completa BD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diccionario de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación por Fases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implementación por Fases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase1_v2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1_v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Fase2_v2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2_v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3_v2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Fase3_v2.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3_v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-procesos-unica-telefonica-colombia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema PROCESOS ÚNICA · Telefónica Colombia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema PROCESOS ÚNICA · Telefónica Colombia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-07-hu-08-flujo-completo-e2e-con-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-07 · HU-08 (Flujo completo E2E con HU-06)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-real-por-hu-auditoria-21042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado real por HU (Auditoría 21/04/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencias-de-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencias de Fase 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-1-hu-07-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 1 — HU-07: Indisponibilidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 1 — HU-07: Indisponibilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estructura-del-modulo-menu-lateral-5-opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 — Estructura del módulo (menú lateral — 5 opciones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-cargar-archivo-base-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 — Cargar archivo base de Incidencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-filtros-de-validacion-durante-la-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 — Filtros de validación durante la carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-validacion-de-ans-y-exclusiones-tablas-parametricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 — Validación de ANS y exclusiones (tablas paramétricas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-calculo-de-indisponibilidad-e-informe-rn-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 — Cálculo de indisponibilidad e informe (RN-22)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-generacion-de-archivos-de-conciliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 — Generación de archivos de conciliación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-cargue-de-respuestas-de-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 — Cargue de respuestas de proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-generacion-del-consolidado-de-conciliacion-mensual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 — Generación del consolidado de conciliación mensual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-brechas-conocidas-hu-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 — Brechas conocidas HU-07
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-2-hu-08-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 2 — HU-08: Prefacturación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 2 — HU-08: Prefacturación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-estructura-del-modulo-menu-lateral-3-opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 — Estructura del módulo (menú lateral — 3 opciones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-prerequisitos-del-mes-rn-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 — Prerequisitos del mes (RN-29)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cargar-ingresos-davox-archivo-fisc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 — Cargar Ingresos Davox (archivo FISC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-generacion-de-prefacturas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 — Generación de Prefacturas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-validacion-pagos-vs-ingresos-davox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 — Validación Pagos vs Ingresos Davox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-exportar-resultado-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 — Exportar resultado de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-brechas-conocidas-hu-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 — Brechas conocidas HU-08
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-e2e-fase-3-ciclo-mensual-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo E2E Fase 3 — Ciclo mensual completo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-aceptacion-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist de Aceptación Fase 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist de Aceptación Fase 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-07-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-07 Indisponibilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-08-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-08 Prefacturación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracion-e2e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integración E2E
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datos-de-prueba-recomendados-para-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datos de prueba recomendados para Fase 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentación del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan Scrum / Sprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auditoría de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-procesos-unica-telefonica-colombia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema PROCESOS ÚNICA · Telefónica Colombia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistema PROCESOS ÚNICA · Telefónica Colombia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-07-hu-08-flujo-completo-e2e-con-hu-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-07 · HU-08 (Flujo completo E2E con HU-06)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-real-por-hu-auditoria-21042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado real por HU (Auditoría 21/04/2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencias-de-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencias de Fase 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-1-hu-07-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 1 — HU-07: Indisponibilidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 1 — HU-07: Indisponibilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estructura-del-modulo-menu-lateral-5-opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 — Estructura del módulo (menú lateral — 5 opciones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-cargar-archivo-base-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 — Cargar archivo base de Incidencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-filtros-de-validacion-durante-la-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 — Filtros de validación durante la carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-validacion-de-ans-y-exclusiones-tablas-parametricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 — Validación de ANS y exclusiones (tablas paramétricas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-calculo-de-indisponibilidad-e-informe-rn-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 — Cálculo de indisponibilidad e informe (RN-22)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-generacion-de-archivos-de-conciliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 — Generación de archivos de conciliación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-cargue-de-respuestas-de-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 — Cargue de respuestas de proveedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-generacion-del-consolidado-de-conciliacion-mensual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 — Generación del consolidado de conciliación mensual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-brechas-conocidas-hu-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 — Brechas conocidas HU-07
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-2-hu-08-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 2 — HU-08: Prefacturación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 2 — HU-08: Prefacturación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-estructura-del-modulo-menu-lateral-3-opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 — Estructura del módulo (menú lateral — 3 opciones)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-prerequisitos-del-mes-rn-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 — Prerequisitos del mes (RN-29)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cargar-ingresos-davox-archivo-fisc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 — Cargar Ingresos Davox (archivo FISC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-generacion-de-prefacturas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 — Generación de Prefacturas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-validacion-pagos-vs-ingresos-davox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 — Validación Pagos vs Ingresos Davox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-exportar-resultado-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 — Exportar resultado de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-brechas-conocidas-hu-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 — Brechas conocidas HU-08
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-e2e-fase-3-ciclo-mensual-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo E2E Fase 3 — Ciclo mensual completo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-aceptacion-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist de Aceptación Fase 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist de Aceptación Fase 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hu-07-indisponibilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-07 Indisponibilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hu-08-prefacturacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HU-08 Prefacturación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracion-e2e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integración E2E
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datos-de-prueba-recomendados-para-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datos de prueba recomendados para Fase 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-de-pruebas-fase-3-v2">Guía de Pruebas — Fase 3 v2<a class="headerlink" href="#guia-de-pruebas-fase-3-v2" title="Permanent link">&para;</a></h1>
+<h2 id="sistema-procesos-unica-telefonica-colombia">Sistema PROCESOS ÚNICA · Telefónica Colombia<a class="headerlink" href="#sistema-procesos-unica-telefonica-colombia" title="Permanent link">&para;</a></h2>
+<h3 id="hu-07-hu-08-flujo-completo-e2e-con-hu-06"><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a> · <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a> (Flujo completo E2E con <a href="../modulos/HU-06_Novedades.html">HU-06</a>)<a class="headerlink" href="#hu-07-hu-08-flujo-completo-e2e-con-hu-06" title="Permanent link">&para;</a></h3>
+<p><strong>Fecha:</strong> 21/04/2026<br />
+<strong>Versión:</strong> 2.0 (generada desde auditorías reales 21/04/2026)<br />
+<strong>Preparado por:</strong> Equipo de Desarrollo QCS  </p>
+<hr />
+<div class="admonition abstract">
+<p><strong>Tipo:</strong> Guía de Pruebas<br />
+<strong>Fase:</strong> Fase 3<br />
+<strong>Roles:</strong> QA, Cliente, PM<br />
+<strong>Estado:</strong> 🟢 Activo<br />
+<strong>HUs relacionadas:</strong> <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a> · <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a>  </p>
+</div>
+<div class="graph-obsidian-wrapper"><p class="graph-obsidian-title">🕸️ Mapa de relaciones</p><div id="graph-fase3_v2" class="graph-obsidian"></div></div>
+<script>
+(function(){
+  var N=[{"id": 0, "label": "Guía de Pruebas\nFase 3", "group": "doc", "mass": 2, "title": "Este documento"}, {"id": 1, "label": "HU-07\nIndisponibilidades", "group": "hu", "title": "Ver HU-07 — Indisponibilidades", "url": "../modulos/HU-07_Indisponibilidades.html"}, {"id": 2, "label": "HU-08\nPrefacturación", "group": "hu", "title": "Ver HU-08 — Prefacturación", "url": "../modulos/HU-08_Prefacturacion.html"}];
+  var E=[{"from": 0, "to": 1}, {"from": 0, "to": 2}];
+  function render(){
+    var el=document.getElementById("graph-fase3_v2");
+    if(!el)return;
+    var net=new vis.Network(el,{nodes:new vis.DataSet(N),edges:new vis.DataSet(E)},{nodes:{shape:"dot",size:18,font:{size:12,color:"#cdd6f4",multi:true},borderWidth:2},edges:{color:"#585b70",width:2,smooth:{type:"continuous"}},groups:{doc:{color:{background:"#cba6f7",border:"#9d7cd8"},font:{color:"#1e1e2e",bold:true},size:24},hu:{color:{background:"#89b4fa",border:"#4a8fd4"},font:{color:"#1e1e2e"}}},physics:{barnesHut:{gravitationalConstant:-4000,springConstant:0.05,springLength:120},stabilization:{iterations:200}},interaction:{hover:true,dragNodes:true,zoomView:true,tooltipDelay:150}});
+    net.on("click",function(p){
+      if(p.nodes.length){var n=new vis.DataSet(N).get(p.nodes[0]);if(n&&n.url)window.location.href=n.url;}
+    });
+  }
+  if(typeof vis!=="undefined"){render();}
+  else{var s=document.createElement("script");s.src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js";s.onload=render;document.head.appendChild(s);}
+})();
+</script>
+
+<blockquote>
+<p><strong>Acceso al sistema</strong><br />
+- <strong>Frontend:</strong> http://localhost:4200<br />
+- <strong>Usuario de prueba:</strong> admin / admin<br />
+- <strong>Backend API:</strong> http://localhost:8080<br />
+- <strong>Prerequisito:</strong> Fases 1 y 2 validadas. Prorrateo del mes ejecutado (<a href="../modulos/HU-06_Novedades.html">HU-06</a>). Tablas paramétricas de Inventario cargadas.</p>
+</blockquote>
+<hr />
+<blockquote>
+<h3 id="estado-real-por-hu-auditoria-21042026">Estado real por HU (Auditoría 21/04/2026)<a class="headerlink" href="#estado-real-por-hu-auditoria-21042026" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>HU</th>
+<th>Estado</th>
+<th>Listo para QCS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a></strong> Indisponibilidades</td>
+<td>🟢 COMPLETO (95%)</td>
+<td>✅ SÍ</td>
+</tr>
+<tr>
+<td><strong><a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></strong> Prefacturación</td>
+<td>🟢 COMPLETO (90%)</td>
+<td>✅ SÍ</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Brechas:</strong> Sin brechas críticas. Las identificadas son mejoras no bloqueantes.</p>
+</blockquote>
+<hr />
+<h2 id="dependencias-de-fase-3">Dependencias de Fase 3<a class="headerlink" href="#dependencias-de-fase-3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>HU-07 REQUIERE:
+  ├── HU-05 ✅ — dim_configuracion_servicios (tabla maestra de inventario)
+  ├── dim_ans_proveedores ✅ — niveles de servicio por proveedor
+  ├── dim_motivos_fallas ✅ — causas exentas de descuento (RN-24)
+  └── dim_exclusiones_remedy ✅ — patrones de tickets a descartar
+
+HU-08 REQUIERE:
+  ├── HU-06 ✅ — fact_prorrateo_novedades (prorrateo ejecutado del mes)
+  ├── HU-07 ✅ — fact_indisponibilidad_mensual_conciliada (conciliación ejecutada del mes)
+  └── dim_trm ✅ — TRM del mes para conversión USD→COP (RN-28)
+</code></pre></div>
+<hr />
+<h2 id="modulo-1-hu-07-indisponibilidades">Módulo 1 — <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a>: Indisponibilidades<a class="headerlink" href="#modulo-1-hu-07-indisponibilidades" title="Permanent link">&para;</a></h2>
+<p><strong>Descripción:</strong> Carga el archivo de incidencias Remedy, valida ANS y exclusiones, genera archivos de conciliación para proveedores, registra respuestas y genera el consolidado mensual.</p>
+<p><strong>Estado real (auditoría):</strong> 🟢 95% implementado. Todas las RN operativas. Una brecha de integración con mantenimientos programados de <a href="../modulos/HU-06_Novedades.html">HU-06</a>.</p>
+<p><strong>Ruta Angular:</strong> <code>/novedades/indisponibilidades</code></p>
+<hr />
+<h3 id="11-estructura-del-modulo-menu-lateral-5-opciones">1.1 — Estructura del módulo (menú lateral — 5 opciones)<a class="headerlink" href="#11-estructura-del-modulo-menu-lateral-5-opciones" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Novedades y Prefactura → Indisponibilidades</strong> (http://localhost:4200/novedades/indisponibilidades).</p>
+</li>
+<li>
+<p>Verificar que el menú lateral muestra exactamente estas 5 opciones:</p>
+</li>
+<li>Cargar archivo base de Incidencias</li>
+<li>Validación de ANS y exclusiones</li>
+<li>Generación de archivos de conciliación</li>
+<li>Cargue de respuestas de proveedores</li>
+<li>Generación de consolidado de conciliación mensual</li>
+</ol>
+<h4 id="resultado-esperado">Resultado esperado<a class="headerlink" href="#resultado-esperado" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Las 5 opciones están visibles.</p>
+</li>
+<li>
+<p>✅ Cada opción navega a su vista correspondiente sin error 404.</p>
+</li>
+</ul>
+<hr />
+<h3 id="12-cargar-archivo-base-de-incidencias">1.2 — Cargar archivo base de Incidencias<a class="headerlink" href="#12-cargar-archivo-base-de-incidencias" title="Permanent link">&para;</a></h3>
+<h4 id="especificaciones-tecnicas-del-archivo-remedy">Especificaciones técnicas del archivo Remedy<a class="headerlink" href="#especificaciones-tecnicas-del-archivo-remedy" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre del archivo</td>
+<td><code>Closed TERCEROS Preview_MM_AAAA.xlsx</code></td>
+</tr>
+<tr>
+<td>Hoja</td>
+<td><code>BASE GENERAL</code></td>
+</tr>
+<tr>
+<td>Columnas</td>
+<td><strong>12</strong> (columnas 10 y 11 comparten nombre — parsear por <strong>índice</strong>)</td>
+</tr>
+<tr>
+<td>Volumen</td>
+<td>~20.000 a 30.000 registros por mes</td>
+</tr>
+<tr>
+<td>Llave de cruce</td>
+<td><strong><code>ID ENLACE</code></strong> (columna índice 9, base 1)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mapeo-de-columnas-por-indice">Mapeo de columnas (por índice)<a class="headerlink" href="#mapeo-de-columnas-por-indice" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Índice</th>
+<th>Campo en archivo</th>
+<th>Campo en BD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Incident ID</td>
+<td><code>incident_id</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Vendor Ticket Number</td>
+<td><code>ticket_tercero</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Numero DS</td>
+<td><code>ds</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Incident Reported Date Time</td>
+<td><code>fecha_reportada_incidente</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Incident Closed Date Time</td>
+<td><code>fecha_cerrada_incidente</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Customer Company</td>
+<td><code>cliente</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Customer City</td>
+<td><code>ciudad</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Customer Site</td>
+<td><code>direccion</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Classification Service CI</td>
+<td><code>clasificacion_servicio</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>ID ENLACE</strong></td>
+<td><code>id_enlace</code> ← <strong>llave de cruce</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Resolution Category Tier1</td>
+<td><code>categoria_resolucion_1</code> (por índice)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Resolution Category Tier2</td>
+<td><code>categoria_resolucion_2</code> (por índice)</td>
+</tr>
+<tr>
+<td>(ext)</td>
+<td>Assignee Assigned Group</td>
+<td><code>grupo_asignado</code></td>
+</tr>
+<tr>
+<td>(ext)</td>
+<td>Resolution Category Tier3</td>
+<td><code>motivo_fallo</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota crítica de implementación:</strong> Las columnas 11 y 12 del archivo comparten nombre de header. Se parsea obligatoriamente por índice (0-based: índice 10 y 11).</p>
+</blockquote>
+<h4 id="pasos-de-prueba">Pasos de prueba<a class="headerlink" href="#pasos-de-prueba" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Seleccionar el archivo XLSX y hacer clic en <strong>Cargar</strong>.</li>
+</ol>
+<h4 id="resultado-esperado_1">Resultado esperado<a class="headerlink" href="#resultado-esperado_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Barra de progreso aparece inmediatamente.</p>
+</li>
+<li>
+<p>✅ El progreso avanza de 0% → 100% sin bloquear la UI.</p>
+</li>
+<li>
+<p>✅ Al completar, el modal de resultado se abre automáticamente.</p>
+</li>
+<li>
+<p>✅ Resumen: total procesados, insertados, duplicados, errores.</p>
+</li>
+<li>
+<p>✅ Tabla con primeras 200 filas del detalle.</p>
+</li>
+<li>
+<p>✅ Botón <strong>Descargar CSV completo</strong> disponible.</p>
+</li>
+</ul>
+<h4 id="prueba-de-bloqueo-de-carga-duplicada-rn-25">Prueba de bloqueo de carga duplicada (RN-25)<a class="headerlink" href="#prueba-de-bloqueo-de-carga-duplicada-rn-25" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Intentar cargar el mismo archivo por segunda vez para el mismo mes.</li>
+</ol>
+<h4 id="resultado-esperado_2">Resultado esperado<a class="headerlink" href="#resultado-esperado_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Sistema rechaza con mensaje: <strong>"Ya existe una carga de incidencias para el mes [Mes/Año]."</strong></p>
+</li>
+<li>
+<p>✅ No se insertan registros duplicados en <code>fact_tickets_indisponibilidad</code>.</p>
+</li>
+</ul>
+<h4 id="verificar-en-base-de-datos">Verificar en base de datos<a class="headerlink" href="#verificar-en-base-de-datos" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>ds</code> cruzó correctamente con <code>dim_configuracion_servicios</code>.</p>
+</li>
+<li>
+<p><code>mes_reporte</code> se calculó como el mes vencido del archivo.</p>
+</li>
+<li>
+<p><code>id_configuracion_servicio</code> fue resuelto automáticamente.</p>
+</li>
+</ul>
+<hr />
+<h3 id="13-filtros-de-validacion-durante-la-carga">1.3 — Filtros de validación durante la carga<a class="headerlink" href="#13-filtros-de-validacion-durante-la-carga" title="Permanent link">&para;</a></h3>
+<p>El sistema aplica 2 filtros secuenciales que determinan el campo <code>estado</code> de cada ticket:</p>
+<h4 id="filtro-1-validacion-contra-inventario">Filtro 1 — Validación contra inventario<a class="headerlink" href="#filtro-1-validacion-contra-inventario" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>Estado resultante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Numero DS</code> cruza con <code>dim_configuracion_servicios</code> Y <code>fecha_reportada &gt; fecha_baja</code></td>
+<td><code>"Registro coincidente DS"</code></td>
+</tr>
+<tr>
+<td><code>Numero DS</code> no cruza</td>
+<td>pasa a Filtro 2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="filtro-2-validacion-contra-exclusiones-remedy">Filtro 2 — Validación contra exclusiones Remedy<a class="headerlink" href="#filtro-2-validacion-contra-exclusiones-remedy" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>Estado resultante</th>
+<th>Excepción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Vendor Ticket</code> contiene patrón en <code>dim_exclusiones_remedy</code></td>
+<td><code>"Registro Descartado Remedy-Vendor"</code></td>
+<td>Si ya es "coincidente DS" → NO sobrescribir</td>
+</tr>
+<tr>
+<td><code>Vendor Ticket</code> NO contiene patrón exclusión</td>
+<td><code>"Registro identificado Remedy-Vendor"</code></td>
+<td>Si ya es "coincidente DS" → SÍ sobrescribir</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Patrones de exclusión predeterminados:</strong> <code>FRACTALIA-PDTI</code>, <code>MAXIMO</code>, <code>UNIX</code>, <code>WALTER BRIDGE</code>, <code>YEPDATA</code></p>
+</blockquote>
+<h4 id="pruebas-de-filtros">Pruebas de filtros<a class="headerlink" href="#pruebas-de-filtros" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Caso coincidente DS + exclusión:</strong> DS está en inventario, Vendor Ticket contiene "MAXIMO" → estado final = <code>"Registro coincidente DS"</code> (NO sobrescribe).</p>
+</li>
+<li>
+<p><strong>Caso coincidente DS + identificado:</strong> DS en inventario, Vendor Ticket no contiene exclusión → estado = <code>"Registro identificado Remedy-Vendor"</code>.</p>
+</li>
+<li>
+<p><strong>Caso descartado:</strong> DS no en inventario, Vendor Ticket contiene "UNIX" → estado = <code>"Registro Descartado Remedy-Vendor"</code>.</p>
+</li>
+<li>
+<p><strong>Caso identificado genérico:</strong> DS no en inventario, Vendor Ticket sin patrón → estado = <code>"Registro identificado Remedy-Vendor"</code>.</p>
+</li>
+</ol>
+<hr />
+<h3 id="14-validacion-de-ans-y-exclusiones-tablas-parametricas">1.4 — Validación de ANS y exclusiones (tablas paramétricas)<a class="headerlink" href="#14-validacion-de-ans-y-exclusiones-tablas-parametricas" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ir a <strong>Validación de ANS y exclusiones</strong>.</li>
+</ol>
+<h4 id="tabla-dim_ans_proveedores">Tabla dim_ans_proveedores<a class="headerlink" href="#tabla-dim_ans_proveedores" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ CRUD activo para configurar umbrales de disponibilidad por proveedor.</p>
+</li>
+<li>
+<p>✅ Campos: <code>proveedor</code>, <code>pct_ans_minimo</code>, rangos de descuento.</p>
+</li>
+<li>
+<p><strong>Prueba:</strong> Agregar nuevo ANS. Verificar que los cálculos usan el nuevo valor.</p>
+</li>
+</ul>
+<h4 id="tabla-dim_motivos_fallas-rn-24">Tabla dim_motivos_fallas — RN-24<a class="headerlink" href="#tabla-dim_motivos_fallas-rn-24" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Si <code>motivo_fallo</code> del ticket está en esta tabla → <code>pct_descuento_final = 0</code>.</p>
+</li>
+<li>
+<p><strong>Prueba:</strong> Agregar un motivo de falla. Recalcular. Verificar que tickets con ese motivo quedan con descuento 0.</p>
+</li>
+</ul>
+<h4 id="tabla-dim_exclusiones_remedy">Tabla dim_exclusiones_remedy<a class="headerlink" href="#tabla-dim_exclusiones_remedy" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ CRUD activo de patrones de exclusión.</p>
+</li>
+<li>
+<p><strong>Prueba:</strong> Agregar patrón nuevo. Recargar incidencias. Verificar tickets descartados con el nuevo patrón.</p>
+</li>
+</ul>
+<hr />
+<h3 id="15-calculo-de-indisponibilidad-e-informe-rn-22">1.5 — Cálculo de indisponibilidad e informe (RN-22)<a class="headerlink" href="#15-calculo-de-indisponibilidad-e-informe-rn-22" title="Permanent link">&para;</a></h3>
+<p>El sistema genera la tabla de informe filtrando solo tickets con estado:</p>
+<ul>
+<li>
+<p><code>"Registro coincidente DS"</code></p>
+</li>
+<li>
+<p><code>"Registro identificado Remedy-Vendor"</code></p>
+</li>
+</ul>
+<p><strong>Fórmula % Disponibilidad (RN-22):</strong>
+<div class="highlight"><pre><span></span><code>pct_disponibilidad = (((dias_mes × 1440) - indisp_minutos) / (dias_mes × 1440)) × 100
+</code></pre></div></p>
+<p><strong>Cálculo <code>indisp_minutos</code>:</strong> suma de minutos entre <code>fecha_reportada_incidente</code> y <code>fecha_cerrada_incidente</code> de todos los tickets del DS en el mes.</p>
+<h4 id="prueba-de-formula">Prueba de fórmula<a class="headerlink" href="#prueba-de-formula" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Tomar un DS conocido del mes.</p>
+</li>
+<li>
+<p>Sumar manualmente los minutos de los tickets del DS en ese mes.</p>
+</li>
+<li>
+<p>Aplicar la fórmula RN-22.</p>
+</li>
+<li>
+<p>Comparar con el valor mostrado en pantalla.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_3">Resultado esperado<a class="headerlink" href="#resultado-esperado_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ Diferencia ≤ 1 minuto (margen de redondeo aceptable).</li>
+</ul>
+<hr />
+<h3 id="16-generacion-de-archivos-de-conciliacion">1.6 — Generación de archivos de conciliación<a class="headerlink" href="#16-generacion-de-archivos-de-conciliacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Generación de archivos de conciliación</strong>.</p>
+</li>
+<li>
+<p>Seleccionar un proveedor.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>Generar archivo de conciliación</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_4">Resultado esperado<a class="headerlink" href="#resultado-esperado_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El archivo se descarga con nombre <code>Informe_Indisponibilidad_{NombreProveedor}_{MM}_{AAAA}.xlsx</code>.</p>
+</li>
+<li>
+<p>✅ Contiene solo los registros del proveedor seleccionado.</p>
+</li>
+<li>
+<p>✅ Los campos <code>pct_disponibilidad</code>, <code>pct_descuento</code>, <code>pct_final</code> tienen valores calculados.</p>
+</li>
+</ul>
+<h4 id="prueba-de-generacion-por-todos-los-proveedores">Prueba de generación por todos los proveedores<a class="headerlink" href="#prueba-de-generacion-por-todos-los-proveedores" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ Se puede generar el archivo para cada proveedor activo del mes.</li>
+</ul>
+<hr />
+<h3 id="17-cargue-de-respuestas-de-proveedores">1.7 — Cargue de respuestas de proveedores<a class="headerlink" href="#17-cargue-de-respuestas-de-proveedores" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Cargue de respuestas de proveedores</strong>.</p>
+</li>
+<li>
+<p>Cargar el archivo de respuesta del proveedor para el mes conciliado.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_5">Resultado esperado<a class="headerlink" href="#resultado-esperado_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Los registros con respuesta del proveedor se actualizan en <code>fact_indisponibilidad_mensual_conciliada</code>.</p>
+</li>
+<li>
+<p>✅ Resumen: registros aceptados / rechazados / nuevos.</p>
+</li>
+<li>
+<p>✅ <code>mes_facturacion</code> calculado según esquema del proveedor:</p>
+</li>
+<li><strong>Vencido:</strong> mes = mes del incidente.</li>
+<li><strong>Anticipado:</strong> mes = mes del incidente + 1.</li>
+<li><strong>Trimestral:</strong> mes = próximo cierre trimestral del contrato.</li>
+</ul>
+<hr />
+<h3 id="18-generacion-del-consolidado-de-conciliacion-mensual">1.8 — Generación del consolidado de conciliación mensual<a class="headerlink" href="#18-generacion-del-consolidado-de-conciliacion-mensual" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Generación de consolidado de conciliación mensual</strong>.</p>
+</li>
+<li>
+<p>Ejecutar la generación para el mes trabajado.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_6">Resultado esperado<a class="headerlink" href="#resultado-esperado_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ La tabla <code>fact_indisponibilidad_mensual_conciliada</code> se actualiza con campos:</li>
+<li><code>id_configuracion_servicio</code></li>
+<li><code>mes_facturacion</code></li>
+<li><code>indisp_minutos_conciliados</code></li>
+<li><code>pct_disponibilidad_final</code></li>
+<li><code>pct_descuento_indisponibilidad</code></li>
+<li>
+<p><code>descuentos_indisponibilidad</code></p>
+</li>
+<li>
+<p>✅ El archivo Excel del consolidado es descargable.</p>
+</li>
+<li>
+<p>✅ El módulo <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a> puede ver el consolidado del mes en su validación de prerequisitos.</p>
+</li>
+</ul>
+<hr />
+<h3 id="19-brechas-conocidas-hu-07">1.9 — Brechas conocidas <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a><a class="headerlink" href="#19-brechas-conocidas-hu-07" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Severidad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integración con mantenimientos programados</td>
+<td>🟡 Importante</td>
+<td>Tickets durante ventana de mantenimiento en <code>fact_mantenimientos</code> (<a href="../modulos/HU-06_Novedades.html">HU-06</a>) no se excluyen automáticamente del cálculo de descuento</td>
+</tr>
+<tr>
+<td>Dashboard de disponibilidad por proveedor</td>
+<td>🟢 Menor</td>
+<td>Sin gráfico de % disponibilidad promedio mensual por proveedor</td>
+</tr>
+<tr>
+<td>Alertas automáticas ANS &lt; 99%</td>
+<td>🟢 Menor</td>
+<td>Sin notificación por email cuando proveedor incumple ANS</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="modulo-2-hu-08-prefacturacion">Módulo 2 — <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a>: Prefacturación<a class="headerlink" href="#modulo-2-hu-08-prefacturacion" title="Permanent link">&para;</a></h2>
+<p><strong>Descripción:</strong> Consolida ingresos Davox, genera prefacturas mensuales aplicando prorrateo y descuentos por indisponibilidad, y valida contra ingresos reales.</p>
+<p><strong>Estado real (auditoría):</strong> 🟢 90% implementado. RN-29 y RN-30 completamente operativas. Brechas: export SAP y flujo de aprobación.</p>
+<p><strong>Ruta Angular:</strong> <code>/novedades/prefacturacion</code></p>
+<hr />
+<h3 id="21-estructura-del-modulo-menu-lateral-3-opciones">2.1 — Estructura del módulo (menú lateral — 3 opciones)<a class="headerlink" href="#21-estructura-del-modulo-menu-lateral-3-opciones" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Novedades y Prefactura → Prefacturación</strong> (http://localhost:4200/novedades/prefacturacion).</p>
+</li>
+<li>
+<p>Verificar que el menú lateral muestra exactamente:</p>
+</li>
+<li>Cargar Ingresos Davox</li>
+<li>Generación de Prefacturas</li>
+<li>Validación Pagos vs Ingresos</li>
+</ol>
+<h4 id="resultado-esperado_7">Resultado esperado<a class="headerlink" href="#resultado-esperado_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ Las 3 opciones están visibles y navegan sin error 404.</li>
+</ul>
+<hr />
+<h3 id="22-prerequisitos-del-mes-rn-29">2.2 — Prerequisitos del mes (RN-29)<a class="headerlink" href="#22-prerequisitos-del-mes-rn-29" title="Permanent link">&para;</a></h3>
+<p>Antes de poder generar prefacturas el sistema valida:</p>
+<ol>
+<li>
+<p>Que el prorrateo del mes esté ejecutado en <code>fact_prorrateo_novedades</code> (<a href="../modulos/HU-06_Novedades.html">HU-06</a>).</p>
+</li>
+<li>
+<p>Que la conciliación de indisponibilidades del mes esté completa en <code>fact_indisponibilidad_mensual_conciliada</code> (<a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a>).</p>
+</li>
+</ol>
+<h4 id="prueba-de-bloqueo-de-prerequisitos">Prueba de bloqueo de prerequisitos<a class="headerlink" href="#prueba-de-bloqueo-de-prerequisitos" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Intentar generar prefacturas para un mes sin prorrateo ejecutado.</li>
+</ol>
+<h4 id="resultado-esperado_8">Resultado esperado<a class="headerlink" href="#resultado-esperado_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El sistema bloquea con mensaje: <strong>"Debe ejecutar el prorrateo del mes antes de generar prefacturas."</strong> (RN-29).</p>
+</li>
+<li>
+<p>✅ El botón de generar está deshabilitado o muestra los prerequisitos faltantes.</p>
+</li>
+</ul>
+<hr />
+<h3 id="23-cargar-ingresos-davox-archivo-fisc">2.3 — Cargar Ingresos Davox (archivo FISC)<a class="headerlink" href="#23-cargar-ingresos-davox-archivo-fisc" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Cargar Ingresos Davox</strong>.</p>
+</li>
+<li>
+<p>Seleccionar el archivo FISC (puede ser grande, &gt;100MB).</p>
+</li>
+<li>
+<p>Hacer clic en <strong>Importar</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_9">Resultado esperado<a class="headerlink" href="#resultado-esperado_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ La importación corre en background asíncrono con barra de progreso.</p>
+</li>
+<li>
+<p>✅ Al finalizar: resumen con procesados, insertados, duplicados, errores.</p>
+</li>
+<li>
+<p>✅ Modal de detalle con primeras 200 filas.</p>
+</li>
+<li>
+<p>✅ Botón <strong>Descargar CSV</strong> con resultado completo.</p>
+</li>
+<li>
+<p>✅ Acepta <code>.csv</code> y <code>.xlsx</code>.</p>
+</li>
+</ul>
+<h4 id="verificar-en-base-de-datos_1">Verificar en base de datos<a class="headerlink" href="#verificar-en-base-de-datos_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Los registros en <code>fact_ingresos_davox</code> tienen <code>mes_ingreso</code> correcto.</p>
+</li>
+<li>
+<p>Los DS de Davox cruzan correctamente con <code>dim_configuracion_servicios</code>.</p>
+</li>
+</ul>
+<hr />
+<h3 id="24-generacion-de-prefacturas">2.4 — Generación de Prefacturas<a class="headerlink" href="#24-generacion-de-prefacturas" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Confirmar que los prerequisitos del mes están completados (prorrateo ✅ + conciliación ✅).</p>
+</li>
+<li>
+<p>Ir a <strong>Generación de Prefacturas</strong>.</p>
+</li>
+<li>
+<p>Seleccionar el mes a prefacturar.</p>
+</li>
+<li>
+<p>Hacer clic en <strong>Generar Prefacturas del mes</strong>.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_10">Resultado esperado<a class="headerlink" href="#resultado-esperado_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El sistema genera la prefactura consolidada por proveedor.</p>
+</li>
+<li>
+<p>✅ Fórmula de prefactura:
+  <div class="highlight"><pre><span></span><code>Total_antes_IVA = MRC_base + prorrateo_novedades - descuento_indisponibilidades
+IVA = Total_antes_IVA × indicador_iva (RN-30)
+Total_factura = Total_antes_IVA + IVA
+</code></pre></div></p>
+</li>
+<li>
+<p>✅ Conversión USD→COP con TRM del mes (RN-28).</p>
+</li>
+<li>
+<p>✅ Los resultados se guardan en <code>fact_prefactura</code>.</p>
+</li>
+<li>
+<p>✅ Tabla de prefacturas generadas con detalle por servicio descargable.</p>
+</li>
+</ul>
+<h4 id="prueba-de-calculo-manual">Prueba de cálculo manual<a class="headerlink" href="#prueba-de-calculo-manual" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Tomar un servicio conocido con <code>moneda_mrc = 'COP'</code>.</p>
+</li>
+<li>
+<p>Verificar: <code>Total_antes_IVA = MRC_COP + prorrateo_COP - descuento_indisp_COP</code>.</p>
+</li>
+<li>
+<p>Verificar: <code>IVA = Total_antes_IVA × indicador_iva</code> (0 si exento, 0.19 si aplica).</p>
+</li>
+<li>
+<p>Comparar con los valores mostrados en pantalla.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_11">Resultado esperado<a class="headerlink" href="#resultado-esperado_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ Diferencia ≤ $1 COP (margen de redondeo).</li>
+</ul>
+<h4 id="prueba-con-servicio-en-usd">Prueba con servicio en USD<a class="headerlink" href="#prueba-con-servicio-en-usd" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Tomar un servicio con <code>moneda_mrc = 'USD'</code>.</p>
+</li>
+<li>
+<p>Verificar que <code>MRC_COP = MRC_USD × TRM_mes</code>.</p>
+</li>
+<li>
+<p>Verificar que el cálculo de prefactura usa el valor en COP.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_12">Resultado esperado<a class="headerlink" href="#resultado-esperado_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>✅ La conversión usa el TRM del mes registrado en <code>dim_trm</code> (RN-28).</li>
+</ul>
+<hr />
+<h3 id="25-validacion-pagos-vs-ingresos-davox">2.5 — Validación Pagos vs Ingresos Davox<a class="headerlink" href="#25-validacion-pagos-vs-ingresos-davox" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ir a <strong>Validación Pagos vs Ingresos</strong>.</p>
+</li>
+<li>
+<p>Seleccionar el mes.</p>
+</li>
+<li>
+<p>Ejecutar la validación.</p>
+</li>
+</ol>
+<h4 id="resultado-esperado_13">Resultado esperado<a class="headerlink" href="#resultado-esperado_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ Tabla con columnas: DS, Proveedor, Prefactura (COP), Ingreso Davox (COP), Diferencia (COP), % Diferencia, Estado.</p>
+</li>
+<li>
+<p>✅ Badge de estado con colores:</p>
+</li>
+<li>🟢 <strong>COINCIDE</strong> — % diferencia ≤ 2%</li>
+<li>🟡 <strong>TOLERANCIA</strong> — % diferencia entre 2% y 5%</li>
+<li>
+<p>🔴 <strong>DISCREPANCIA</strong> — % diferencia &gt; 5%</p>
+</li>
+<li>
+<p>✅ Filtros por estado (ver solo DISCREPANCIA, TOLERANCIA, etc.).</p>
+</li>
+<li>
+<p>✅ Exportar resultado de validación a CSV / Excel.</p>
+</li>
+</ul>
+<h4 id="prueba-de-casos-especificos">Prueba de casos específicos<a class="headerlink" href="#prueba-de-casos-especificos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>Prefactura</th>
+<th>Ingreso Davox</th>
+<th>% Diferencia</th>
+<th>Estado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coincidencia exacta</td>
+<td>$1.000.000</td>
+<td>$1.000.000</td>
+<td>0%</td>
+<td>COINCIDE</td>
+</tr>
+<tr>
+<td>Tolerancia aceptable</td>
+<td>$1.000.000</td>
+<td>$1.030.000</td>
+<td>3%</td>
+<td>TOLERANCIA</td>
+</tr>
+<tr>
+<td>Sobrefacturado</td>
+<td>$1.000.000</td>
+<td>$1.100.000</td>
+<td>10%</td>
+<td>DISCREPANCIA</td>
+</tr>
+<tr>
+<td>Subfacturado</td>
+<td>$1.000.000</td>
+<td>$900.000</td>
+<td>10%</td>
+<td>DISCREPANCIA</td>
+</tr>
+<tr>
+<td>Sin ingreso Davox</td>
+<td>$1.000.000</td>
+<td>$0</td>
+<td>100%</td>
+<td>DISCREPANCIA</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="26-exportar-resultado-de-validacion">2.6 — Exportar resultado de validación<a class="headerlink" href="#26-exportar-resultado-de-validacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Desde la vista de Validación Pagos, hacer clic en <strong>Exportar</strong>.</li>
+</ol>
+<h4 id="resultado-esperado_14">Resultado esperado<a class="headerlink" href="#resultado-esperado_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>✅ El archivo descargado contiene todos los registros del mes.</p>
+</li>
+<li>
+<p>✅ Incluye las columnas: DS, Proveedor, Prefactura, Ingreso Davox, Diferencia, % Diferencia, Estado.</p>
+</li>
+<li>
+<p>✅ El archivo está disponible en CSV y/o Excel.</p>
+</li>
+</ul>
+<hr />
+<h3 id="27-brechas-conocidas-hu-08">2.7 — Brechas conocidas <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a><a class="headerlink" href="#27-brechas-conocidas-hu-08" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Brecha</th>
+<th>Severidad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Export a formato SAP</td>
+<td>🟡 Importante</td>
+<td>Pendiente definir estructura exacta con QCS. Endpoint <code>/api/prefactura/export-sap/{mes}</code> no implementado</td>
+</tr>
+<tr>
+<td>Flujo de aprobación de prefactura</td>
+<td>🟡 Importante</td>
+<td>No existe campo <code>estado</code> (GENERADA/APROBADA/RECHAZADA/ENVIADA). Solo Gerente/Líder debería aprobar. Pendiente migración <code>V43__add_estado_prefactura.sql</code></td>
+</tr>
+<tr>
+<td>Dashboard métricas de prefacturación</td>
+<td>🟢 Menor</td>
+<td>Sin resumen de total MRC, descuentos y % diferencia promedio del mes</td>
+</tr>
+<tr>
+<td>Notificación automática discrepancias &gt; 5%</td>
+<td>🟢 Menor</td>
+<td>Sin alerta por email cuando hay servicios con discrepancia &gt; 5%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="flujo-e2e-fase-3-ciclo-mensual-completo">Flujo E2E Fase 3 — Ciclo mensual completo<a class="headerlink" href="#flujo-e2e-fase-3-ciclo-mensual-completo" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>MES N — Proceso completo:
+
+SEMANA 1 (días 1-5):
+  1. HU-06: Ejecutar prorrateo del mes N
+     → Identifica novedades (ALTA, BAJA, CAMBIO_BW, CAMBIO_MRC)
+     → Calcula días de servicio y MRC prorrateo
+
+  2. HU-07: Cargar archivo Remedy del mes N
+     → Aplicar filtros (coincidente DS / descartado / identificado)
+     → Generar archivos de conciliación por proveedor
+     → Recibir respuestas de proveedores
+
+SEMANA 2 (días 6-10):
+  3. HU-07: Generar consolidado mensual de conciliación
+     → fact_indisponibilidad_mensual_conciliada actualizada
+
+  4. HU-08: Cargar ingresos Davox (archivo FISC del mes N)
+     → fact_ingresos_davox actualizada
+
+SEMANA 3 (días 11-15):
+  5. HU-08: Verificar prerequisitos completados
+     → Prorrateo HU-06 ✅ + Conciliación HU-07 ✅
+
+  6. HU-08: Generar prefacturas del mes N
+     → MRC + prorrateo - descuento indisponibilidades + IVA
+
+  7. HU-08: Ejecutar validación pagos vs ingresos Davox
+     → Identificar COINCIDE / TOLERANCIA / DISCREPANCIA
+
+  8. Gestión de discrepancias y cierre del mes
+</code></pre></div>
+<hr />
+<h2 id="checklist-de-aceptacion-fase-3">Checklist de Aceptación Fase 3<a class="headerlink" href="#checklist-de-aceptacion-fase-3" title="Permanent link">&para;</a></h2>
+<h3 id="hu-07-indisponibilidades"><a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a> Indisponibilidades<a class="headerlink" href="#hu-07-indisponibilidades" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] Menú lateral muestra 5 opciones de navegación</p>
+</li>
+<li>
+<p>[ ] Carga tickets Remedy (XLSX) asíncrona con barra de progreso</p>
+</li>
+<li>
+<p>[ ] RN-25: Bloquea segunda carga del mes con mensaje claro</p>
+</li>
+<li>
+<p>[ ] Filtro 1: estado "Registro coincidente DS" para DS en inventario</p>
+</li>
+<li>
+<p>[ ] Filtro 2: estado "Registro Descartado Remedy-Vendor" para exclusiones</p>
+</li>
+<li>
+<p>[ ] Filtro 2: NO sobrescribe "coincidente DS" con exclusión</p>
+</li>
+<li>
+<p>[ ] CRUD activo para dim_ans_proveedores</p>
+</li>
+<li>
+<p>[ ] CRUD activo para dim_motivos_fallas</p>
+</li>
+<li>
+<p>[ ] CRUD activo para dim_exclusiones_remedy</p>
+</li>
+<li>
+<p>[ ] RN-24: tickets con motivo en dim_motivos_fallas → descuento = 0</p>
+</li>
+<li>
+<p>[ ] RN-22: fórmula % disponibilidad correcta (diferencia ≤ 1 minuto)</p>
+</li>
+<li>
+<p>[ ] Genera archivo de conciliación XLSX por proveedor</p>
+</li>
+<li>
+<p>[ ] Carga respuestas de proveedores y actualiza conciliada</p>
+</li>
+<li>
+<p>[ ] mes_facturacion calculado según esquema (vencido/anticipado/trimestral)</p>
+</li>
+<li>
+<p>[ ] Genera consolidado mensual en fact_indisponibilidad_mensual_conciliada</p>
+</li>
+</ul>
+<h3 id="hu-08-prefacturacion"><a href="../modulos/HU-08_Prefacturacion.html">HU-08</a> Prefacturación<a class="headerlink" href="#hu-08-prefacturacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] Menú lateral muestra 3 opciones de navegación</p>
+</li>
+<li>
+<p>[ ] RN-29: Bloquea generación sin prorrateo/conciliación previos</p>
+</li>
+<li>
+<p>[ ] Carga ingresos Davox asíncrona con barra de progreso</p>
+</li>
+<li>
+<p>[ ] Acepta .csv y .xlsx para carga Davox</p>
+</li>
+<li>
+<p>[ ] Generación de prefacturas aplica fórmula: MRC + prorrateo - indisp + IVA</p>
+</li>
+<li>
+<p>[ ] RN-30: IVA = Total_antes_IVA × indicador_iva</p>
+</li>
+<li>
+<p>[ ] RN-28: Conversión USD→COP usa TRM del mes</p>
+</li>
+<li>
+<p>[ ] Validación Pagos: badge COINCIDE (≤2%) / TOLERANCIA (2-5%) / DISCREPANCIA (&gt;5%)</p>
+</li>
+<li>
+<p>[ ] Filtros de validación por estado funcionan</p>
+</li>
+<li>
+<p>[ ] Exportar resultado de validación a CSV/Excel</p>
+</li>
+<li>
+<p>[ ] Prefactura por servicio descargable en detalle</p>
+</li>
+</ul>
+<h3 id="integracion-e2e">Integración E2E<a class="headerlink" href="#integracion-e2e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>[ ] <a href="../modulos/HU-06_Novedades.html">HU-06</a> prorrateo alimenta correctamente <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></p>
+</li>
+<li>
+<p>[ ] <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a> conciliación alimenta correctamente <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></p>
+</li>
+<li>
+<p>[ ] La suma de descuentos de indisponibilidad coincide entre <a href="../modulos/HU-07_Indisponibilidades.html">HU-07</a> y <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></p>
+</li>
+<li>
+<p>[ ] El total de MRC prorrateo de <a href="../modulos/HU-06_Novedades.html">HU-06</a> coincide con el usado en <a href="../modulos/HU-08_Prefacturacion.html">HU-08</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="datos-de-prueba-recomendados-para-fase-3">Datos de prueba recomendados para Fase 3<a class="headerlink" href="#datos-de-prueba-recomendados-para-fase-3" title="Permanent link">&para;</a></h2>
+<p>Para una validación completa del ciclo mensual se recomienda usar el mes de <strong>febrero 2025</strong> que ya cuenta con datos cargados:</p>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Archivo Remedy <code>Closed_TERCEROS_Preview_02_2025.xlsx</code></td>
+<td>Disponible en <code>imports/</code></td>
+</tr>
+<tr>
+<td>Ingresos Davox FISC febrero 2025</td>
+<td>Disponible en <code>imports/</code></td>
+</tr>
+<tr>
+<td>TRM febrero 2025</td>
+<td>Registrado en <code>dim_trm</code></td>
+</tr>
+<tr>
+<td>Prorrateo febrero 2025</td>
+<td>Ejecutado en <code>fact_prorrateo_novedades</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Si se usa un mes diferente:</strong> asegurarse de tener cargados en ese mes el archivo Remedy, los ingresos Davox y el TRM. El prorrateo debe ejecutarse primero.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
