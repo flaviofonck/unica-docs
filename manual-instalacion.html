@@ -1,0 +1,4108 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Plataforma de Gestión de Servicios Terceros — Colombia Telecomunicaciones">
+      
+      
+        <meta name="author" content="QCS — Equipo ÚNICA">
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="guia-proyecto.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>📦 Manual de Instalación - ÚNICA — Manual de Usuario</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@10/dist/mermaid.min.css">
+    
+      <link rel="stylesheet" href="extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manual-de-instalacion-plataforma-unica" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="ÚNICA — Manual de Usuario" class="md-header__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ÚNICA — Manual de Usuario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📦 Manual de Instalación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="ÚNICA — Manual de Usuario" class="md-nav__button md-logo" aria-label="ÚNICA — Manual de Usuario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ÚNICA — Manual de Usuario
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    📦 Manual de Instalación
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="manual-instalacion.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    📦 Manual de Instalación
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telefonica-colombia-gestion-de-servicios-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telefónica Colombia - Gestión de Servicios Terceros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      � Información del Repositorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      �📋 Índice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Requisitos del Sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖥️ Requisitos del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-minimo-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Mínimo Recomendado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectividad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-requerido" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Software Requerido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Software Requerido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versiones-exactas-critico-no-usar-otras-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versiones Exactas (Crítico - No usar otras versiones)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Instalación de Dependencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Instalación de Dependencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-instalacion-de-java-jdk-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalación de Java JDK 21
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-instalacion-de-mysql-84" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instalación de MySQL 8.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instalacion-de-nodejs-y-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Instalación de Node.js y npm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-instalacion-de-angular-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Instalación de Angular CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-instalacion-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Instalación de Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗄️ Configuración de Base de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Configuración de Base de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-crear-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Crear Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificar-creacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificar Creación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuracion-de-charset-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuración de Charset (Importante)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota-sobre-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Nota sobre Migraciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuración de la Aplicación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Configuración de la Aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-crear-cuenta-de-github-y-obtener-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Crear Cuenta de GitHub y Obtener Acceso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clonar-el-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clonar el Repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configurar-credenciales-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configurar Credenciales de Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configurar-variables-de-entorno-opcional-scripts-incluidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configurar Variables de Entorno (Opcional - Scripts incluidos)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Ejecución de la Aplicación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Ejecución de la Aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcion-1-scripts-automaticos-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción 1: Scripts Automáticos (Recomendado)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-2-comandos-manuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción 2: Comandos Manuales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-cloudflare-tunnel-acceso-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Configuración de Cloudflare Tunnel (Acceso Remoto)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Configuración de Cloudflare Tunnel (Acceso Remoto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-cloudflare-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Cloudflare Tunnel?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-instalar-cloudflared" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalar Cloudflared
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preparar-configuracion-del-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Preparar Configuración del Túnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-actualizar-rutas-en-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Actualizar Rutas en Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ejecutar-el-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ejecutar el Túnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracion-final-por-el-proveedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuración Final por el Proveedor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verificar-el-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verificar el Túnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-scripts-de-ejecucion-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Scripts de Ejecución (Referencia)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificacion-de-la-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Verificación de la Instalación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Verificación de la Instalación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-verificar-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Verificar Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificar-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificar Frontend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-primer-inicio-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Primer Inicio de Sesión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-verificar-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Verificar Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Solución de Problemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Solución de Problemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-el-termino-java-no-se-reconoce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "El término 'java' no se reconoce"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-cannot-connect-to-mysql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Cannot connect to MySQL Server"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-port-8080-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Port 8080 already in use"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-npm-err-enoent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "npm ERR! ENOENT"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-flyway-migration-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Flyway migration failed"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-angular-cli-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Angular CLI not found"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-caracteres-extranos-en-la-base-de-datos-mojibake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Caracteres extraños en la base de datos (mojibake)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-git-command-not-found-o-el-termino-git-no-se-reconoce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "git: command not found" o "El término 'git' no se reconoce"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-authentication-failed-al-clonar-el-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Authentication failed" al clonar el repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-fatal-destination-path-unica-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "fatal: destination path 'unica' already exists"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-ssl-certificate-problem-al-clonar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "SSL certificate problem" al clonar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-tunel-no-se-conecta-failed-to-authenticate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Túnel no se conecta - "failed to authenticate"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-tunnel-connections-not-registered-en-tunnelbat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "tunnel connections not registered" en tunnel.bat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-cloudflaredexe-not-found-al-ejecutar-tunnelbat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "cloudflared.exe not found" al ejecutar tunnel.bat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-tunel-conecta-pero-no-se-puede-acceder-desde-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Túnel conecta pero no se puede acceder desde Internet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-err_too_many_redirects-al-acceder-a-url-publica-del-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "ERR_TOO_MANY_REDIRECTS" al acceder a URL pública del túnel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-instalacion-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Checklist de Instalación Completa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Checklist de Instalación Completa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-y-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Software y Dependencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐙 Configuración de GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📂 Código y Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecucion-y-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ Ejecución y Verificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudflare-tunnel-acceso-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Cloudflare Tunnel (Acceso Remoto)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-de-seguridad-para-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Notas de Seguridad para Producción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-del-codigo-futuras-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Actualización del Código (Futuras Versiones)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Actualización del Código (Futuras Versiones)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-suscribirse-a-notificaciones-configuracion-inicial-solo-una-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      0. Suscribirse a Notificaciones (Configuración Inicial - Solo una vez)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-verificar-si-hay-actualizaciones-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Verificar si Hay Actualizaciones Disponibles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-detener-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Detener la Aplicación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-descargar-y-aplicar-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Descargar y Aplicar Actualizaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-actualizar-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Actualizar Dependencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reiniciar-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Reiniciar la Aplicación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verificar-que-las-actualizaciones-se-aplicaron-correctamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verificar que las Actualizaciones se Aplicaron Correctamente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflictos-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Conflictos de Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-ver-el-historial-de-cambios-release-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Cómo Ver el Historial de Cambios (Release Notes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-de-actualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Recomendaciones de Actualización
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-rapidos-de-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Enlaces Rápidos de Referencia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Enlaces Rápidos de Referencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repositorio-y-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositorio y Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuenta-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuenta GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargas de Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urls-de-la-aplicacion-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      URLs de la Aplicación (Local)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-rapidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Rápidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registro-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Registro de Versiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guia-proyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guía del Proyecto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Módulos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Módulos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-00_Acceso.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-00 — Acceso y Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-05_Inventario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-05 — Inventario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-06_Novedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-06 — Novedades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-07_Indisponibilidades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-07 — Indisponibilidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-08_Prefacturacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-08 — Prefacturación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-01_Cotizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-01 — Cotización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-02_Instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-02 — Instalación Terceros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-03_Migraciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-03 — Migraciones y Ampliaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modulos/HU-04_Bajas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HU-04 — Bajas y Cartera
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="reportes-novedades/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Reportes de Novedades
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reportes de Novedades
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reportes-novedades/reportes_2026-04-17/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2026-04-17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reportes-novedades/reportes_2026-04-15/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2026-04-15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Base de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Base de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="base-datos/DB_Documentacion_Completa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentación Completa BD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="base-datos/DB_Diccionario_Datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diccionario de Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementación por Fases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Implementación por Fases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="implementacion/Fase1_v2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1_v2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="implementacion/Fase2_v2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2_v2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="implementacion/Fase3_v2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3_v2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentación del Proyecto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación del Proyecto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="documentacion/Plan_Scrum.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plan Scrum / Sprints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="documentacion/Auditoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auditoría de Implementación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telefonica-colombia-gestion-de-servicios-terceros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telefónica Colombia - Gestión de Servicios Terceros
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      � Información del Repositorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      �📋 Índice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Requisitos del Sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖥️ Requisitos del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-minimo-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Mínimo Recomendado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectividad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-requerido" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Software Requerido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Software Requerido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versiones-exactas-critico-no-usar-otras-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versiones Exactas (Crítico - No usar otras versiones)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Instalación de Dependencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Instalación de Dependencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-instalacion-de-java-jdk-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalación de Java JDK 21
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-instalacion-de-mysql-84" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instalación de MySQL 8.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instalacion-de-nodejs-y-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Instalación de Node.js y npm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-instalacion-de-angular-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Instalación de Angular CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-instalacion-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Instalación de Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗄️ Configuración de Base de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Configuración de Base de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-crear-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Crear Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificar-creacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificar Creación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuracion-de-charset-importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuración de Charset (Importante)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota-sobre-migraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Nota sobre Migraciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuración de la Aplicación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Configuración de la Aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-crear-cuenta-de-github-y-obtener-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Crear Cuenta de GitHub y Obtener Acceso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clonar-el-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clonar el Repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configurar-credenciales-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configurar Credenciales de Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configurar-variables-de-entorno-opcional-scripts-incluidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configurar Variables de Entorno (Opcional - Scripts incluidos)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Ejecución de la Aplicación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Ejecución de la Aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcion-1-scripts-automaticos-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción 1: Scripts Automáticos (Recomendado)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-2-comandos-manuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opción 2: Comandos Manuales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-cloudflare-tunnel-acceso-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Configuración de Cloudflare Tunnel (Acceso Remoto)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Configuración de Cloudflare Tunnel (Acceso Remoto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-cloudflare-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Cloudflare Tunnel?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-instalar-cloudflared" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalar Cloudflared
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preparar-configuracion-del-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Preparar Configuración del Túnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-actualizar-rutas-en-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Actualizar Rutas en Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ejecutar-el-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ejecutar el Túnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-configuracion-final-por-el-proveedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuración Final por el Proveedor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verificar-el-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verificar el Túnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-scripts-de-ejecucion-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Scripts de Ejecución (Referencia)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificacion-de-la-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Verificación de la Instalación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Verificación de la Instalación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-verificar-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Verificar Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificar-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificar Frontend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-primer-inicio-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Primer Inicio de Sesión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-verificar-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Verificar Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Solución de Problemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Solución de Problemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problema-el-termino-java-no-se-reconoce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "El término 'java' no se reconoce"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-cannot-connect-to-mysql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Cannot connect to MySQL Server"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-port-8080-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Port 8080 already in use"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-npm-err-enoent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "npm ERR! ENOENT"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-flyway-migration-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Flyway migration failed"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-angular-cli-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Angular CLI not found"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-caracteres-extranos-en-la-base-de-datos-mojibake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Caracteres extraños en la base de datos (mojibake)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-git-command-not-found-o-el-termino-git-no-se-reconoce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "git: command not found" o "El término 'git' no se reconoce"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-authentication-failed-al-clonar-el-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "Authentication failed" al clonar el repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-fatal-destination-path-unica-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "fatal: destination path 'unica' already exists"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-ssl-certificate-problem-al-clonar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "SSL certificate problem" al clonar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-tunel-no-se-conecta-failed-to-authenticate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Túnel no se conecta - "failed to authenticate"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-tunnel-connections-not-registered-en-tunnelbat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "tunnel connections not registered" en tunnel.bat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-cloudflaredexe-not-found-al-ejecutar-tunnelbat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "cloudflared.exe not found" al ejecutar tunnel.bat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-tunel-conecta-pero-no-se-puede-acceder-desde-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: Túnel conecta pero no se puede acceder desde Internet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problema-err_too_many_redirects-al-acceder-a-url-publica-del-tunel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema: "ERR_TOO_MANY_REDIRECTS" al acceder a URL pública del túnel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-instalacion-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Checklist de Instalación Completa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Checklist de Instalación Completa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-y-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Software y Dependencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐙 Configuración de GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📂 Código y Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecucion-y-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ Ejecución y Verificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudflare-tunnel-acceso-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Cloudflare Tunnel (Acceso Remoto)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-de-seguridad-para-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Notas de Seguridad para Producción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-del-codigo-futuras-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Actualización del Código (Futuras Versiones)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Actualización del Código (Futuras Versiones)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-suscribirse-a-notificaciones-configuracion-inicial-solo-una-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      0. Suscribirse a Notificaciones (Configuración Inicial - Solo una vez)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-verificar-si-hay-actualizaciones-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Verificar si Hay Actualizaciones Disponibles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-detener-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Detener la Aplicación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-descargar-y-aplicar-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Descargar y Aplicar Actualizaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-actualizar-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Actualizar Dependencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reiniciar-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Reiniciar la Aplicación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verificar-que-las-actualizaciones-se-aplicaron-correctamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verificar que las Actualizaciones se Aplicaron Correctamente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflictos-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Conflictos de Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-ver-el-historial-de-cambios-release-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Cómo Ver el Historial de Cambios (Release Notes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-de-actualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Recomendaciones de Actualización
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-rapidos-de-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Enlaces Rápidos de Referencia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Enlaces Rápidos de Referencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repositorio-y-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositorio y Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuenta-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuenta GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargas de Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urls-de-la-aplicacion-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      URLs de la Aplicación (Local)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-rapidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Rápidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registro-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Registro de Versiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- markdownlint-disable -->
+<h1 id="manual-de-instalacion-plataforma-unica">Manual de Instalación - Plataforma ÚNICA<a class="headerlink" href="#manual-de-instalacion-plataforma-unica" title="Permanent link">&para;</a></h1>
+<h2 id="telefonica-colombia-gestion-de-servicios-terceros">Telefónica Colombia - Gestión de Servicios Terceros<a class="headerlink" href="#telefonica-colombia-gestion-de-servicios-terceros" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="informacion-del-repositorio">� Información del Repositorio<a class="headerlink" href="#informacion-del-repositorio" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Repositorio GitHub</strong></td>
+<td>https://github.com/flaviofonck/unica-telefonica-produccion</td>
+</tr>
+<tr>
+<td><strong>Commits</strong></td>
+<td>https://github.com/flaviofonck/unica-telefonica-produccion/commits/main</td>
+</tr>
+<tr>
+<td><strong>Releases</strong></td>
+<td>https://github.com/flaviofonck/unica-telefonica-produccion/releases</td>
+</tr>
+<tr>
+<td><strong>Tipo de Acceso</strong></td>
+<td>Privado (requiere invitación de colaborador)</td>
+</tr>
+<tr>
+<td><strong>Rama Principal</strong></td>
+<td><code>main</code></td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>Requisito:</strong> Debe tener una cuenta de GitHub y solicitar acceso al administrador del proyecto.</p>
+<hr />
+<h2 id="indice">�📋 Índice<a class="headerlink" href="#indice" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#requisitos-del-sistema">Requisitos del Sistema</a></li>
+<li><a href="#software-requerido">Software Requerido</a></li>
+<li><a href="#instalación-de-dependencias">Instalación de Dependencias</a></li>
+<li><a href="#configuración-de-base-de-datos">Configuración de Base de Datos</a></li>
+<li><a href="#configuración-de-la-aplicación">Configuración de la Aplicación</a></li>
+<li><a href="#ejecución-de-la-aplicación">Ejecución de la Aplicación</a></li>
+<li><a href="#verificación-de-la-instalación">Verificación de la Instalación</a></li>
+<li><a href="#solución-de-problemas">Solución de Problemas</a></li>
+<li><a href="#actualización-del-código-futuras-versiones">Actualización del Código</a></li>
+</ol>
+<hr />
+<h2 id="requisitos-del-sistema">🖥️ Requisitos del Sistema<a class="headerlink" href="#requisitos-del-sistema" title="Permanent link">&para;</a></h2>
+<h3 id="hardware-minimo-recomendado">Hardware Mínimo Recomendado<a class="headerlink" href="#hardware-minimo-recomendado" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Procesador:</strong> Intel Core i5 o AMD Ryzen 5 (4 núcleos)</li>
+<li><strong>RAM:</strong> 8 GB (16 GB recomendado)</li>
+<li><strong>Disco:</strong> 20 GB libres (SSD recomendado)</li>
+<li><strong>Sistema Operativo:</strong> Windows 10/11 Professional (64-bit) o Windows Server 2019+</li>
+</ul>
+<h3 id="conectividad">Conectividad<a class="headerlink" href="#conectividad" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Acceso a Internet para descarga de dependencias</li>
+<li>Acceso al repositorio Git de Telefónica (credenciales proporcionadas)</li>
+<li>Puertos disponibles: <strong>8080</strong> (backend), <strong>4200</strong> (frontend), <strong>3306</strong> (MySQL)</li>
+</ul>
+<hr />
+<h2 id="software-requerido">📦 Software Requerido<a class="headerlink" href="#software-requerido" title="Permanent link">&para;</a></h2>
+<h3 id="versiones-exactas-critico-no-usar-otras-versiones">Versiones Exactas (Crítico - No usar otras versiones)<a class="headerlink" href="#versiones-exactas-critico-no-usar-otras-versiones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Versión Exacta</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Java JDK</strong></td>
+<td>21.0.10 o superior (Eclipse Adoptium)</td>
+<td>Ejecución del backend Spring Boot</td>
+</tr>
+<tr>
+<td><strong>MySQL Server</strong></td>
+<td>8.4.x</td>
+<td>Base de datos principal</td>
+</tr>
+<tr>
+<td><strong>Node.js</strong></td>
+<td>20.x LTS (20.17.x recomendado)</td>
+<td>Runtime para Angular</td>
+</tr>
+<tr>
+<td><strong>npm</strong></td>
+<td>11.9.0 o superior</td>
+<td>Gestor de paquetes frontend</td>
+</tr>
+<tr>
+<td><strong>Angular CLI</strong></td>
+<td>21.2.2</td>
+<td>Framework frontend</td>
+</tr>
+<tr>
+<td><strong>Maven</strong></td>
+<td>Incluido en el proyecto (wrapper)</td>
+<td>Build del backend</td>
+</tr>
+<tr>
+<td><strong>Git</strong></td>
+<td>2.40+</td>
+<td>Control de versiones y clonación del repositorio</td>
+</tr>
+<tr>
+<td><strong>Cloudflare Tunnel (cloudflared)</strong></td>
+<td>2024.12.x o superior</td>
+<td>Acceso remoto seguro (opcional pero recomendado)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="instalacion-de-dependencias">🔧 Instalación de Dependencias<a class="headerlink" href="#instalacion-de-dependencias" title="Permanent link">&para;</a></h2>
+<h3 id="1-instalacion-de-java-jdk-21">1. Instalación de Java JDK 21<a class="headerlink" href="#1-instalacion-de-java-jdk-21" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-descargar-jdk">Paso 1: Descargar JDK<a class="headerlink" href="#paso-1-descargar-jdk" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://adoptium.net/temurin/releases/</li>
+<li>Seleccionar:</li>
+<li><strong>Version:</strong> 21 (LTS)</li>
+<li><strong>Operating System:</strong> Windows</li>
+<li><strong>Architecture:</strong> x64</li>
+<li>Descargar el instalador <code>.msi</code></li>
+</ol>
+<h4 id="paso-2-instalar-jdk">Paso 2: Instalar JDK<a class="headerlink" href="#paso-2-instalar-jdk" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Ejecutar el instalador descargado</li>
+<li>Durante la instalación:</li>
+<li>✅ Marcar <strong>"Set JAVA_HOME variable"</strong></li>
+<li>✅ Marcar <strong>"Add to PATH"</strong></li>
+<li>Ruta sugerida: <code>C:\Program Files\Eclipse Adoptium\jdk-21.x.x.x-hotspot</code></li>
+<li>Completar la instalación</li>
+</ol>
+<h4 id="paso-3-verificar-instalacion">Paso 3: Verificar Instalación<a class="headerlink" href="#paso-3-verificar-instalacion" title="Permanent link">&para;</a></h4>
+<p>Abrir <strong>PowerShell</strong> o <strong>Command Prompt</strong> y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="n">java</span> <span class="n">-version</span>
+</code></pre></div>
+<strong>Salida esperada:</strong>
+<div class="highlight"><pre><span></span><code>openjdk version &quot;21.0.10&quot; 2024-01-16 LTS
+OpenJDK Runtime Environment Temurin-21.0.10+9 (build 21.0.10+9-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.10+9 (build 21.0.10+9-LTS, mixed mode, sharing)
+</code></pre></div></p>
+<h4 id="paso-4-configurar-java_home-si-no-se-configuro-automaticamente">Paso 4: Configurar JAVA_HOME (si no se configuró automáticamente)<a class="headerlink" href="#paso-4-configurar-java_home-si-no-se-configuro-automaticamente" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Abrir <strong>"Variables de entorno del sistema"</strong></li>
+<li>En <strong>"Variables del sistema"</strong> → <strong>Nuevo</strong></li>
+<li>Nombre: <code>JAVA_HOME</code></li>
+<li>Valor: <code>C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot</code> (ajustar según la ruta real)</li>
+<li>Editar la variable <strong>PATH</strong> → <strong>Nuevo</strong> → <code>%JAVA_HOME%\bin</code></li>
+<li><strong>Reiniciar PowerShell</strong> y volver a verificar <code>java -version</code></li>
+</ol>
+<hr />
+<h3 id="2-instalacion-de-mysql-84">2. Instalación de MySQL 8.4<a class="headerlink" href="#2-instalacion-de-mysql-84" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-descargar-mysql">Paso 1: Descargar MySQL<a class="headerlink" href="#paso-1-descargar-mysql" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://dev.mysql.com/downloads/mysql/</li>
+<li>Seleccionar <strong>"MySQL Community Server 8.4.x"</strong> para Windows</li>
+<li>Descargar el instalador <strong>MSI</strong> (mysql-installer-community-8.4.x.msi)</li>
+</ol>
+<h4 id="paso-2-instalar-mysql">Paso 2: Instalar MySQL<a class="headerlink" href="#paso-2-instalar-mysql" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Ejecutar el instalador</li>
+<li>Seleccionar <strong>"Developer Default"</strong> o <strong>"Server only"</strong></li>
+<li>En <strong>"Type and Networking":</strong></li>
+<li>Config Type: <strong>Development Computer</strong></li>
+<li>Port: <strong>3306</strong> (por defecto)</li>
+<li>✅ Habilitar TCP/IP</li>
+<li>En <strong>"Authentication Method":</strong></li>
+<li>Seleccionar: <strong>Use Strong Password Encryption</strong> (recomendado)</li>
+<li>En <strong>"Accounts and Roles":</strong></li>
+<li><strong>Root Password:</strong> <code>admin</code> (o personalizado según políticas de seguridad)</li>
+<li>⚠️ <strong>IMPORTANTE:</strong> Anotar esta contraseña, se usará en la configuración</li>
+<li>En <strong>"Windows Service":</strong></li>
+<li>✅ Configure MySQL Server as a Windows Service</li>
+<li>Service Name: <strong>MySQL84</strong></li>
+<li>✅ Start the MySQL Server at System Startup</li>
+<li>Completar la instalación</li>
+</ol>
+<h4 id="paso-3-verificar-instalacion_1">Paso 3: Verificar Instalación<a class="headerlink" href="#paso-3-verificar-instalacion_1" title="Permanent link">&para;</a></h4>
+<p>Abrir PowerShell y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="p">-</span><span class="n">-version</span>
+</code></pre></div>
+<strong>Salida esperada:</strong>
+<div class="highlight"><pre><span></span><code>mysql  Ver 8.4.x for Win64 on x86_64 (MySQL Community Server - GPL)
+</code></pre></div></p>
+<h4 id="paso-4-verificar-conexion">Paso 4: Verificar Conexión<a class="headerlink" href="#paso-4-verificar-conexion" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-p</span>
+</code></pre></div>
+- Ingresar la contraseña configurada (<code>admin</code>)
+- Si conecta correctamente, salir con <code>exit;</code></p>
+<hr />
+<h3 id="3-instalacion-de-nodejs-y-npm">3. Instalación de Node.js y npm<a class="headerlink" href="#3-instalacion-de-nodejs-y-npm" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-descargar-nodejs">Paso 1: Descargar Node.js<a class="headerlink" href="#paso-1-descargar-nodejs" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://nodejs.org/</li>
+<li>Descargar <strong>Node.js 20.x LTS</strong> (Long Term Support)</li>
+<li>Archivo: <code>node-v20.x.x-x64.msi</code></li>
+</ol>
+<h4 id="paso-2-instalar-nodejs">Paso 2: Instalar Node.js<a class="headerlink" href="#paso-2-instalar-nodejs" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Ejecutar el instalador</li>
+<li>Durante la instalación:</li>
+<li>✅ Aceptar todos los componentes por defecto</li>
+<li>✅ Marcar <strong>"Automatically install the necessary tools"</strong> si aparece</li>
+<li>Completar la instalación</li>
+</ol>
+<h4 id="paso-3-verificar-instalacion_2">Paso 3: Verificar Instalación<a class="headerlink" href="#paso-3-verificar-instalacion_2" title="Permanent link">&para;</a></h4>
+<p>Abrir <strong>PowerShell NUEVA</strong> (cerrar y abrir para recargar PATH) y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="n">node</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">npm</span> <span class="p">-</span><span class="n">-version</span>
+</code></pre></div>
+<strong>Salida esperada:</strong>
+<div class="highlight"><pre><span></span><code>v20.17.x
+11.9.x
+</code></pre></div></p>
+<h4 id="paso-4-actualizar-npm-si-es-necesario">Paso 4: Actualizar npm (si es necesario)<a class="headerlink" href="#paso-4-actualizar-npm-si-es-necesario" title="Permanent link">&para;</a></h4>
+<p>Si la versión de npm es inferior a 11.9.0:
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="n">npm</span><span class="nv">@11</span><span class="p">.</span><span class="n">9</span><span class="p">.</span><span class="n">0</span>
+</code></pre></div></p>
+<hr />
+<h3 id="4-instalacion-de-angular-cli">4. Instalación de Angular CLI<a class="headerlink" href="#4-instalacion-de-angular-cli" title="Permanent link">&para;</a></h3>
+<p>Abrir PowerShell y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="nv">@angular</span><span class="p">/</span><span class="n">cli</span><span class="nv">@21</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">2</span>
+</code></pre></div></p>
+<p>Verificar instalación:
+<div class="highlight"><pre><span></span><code><span class="n">ng</span> <span class="n">version</span>
+</code></pre></div>
+<strong>Salida esperada:</strong>
+<div class="highlight"><pre><span></span><code>Angular CLI: 21.2.2
+Node: 20.x.x
+Package Manager: npm 11.9.x
+</code></pre></div></p>
+<hr />
+<h3 id="5-instalacion-de-git">5. Instalación de Git<a class="headerlink" href="#5-instalacion-de-git" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-descargar-git">Paso 1: Descargar Git<a class="headerlink" href="#paso-1-descargar-git" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://git-scm.com/download/win</li>
+<li>Descargar el instalador de <strong>64-bit Git for Windows Setup</strong></li>
+</ol>
+<h4 id="paso-2-instalar-git">Paso 2: Instalar Git<a class="headerlink" href="#paso-2-instalar-git" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Ejecutar el instalador</li>
+<li>Durante la instalación, aceptar las opciones por defecto:</li>
+<li>✅ Git Bash Here</li>
+<li>✅ Git GUI Here</li>
+<li>Editor por defecto: <strong>Use Visual Studio Code as Git's default editor</strong> (o el preferido)</li>
+<li>PATH: <strong>Git from the command line and also from 3rd-party software</strong></li>
+<li>SSH: <strong>Use bundled OpenSSH</strong></li>
+<li>HTTPS: <strong>Use the OpenSSL library</strong></li>
+<li>Line endings: <strong>Checkout Windows-style, commit Unix-style line endings</strong></li>
+<li>Completar la instalación</li>
+</ol>
+<h4 id="paso-3-verificar-instalacion_3">Paso 3: Verificar Instalación<a class="headerlink" href="#paso-3-verificar-instalacion_3" title="Permanent link">&para;</a></h4>
+<p>Abrir <strong>PowerShell NUEVA</strong> y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="p">-</span><span class="n">-version</span>
+</code></pre></div>
+<strong>Salida esperada:</strong>
+<div class="highlight"><pre><span></span><code>git version 2.40.x.windows.x
+</code></pre></div></p>
+<h4 id="paso-4-configurar-git-primera-vez">Paso 4: Configurar Git (Primera vez)<a class="headerlink" href="#paso-4-configurar-git-primera-vez" title="Permanent link">&para;</a></h4>
+<p>Configurar nombre y email para commits:
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">config</span> <span class="p">-</span><span class="n">-global</span> <span class="n">user</span><span class="p">.</span><span class="n">name</span> <span class="s2">&quot;Su Nombre&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="p">-</span><span class="n">-global</span> <span class="n">user</span><span class="p">.</span><span class="n">email</span> <span class="s2">&quot;su.email@telefonica.com&quot;</span>
+</code></pre></div></p>
+<p>Verificar configuración:
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">config</span> <span class="p">-</span><span class="n">-list</span>
+</code></pre></div></p>
+<hr />
+<h2 id="configuracion-de-base-de-datos">🗄️ Configuración de Base de Datos<a class="headerlink" href="#configuracion-de-base-de-datos" title="Permanent link">&para;</a></h2>
+<h3 id="1-crear-base-de-datos">1. Crear Base de Datos<a class="headerlink" href="#1-crear-base-de-datos" title="Permanent link">&para;</a></h3>
+<p>Abrir PowerShell y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="c"># Conectar a MySQL</span>
+<span class="nv">$env:MYSQL_PWD</span><span class="p">=</span><span class="s1">&#39;admin&#39;</span>
+<span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-e</span> <span class="s2">&quot;CREATE DATABASE IF NOT EXISTS unica_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;&quot;</span>
+</code></pre></div></p>
+<h3 id="2-verificar-creacion">2. Verificar Creación<a class="headerlink" href="#2-verificar-creacion" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="p">-</span><span class="n">-password</span><span class="p">=</span><span class="n">admin</span> <span class="n">-e</span> <span class="s2">&quot;SHOW DATABASES LIKE &#39;unica_db&#39;;&quot;</span>
+</code></pre></div>
+<strong>Salida esperada:</strong>
+<div class="highlight"><pre><span></span><code>+--------------------+
+| Database (unica_db)|
++--------------------+
+| unica_db           |
++--------------------+
+</code></pre></div></p>
+<h3 id="3-configuracion-de-charset-importante">3. Configuración de Charset (Importante)<a class="headerlink" href="#3-configuracion-de-charset-importante" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="p">-</span><span class="n">-password</span><span class="p">=</span><span class="n">admin</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;ALTER DATABASE unica_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;&quot;</span>
+</code></pre></div>
+<h3 id="nota-sobre-migraciones">⚠️ Nota sobre Migraciones<a class="headerlink" href="#nota-sobre-migraciones" title="Permanent link">&para;</a></h3>
+<p>Las <strong>tablas se crean automáticamente</strong> al arrancar el backend por primera vez mediante <strong>Flyway</strong>. No es necesario ejecutar scripts SQL manualmente.</p>
+<hr />
+<h2 id="configuracion-de-la-aplicacion">⚙️ Configuración de la Aplicación<a class="headerlink" href="#configuracion-de-la-aplicacion" title="Permanent link">&para;</a></h2>
+<h3 id="1-crear-cuenta-de-github-y-obtener-acceso">1. Crear Cuenta de GitHub y Obtener Acceso<a class="headerlink" href="#1-crear-cuenta-de-github-y-obtener-acceso" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-crear-cuenta-en-github-si-no-tiene-una">Paso 1: Crear Cuenta en GitHub (si no tiene una)<a class="headerlink" href="#paso-1-crear-cuenta-en-github-si-no-tiene-una" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://github.com/signup</li>
+<li>Ingresar:</li>
+<li><strong>Email:</strong> Usar el correo corporativo de Telefónica</li>
+<li><strong>Contraseña:</strong> Crear una contraseña segura</li>
+<li><strong>Username:</strong> Elegir un nombre de usuario (ej: <code>juanperez-telefonica</code>)</li>
+<li>Verificar el email (GitHub enviará un código de verificación)</li>
+<li>Completar el perfil básico</li>
+</ol>
+<h4 id="paso-2-solicitar-permisos-de-colaborador">Paso 2: Solicitar Permisos de Colaborador<a class="headerlink" href="#paso-2-solicitar-permisos-de-colaborador" title="Permanent link">&para;</a></h4>
+<p>⚠️ <strong>IMPORTANTE:</strong> El repositorio es privado. Debe solicitar acceso siguiendo estos pasos:</p>
+<ol>
+<li><strong>Enviar su usuario de GitHub</strong> al administrador del proyecto</li>
+<li>Ejemplo: Si su usuario es <code>juanperez-telefonica</code>, enviar ese nombre</li>
+<li>
+<p>El administrador agregará su usuario como <strong>colaborador</strong> del repositorio</p>
+</li>
+<li>
+<p><strong>Esperar confirmación de acceso</strong></p>
+</li>
+<li>Recibirá un email de GitHub con la invitación</li>
+<li>
+<p>Título: <em>"You've been invited to collaborate on..."</em></p>
+</li>
+<li>
+<p><strong>Aceptar la invitación</strong></p>
+</li>
+<li>Hacer clic en el link del email o visitar: https://github.com/flaviofonck/unica-telefonica-produccion</li>
+<li>
+<p>Hacer clic en <strong>"Accept invitation"</strong></p>
+</li>
+<li>
+<p><strong>Verificar acceso</strong></p>
+</li>
+<li>Una vez aceptada la invitación, podrá ver el repositorio en: https://github.com/flaviofonck/unica-telefonica-produccion</li>
+</ol>
+<hr />
+<h3 id="2-clonar-el-repositorio">2. Clonar el Repositorio<a class="headerlink" href="#2-clonar-el-repositorio" title="Permanent link">&para;</a></h3>
+<h4 id="url-del-repositorio">URL del Repositorio<a class="headerlink" href="#url-del-repositorio" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>https://github.com/flaviofonck/unica-telefonica-produccion
+</code></pre></div>
+<h4 id="clonar-via-https-recomendado">Clonar vía HTTPS (Recomendado)<a class="headerlink" href="#clonar-via-https-recomendado" title="Permanent link">&para;</a></h4>
+<p>Abrir PowerShell y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="c"># Crear carpeta contenedora (opcional)</span>
+<span class="n">mkdir</span> <span class="n">C</span><span class="p">:\</span><span class="n">proyectos</span>
+<span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">proyectos</span>
+
+<span class="c"># Clonar el repositorio</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">flaviofonck</span><span class="p">/</span><span class="n">unica-telefonica-produccion</span><span class="p">.</span><span class="n">git</span> <span class="n">unica</span>
+</code></pre></div></p>
+<p><strong>Comando completo en una línea:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">flaviofonck</span><span class="p">/</span><span class="n">unica-telefonica-produccion</span><span class="p">.</span><span class="n">git</span> <span class="n">unica</span>
+</code></pre></div></p>
+<h4 id="autenticacion-con-github">Autenticación con GitHub<a class="headerlink" href="#autenticacion-con-github" title="Permanent link">&para;</a></h4>
+<p>Cuando ejecute <code>git clone</code>, GitHub solicitará autenticación:</p>
+<p><strong>Método 1: GitHub Desktop (Más Fácil - Recomendado para Windows)</strong></p>
+<ol>
+<li>Descargar GitHub Desktop: https://desktop.github.com/</li>
+<li>Instalar y hacer login con su cuenta de GitHub</li>
+<li>GitHub Desktop maneja automáticamente la autenticación</li>
+<li>Usar <strong>File → Clone Repository</strong> para clonar gráficamente</li>
+</ol>
+<p><strong>Método 2: Personal Access Token (PAT) - Línea de Comandos</strong></p>
+<p>GitHub ya no acepta contraseñas en línea de comandos. Debe usar un <strong>Personal Access Token</strong>:</p>
+<ol>
+<li><strong>Generar un Token:</strong></li>
+<li>Visitar: https://github.com/settings/tokens</li>
+<li>Hacer clic en <strong>"Generate new token"</strong> → <strong>"Generate new token (classic)"</strong></li>
+<li><strong>Note:</strong> <code>unica-telefonica-token</code></li>
+<li><strong>Expiration:</strong> 90 días (o según políticas de seguridad)</li>
+<li><strong>Scopes:</strong> Marcar ✅ <strong><code>repo</code></strong> (acceso completo a repositorios privados)</li>
+<li>Hacer clic en <strong>"Generate token"</strong></li>
+<li>
+<p><strong>⚠️ COPIAR EL TOKEN</strong> (solo se muestra una vez): <code>ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></p>
+</li>
+<li>
+<p><strong>Usar el Token al Clonar:</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">flaviofonck</span><span class="p">/</span><span class="n">unica-telefonica-produccion</span><span class="p">.</span><span class="n">git</span> <span class="n">unica</span>
+</code></pre></div></p>
+</li>
+<li>Cuando pida <strong>username:</strong> Ingresar su usuario de GitHub</li>
+<li>
+<p>Cuando pida <strong>password:</strong> Pegar el token (no la contraseña de GitHub)</p>
+</li>
+<li>
+<p><strong>Guardar Credenciales (para no ingresarlas cada vez):</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">config</span> <span class="p">-</span><span class="n">-global</span> <span class="n">credential</span><span class="p">.</span><span class="n">helper</span> <span class="n">manager</span>
+</code></pre></div></p>
+</li>
+<li>Windows abrirá el <strong>Credential Manager</strong> y guardará el token automáticamente</li>
+</ol>
+<p><strong>Método 3: SSH Keys (Avanzado)</strong></p>
+<p>Si prefiere usar SSH:
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">flaviofonck</span><span class="p">/</span><span class="n">unica-telefonica-produccion</span><span class="p">.</span><span class="n">git</span> <span class="n">unica</span>
+</code></pre></div>
+- Requiere configurar claves SSH en GitHub: https://docs.github.com/en/authentication/connecting-to-github-with-ssh</p>
+<h4 id="resultado-esperado">Resultado Esperado<a class="headerlink" href="#resultado-esperado" title="Permanent link">&para;</a></h4>
+<p>Después de clonar, se creará la carpeta <code>unica\</code> con toda la estructura del proyecto:
+<div class="highlight"><pre><span></span><code>C:\proyectos\unica\
+├── src/
+├── unica-frontend/
+├── docs/
+├── backend.bat
+├── frontend.bat
+├── pom.xml
+└── ...
+</code></pre></div></p>
+<p>⚠️ <strong>IMPORTANTE:</strong> El proyecto debe clonarse en una ruta <strong>sin espacios ni caracteres especiales</strong>.</p>
+<p><strong>Rutas válidas:</strong>
+- ✅ <code>C:\unica\</code>
+- ✅ <code>C:\proyectos\unica\</code>
+- ✅ <code>D:\apps\unica\</code></p>
+<p><strong>Rutas NO válidas:</strong>
+- ❌ <code>C:\Program Files\unica\</code> (tiene espacios)
+- ❌ <code>C:\Mis Documentos\unica\</code> (tiene espacios)
+- ❌ <code>C:\carpeta con espacios\unica\</code></p>
+<hr />
+<h3 id="3-configurar-credenciales-de-base-de-datos">3. Configurar Credenciales de Base de Datos<a class="headerlink" href="#3-configurar-credenciales-de-base-de-datos" title="Permanent link">&para;</a></h3>
+<p>Editar el archivo:
+<div class="highlight"><pre><span></span><code>C:\unica\src\main\resources\application.properties
+</code></pre></div></p>
+<p>Verificar las siguientes líneas (ajustar si se cambió la contraseña de MySQL):
+<div class="highlight"><pre><span></span><code><span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://localhost:3306/unica_db?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;connectionCollation=utf8mb4_unicode_ci&amp;rewriteBatchedStatements=true</span>
+<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">root</span>
+<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">admin</span>
+</code></pre></div></p>
+<p><strong>Si se cambió la contraseña de MySQL, modificar la línea:</strong>
+<div class="highlight"><pre><span></span><code><span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">SU_CONTRASEÑA_REAL</span>
+</code></pre></div></p>
+<hr />
+<h3 id="4-configurar-variables-de-entorno-opcional-scripts-incluidos">4. Configurar Variables de Entorno (Opcional - Scripts incluidos)<a class="headerlink" href="#4-configurar-variables-de-entorno-opcional-scripts-incluidos" title="Permanent link">&para;</a></h3>
+<p>Los scripts <code>backend.bat</code> y <code>frontend.bat</code> incluidos ya configuran automáticamente <code>JAVA_HOME</code>. Si se desea ejecutar manualmente los comandos Maven, verificar que <code>JAVA_HOME</code> esté configurado:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nv">$env:JAVA_HOME</span>
+</code></pre></div>
+Debe mostrar algo como:
+<div class="highlight"><pre><span></span><code>C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot
+</code></pre></div></p>
+<hr />
+<h2 id="ejecucion-de-la-aplicacion">🚀 Ejecución de la Aplicación<a class="headerlink" href="#ejecucion-de-la-aplicacion" title="Permanent link">&para;</a></h2>
+<h3 id="opcion-1-scripts-automaticos-recomendado">Opción 1: Scripts Automáticos (Recomendado)<a class="headerlink" href="#opcion-1-scripts-automaticos-recomendado" title="Permanent link">&para;</a></h3>
+<h4 id="iniciar-backend">Iniciar Backend<a class="headerlink" href="#iniciar-backend" title="Permanent link">&para;</a></h4>
+<p>En PowerShell, dentro de la carpeta del proyecto:
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span>
+<span class="p">.\</span><span class="n">backend</span><span class="p">.</span><span class="n">bat</span>
+</code></pre></div></p>
+<p><strong>Proceso:</strong>
+1. Verifica y libera el puerto 8080
+2. Configura JAVA_HOME automáticamente
+3. Ejecuta Maven Wrapper
+4. Aplica migraciones Flyway (primera vez crea todas las tablas)
+5. Inicia Spring Boot</p>
+<p><strong>Esperar a ver:</strong>
+<div class="highlight"><pre><span></span><code>Started AppApplication in X.XXX seconds
+</code></pre></div></p>
+<p>⚠️ <strong>No cerrar esta ventana</strong> - El backend debe permanecer en ejecución.</p>
+<h4 id="iniciar-frontend">Iniciar Frontend<a class="headerlink" href="#iniciar-frontend" title="Permanent link">&para;</a></h4>
+<p>En <strong>otra ventana de PowerShell</strong>:
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span>
+<span class="p">.\</span><span class="n">frontend</span><span class="p">.</span><span class="n">bat</span>
+</code></pre></div></p>
+<p><strong>Proceso:</strong>
+1. Instala dependencias npm (primera vez, puede tardar varios minutos)
+2. Inicia servidor Angular de desarrollo
+3. Compila la aplicación</p>
+<p><strong>Esperar a ver:</strong>
+<div class="highlight"><pre><span></span><code>✔ Browser application bundle generation complete.
+** Angular Live Development Server is listening on localhost:4200 **
+</code></pre></div></p>
+<hr />
+<h3 id="opcion-2-comandos-manuales">Opción 2: Comandos Manuales<a class="headerlink" href="#opcion-2-comandos-manuales" title="Permanent link">&para;</a></h3>
+<h4 id="backend-manual">Backend Manual<a class="headerlink" href="#backend-manual" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span>
+<span class="nv">$env:JAVA_HOME</span> <span class="p">=</span> <span class="s2">&quot;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot&quot;</span>
+<span class="p">.\</span><span class="n">mvnw</span><span class="p">.</span><span class="n">cmd</span> <span class="n">spring-boot</span><span class="p">:</span><span class="n">run</span>
+</code></pre></div>
+<h4 id="frontend-manual">Frontend Manual<a class="headerlink" href="#frontend-manual" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span><span class="p">\</span><span class="n">unica-frontend</span>
+<span class="n">npm</span> <span class="n">install</span>
+<span class="n">npm</span> <span class="nb">start</span>
+</code></pre></div>
+<hr />
+<h2 id="configuracion-de-cloudflare-tunnel-acceso-remoto">🌐 Configuración de Cloudflare Tunnel (Acceso Remoto)<a class="headerlink" href="#configuracion-de-cloudflare-tunnel-acceso-remoto" title="Permanent link">&para;</a></h2>
+<p>⚠️ <strong>IMPORTANTE:</strong> Esta sección es necesaria para permitir el acceso remoto a la aplicación ÚNICA a través de Internet de forma segura, sin necesidad de abrir puertos en el firewall ni configurar port forwarding.</p>
+<h3 id="que-es-cloudflare-tunnel">¿Qué es Cloudflare Tunnel?<a class="headerlink" href="#que-es-cloudflare-tunnel" title="Permanent link">&para;</a></h3>
+<p>Cloudflare Tunnel crea una conexión segura entre su servidor local y la red de Cloudflare, permitiendo que la aplicación sea accesible desde Internet mediante URLs públicas (ej: <code>https://unica.fonck.app</code>).</p>
+<p><strong>Ventajas:</strong>
+- ✅ Sin necesidad de IP pública estática
+- ✅ Sin configuración de router/firewall
+- ✅ Certificados SSL automáticos (HTTPS)
+- ✅ Protección DDoS de Cloudflare
+- ✅ Acceso controlado por el proveedor</p>
+<hr />
+<h3 id="1-instalar-cloudflared">1. Instalar Cloudflared<a class="headerlink" href="#1-instalar-cloudflared" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-descargar-el-ejecutable">Paso 1: Descargar el Ejecutable<a class="headerlink" href="#paso-1-descargar-el-ejecutable" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://github.com/cloudflare/cloudflared/releases</li>
+<li>Descargar la versión para Windows (64-bit):</li>
+<li>Buscar el archivo: <code>cloudflared-windows-amd64.exe</code></li>
+<li>Última versión estable (ej: <code>2024.12.2</code>)</li>
+</ol>
+<h4 id="paso-2-instalar-en-el-sistema">Paso 2: Instalar en el Sistema<a class="headerlink" href="#paso-2-instalar-en-el-sistema" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Crear carpeta de instalación</span>
+<span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Force</span> <span class="n">-Path</span> <span class="s2">&quot;C:\Program Files (x86)\cloudflared&quot;</span>
+
+<span class="c"># Mover el ejecutable descargado (ajustar ruta de Downloads)</span>
+<span class="nb">Move-Item</span> <span class="s2">&quot;$env:USERPROFILE\Downloads\cloudflared-windows-amd64.exe&quot;</span> <span class="s2">&quot;C:\Program Files (x86)\cloudflared\cloudflared.exe&quot;</span>
+
+<span class="c"># Verificar instalación</span>
+<span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files (x86)\cloudflared\cloudflared.exe&#39;</span> <span class="p">-</span><span class="n">-version</span>
+</code></pre></div>
+<p><strong>Resultado esperado:</strong>
+<div class="highlight"><pre><span></span><code>cloudflared version 2024.12.2 (built YYYY-MM-DD)
+</code></pre></div></p>
+<hr />
+<h3 id="2-preparar-configuracion-del-tunel">2. Preparar Configuración del Túnel<a class="headerlink" href="#2-preparar-configuracion-del-tunel" title="Permanent link">&para;</a></h3>
+<p>⚠️ <strong>PASO COORDINADO CON EL PROVEEDOR:</strong></p>
+<p>El proveedor del sistema (QCS/desarrollador) le proporcionará un <strong>archivo de credenciales</strong> que debe colocar en su máquina. Este archivo es único por instalación y contiene las claves de autenticación del túnel.</p>
+<h4 id="paso-1-crear-carpeta-de-credenciales">Paso 1: Crear Carpeta de Credenciales<a class="headerlink" href="#paso-1-crear-carpeta-de-credenciales" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Crear carpeta .cloudflared en el perfil de usuario</span>
+<span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Force</span> <span class="n">-Path</span> <span class="s2">&quot;$env:USERPROFILE\.cloudflared&quot;</span>
+</code></pre></div>
+<h4 id="paso-2-recibir-archivo-de-credenciales">Paso 2: Recibir Archivo de Credenciales<a class="headerlink" href="#paso-2-recibir-archivo-de-credenciales" title="Permanent link">&para;</a></h4>
+<p>El proveedor le enviará un archivo con nombre similar a:
+<div class="highlight"><pre><span></span><code>f123a480-a795-4497-8972-eee3474cad45.json
+</code></pre></div></p>
+<p><strong>Debe colocar este archivo en:</strong>
+<div class="highlight"><pre><span></span><code>C:\Users\&lt;SU_USUARIO&gt;\.cloudflared\&lt;UUID&gt;.json
+</code></pre></div></p>
+<p>Ejemplo:
+<div class="highlight"><pre><span></span><code>C:\Users\admin.telefonica\.cloudflared\f123a480-a795-4497-8972-eee3474cad45.json
+</code></pre></div></p>
+<p>⚠️ <strong>NO compartir ni modificar este archivo</strong> - contiene credenciales de autenticación.</p>
+<hr />
+<h3 id="3-actualizar-rutas-en-configuracion">3. Actualizar Rutas en Configuración<a class="headerlink" href="#3-actualizar-rutas-en-configuracion" title="Permanent link">&para;</a></h3>
+<p>El archivo <code>cloudflared-config.yml</code> en la raíz del proyecto contiene las rutas de configuración. Debe actualizar la línea de <code>credentials-file</code> con <strong>su usuario de Windows</strong>.</p>
+<p><strong>Ubicación del archivo:</strong>
+<div class="highlight"><pre><span></span><code>C:\unica\cloudflared-config.yml
+</code></pre></div></p>
+<p><strong>Editar con Bloc de Notas:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># cloudflared-config.yml — ÚNICA App</span>
+<span class="nt">tunnel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">f123a480-a795-4497-8972-eee3474cad45</span>
+<span class="nt">credentials-file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:\Users\&lt;SU_USUARIO&gt;\.cloudflared\f123a480-a795-4497-8972-eee3474cad45.json</span>
+
+<span class="nt">ingress</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unica.fonck.app</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:4200</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api-unica.fonck.app</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8080</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span>
+</code></pre></div>
+<p><strong>Reemplazar:</strong>
+- <code>&lt;SU_USUARIO&gt;</code> → Su nombre de usuario de Windows (ej: <code>admin.telefonica</code>)
+- El UUID del tunnel (números largos) debe coincidir con el nombre del archivo JSON</p>
+<hr />
+<h3 id="4-ejecutar-el-tunel">4. Ejecutar el Túnel<a class="headerlink" href="#4-ejecutar-el-tunel" title="Permanent link">&para;</a></h3>
+<p>⚠️ <strong>IMPORTANTE:</strong> El túnel solo debe ejecutarse <strong>después</strong> de que el backend y frontend estén corriendo.</p>
+<h4 id="secuencia-de-inicio-completa">Secuencia de Inicio Completa:<a class="headerlink" href="#secuencia-de-inicio-completa" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Terminal 1: Iniciar Backend</span>
+<span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span>
+<span class="p">.\</span><span class="n">backend</span><span class="p">.</span><span class="n">bat</span>
+<span class="c"># Esperar a ver: &quot;Started AppApplication&quot;</span>
+
+<span class="c"># Terminal 2: Iniciar Frontend</span>
+<span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span>
+<span class="p">.\</span><span class="n">frontend</span><span class="p">.</span><span class="n">bat</span>
+<span class="c"># Esperar a ver: &quot;listening on localhost:4200&quot;</span>
+
+<span class="c"># Terminal 3: Iniciar Túnel</span>
+<span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span>
+<span class="p">.\</span><span class="n">tunnel</span><span class="p">.</span><span class="n">bat</span>
+</code></pre></div>
+<p><strong>Resultado esperado en <code>tunnel.bat</code>:</strong>
+<div class="highlight"><pre><span></span><code>============================================
+  UNICA App - Tunel Cloudflare
+  Frontend : https://unica.fonck.app
+  Backend  : https://api-unica.fonck.app
+============================================
+
+INFO Connection established
+INFO Registered tunnel connection
+</code></pre></div></p>
+<p>✅ Cuando vea <strong>"Connection established"</strong>, el túnel está activo.</p>
+<hr />
+<h3 id="5-configuracion-final-por-el-proveedor">5. Configuración Final por el Proveedor<a class="headerlink" href="#5-configuracion-final-por-el-proveedor" title="Permanent link">&para;</a></h3>
+<p>⚠️ <strong>ACCESO REMOTO REQUERIDO:</strong></p>
+<p>Una vez que tenga:
+- ✅ Backend corriendo (<code>backend.bat</code>)
+- ✅ Frontend corriendo (<code>frontend.bat</code>)
+- ✅ Túnel corriendo (<code>tunnel.bat</code>)
+- ✅ Archivo de credenciales en <code>.cloudflared</code></p>
+<p>Debe <strong>coordinar con el proveedor</strong> para que:</p>
+<ol>
+<li><strong>Acceda remotamente</strong> a su máquina (mediante TeamViewer, AnyDesk, RDP u otra herramienta)</li>
+<li><strong>Configure los dominios finales</strong> que apunten a su túnel</li>
+<li><strong>Verifique la conectividad</strong> desde Internet</li>
+</ol>
+<p>El proveedor realizará ajustes en:
+- Configuración DNS de Cloudflare
+- Apuntamiento de dominios al túnel
+- Verificación de certificados SSL
+- Pruebas de acceso público</p>
+<p><strong>URLs de acceso final</strong> (ejemplo):
+- Frontend: <code>https://unica.fonck.app</code> (o dominio personalizado de Telefónica)
+- Backend API: <code>https://api-unica.fonck.app</code></p>
+<hr />
+<h3 id="6-verificar-el-tunel">6. Verificar el Túnel<a class="headerlink" href="#6-verificar-el-tunel" title="Permanent link">&para;</a></h3>
+<h4 id="desde-la-maquina-local">Desde la Máquina Local:<a class="headerlink" href="#desde-la-maquina-local" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Ver estado del túnel</span>
+<span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files (x86)\cloudflared\cloudflared.exe&#39;</span> <span class="n">tunnel</span> <span class="n">info</span> <span class="n">f123a480-a795</span><span class="p">-</span><span class="n">4497</span><span class="p">-</span><span class="n">8972-eee3474cad45</span>
+
+<span class="c"># Ver logs en tiempo real (si tunnel.bat está corriendo)</span>
+<span class="nb">Get-Content</span> <span class="n">C</span><span class="p">:\</span><span class="n">unica</span><span class="p">\</span><span class="n">tunnel</span><span class="p">.</span><span class="n">log</span> <span class="n">-Wait</span> <span class="n">-Tail</span> <span class="n">20</span>
+</code></pre></div>
+<h4 id="desde-internet-despues-de-configuracion-del-proveedor">Desde Internet (después de configuración del proveedor):<a class="headerlink" href="#desde-internet-despues-de-configuracion-del-proveedor" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Abrir navegador en <strong>otra computadora</strong> (fuera de la red local)</li>
+<li>Acceder a la URL pública proporcionada (ej: <code>https://unica.fonck.app</code>)</li>
+<li>Debe cargar la pantalla de login de ÚNICA</li>
+</ol>
+<hr />
+<h3 id="7-scripts-de-ejecucion-referencia">7. Scripts de Ejecución (Referencia)<a class="headerlink" href="#7-scripts-de-ejecucion-referencia" title="Permanent link">&para;</a></h3>
+<p>La carpeta del proyecto incluye 3 scripts principales:</p>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Función</th>
+<th>Debe Ejecutarse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>backend.bat</code></td>
+<td>Inicia Spring Boot en puerto 8080</td>
+<td>Primero</td>
+</tr>
+<tr>
+<td><code>frontend.bat</code></td>
+<td>Inicia Angular en puerto 4200</td>
+<td>Segundo</td>
+</tr>
+<tr>
+<td><code>tunnel.bat</code></td>
+<td>Inicia Cloudflare Tunnel (acceso público)</td>
+<td>Tercero (último)</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>Orden obligatorio:</strong> Backend → Frontend → Tunnel</p>
+<p><strong>Para detener:</strong>
+- Presionar <code>Ctrl+C</code> en cada ventana de PowerShell
+- O cerrar las ventanas directamente</p>
+<hr />
+<h2 id="verificacion-de-la-instalacion">✅ Verificación de la Instalación<a class="headerlink" href="#verificacion-de-la-instalacion" title="Permanent link">&para;</a></h2>
+<h3 id="1-verificar-backend">1. Verificar Backend<a class="headerlink" href="#1-verificar-backend" title="Permanent link">&para;</a></h3>
+<p>Abrir un navegador y acceder a:
+<div class="highlight"><pre><span></span><code>http://localhost:8080/swagger-ui.html
+</code></pre></div></p>
+<p><strong>Resultado esperado:</strong> Página de Swagger UI mostrando la documentación de la API REST.</p>
+<h3 id="2-verificar-frontend">2. Verificar Frontend<a class="headerlink" href="#2-verificar-frontend" title="Permanent link">&para;</a></h3>
+<p>Abrir un navegador y acceder a:
+<div class="highlight"><pre><span></span><code>http://localhost:4200
+</code></pre></div></p>
+<p><strong>Resultado esperado:</strong> Pantalla de inicio de sesión de ÚNICA.</p>
+<h3 id="3-primer-inicio-de-sesion">3. Primer Inicio de Sesión<a class="headerlink" href="#3-primer-inicio-de-sesion" title="Permanent link">&para;</a></h3>
+<p><strong>Credenciales por defecto:</strong>
+- <strong>Usuario:</strong> <code>admin</code>
+- <strong>Contraseña:</strong> <code>admin</code></p>
+<p>⚠️ <strong>CAMBIAR ESTAS CREDENCIALES EN PRODUCCIÓN</strong></p>
+<h3 id="4-verificar-base-de-datos">4. Verificar Base de Datos<a class="headerlink" href="#4-verificar-base-de-datos" title="Permanent link">&para;</a></h3>
+<p>Abrir PowerShell:
+<div class="highlight"><pre><span></span><code><span class="nv">$env:MYSQL_PWD</span><span class="p">=</span><span class="s1">&#39;admin&#39;</span>
+<span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;SHOW TABLES;&quot;</span>
+</code></pre></div></p>
+<p><strong>Resultado esperado:</strong> Listado de tablas creadas por Flyway (20+ tablas).</p>
+<hr />
+<h2 id="solucion-de-problemas">🛠️ Solución de Problemas<a class="headerlink" href="#solucion-de-problemas" title="Permanent link">&para;</a></h2>
+<h3 id="problema-el-termino-java-no-se-reconoce">Problema: "El término 'java' no se reconoce"<a class="headerlink" href="#problema-el-termino-java-no-se-reconoce" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> JAVA_HOME no está configurado correctamente.</p>
+<p><strong>Solución:</strong>
+1. Verificar instalación de JDK: <code>dir "C:\Program Files\Eclipse Adoptium\"</code>
+2. Configurar JAVA_HOME en Variables de Entorno del Sistema
+3. Reiniciar PowerShell</p>
+<hr />
+<h3 id="problema-cannot-connect-to-mysql-server">Problema: "Cannot connect to MySQL Server"<a class="headerlink" href="#problema-cannot-connect-to-mysql-server" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> MySQL no está en ejecución o las credenciales son incorrectas.</p>
+<p><strong>Solución:</strong>
+1. Verificar que el servicio de MySQL esté corriendo:
+   <div class="highlight"><pre><span></span><code><span class="nb">Get-Service</span> <span class="n">-Name</span> <span class="n">MySQL84</span>
+</code></pre></div>
+   Si está detenido:
+   <div class="highlight"><pre><span></span><code><span class="nb">Start-Service</span> <span class="n">-Name</span> <span class="n">MySQL84</span>
+</code></pre></div>
+2. Verificar credenciales en <code>application.properties</code>
+3. Probar conexión manual:
+   <div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-p</span>
+</code></pre></div></p>
+<hr />
+<h3 id="problema-port-8080-already-in-use">Problema: "Port 8080 already in use"<a class="headerlink" href="#problema-port-8080-already-in-use" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Otro proceso está usando el puerto 8080.</p>
+<p><strong>Solución:</strong>
+1. Identificar el proceso:
+   <div class="highlight"><pre><span></span><code><span class="n">netstat</span> <span class="n">-ano</span> <span class="p">|</span> <span class="n">findstr</span> <span class="p">:</span><span class="n">8080</span>
+</code></pre></div>
+2. Detener el proceso (anotar el PID del resultado anterior):
+   <div class="highlight"><pre><span></span><code><span class="nb">Stop-Process</span> <span class="n">-Id</span> <span class="p">&lt;</span><span class="n">PID</span><span class="p">&gt;</span> <span class="n">-Force</span>
+</code></pre></div>
+3. Reintentar <code>.\backend.bat</code></p>
+<hr />
+<h3 id="problema-npm-err-enoent">Problema: "npm ERR! ENOENT"<a class="headerlink" href="#problema-npm-err-enoent" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> node_modules corrupto o npm cache con problemas.</p>
+<p><strong>Solución:</strong>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">unica</span><span class="p">\</span><span class="n">unica-frontend</span>
+<span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="n">node_modules</span>
+<span class="n">npm</span> <span class="n">cache</span> <span class="n">clean</span> <span class="p">-</span><span class="n">-force</span>
+<span class="n">npm</span> <span class="n">install</span>
+</code></pre></div></p>
+<hr />
+<h3 id="problema-flyway-migration-failed">Problema: "Flyway migration failed"<a class="headerlink" href="#problema-flyway-migration-failed" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Una migración ya fue ejecutada parcialmente y quedó marcada como fallida.</p>
+<p><strong>Solución:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Ver el historial de migraciones</span>
+<span class="nv">$env:MYSQL_PWD</span><span class="p">=</span><span class="s1">&#39;admin&#39;</span>
+<span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;SELECT version, description, success FROM flyway_schema_history ORDER BY installed_rank DESC LIMIT 10;&quot;</span>
+
+<span class="c"># Si hay una migración con success=0, eliminarla:</span>
+<span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="p">-</span><span class="n">-password</span><span class="p">=</span><span class="n">admin</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;DELETE FROM flyway_schema_history WHERE version=&#39;X&#39; AND success=0;&quot;</span>
+
+<span class="c"># Reiniciar backend</span>
+<span class="p">.\</span><span class="n">backend</span><span class="p">.</span><span class="n">bat</span>
+</code></pre></div></p>
+<hr />
+<h3 id="problema-angular-cli-not-found">Problema: "Angular CLI not found"<a class="headerlink" href="#problema-angular-cli-not-found" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Angular CLI no está instalado globalmente o npm global no está en PATH.</p>
+<p><strong>Solución:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">list</span> <span class="n">-g</span> <span class="nv">@angular</span><span class="p">/</span><span class="nb">cli</span>
+<span class="c"># Si no aparece o la versión es incorrecta:</span>
+<span class="n">npm</span> <span class="n">uninstall</span> <span class="n">-g</span> <span class="nv">@angular</span><span class="p">/</span><span class="nb">cli</span>
+<span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="nv">@angular</span><span class="p">/</span><span class="n">cli</span><span class="nv">@21</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">2</span>
+</code></pre></div></p>
+<hr />
+<h3 id="problema-caracteres-extranos-en-la-base-de-datos-mojibake">Problema: Caracteres extraños en la base de datos (mojibake)<a class="headerlink" href="#problema-caracteres-extranos-en-la-base-de-datos-mojibake" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Problemas de encoding UTF-8.</p>
+<p><strong>Solución:</strong>
+1. Verificar charset de la base de datos:
+   <div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="p">-</span><span class="n">-password</span><span class="p">=</span><span class="n">admin</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;SHOW CREATE DATABASE unica_db;&quot;</span>
+</code></pre></div>
+   Debe mostrar: <code>CHARACTER SET utf8mb4</code></p>
+<ol>
+<li>
+<p>Si está incorrecto, corregirlo:
+   <div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="p">-</span><span class="n">-password</span><span class="p">=</span><span class="n">admin</span> <span class="n">unica_db</span> <span class="n">-e</span> <span class="s2">&quot;ALTER DATABASE unica_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Reiniciar el backend.</p>
+</li>
+</ol>
+<hr />
+<h3 id="problema-git-command-not-found-o-el-termino-git-no-se-reconoce">Problema: "git: command not found" o "El término 'git' no se reconoce"<a class="headerlink" href="#problema-git-command-not-found-o-el-termino-git-no-se-reconoce" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Git no está instalado o no está en el PATH.</p>
+<p><strong>Solución:</strong>
+1. Verificar si Git está instalado:
+   <div class="highlight"><pre><span></span><code><span class="nb">dir </span><span class="s2">&quot;C:\Program Files\Git&quot;</span>
+</code></pre></div>
+2. Si no está instalado, seguir la sección "5. Instalación de Git"
+3. Si está instalado pero no se reconoce el comando:
+   - Agregar <code>C:\Program Files\Git\cmd</code> a la variable PATH del sistema
+   - Reiniciar PowerShell</p>
+<hr />
+<h3 id="problema-authentication-failed-al-clonar-el-repositorio">Problema: "Authentication failed" al clonar el repositorio<a class="headerlink" href="#problema-authentication-failed-al-clonar-el-repositorio" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Credenciales incorrectas o token de acceso inválido.</p>
+<p><strong>Solución:</strong>
+1. Verificar que las credenciales proporcionadas sean correctas
+2. Si se usa token de acceso personal (PAT):
+   - Verificar que el token no haya expirado
+   - Verificar que el token tenga permisos de lectura del repositorio
+3. Limpiar credenciales guardadas e intentar de nuevo:
+   <div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">credential-manager</span> <span class="nb">clear</span>
+</code></pre></div>
+4. Intentar clonar nuevamente, ingresando credenciales correctas</p>
+<hr />
+<h3 id="problema-fatal-destination-path-unica-already-exists">Problema: "fatal: destination path 'unica' already exists"<a class="headerlink" href="#problema-fatal-destination-path-unica-already-exists" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Ya existe una carpeta <code>unica</code> en la ubicación donde se intenta clonar.</p>
+<p><strong>Solución:</strong>
+1. Opción A - Clonar en otra ubicación:
+   <div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">clone</span> <span class="p">&lt;</span><span class="n">URL</span><span class="p">&gt;</span> <span class="n">unica-nuevo</span>
+</code></pre></div>
+2. Opción B - Eliminar la carpeta existente (si no contiene cambios importantes):
+   <div class="highlight"><pre><span></span><code><span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="n">unica</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="p">&lt;</span><span class="n">URL</span><span class="p">&gt;</span> <span class="n">unica</span>
+</code></pre></div></p>
+<hr />
+<h3 id="problema-ssl-certificate-problem-al-clonar">Problema: "SSL certificate problem" al clonar<a class="headerlink" href="#problema-ssl-certificate-problem-al-clonar" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Problemas con certificados SSL corporativos o proxy.</p>
+<p><strong>Solución:</strong>
+1. <strong>Temporal (solo para probar):</strong>
+   <div class="highlight"><pre><span></span><code><span class="nv">$env:GIT_SSL_NO_VERIFY</span> <span class="p">=</span> <span class="s1">&#39;true&#39;</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="p">&lt;</span><span class="n">URL</span><span class="p">&gt;</span>
+</code></pre></div>
+2. <strong>Permanente (recomendado para entornos corporativos):</strong>
+   - Obtener el certificado corporativo (.crt)
+   - Configurar Git para usarlo:
+     <div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">config</span> <span class="p">-</span><span class="n">-global</span> <span class="n">http</span><span class="p">.</span><span class="n">sslCAInfo</span> <span class="s2">&quot;C:\ruta\al\certificado.crt&quot;</span>
+</code></pre></div>
+3. Si hay un proxy corporativo, configurarlo:
+   <div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">config</span> <span class="p">-</span><span class="n">-global</span> <span class="n">http</span><span class="p">.</span><span class="n">proxy</span> <span class="n">http</span><span class="p">://</span><span class="n">proxy</span><span class="p">.</span><span class="n">empresa</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">puerto</span>
+</code></pre></div></p>
+<hr />
+<h3 id="problema-tunel-no-se-conecta-failed-to-authenticate">Problema: Túnel no se conecta - "failed to authenticate"<a class="headerlink" href="#problema-tunel-no-se-conecta-failed-to-authenticate" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Archivo de credenciales JSON incorrecto, inexistente o con permisos incorrectos.</p>
+<p><strong>Solución:</strong>
+1. Verificar que el archivo JSON existe:
+   <div class="highlight"><pre><span></span><code><span class="nb">Test-Path</span> <span class="s2">&quot;$env:USERPROFILE\.cloudflared\*.json&quot;</span>
+</code></pre></div>
+2. Verificar que la ruta en <code>cloudflared-config.yml</code> es correcta y coincide con su usuario de Windows
+3. Verificar que el UUID en <code>cloudflared-config.yml</code> coincide con el nombre del archivo JSON
+4. Si el archivo es nuevo, asegurar que fue copiado completamente (no truncado)
+5. Solicitar al proveedor un nuevo archivo de credenciales si el problema persiste</p>
+<hr />
+<h3 id="problema-tunnel-connections-not-registered-en-tunnelbat">Problema: "tunnel connections not registered" en tunnel.bat<a class="headerlink" href="#problema-tunnel-connections-not-registered-en-tunnelbat" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Backend o frontend no están corriendo, o están en puertos incorrectos.</p>
+<p><strong>Solución:</strong>
+1. <strong>Verificar orden de inicio:</strong>
+   - Primero: <code>backend.bat</code> (esperar "Started AppApplication")
+   - Segundo: <code>frontend.bat</code> (esperar "listening on localhost:4200")
+   - Tercero: <code>tunnel.bat</code>
+2. <strong>Verificar que los puertos están activos:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Backend en 8080</span>
+<span class="nb">Test-NetConnection</span> <span class="n">-ComputerName</span> <span class="n">localhost</span> <span class="n">-Port</span> <span class="n">8080</span>
+<span class="c"># Frontend en 4200</span>
+<span class="nb">Test-NetConnection</span> <span class="n">-ComputerName</span> <span class="n">localhost</span> <span class="n">-Port</span> <span class="n">4200</span>
+</code></pre></div>
+3. Si algún puerto no responde, detener el túnel y reiniciar backend/frontend primero</p>
+<hr />
+<h3 id="problema-cloudflaredexe-not-found-al-ejecutar-tunnelbat">Problema: "cloudflared.exe not found" al ejecutar tunnel.bat<a class="headerlink" href="#problema-cloudflaredexe-not-found-al-ejecutar-tunnelbat" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Cloudflared no está instalado en la ruta esperada.</p>
+<p><strong>Solución:</strong>
+1. Verificar instalación:
+   <div class="highlight"><pre><span></span><code><span class="nb">Test-Path</span> <span class="s2">&quot;C:\Program Files (x86)\cloudflared\cloudflared.exe&quot;</span>
+</code></pre></div>
+2. Si no existe, seguir pasos de instalación en <a href="#configuración-de-cloudflare-tunnel-acceso-remoto">Sección 7</a>
+3. Si está en otra ubicación, actualizar la variable PATH en <code>tunnel.bat</code>:
+   <div class="highlight"><pre><span></span><code><span class="k">set</span> <span class="s2">&quot;PATH=</span><span class="nv">%PATH%</span><span class="s2">;&lt;ruta_donde_esta_cloudflared&gt;&quot;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="problema-tunel-conecta-pero-no-se-puede-acceder-desde-internet">Problema: Túnel conecta pero no se puede acceder desde Internet<a class="headerlink" href="#problema-tunel-conecta-pero-no-se-puede-acceder-desde-internet" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Configuración DNS no completada o dominios no apuntados al túnel.</p>
+<p><strong>Solución:</strong>
+1. ⚠️ <strong>Esto es responsabilidad del proveedor</strong> - no puede resolverse localmente
+2. Verificar que el túnel está corriendo correctamente (debe mostrar "Connection established")
+3. Coordinar sesión remota con el proveedor para:
+   - Configurar registros DNS en Cloudflare
+   - Verificar que los dominios estén activos
+   - Probar acceso desde Internet
+4. Mientras tanto, verificar acceso local en <code>http://localhost:4200</code> y <code>http://localhost:8080</code></p>
+<hr />
+<h3 id="problema-err_too_many_redirects-al-acceder-a-url-publica-del-tunel">Problema: "ERR_TOO_MANY_REDIRECTS" al acceder a URL pública del túnel<a class="headerlink" href="#problema-err_too_many_redirects-al-acceder-a-url-publica-del-tunel" title="Permanent link">&para;</a></h3>
+<p><strong>Causa:</strong> Configuración de ingress incorrecta en <code>cloudflared-config.yml</code>.</p>
+<p><strong>Solución:</strong>
+1. Verificar que el archivo <code>cloudflared-config.yml</code> tiene la estructura correcta:
+   <div class="highlight"><pre><span></span><code><span class="nt">ingress</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unica.fonck.app</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:4200</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api-unica.fonck.app</span>
+<span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8080</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span>
+</code></pre></div>
+2. No debe haber líneas duplicadas ni tabulaciones (usar solo espacios)
+3. Reiniciar el túnel después de cualquier cambio en este archivo</p>
+<hr />
+<h2 id="checklist-de-instalacion-completa">📋 Checklist de Instalación Completa<a class="headerlink" href="#checklist-de-instalacion-completa" title="Permanent link">&para;</a></h2>
+<p>Usar esta lista para verificar que todo esté instalado correctamente:</p>
+<h3 id="software-y-dependencias">🔧 Software y Dependencias<a class="headerlink" href="#software-y-dependencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Java JDK 21 instalado y <code>java -version</code> funciona</li>
+<li>[ ] JAVA_HOME configurado correctamente</li>
+<li>[ ] MySQL 8.4 instalado y servicio corriendo</li>
+<li>[ ] Base de datos <code>unica_db</code> creada con charset UTF-8</li>
+<li>[ ] Node.js 20.x instalado y <code>node --version</code> funciona</li>
+<li>[ ] npm 11.9+ instalado y <code>npm --version</code> funciona</li>
+<li>[ ] Angular CLI 21.2.2 instalado y <code>ng version</code> funciona</li>
+<li>[ ] Git instalado y <code>git --version</code> funciona</li>
+</ul>
+<h3 id="configuracion-de-github">🐙 Configuración de GitHub<a class="headerlink" href="#configuracion-de-github" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Cuenta de GitHub creada (si no tenía una)</li>
+<li>[ ] Usuario de GitHub enviado al administrador del proyecto</li>
+<li>[ ] Invitación de colaborador recibida y aceptada</li>
+<li>[ ] Acceso verificado al repositorio: https://github.com/flaviofonck/unica-telefonica-produccion</li>
+<li>[ ] Personal Access Token (PAT) generado (si usa línea de comandos)</li>
+<li>[ ] Credenciales configuradas con <code>git config --global credential.helper manager</code></li>
+<li>[ ] Suscrito a notificaciones del repositorio (opcional pero recomendado)</li>
+</ul>
+<h3 id="codigo-y-configuracion">📂 Código y Configuración<a class="headerlink" href="#codigo-y-configuracion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Repositorio clonado correctamente en ruta sin espacios</li>
+<li>[ ] <code>application.properties</code> con credenciales correctas de MySQL</li>
+<li>[ ] Dependencias npm instaladas (<code>node_modules</code> existe en <code>unica-frontend/</code>)</li>
+</ul>
+<h3 id="ejecucion-y-verificacion">▶️ Ejecución y Verificación<a class="headerlink" href="#ejecucion-y-verificacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Backend inicia correctamente (<code>.\backend.bat</code>)</li>
+<li>[ ] Migraciones Flyway ejecutadas correctamente (tablas creadas)</li>
+<li>[ ] Swagger UI accesible en http://localhost:8080/swagger-ui.html</li>
+<li>[ ] Frontend inicia correctamente (<code>.\frontend.bat</code>)</li>
+<li>[ ] Login accesible en http://localhost:4200</li>
+<li>[ ] Login exitoso con <code>admin/admin</code></li>
+<li>[ ] Tablas creadas en <code>unica_db</code> (verificar con <code>SHOW TABLES</code>)</li>
+</ul>
+<h3 id="cloudflare-tunnel-acceso-remoto">🌐 Cloudflare Tunnel (Acceso Remoto)<a class="headerlink" href="#cloudflare-tunnel-acceso-remoto" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <code>cloudflared.exe</code> instalado en <code>C:\Program Files (x86)\cloudflared</code></li>
+<li>[ ] Versión de cloudflared verificada (<code>cloudflared --version</code>)</li>
+<li>[ ] Carpeta <code>.cloudflared</code> creada en perfil de usuario</li>
+<li>[ ] Archivo de credenciales JSON recibido del proveedor</li>
+<li>[ ] Archivo JSON colocado en <code>C:\Users\&lt;USUARIO&gt;\.cloudflared\&lt;UUID&gt;.json</code></li>
+<li>[ ] <code>cloudflared-config.yml</code> actualizado con ruta correcta de usuario</li>
+<li>[ ] Túnel inicia correctamente (<code>.\tunnel.bat</code>)</li>
+<li>[ ] Mensaje "Connection established" visible en consola del túnel</li>
+<li>[ ] Sesión remota coordinada con proveedor para configuración DNS final</li>
+<li>[ ] Acceso público verificado desde Internet (después de configuración del proveedor)</li>
+</ul>
+<hr />
+<h2 id="notas-de-seguridad-para-produccion">🔒 Notas de Seguridad para Producción<a class="headerlink" href="#notas-de-seguridad-para-produccion" title="Permanent link">&para;</a></h2>
+<p>⚠️ <strong>ANTES DE PASAR A PRODUCCIÓN:</strong></p>
+<ol>
+<li><strong>Cambiar credenciales de MySQL:</strong></li>
+<li>Crear usuario específico para ÚNICA (no usar root)</li>
+<li>
+<p>Asignar permisos mínimos necesarios</p>
+</li>
+<li>
+<p><strong>Cambiar credenciales de admin:</strong></p>
+</li>
+<li>
+<p>Actualizar <code>usuarios</code> en base de datos con contraseña segura</p>
+</li>
+<li>
+<p><strong>Cambiar JWT secret:</strong></p>
+</li>
+<li>
+<p>En <code>application.properties</code>, reemplazar <code>jwt.secret</code> con un valor aleatorio de 256+ bits</p>
+</li>
+<li>
+<p><strong>Configurar HTTPS:</strong></p>
+</li>
+<li>Agregar certificado SSL en Spring Boot</li>
+<li>
+<p>Configurar proxy inverso (nginx/Apache) recomendado</p>
+</li>
+<li>
+<p><strong>Deshabilitar Swagger en producción:</strong></p>
+</li>
+<li>
+<p>Agregar en <code>application.properties</code>:
+     <div class="highlight"><pre><span></span><code><span class="na">springdoc.swagger-ui.enabled</span><span class="o">=</span><span class="s">false</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configurar backups automáticos:</strong></p>
+</li>
+<li>Implementar script de backup diario de <code>unica_db</code></li>
+<li>
+<p>Guardar backups en ubicación segura fuera del servidor</p>
+</li>
+<li>
+<p><strong>Gestión del repositorio Git:</strong></p>
+</li>
+<li>Proteger las credenciales de acceso al repositorio</li>
+<li>Configurar acceso SSH con claves en lugar de usuario/contraseña</li>
+<li>Restringir permisos de escritura solo a personal autorizado</li>
+<li>Nunca commitear archivos con credenciales sensibles (.env, application.properties con passwords reales)</li>
+<li>Configurar <code>.gitignore</code> para excluir logs, archivos temporales y configuraciones locales</li>
+</ol>
+<hr />
+<h2 id="actualizacion-del-codigo-futuras-versiones">🔄 Actualización del Código (Futuras Versiones)<a class="headerlink" href="#actualizacion-del-codigo-futuras-versiones" title="Permanent link">&para;</a></h2>
+<p>Cuando el equipo de desarrollo publique actualizaciones, correcciones o nuevas funcionalidades en el repositorio:</p>
+<h3 id="0-suscribirse-a-notificaciones-configuracion-inicial-solo-una-vez">0. Suscribirse a Notificaciones (Configuración Inicial - Solo una vez)<a class="headerlink" href="#0-suscribirse-a-notificaciones-configuracion-inicial-solo-una-vez" title="Permanent link">&para;</a></h3>
+<p>Para recibir notificaciones automáticas de nuevos cambios:</p>
+<ol>
+<li>Visitar el repositorio: https://github.com/flaviofonck/unica-telefonica-produccion</li>
+<li>Hacer clic en <strong>"Watch"</strong> (arriba a la derecha)</li>
+<li>Seleccionar:</li>
+<li>✅ <strong>"All Activity"</strong> (todas las actualizaciones) o</li>
+<li>✅ <strong>"Releases only"</strong> (solo versiones oficiales)</li>
+<li>GitHub enviará emails cuando haya nuevos commits o releases</li>
+</ol>
+<p><strong>Alternativamente, verificar manualmente:</strong>
+- Visitar https://github.com/flaviofonck/unica-telefonica-produccion/commits/main
+- Ver el historial de commits recientes</p>
+<hr />
+<h3 id="1-verificar-si-hay-actualizaciones-disponibles">1. Verificar si Hay Actualizaciones Disponibles<a class="headerlink" href="#1-verificar-si-hay-actualizaciones-disponibles" title="Permanent link">&para;</a></h3>
+<p>Antes de actualizar, verificar si hay cambios nuevos en el repositorio:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">proyectos</span><span class="p">\</span><span class="n">unica</span>
+<span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span>
+<span class="n">git</span> <span class="n">status</span>
+</code></pre></div>
+<p><strong>Salidas posibles:</strong></p>
+<p>✅ <strong>"Your branch is up to date"</strong> → No hay actualizaciones, no es necesario hacer nada</p>
+<p>⚠️ <strong>"Your branch is behind 'origin/main' by X commits"</strong> → Hay X nuevos cambios disponibles para descargar</p>
+<p><strong>Ver qué cambió:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">log</span> <span class="n">HEAD</span><span class="p">..</span><span class="n">origin</span><span class="p">/</span><span class="n">main</span> <span class="p">-</span><span class="n">-oneline</span>
+</code></pre></div>
+Muestra los commits que se descargarán.</p>
+<hr />
+<h3 id="2-detener-la-aplicacion">2. Detener la Aplicación<a class="headerlink" href="#2-detener-la-aplicacion" title="Permanent link">&para;</a></h3>
+<p>Cerrar ambas ventanas de PowerShell donde corren backend y frontend.</p>
+<h3 id="3-descargar-y-aplicar-actualizaciones">3. Descargar y Aplicar Actualizaciones<a class="headerlink" href="#3-descargar-y-aplicar-actualizaciones" title="Permanent link">&para;</a></h3>
+<p>Abrir PowerShell en la carpeta del proyecto y ejecutar:
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">proyectos</span><span class="p">\</span><span class="n">unica</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</code></pre></div></p>
+<p><strong>Resultado esperado:</strong>
+<div class="highlight"><pre><span></span><code>remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 9 (delta 5), reused 0 (delta 0)
+Unpacking objects: 100% (9/9), done.
+From https://github.com/flaviofonck/unica-telefonica-produccion
+ * branch            main       -&gt; FETCH_HEAD
+Updating abc1234..def5678
+Fast-forward
+ src/main/java/com/unica/app/service/X.java | 10 ++++---
+ unica-frontend/src/app/components/Y.ts      |  5 ++--
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+</code></pre></div></p>
+<p>⚠️ <strong>Si aparece error:</strong> Ver sección "Conflictos de Git" más abajo.</p>
+<h3 id="4-actualizar-dependencias">4. Actualizar Dependencias<a class="headerlink" href="#4-actualizar-dependencias" title="Permanent link">&para;</a></h3>
+<h4 id="backend-si-cambio-pomxml">Backend (si cambió pom.xml)<a class="headerlink" href="#backend-si-cambio-pomxml" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">mvnw</span><span class="p">.</span><span class="n">cmd</span> <span class="n">clean</span> <span class="n">install</span>
+</code></pre></div>
+<p><strong>Ejecutar siempre si el log de <code>git pull</code> mostró:</strong> <code>pom.xml</code></p>
+<h4 id="frontend-si-cambio-packagejson">Frontend (si cambió package.json)<a class="headerlink" href="#frontend-si-cambio-packagejson" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">unica-frontend</span>
+<span class="n">npm</span> <span class="n">install</span>
+<span class="nb">cd </span><span class="p">..</span>
+</code></pre></div>
+<p><strong>Ejecutar siempre si el log de <code>git pull</code> mostró:</strong> <code>package.json</code></p>
+<p>💡 <strong>Tip:</strong> Si no está seguro, ejecutar ambos comandos por seguridad (no causa problemas).</p>
+<hr />
+<h3 id="5-reiniciar-la-aplicacion">5. Reiniciar la Aplicación<a class="headerlink" href="#5-reiniciar-la-aplicacion" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Terminal 1</span>
+<span class="p">.\</span><span class="n">backend</span><span class="p">.</span><span class="n">bat</span>
+
+<span class="c"># Terminal 2 (otra ventana)</span>
+<span class="p">.\</span><span class="n">frontend</span><span class="p">.</span><span class="n">bat</span>
+</code></pre></div>
+<h3 id="6-verificar-que-las-actualizaciones-se-aplicaron-correctamente">6. Verificar que las Actualizaciones se Aplicaron Correctamente<a class="headerlink" href="#6-verificar-que-las-actualizaciones-se-aplicaron-correctamente" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Ver el log de commits recientes (debe mostrar los nuevos cambios)</span>
+<span class="n">git</span> <span class="n">log</span> <span class="p">-</span><span class="n">-oneline</span> <span class="p">-</span><span class="n">10</span>
+
+<span class="c"># Ver qué archivos cambiaron en el último commit</span>
+<span class="n">git</span> <span class="nb">diff </span><span class="n">HEAD</span><span class="p">~</span><span class="n">1</span> <span class="n">HEAD</span> <span class="p">-</span><span class="n">-name-only</span>
+
+<span class="c"># Ver la versión actual (el commit hash)</span>
+<span class="n">git</span> <span class="n">rev-parse</span> <span class="p">-</span><span class="n">-short</span> <span class="n">HEAD</span>
+</code></pre></div>
+<p><strong>Probar la aplicación:</strong>
+1. Acceder a http://localhost:4200
+2. Verificar que el login funcione
+3. Revisar las funcionalidades actualizadas según las notas de la versión</p>
+<hr />
+<h3 id="conflictos-de-git">⚠️ Conflictos de Git<a class="headerlink" href="#conflictos-de-git" title="Permanent link">&para;</a></h3>
+<p>Si al hacer <code>git pull</code> aparece el mensaje <strong>"Please commit your changes or stash them"</strong>:</p>
+<p><strong>Opción A: Descartar cambios locales (si no son importantes)</strong>
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">reset</span> <span class="p">-</span><span class="n">-hard</span> <span class="n">HEAD</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</code></pre></div></p>
+<p>🚨 <strong>ADVERTENCIA:</strong> Esto elimina TODOS los cambios locales no commiteados. Solo usar si está seguro de que no hay trabajo importante sin guardar.</p>
+<p><strong>Opción B: Guardar cambios locales temporalmente</strong>
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">stash</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">stash</span> <span class="n">pop</span>  <span class="c"># Restaurar cambios guardados</span>
+</code></pre></div></p>
+<p><strong>Opción C: Commitear cambios locales</strong>
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="n">-m</span> <span class="s2">&quot;Cambios locales antes de actualizar&quot;</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</code></pre></div></p>
+<p>🚨 <strong>ADVERTENCIA:</strong> Esta opción requiere que tenga permisos de escritura en el repositorio. Si solo es colaborador de lectura, usar Opción A o B.</p>
+<hr />
+<h3 id="como-ver-el-historial-de-cambios-release-notes">📝 Cómo Ver el Historial de Cambios (Release Notes)<a class="headerlink" href="#como-ver-el-historial-de-cambios-release-notes" title="Permanent link">&para;</a></h3>
+<h4 id="metodo-1-en-github-recomendado">Método 1: En GitHub (Recomendado)<a class="headerlink" href="#metodo-1-en-github-recomendado" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://github.com/flaviofonck/unica-telefonica-produccion/releases</li>
+<li>Ver las notas de cada versión publicada con:</li>
+<li>🆕 Nuevas funcionalidades</li>
+<li>🐛 Correcciones de bugs</li>
+<li>⚠️ Cambios importantes</li>
+</ol>
+<h4 id="metodo-2-commits-recientes">Método 2: Commits Recientes<a class="headerlink" href="#metodo-2-commits-recientes" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visitar: https://github.com/flaviofonck/unica-telefonica-produccion/commits/main</li>
+<li>Ver la lista de todos los commits con descripciones</li>
+</ol>
+<h4 id="metodo-3-desde-powershell">Método 3: Desde PowerShell<a class="headerlink" href="#metodo-3-desde-powershell" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Ver los últimos 20 commits con descripción</span>
+<span class="n">git</span> <span class="n">log</span> <span class="p">-</span><span class="n">-oneline</span> <span class="p">-</span><span class="n">20</span>
+
+<span class="c"># Ver cambios detallados de un commit específico</span>
+<span class="n">git</span> <span class="n">show</span> <span class="p">&lt;</span><span class="n">hash_del_commit</span><span class="p">&gt;</span>
+
+<span class="c"># Ver archivos modificados entre dos versiones</span>
+<span class="n">git</span> <span class="nb">diff </span><span class="n">v1</span><span class="p">.</span><span class="n">0</span><span class="p">..</span><span class="n">v2</span><span class="p">.</span><span class="n">0</span> <span class="p">-</span><span class="n">-name-status</span>
+</code></pre></div>
+<hr />
+<h3 id="recomendaciones-de-actualizacion">🔔 Recomendaciones de Actualización<a class="headerlink" href="#recomendaciones-de-actualizacion" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Frecuencia:</strong> Actualizar al menos una vez por semana para recibir correcciones de bugs y mejoras</li>
+<li><strong>Horario:</strong> Hacer actualizaciones fuera del horario laboral para evitar interrupciones</li>
+<li><strong>Backup:</strong> Antes de actualizar, hacer backup de la base de datos:
+   <div class="highlight"><pre><span></span><code><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysqldump.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="p">-</span><span class="n">-password</span><span class="p">=</span><span class="n">admin</span> <span class="n">unica_db</span> <span class="p">&gt;</span> <span class="n">backup_</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="s1">&#39;yyyyMMdd&#39;</span><span class="p">).</span><span class="n">sql</span>
+</code></pre></div></li>
+<li><strong>Pruebas:</strong> Después de actualizar, probar las funcionalidades críticas antes de volver a operar normalmente</li>
+<li><strong>Documentación:</strong> Leer las notas de la versión (release notes) para conocer los cambios</li>
+</ol>
+<hr />
+<h2 id="enlaces-rapidos-de-referencia">🔗 Enlaces Rápidos de Referencia<a class="headerlink" href="#enlaces-rapidos-de-referencia" title="Permanent link">&para;</a></h2>
+<h3 id="repositorio-y-codigo">Repositorio y Código<a class="headerlink" href="#repositorio-y-codigo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Repositorio Principal:</strong> https://github.com/flaviofonck/unica-telefonica-produccion</li>
+<li><strong>Clonar (HTTPS):</strong> <code>git clone https://github.com/flaviofonck/unica-telefonica-produccion.git</code></li>
+<li><strong>Historial de Commits:</strong> https://github.com/flaviofonck/unica-telefonica-produccion/commits/main</li>
+<li><strong>Versiones Publicadas:</strong> https://github.com/flaviofonck/unica-telefonica-produccion/releases</li>
+<li><strong>Reportar Problemas:</strong> https://github.com/flaviofonck/unica-telefonica-produccion/issues</li>
+</ul>
+<h3 id="cuenta-github">Cuenta GitHub<a class="headerlink" href="#cuenta-github" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Crear Cuenta:</strong> https://github.com/signup</li>
+<li><strong>Generar Token (PAT):</strong> https://github.com/settings/tokens</li>
+<li><strong>Configurar SSH:</strong> https://docs.github.com/en/authentication/connecting-to-github-with-ssh</li>
+</ul>
+<h3 id="descargas-de-software">Descargas de Software<a class="headerlink" href="#descargas-de-software" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Java JDK 21:</strong> https://adoptium.net/temurin/releases/</li>
+<li><strong>MySQL 8.4:</strong> https://dev.mysql.com/downloads/mysql/</li>
+<li><strong>Node.js 20 LTS:</strong> https://nodejs.org/</li>
+<li><strong>Git para Windows:</strong> https://git-scm.com/download/win</li>
+<li><strong>GitHub Desktop:</strong> https://desktop.github.com/</li>
+<li><strong>Cloudflare Tunnel (cloudflared):</strong> https://github.com/cloudflare/cloudflared/releases</li>
+</ul>
+<h3 id="urls-de-la-aplicacion-local">URLs de la Aplicación (Local)<a class="headerlink" href="#urls-de-la-aplicacion-local" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Frontend:</strong> http://localhost:4200</li>
+<li><strong>Backend API (Swagger):</strong> http://localhost:8080/swagger-ui.html</li>
+<li><strong>Actuator Health:</strong> http://localhost:8080/actuator/health</li>
+</ul>
+<h3 id="comandos-rapidos">Comandos Rápidos<a class="headerlink" href="#comandos-rapidos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Verificar versiones instaladas</span>
+<span class="n">java</span> <span class="n">-version</span>
+<span class="n">node</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">npm</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">git</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">ng</span> <span class="n">version</span>
+
+<span class="c"># Actualizar código</span>
+<span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">proyectos</span><span class="p">\</span><span class="n">unica</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+
+<span class="c"># Iniciar aplicación</span>
+<span class="p">.\</span><span class="n">backend</span><span class="p">.</span><span class="n">bat</span>    <span class="c"># Terminal 1</span>
+<span class="p">.\</span><span class="n">frontend</span><span class="p">.</span><span class="n">bat</span>   <span class="c"># Terminal 2</span>
+<span class="p">.\</span><span class="n">tunnel</span><span class="p">.</span><span class="n">bat</span>     <span class="c"># Terminal 3 (opcional, para acceso remoto)</span>
+
+<span class="c"># Backup de base de datos</span>
+<span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\MySQL\MySQL Server 8.4\bin\mysqldump.exe&#39;</span> <span class="n">-u</span> <span class="n">root</span> <span class="p">-</span><span class="n">-password</span><span class="p">=</span><span class="n">admin</span> <span class="n">unica_db</span> <span class="p">&gt;</span> <span class="n">backup_</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="s1">&#39;yyyyMMdd&#39;</span><span class="p">).</span><span class="n">sql</span>
+</code></pre></div>
+<hr />
+<p><strong>Versión del Manual:</strong> 4.0<br />
+<strong>Fecha:</strong> Mayo 2026<br />
+<strong>Proyecto:</strong> ÚNICA - Plataforma de Gestión de Servicios Terceros<br />
+<strong>Cliente:</strong> Telefónica Colombia  </p>
+<hr />
+<h2 id="registro-de-versiones">📄 Registro de Versiones<a class="headerlink" href="#registro-de-versiones" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Cambios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.0</td>
+<td>Mayo 2026</td>
+<td><strong>Cloudflare Tunnel para acceso remoto:</strong> Nueva sección completa con instalación de cloudflared, configuración de túnel, coordinación con proveedor para archivo de credenciales JSON, ubicación en <code>.cloudflared</code>, actualización de rutas en <code>cloudflared-config.yml</code>, secuencia de ejecución (backend → frontend → tunnel), scripts de verificación, configuración DNS remota por proveedor, solución de problemas específicos del túnel (authentication failed, tunnel not registered, puertos incorrectos, ERR_TOO_MANY_REDIRECTS). Agregado cloudflared a tabla de Software Requerido. Checklist expandido con 10 verificaciones de túnel. Enlaces rápidos actualizados</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>Mayo 2026</td>
+<td>Especificación del repositorio GitHub oficial: URL exacta (github.com/flaviofonck/unica-telefonica-produccion), instrucciones para crear cuenta GitHub, proceso de invitación como colaborador, autenticación con Personal Access Token (PAT) y GitHub Desktop, suscripción a notificaciones de cambios, verificación de actualizaciones disponibles antes de pull, historial de cambios (release notes), recomendaciones de backup antes de actualizar</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>Mayo 2026</td>
+<td>Actualización para entrega mediante Git: agregado Git 2.40+ como dependencia, instrucciones de clonación del repositorio (HTTPS/SSH), autenticación para repositorios privados, actualización de código con git pull, solución de problemas Git, notas de seguridad para gestión del repositorio</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>Mayo 2026</td>
+<td>Manual inicial de instalación completo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Fin del Manual de Instalación</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.suggest"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
